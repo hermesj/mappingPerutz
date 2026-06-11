@@ -1,0 +1,104 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "title": "Tour B",
+  "note": "Fictional demo data.",
+  "license": "CC0"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Stage One",
+    "name": "North Gate",
+    "kind": "place",
+    "character": "Guide",
+    "time": "14:00",
+    "gloss": "The tour begins at the old gate.",
+    "quote": "Welcome, traveller.",
+    "ref": "B.1"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.956,
+     50.943
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Stage Two",
+    "name": "The Tower",
+    "kind": "place",
+    "character": "Guide",
+    "time": "14:30",
+    "gloss": "A tall landmark in the centre.",
+    "quote": "Look up.",
+    "ref": "B.2"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9583,
+     50.9413
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 3,
+    "story": "Stage Three",
+    "name": "Riverside Bench",
+    "kind": "place",
+    "character": "Guide",
+    "time": "15:00",
+    "gloss": "A place to rest and watch the water."
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9648,
+     50.9405
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Stage One",
+    "name": "Guide's path",
+    "kind": "route",
+    "character": "Guide",
+    "time": "14:00–15:00",
+    "gloss": "The guided route from gate to riverside."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      6.956,
+      50.943
+     ],
+     [
+      6.9583,
+      50.9413
+     ],
+     [
+      6.962,
+      50.9408
+     ],
+     [
+      6.9648,
+      50.9405
+     ]
+    ]
+   }
+  }
+ ]
+}

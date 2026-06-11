@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 640" font-family="Georgia, serif">
+  <rect width="940" height="640" fill="#f4efe8"/>
+  <text x="470" y="40" text-anchor="middle" font-size="23" fill="#3a2a1a">Engine vs. Projekt — dieselbe Maschine, andere Inhalte</text>
+  <text x="470" y="66" text-anchor="middle" font-size="14" font-style="italic" fill="#7b5e44">Es geht nicht um »Joyce vs. config«, sondern um Code (Werkzeug) vs. Inhalt (Projekt)</text>
+
+  <!-- ===== HEUTE ===== -->
+  <text x="40" y="110" font-size="16" font-weight="bold" fill="#8a4b2a">HEUTE — vermischt</text>
+  <rect x="40" y="125" width="300" height="270" rx="8" fill="#fff" stroke="#c9b8a4"/>
+  <text x="190" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">joyce.js</text>
+
+  <rect x="62" y="168" width="256" height="92" rx="6" fill="#dfeee0" stroke="#7ba87f"/>
+  <text x="190" y="192" text-anchor="middle" font-size="13" fill="#234" font-weight="bold">Engine-Logik</text>
+  <text x="190" y="212" text-anchor="middle" font-size="12" fill="#345">Karte, Sidebar, Popups,</text>
+  <text x="190" y="228" text-anchor="middle" font-size="12" fill="#345">Routen, Layer-Umschalter</text>
+  <text x="190" y="248" text-anchor="middle" font-size="11.5" fill="#3a7d42" font-style="italic">GENERISCH (~90 %)</text>
+
+  <rect x="62" y="270" width="256" height="106" rx="6" fill="#f6e2d4" stroke="#cf8a5c"/>
+  <text x="190" y="293" text-anchor="middle" font-size="13" fill="#542" font-weight="bold">Joyce-Daten</text>
+  <text x="190" y="313" text-anchor="middle" font-size="12" fill="#653">Werke, Gruppen, Farben,</text>
+  <text x="190" y="329" text-anchor="middle" font-size="12" fill="#653">Strings, Dublin-BBox</text>
+  <text x="190" y="349" text-anchor="middle" font-size="11.5" fill="#b5651d" font-style="italic">SPEZIFISCH (~10 %)</text>
+  <text x="190" y="367" text-anchor="middle" font-size="11.5" fill="#b5651d" font-style="italic">— fest eingebaut</text>
+
+  <text x="40" y="418" font-size="12.5" fill="#7b5e44">Name sagt »Joyce«, obwohl darin v. a.</text>
+  <text x="40" y="436" font-size="12.5" fill="#7b5e44">die generische Maschine steckt.</text>
+
+  <!-- arrow -->
+  <text x="372" y="265" text-anchor="middle" font-size="34" fill="#9a7b5a">→</text>
+
+  <!-- ===== ZIEL ===== -->
+  <text x="410" y="110" font-size="16" font-weight="bold" fill="#2f6f3a">ZIEL — getrennt</text>
+
+  <!-- engine -->
+  <rect x="410" y="125" width="300" height="86" rx="8" fill="#dfeee0" stroke="#7ba87f"/>
+  <text x="560" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#234">engine.js  <tspan font-weight="normal" font-style="italic" font-size="12">(umbenannt)</tspan></text>
+  <text x="560" y="172" text-anchor="middle" font-size="12" fill="#345">generische Maschine — kein »Joyce« im Code</text>
+  <text x="560" y="194" text-anchor="middle" font-size="11.5" fill="#3a7d42" font-style="italic">DAS WERKZEUG (wiederverwendbar)</text>
+
+  <!-- config -->
+  <rect x="410" y="232" width="300" height="74" rx="8" fill="#f6e2d4" stroke="#cf8a5c"/>
+  <text x="560" y="256" text-anchor="middle" font-size="14" font-weight="bold" fill="#542">config.json</text>
+  <text x="560" y="277" text-anchor="middle" font-size="12" fill="#653">Werke, Gruppen, Farben, Strings, BBox</text>
+  <text x="560" y="295" text-anchor="middle" font-size="11.5" fill="#b5651d">(Basemap, Attribution, Popup-Felder)</text>
+
+  <!-- data -->
+  <rect x="410" y="318" width="300" height="58" rx="8" fill="#f6e2d4" stroke="#cf8a5c"/>
+  <text x="560" y="341" text-anchor="middle" font-size="14" font-weight="bold" fill="#542">data/*.geojson</text>
+  <text x="560" y="361" text-anchor="middle" font-size="12" fill="#653">Orte, Routen, Figuren</text>
+
+  <!-- brace + label for project -->
+  <path d="M 722 232 q 10 0 10 12 v 50 q 0 12 10 12 q -10 0 -10 12 v 50 q 0 12 -10 12" fill="none" stroke="#b5651d" stroke-width="1.5"/>
+  <text x="752" y="300" font-size="12.5" fill="#b5651d" font-weight="bold">= das Projekt</text>
+  <text x="752" y="318" font-size="12.5" fill="#b5651d" font-weight="bold">»Joyce«</text>
+
+  <!-- engine reads config/data arrows -->
+  <text x="560" y="226" text-anchor="middle" font-size="11" fill="#777">↓ liest</text>
+
+  <!-- ===== REUSE ===== -->
+  <line x1="40" y1="470" x2="900" y2="470" stroke="#d8c8b4"/>
+  <text x="40" y="498" font-size="15" font-weight="bold" fill="#2f6f3a">Wiederverwendung — gleiche Engine, neues Projekt</text>
+
+  <rect x="40" y="512" width="190" height="70" rx="8" fill="#dfeee0" stroke="#7ba87f"/>
+  <text x="135" y="540" text-anchor="middle" font-size="13" font-weight="bold" fill="#234">engine.js</text>
+  <text x="135" y="560" text-anchor="middle" font-size="11.5" fill="#345" font-style="italic">unverändert</text>
+
+  <text x="246" y="552" font-size="22" fill="#9a7b5a">+</text>
+
+  <rect x="270" y="512" width="230" height="70" rx="8" fill="#e6e0f0" stroke="#8e7bb5"/>
+  <text x="385" y="538" text-anchor="middle" font-size="13" font-weight="bold" fill="#423a55">config-dickens.json</text>
+  <text x="385" y="560" text-anchor="middle" font-size="11.5" fill="#534a66">+ data/ (London)</text>
+
+  <text x="516" y="552" font-size="22" fill="#9a7b5a">→</text>
+
+  <rect x="540" y="512" width="360" height="70" rx="8" fill="#fff" stroke="#c9b8a4"/>
+  <text x="720" y="540" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Mapping Dickens' London</text>
+  <text x="720" y="561" text-anchor="middle" font-size="11.5" fill="#666" font-style="italic">ohne eine Zeile Engine-Code anzufassen</text>
+
+  <!-- analogy -->
+  <text x="470" y="616" text-anchor="middle" font-size="12.5" font-style="italic" fill="#7b5e44">Analogie: VLC (Engine) enthält nicht deine Filme. Heute haben wir einen »JoycePlayer« mit fest eingebauten Filmen.</text>
+</svg>

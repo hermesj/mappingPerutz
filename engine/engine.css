@@ -1,0 +1,405 @@
+/* Mapping Joyce — Leaflet view of locations in Joyce's *Dubliners*.
+   Palette echoes figround's warm, aged-paper tone. */
+
+:root {
+  --paper: #ede6df;
+  --ink: #2a2018;
+  --ink-soft: #5a4535;
+  --rule: rgba(60, 40, 20, 0.14);
+  --panel-bg: rgba(247, 243, 238, 0.96);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* ── LAYOUT ── */
+#app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar map";
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  flex-wrap: wrap;
+  padding: 0.7em 1.2em;
+  background: linear-gradient(to right, #ede6df 0%, #cdbba8 100%);
+  border-bottom: 1px solid var(--rule);
+}
+
+header h1 {
+  font-weight: 300;
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #3a2a1a;
+}
+
+header .tagline {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  flex: 1 1 auto;
+}
+
+/* Work switch — the prominent Dubliners / Ulysses tabs */
+.work-switch {
+  display: inline-flex;
+  gap: 0.3em;
+}
+.work-switch a {
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.2em 0.7em;
+  border-radius: 4px;
+  color: var(--ink-soft);
+  border: 1px solid transparent;
+}
+.work-switch a:hover { background: rgba(255, 255, 255, 0.4); }
+.work-switch a.active {
+  color: #3a2a1a;
+  background: rgba(255, 252, 248, 0.7);
+  border-color: var(--rule);
+  font-weight: 600;
+}
+
+.work-switch a .exp {
+  font-size: 0.55rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #b5651d;
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+  margin-left: 0.25em;
+  vertical-align: 0.35em;
+}
+
+/* Tagline experimental notice */
+.exp-note {
+  color: #a05a1a;
+  font-style: normal;
+  font-size: 0.78rem;
+}
+
+.lang-switch a {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: rgba(90, 70, 55, 0.55);
+  cursor: pointer;
+  padding: 0.2em 0.45em;
+}
+.lang-switch a:hover { color: rgba(60, 40, 25, 1); }
+.lang-switch a.active {
+  color: rgba(60, 40, 25, 1);
+  border-bottom: 1px solid rgba(60, 40, 25, 0.5);
+}
+
+/* ── SIDEBAR ── */
+#sidebar {
+  grid-area: sidebar;
+  background: var(--panel-bg);
+  border-right: 1px solid var(--rule);
+  overflow-y: auto;
+  padding: 0.6em 0;
+}
+
+.sidebar-tools {
+  display: flex;
+  gap: 0.5em;
+  padding: 0 1em 0.5em;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0.4em;
+}
+.sidebar-tools button {
+  flex: 1;
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  padding: 0.35em 0.4em;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--ink-soft);
+}
+.sidebar-tools button:hover { background: rgba(255, 255, 255, 0.9); }
+
+.story-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+.story-item:hover { background: rgba(0, 0, 0, 0.04); }
+.story-item.off { opacity: 0.4; }
+
+.caret {
+  flex: 0 0 auto;
+  width: 0.8em;
+  font-size: 0.7rem;
+  color: #9a8a7a;
+  transition: transform 0.15s ease;
+}
+.story-item.expanded .caret { transform: rotate(90deg); }
+
+.swatch {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.swatch:hover { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.18); }
+
+.story-item .count {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: #9a8a7a;
+}
+.grp-unverified {
+  margin-left: 0.5em;
+  font-size: 0.6rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #a05a1a;
+  white-space: nowrap;
+}
+
+/* ── collapsible place list under each group ── */
+.place-list {
+  border-bottom: 1px solid rgba(60, 40, 20, 0.06);
+}
+.place-item {
+  padding: 0.28em 1em 0.28em 2.7em;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  line-height: 1.3;
+}
+.place-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--ink);
+}
+.pl-route {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9a8a7a;
+}
+
+/* ── MAP ── */
+#map {
+  grid-area: map;
+  height: 100%;
+  background: #dfe3e6;
+}
+
+/* ── POPUP ── */
+.leaflet-popup-content-wrapper {
+  border-radius: 6px;
+  background: var(--panel-bg);
+}
+.leaflet-popup-content {
+  margin: 0.9em 1em;
+  font-family: Georgia, serif;
+  color: var(--ink);
+  max-width: 280px;
+}
+/* When a long quote exceeds maxHeight, Leaflet wraps the content in this
+   scrollable container — give it a touch of breathing room and a subtle
+   scrollbar. */
+.leaflet-popup-scrolled {
+  padding-right: 0.4em;
+  border-bottom: 1px solid rgba(60, 40, 20, 0.12);
+  scrollbar-width: thin;
+}
+.pop-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.15em;
+}
+.pop-story {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.5em;
+}
+.pop-time {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.05em 0.45em;
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  color: #6a5037;
+  background: rgba(120, 90, 60, 0.12);
+  border-radius: 3px;
+  vertical-align: 0.1em;
+}
+.pop-char {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a3a2a;
+  margin-bottom: 0.45em;
+}
+.pop-char::before {
+  content: "\1F6B6  "; /* walking figure */
+  font-weight: 400;
+}
+
+.pop-gloss {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin-bottom: 0.5em;
+}
+.pop-quote {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  border-left: 2px solid rgba(120, 90, 60, 0.4);
+  padding-left: 0.7em;
+}
+.pop-page {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.72rem;
+  color: #9a8a7a;
+}
+.pop-src {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: #6a5037;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(120, 90, 60, 0.35);
+}
+.pop-src:hover { color: #3a2a1a; border-bottom-color: rgba(60, 40, 25, 0.7); }
+.pop-essay {
+  display: block;
+  margin-top: 0.6em;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: #6a5037;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(120, 90, 60, 0.35);
+  width: fit-content;
+}
+.pop-essay:hover { color: #3a2a1a; border-bottom-color: rgba(60, 40, 25, 0.7); }
+.pop-unverified {
+  margin-top: 0.5em;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: #a05a1a;
+}
+.pop-source {
+  margin-top: 0.6em;
+  padding-top: 0.4em;
+  border-top: 1px solid rgba(60, 40, 20, 0.12);
+  font-size: 0.66rem;
+  font-style: italic;
+  color: #8a7a6a;
+}
+
+/* ── FOOTER — single credit line (Leaflet's own attribution control is
+   disabled in engine.js; work credit + basemap + Leaflet + Impressum all
+   live here, so nothing overlaps at the bottom of the map) ── */
+.credit {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  max-width: calc(100% - 340px);   /* stay clear of the 320px sidebar */
+  z-index: 500;
+  font-family: Georgia, serif;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  text-align: right;
+  color: var(--ink-soft);
+  background: rgba(247, 243, 238, 0.8);
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+}
+.credit a { color: var(--ink-soft); }
+.impressum-link { cursor: pointer; border-bottom: 1px solid rgba(60, 40, 20, 0.3); }
+.impressum-link:hover { color: #3a2a1a; border-bottom-color: rgba(60, 40, 25, 0.7); }
+
+/* ── Impressum / about overlay ── */
+#impressum-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 15, 10, 0.45);
+}
+#impressum-modal.open { display: flex; }
+.impressum-box {
+  position: relative;
+  max-width: 560px;
+  max-height: 80vh;
+  overflow: auto;
+  margin: 1em;
+  padding: 1.6em 1.9em;
+  background: var(--panel-bg);
+  color: var(--ink);
+  border-radius: 8px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  font-family: Georgia, serif;
+  line-height: 1.5;
+}
+.impressum-close {
+  position: absolute;
+  top: 0.4em;
+  right: 0.6em;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+.impressum-content h2 { margin-top: 0; font-weight: 300; letter-spacing: 0.05em; }
+.impressum-content h3 { margin-bottom: 0.3em; font-weight: 600; }
+.impressum-content a { color: #6a5037; }
+.impressum-content ul { padding-left: 1.2em; }
+
+/* ── MOBILE ── */
+@media (max-width: 680px) {
+  #app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 38vh 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "map";
+  }
+  #sidebar { border-right: none; border-bottom: 1px solid var(--rule); }
+  .credit { max-width: calc(100% - 12px); }
+}

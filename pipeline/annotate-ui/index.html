@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annotate — litmap</title>
+<style>
+  :root { --ink:#2a2018; --soft:#5a4535; --rule:rgba(60,40,20,.18); --paper:#ede6df; --panel:#f7f3ee; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; font-family:Georgia,serif; color:var(--ink); background:var(--paper); }
+  #app { display:grid; grid-template-columns:340px 1fr; grid-template-rows:auto 1fr; height:100vh; }
+  header { grid-column:1/3; display:flex; align-items:center; gap:1em; padding:.6em 1em;
+           background:linear-gradient(to right,#ede6df,#cdbba8); border-bottom:1px solid var(--rule); }
+  header h1 { font-size:1.05rem; font-weight:300; letter-spacing:.12em; text-transform:uppercase; margin:0; }
+  header .meta { font-size:.72rem; color:var(--soft); font-style:italic; }
+  select,input,textarea,button { font:inherit; }
+  select { padding:.25em .5em; border:1px solid var(--rule); border-radius:4px; background:#fffdfa; }
+  #sidebar { border-right:1px solid var(--rule); background:var(--panel); overflow-y:auto; padding:.4em 0; }
+  #search { width:calc(100% - 1.2em); margin:.3em .6em .5em; padding:.4em .6em; border:1px solid var(--rule); border-radius:4px; }
+  .grp { font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:#9a8a7a; padding:.5em 1em .2em; }
+  .row { display:flex; align-items:center; gap:.5em; padding:.32em 1em; cursor:pointer; font-size:.85rem; line-height:1.2; }
+  .row:hover { background:rgba(0,0,0,.05); }
+  .row.sel { background:rgba(181,101,29,.16); }
+  .row .nm { flex:1 1 auto; }
+  .row .rt { font-size:.6rem; text-transform:uppercase; color:#9a8a7a; }
+  .dot { width:7px; height:7px; border-radius:50%; flex:0 0 auto; background:transparent; }
+  .dot.on { background:#b5651d; }
+  .own { font-size:.55rem; color:#a05a1a; border:1px solid #d8b08a; border-radius:3px; padding:0 .25em; }
+  #panel { overflow-y:auto; padding:1.1em 1.4em; }
+  #panel .empty { color:var(--soft); font-style:italic; margin-top:2em; }
+  .ctx { background:var(--panel); border:1px solid var(--rule); border-radius:6px; padding:.7em .9em; margin-bottom:1em; }
+  .ctx h2 { margin:0 0 .15em; font-size:1.05rem; font-weight:600; }
+  .ctx .sub { font-size:.7rem; text-transform:uppercase; letter-spacing:.04em; color:var(--soft); }
+  .ctx dl { margin:.5em 0 0; font-size:.8rem; }
+  .ctx dt { font-size:.62rem; text-transform:uppercase; letter-spacing:.04em; color:#9a8a7a; margin-top:.5em; }
+  .ctx dd { margin:.1em 0 0; color:var(--soft); }
+  form label { display:block; font-size:.66rem; text-transform:uppercase; letter-spacing:.05em; color:#9a8a7a; margin:.8em 0 .15em; }
+  form input, form textarea { width:100%; padding:.45em .6em; border:1px solid var(--rule); border-radius:4px; background:#fffdfa; }
+  form textarea { min-height:3.5em; resize:vertical; }
+  .hint { font-size:.66rem; color:#9a8a7a; font-style:italic; margin-top:.2em; }
+  .actions { margin-top:1.2em; display:flex; gap:.6em; align-items:center; }
+  button.save { background:#b5651d; color:#fff; border:none; border-radius:4px; padding:.5em 1.2em; cursor:pointer; letter-spacing:.03em; }
+  button.save:hover { background:#9a5418; }
+  button.clear { background:none; border:1px solid var(--rule); border-radius:4px; padding:.5em .9em; cursor:pointer; color:var(--soft); }
+  #status { font-size:.74rem; color:var(--soft); }
+  #status.err { color:#b00020; }
+  #confighint { margin-top:1em; font-size:.72rem; background:#fff6e9; border:1px solid #e3c79a; border-radius:5px; padding:.5em .7em; color:#7a5a1a; }
+  .prov { margin-top:1.4em; font-size:.66rem; color:#9a8a7a; font-style:italic; border-top:1px solid var(--rule); padding-top:.6em; }
+  .newbtn { background:#2c7a3f; color:#fff; border:none; border-radius:4px; padding:.35em .8em; cursor:pointer; font-size:.78rem; }
+  .newbtn:hover { background:#246633; }
+  .fieldrow { margin:.55em 0; }
+  .fieldrow label { display:flex; align-items:center; gap:.5em; }
+  .fieldrow .ov { font-size:.55rem; color:#fff; background:#b5651d; border-radius:3px; padding:0 .35em; text-transform:uppercase; letter-spacing:.04em; }
+  .fieldrow .revert { font-size:.62rem; color:#a05a1a; cursor:pointer; text-decoration:underline; margin-left:auto; }
+  .fieldrow input:disabled, .fieldrow textarea:disabled, .fieldrow select:disabled { background:#f3efe9; color:#5a4535; cursor:default; }
+  .fieldrow.overridden input, .fieldrow.overridden textarea, .fieldrow.overridden select { border-color:#b5651d; }
+  .editbar { position:sticky; top:0; background:var(--paper); padding:.5em 0; display:flex; gap:.6em; align-items:center; border-bottom:1px solid var(--rule); margin-bottom:.6em; z-index:2; }
+  button.edit { background:none; border:1px solid var(--rule); border-radius:4px; padding:.4em 1em; cursor:pointer; color:var(--soft); }
+  .group-hint { font-size:.66rem; color:#9a8a7a; }
+  fieldset { border:1px solid var(--rule); border-radius:5px; margin:.6em 0; padding:.5em .8em; }
+  fieldset legend { font-size:.64rem; text-transform:uppercase; letter-spacing:.05em; color:#9a8a7a; padding:0 .4em; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Annotate</h1>
+    <select id="workSel"></select>
+    <button id="newBtn" class="newbtn">+ New object</button>
+    <span class="meta" id="meta"></span>
+  </header>
+  <nav id="sidebar">
+    <input id="search" type="search" placeholder="filter by name / story …">
+    <div id="list"></div>
+  </nav>
+  <section id="panel"><p class="empty">Pick a work, then a feature to annotate.</p></section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

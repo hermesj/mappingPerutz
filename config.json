@@ -1,0 +1,64 @@
+{
+  "site": { "title": "litmap demo — Demoville", "defaultWork": "tour-a", "defaultLang": "en" },
+
+  "basemap": {
+    "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    "maxZoom": 19,
+    "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>"
+  },
+
+  "view": { "center": [50.9385, 6.9605], "zoom": 14, "regionBBox": [50.90, 6.90, 50.98, 7.02] },
+
+  "ui": {
+    "en": { "showAll": "Show all", "hideAll": "Hide all", "route": "Route", "page": "p.",
+            "exp": "experimental", "toggleLayer": "toggle layer",
+            "expNote": "Experimental · a demo work in progress." },
+    "de": { "showAll": "Alle zeigen", "hideAll": "Alle aus", "route": "Route", "page": "S.",
+            "exp": "experimentell", "toggleLayer": "Ebene ein/aus",
+            "expNote": "Experimentell · Demo in Arbeit." }
+  },
+
+  "works": {
+    "tour-a": {
+      "label": { "en": "Tour A", "de": "Tour A" },
+      "data": "data/tour-a.geojson",
+      "experimental": false,
+      "numberedGroups": false,
+      "groupPrefix": null,
+      "tagline": {
+        "en": "A short demo walk through Demoville — points, a route, and characters.",
+        "de": "Ein kurzer Demo-Rundgang durch Demoville — Punkte, eine Route und Figuren."
+      },
+      "credit": {
+        "en": "Demo dataset (fictional)",
+        "de": "Demo-Datensatz (fiktiv)"
+      },
+      "groups": [
+        { "key": "Old Town",  "de": "Altstadt",   "color": "#b5651d" },
+        { "key": "Riverside", "de": "Flussufer",  "color": "#2980b9" },
+        { "key": "Park",      "de": "Park",       "color": "#2c7a3f" }
+      ]
+    },
+
+    "tour-b": {
+      "label": { "en": "Tour B", "de": "Tour B" },
+      "data": "data/tour-b.geojson",
+      "experimental": true,
+      "numberedGroups": true,
+      "groupPrefix": { "en": "Stop", "de": "Station" },
+      "tagline": {
+        "en": "A numbered demo tour — shows the group prefix, time chips and quotes.",
+        "de": "Eine nummerierte Demo-Tour — zeigt Präfix, Uhrzeit-Chips und Zitate."
+      },
+      "credit": {
+        "en": "Demo dataset (fictional)",
+        "de": "Demo-Datensatz (fiktiv)"
+      },
+      "groups": [
+        { "key": "Stage One",   "de": "Etappe eins", "color": "#c0392b" },
+        { "key": "Stage Two",   "de": "Etappe zwei", "color": "#8e44ad" },
+        { "key": "Stage Three", "de": "Etappe drei", "color": "#1b5e20" }
+      ]
+    }
+  }
+}

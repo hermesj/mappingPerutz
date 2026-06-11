@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>litmap demo</title>
+<meta name="description" content="A tiny, fictional demo of the litmap engine — config + data only, shared engine.">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<!-- Reuses the SAME engine as the flagship example — no copy, no edits. -->
+<link rel="stylesheet" href="engine/engine.css">
+</head>
+<body>
+
+<div id="app">
+
+  <header>
+    <h1 id="site-title">litmap demo</h1>
+    <!-- Work tabs are built from config.json by the engine. -->
+    <span class="work-switch" id="work-switch"></span>
+    <span class="tagline" id="tagline"></span>
+  </header>
+
+  <nav id="sidebar">
+    <div class="sidebar-tools">
+      <button id="btnShowAll" type="button">Show all</button>
+      <button id="btnHideAll" type="button">Hide all</button>
+    </div>
+    <div id="story-list"></div>
+  </nav>
+
+  <div id="map"></div>
+
+</div>
+
+<div class="credit" id="credit"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="engine/engine.js"></script>
+
+</body>
+</html>

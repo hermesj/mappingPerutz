@@ -1,0 +1,140 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "title": "Tour A",
+  "note": "Fictional demo data.",
+  "license": "CC0"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Old Town",
+    "name": "Market Square",
+    "kind": "place",
+    "character": "Ada",
+    "time": "10:00",
+    "gloss": "Where the walk begins, by the fountain."
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9605,
+     50.938
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Old Town",
+    "name": "Town Hall",
+    "kind": "place",
+    "character": "Ada",
+    "time": "10:20",
+    "gloss": "The old council building with the clock tower."
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.959,
+     50.9379
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Riverside",
+    "name": "Old Bridge",
+    "kind": "place",
+    "character": "Ben",
+    "time": "11:00",
+    "gloss": "A river crossing with a view.",
+    "quote": "Mind the gap.",
+    "ref": "A·3"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9665,
+     50.9415
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Riverside",
+    "name": "Harbour",
+    "kind": "place",
+    "character": "Ben",
+    "time": "11:30",
+    "gloss": "Boats, cranes and a coffee stand."
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.964,
+     50.93
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 3,
+    "story": "Park",
+    "name": "City Park",
+    "kind": "place",
+    "character": "Ada",
+    "time": "12:00",
+    "gloss": "Green and quiet; the walk ends here."
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.963,
+     50.94
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Old Town",
+    "name": "Ada's stroll",
+    "kind": "route",
+    "character": "Ada",
+    "time": "10:00–12:00",
+    "gloss": "Ada's route from the square to the park."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      6.9605,
+      50.938
+     ],
+     [
+      6.959,
+      50.9379
+     ],
+     [
+      6.9612,
+      50.9388
+     ],
+     [
+      6.963,
+      50.94
+     ]
+    ]
+   }
+  }
+ ]
+}
