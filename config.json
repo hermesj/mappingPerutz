@@ -122,43 +122,50 @@
         {
           "key": "Chapter 9",
           "de": "Kapitel 9",
-          "color": "#7d5a2b"
+          "color": "#7d5a2b",
+          "badge": "gegen halb 1"
         },
         {
           "key": "Chapter 10",
           "de": "Kapitel 10",
-          "color": "#6b8e23"
+          "color": "#6b8e23",
+          "badge": "gegen 1 Uhr"
         },
         {
           "key": "Chapter 11",
           "de": "Kapitel 11",
           "color": "#9b1d4f",
-          "badge": "gegen 2 Uhr"
+          "badge": "kurz nach 2"
         },
         {
           "key": "Chapter 12",
           "de": "Kapitel 12",
-          "color": "#33691e"
+          "color": "#33691e",
+          "badge": "gegen 3"
         },
         {
           "key": "Chapter 13",
           "de": "Kapitel 13",
-          "color": "#1565a0"
+          "color": "#1565a0",
+          "badge": "gegen 4"
         },
         {
           "key": "Chapter 14",
           "de": "Kapitel 14",
-          "color": "#7b3f00"
+          "color": "#7b3f00",
+          "badge": "zwischen 4 und 5"
         },
         {
           "key": "Chapter 15",
           "de": "Kapitel 15",
-          "color": "#34495e"
+          "color": "#34495e",
+          "badge": "gegen 7"
         },
         {
           "key": "Chapter 16",
           "de": "Kapitel 16",
-          "color": "#6a5acd"
+          "color": "#6a5acd",
+          "badge": "gegen halb 8"
         },
         {
           "key": "Chapter 17",
