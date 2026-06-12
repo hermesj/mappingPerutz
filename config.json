@@ -1,64 +1,200 @@
 {
-  "site": { "title": "litmap demo — Demoville", "defaultWork": "tour-a", "defaultLang": "en" },
-
+  "site": {
+    "title": "Mapping Perutz",
+    "defaultWork": "zwischen-neun-und-neun",
+    "defaultLang": "de",
+    "impressum": "<h2>Impressum &amp; Lizenz</h2><p>Angaben gemäß § 5 DDG:</p><p><strong>Jürgen Hermes</strong><br>Department of Digital Humanities<br>Universität zu Köln<br>50923 Köln<br><a href='https://dh.phil-fak.uni-koeln.de/mitarbeiterinnen/wissenschaftliche-mitarbeiterinnen/dr-juergen-hermes' target='_blank' rel='noopener'>Profilseite</a><br>Kontakt: <a href='mailto:&#104;&#101;&#114;&#109;&#101;&#115;&#106;&#64;&#117;&#110;&#105;&#45;&#107;&#111;&#101;&#108;&#110;&#46;&#100;&#101;'>&#104;&#101;&#114;&#109;&#101;&#115;&#106;&#64;&#117;&#110;&#105;&#45;&#107;&#111;&#101;&#108;&#110;&#46;&#100;&#101;</a></p><h3>Lizenzen</h3><ul><li><strong>Code</strong> (Karten-Engine &amp; Pipeline): MIT (litmap).</li><li><strong>Geodaten</strong>: eigener Datensatz, CC&nbsp;BY-NC&nbsp;4.0.</li><li><strong>Quelltext</strong>: Leo Perutz, <em>Zwischen neun und neun</em> (1918). In den USA gemeinfrei; in der EU bis 31.12.2027 urheberrechtlich geschützt (Perutz †&nbsp;1957, gemeinfrei ab 1.1.2028). Kurzzitate auf dieser Karte dienen als Belegstellen nach §&nbsp;51 UrhG.</li><li>Basemap © <a href='https://www.openstreetmap.org/copyright' target='_blank' rel='noopener'>OpenStreetMap</a>-Mitwirkende © <a href='https://carto.com/attributions' target='_blank' rel='noopener'>CARTO</a>.</li></ul><p>Ein nicht-kommerzielles akademisches Projekt.</p>"
+  },
   "basemap": {
     "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
     "maxZoom": 19,
     "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>"
   },
-
-  "view": { "center": [50.9385, 6.9605], "zoom": 14, "regionBBox": [50.90, 6.90, 50.98, 7.02] },
-
-  "ui": {
-    "en": { "showAll": "Show all", "hideAll": "Hide all", "route": "Route", "page": "p.",
-            "exp": "experimental", "toggleLayer": "toggle layer",
-            "expNote": "Experimental · a demo work in progress." },
-    "de": { "showAll": "Alle zeigen", "hideAll": "Alle aus", "route": "Route", "page": "S.",
-            "exp": "experimentell", "toggleLayer": "Ebene ein/aus",
-            "expNote": "Experimentell · Demo in Arbeit." }
+  "view": {
+    "center": [
+      48.2082,
+      16.3719
+    ],
+    "zoom": 13,
+    "regionBBox": [
+      48.12,
+      16.25,
+      48.28,
+      16.5
+    ]
   },
-
+  "ui": {
+    "en": {
+      "showAll": "Show all",
+      "hideAll": "Hide all",
+      "route": "Route",
+      "page": "p.",
+      "exp": "experimental",
+      "toggleLayer": "toggle layer",
+      "expNote": "Experimental · a still-incomplete dataset; quotes not yet finally verified."
+    },
+    "de": {
+      "showAll": "Alle zeigen",
+      "hideAll": "Alle aus",
+      "route": "Route",
+      "page": "S.",
+      "exp": "experimentell",
+      "toggleLayer": "Ebene ein/aus",
+      "expNote": "Experimentell · eigener, noch unvollständiger Datensatz; Zitate noch nicht final geprüft."
+    }
+  },
   "works": {
-    "tour-a": {
-      "label": { "en": "Tour A", "de": "Tour A" },
-      "data": "data/tour-a.geojson",
+    "zwischen-neun-und-neun": {
+      "label": {
+        "en": "Between Nine and Nine",
+        "de": "Zwischen neun und neun"
+      },
+      "data": "data/zwischen-neun-und-neun.geojson",
+      "annotations": "data/zwischen-neun-und-neun-annotations.json",
       "experimental": false,
       "numberedGroups": false,
       "groupPrefix": null,
+      "sourceText": {
+        "url": "https://www.gutenberg.org/cache/epub/36901/pg36901-images.html",
+        "anchor": "",
+        "label": {
+          "en": "in context (Gutenberg)",
+          "de": "im Kontext (Gutenberg)"
+        }
+      },
       "tagline": {
-        "en": "A short demo walk through Demoville — points, a route, and characters.",
-        "de": "Ein kurzer Demo-Rundgang durch Demoville — Punkte, eine Route und Figuren."
+        "de": "Stanislaus Dembas Stationen und Wege an einem einzigen Wiener Tag — zwischen neun Uhr früh und neun Uhr abends (1918)",
+        "en": "Stanislaus Demba's stations and paths through a single Vienna day — between nine in the morning and nine at night (1918)"
       },
       "credit": {
-        "en": "Demo dataset (fictional)",
-        "de": "Demo-Datensatz (fiktiv)"
+        "de": "Eigener Datensatz zum Roman »Zwischen neun und neun« von Leo Perutz (1918)",
+        "en": "Original dataset for Leo Perutz's novel Between Nine and Nine (1918)"
       },
       "groups": [
-        { "key": "Old Town",  "de": "Altstadt",   "color": "#b5651d" },
-        { "key": "Riverside", "de": "Flussufer",  "color": "#2980b9" },
-        { "key": "Park",      "de": "Park",       "color": "#2c7a3f" }
-      ]
-    },
-
-    "tour-b": {
-      "label": { "en": "Tour B", "de": "Tour B" },
-      "data": "data/tour-b.geojson",
-      "experimental": true,
-      "numberedGroups": true,
-      "groupPrefix": { "en": "Stop", "de": "Station" },
-      "tagline": {
-        "en": "A numbered demo tour — shows the group prefix, time chips and quotes.",
-        "de": "Eine nummerierte Demo-Tour — zeigt Präfix, Uhrzeit-Chips und Zitate."
-      },
-      "credit": {
-        "en": "Demo dataset (fictional)",
-        "de": "Demo-Datensatz (fiktiv)"
-      },
-      "groups": [
-        { "key": "Stage One",   "de": "Etappe eins", "color": "#c0392b" },
-        { "key": "Stage Two",   "de": "Etappe zwei", "color": "#8e44ad" },
-        { "key": "Stage Three", "de": "Etappe drei", "color": "#1b5e20" }
-      ]
+        {
+          "key": "Chapter 1",
+          "de": "Kapitel 1",
+          "color": "#b5651d",
+          "badge": "kurz nach 9 Uhr"
+        },
+        {
+          "key": "Chapter 2",
+          "de": "Kapitel 2",
+          "color": "#1f6f6f",
+          "badge": "gegen halb 10"
+        },
+        {
+          "key": "Chapter 3",
+          "de": "Kapitel 3",
+          "color": "#8e44ad",
+          "badge": "gegen dreiviertel 10"
+        },
+        {
+          "key": "Chapter 4",
+          "de": "Kapitel 4",
+          "color": "#2c7a3f",
+          "badge": "gegen 10 bis halb 11"
+        },
+        {
+          "key": "Chapter 5",
+          "de": "Kapitel 5",
+          "color": "#c0392b",
+          "badge": "gegen 11 Uhr"
+        },
+        {
+          "key": "Chapter 6",
+          "de": "Kapitel 6",
+          "color": "#16735b",
+          "badge": "zwischen 11 und 12"
+        },
+        {
+          "key": "Chapter 7",
+          "de": "Kapitel 7",
+          "color": "#a67c00",
+          "badge": "halb 12 bis 12"
+        },
+        {
+          "key": "Chapter 8",
+          "de": "Kapitel 8",
+          "color": "#2980b9",
+          "badge": "kurz nach 12"
+        },
+        {
+          "key": "Chapter 9",
+          "de": "Kapitel 9",
+          "color": "#7d5a2b"
+        },
+        {
+          "key": "Chapter 10",
+          "de": "Kapitel 10",
+          "color": "#6b8e23"
+        },
+        {
+          "key": "Chapter 11",
+          "de": "Kapitel 11",
+          "color": "#9b1d4f",
+          "badge": "gegen 2 Uhr"
+        },
+        {
+          "key": "Chapter 12",
+          "de": "Kapitel 12",
+          "color": "#33691e"
+        },
+        {
+          "key": "Chapter 13",
+          "de": "Kapitel 13",
+          "color": "#1565a0"
+        },
+        {
+          "key": "Chapter 14",
+          "de": "Kapitel 14",
+          "color": "#7b3f00"
+        },
+        {
+          "key": "Chapter 15",
+          "de": "Kapitel 15",
+          "color": "#34495e"
+        },
+        {
+          "key": "Chapter 16",
+          "de": "Kapitel 16",
+          "color": "#6a5acd"
+        },
+        {
+          "key": "Chapter 17",
+          "de": "Kapitel 17",
+          "color": "#e07b16"
+        },
+        {
+          "key": "Chapter 18",
+          "de": "Kapitel 18",
+          "color": "#5d6d7e"
+        },
+        {
+          "key": "Chapter 19",
+          "de": "Kapitel 19",
+          "color": "#7e1620"
+        },
+        {
+          "key": "Chapter 20",
+          "de": "Kapitel 20",
+          "color": "#4e342e",
+          "badge": "gegen 9 Uhr abends"
+        }
+      ],
+      "essay": {
+        "source": "Wiener Zeitung",
+        "label": {
+          "place": {
+            "de": "über diesen Ort",
+            "en": "about this place"
+          },
+          "route": {
+            "de": "über diese Route",
+            "en": "about this route"
+          }
+        }
+      }
     }
   }
 }

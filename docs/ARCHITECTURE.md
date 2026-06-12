@@ -145,7 +145,10 @@ The project file the engine reads at startup (excerpt — see the live
       },
       "groups": [
         { "key": "The Sisters", "de": "Die Schwestern", "color": "#b5651d" }
-        /* … one per story/episode/chapter; `key` matches a feature's `story` */
+        /* … one per story/episode/chapter; `key` matches a feature's `story`.
+           Optional per group: "badge" (string or {en,de}) — a small free-content
+           chip on the sidebar row (e.g. clock times where chapters map to hours
+           of a single day, part labels, years); omitted groups render nothing. */
       ]
     }
     /* ulysses: experimental true, numberedGroups true, groupPrefix {"en":"Episode"},

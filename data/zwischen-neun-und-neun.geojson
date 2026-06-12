@@ -1,0 +1,389 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "title": "Zwischen neun und neun",
+  "note": "Dataset compiled from a public-domain text. Coordinates via OpenStreetMap/Nominatim; routes via OSRM (driving) / BRouter (foot).",
+  "license": "CC BY-NC 4.0"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Chapter 1",
+    "name": "Greislerladen der Frau Püchl",
+    "kind": "place",
+    "character": "Demba, Frau Püchl, Frau Schimek",
+    "time": "kurz nach 9 Uhr",
+    "gloss": "Der Greislerladen der Frau Johanna Püchl in der Wiesengasse (Lichtental, 9. Bezirk) — hier beginnt der Roman: Demba kauft ein Butterbrot, drückt die Klinke mit dem Ellbogen, lässt sich das Brot kleinschneiden und verschwindet schließlich, das Geld abgezählt auf dem Ladentisch. Zur Verortung vgl. Alexander Peers Stadtspaziergang (Wiener Zeitung, 2022).",
+    "quote": "Die Greislerin in der Wiesengasse, Frau Johanna Püchl, trat an diesem Morgen gegen halb acht Uhr aus dem Laden auf die Straße.",
+    "srcText": "Die Greislerin in der Wiesengasse, Frau Johanna Püchl",
+    "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.358229,
+     48.227866
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Chapter 1",
+    "name": "Ecktrafik der Frau Schimek",
+    "kind": "place",
+    "character": "Frau Schimek",
+    "time": "kurz nach 9 Uhr",
+    "gloss": "Die Ecktrafik der alten Frau Schimek »in der Karl-Denk-Gasse« — der Straßenname ist im Roman umbenannt: gemeint ist die benachbarte Simon-Denk-Gasse (vgl. Alexander Peer, Wiener Zeitung, 2022). Platziert am Nordende der Gasse, der dem Greislerladen nächstgelegenen Ecke; welche Ecke genau, bleibt offen.",
+    "quote": "Kurz nach neun Uhr erschien die alte Frau Schimek, der die Ecktrafik in der Karl-Denk-Gasse gehörte, zu einem längeren Plausch.",
+    "srcText": "die Ecktrafik in der Karl-Denk-Gasse",
+    "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.359236,
+     48.226439
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Bank im Liechtensteinpark",
+    "kind": "place",
+    "character": "Demba, Hofrat Klementi, Professor Truxa, Cyrus",
+    "time": "gegen halb 10",
+    "gloss": "Das Lieblingsplätzchen der beiden Gelehrten im oberen, abgelegenen Teil des Liechtensteinparks — hinter einer Sandsteingruppe verborgen, von zwei Akazien beschattet. Hier frühstückt Demba das Butterbrot aus der Wiesengasse, der Hund Cyrus frisst ihm die Extrawurst weg, und der Fußtritt für Cyrus trägt Demba die Diagnose »Haschisch!« ein. Lage der Bank hypothetisch; zur Topografie des Parks vgl. Alexander Peer (Wiener Zeitung, 2022).",
+    "quote": "Auf der Bank saß Stanislaus Demba. Er war beim Frühstück.",
+    "srcText": "Auf der Bank saß Stanislaus Demba",
+    "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.359894,
+     48.224042
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Unterer Liechtensteinpark",
+    "kind": "place",
+    "character": "Demba, Hofrat Klementi, Professor Truxa",
+    "time": "gegen halb 10",
+    "gloss": "Die Gelehrten jagen dem vermeintlichen Haschischraucher nach — und vergessen dabei den an die Bank gebundenen Cyrus. Im unteren, belebten Teil des Parks verliert sich Dembas Spur im Gewühl der spielenden Kinder. Lage ungefähr (südlicher Parkteil).",
+    "quote": "Als die beiden Gelehrten atemlos den unteren Teil des Parkes erreichten, war der Haschischtrunkene schon lange im Gewühle der spielenden Kinder verschwunden.",
+    "srcText": "den unteren Teil des Parkes erreichten",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.359,
+     48.2232
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Porzellangasse (Querung)",
+    "kind": "place",
+    "character": "Hofrat Klementi, Professor Truxa, Cyrus",
+    "time": "gegen halb 10",
+    "gloss": "Auf dem morgendlichen Weg in den Park: Professor Truxa hat »seine liebe Not«, den in Gedanken stehenbleibenden Hofrat heil über die Gleise der elektrischen Tramway zu bringen. Genaue Querungsstelle offen.",
+    "quote": "Professor Truxa hatte seine liebe Not, den Freund beim Überqueren der Porzellangasse glücklich aus dem Gefahrenbereich der elektrischen Tramway zu bringen.",
+    "srcText": "beim Überqueren der Porzellangasse",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.36135,
+     48.22365
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 3,
+    "story": "Chapter 3",
+    "name": "Parkbank des Fräuleins",
+    "kind": "place",
+    "character": "Demba, Alice Leitner, Frau Buresch",
+    "time": "gegen dreiviertel 10",
+    "gloss": "Die Bank, auf der das Kinderfräulein Alice Leitner liest (»Hedda Gabler«) und Demba sich erschöpft niederlässt — er hebt weder Schirm noch Hut auf und flüchtet sich schließlich in die Behauptung, ein armloser Krüppel zu sein; seine Lügen-Identität (»Ingenieur in den Heurekawerken«) zitiert die Blechplakate aus Frau Püchls Laden. Der Park wird im Text nicht benannt — plausibel der belebte untere Liechtensteinpark, wo Demba kurz zuvor im Kindergewühl verschwand; Lage hypothetisch.",
+    "quote": "»Weil ich ein Krüppel bin,« sagte er mit tonloser Stimme. »Es muß heraus. Ich habe keine Arme.«",
+    "srcText": "Es muß heraus. Ich habe keine Arme",
+    "verified": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.358371,
+     48.223185
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 3,
+    "story": "Chapter 3",
+    "name": "Votivpark",
+    "kind": "place",
+    "gloss": "Nur Gesprächsstoff auf der Parkbank: Das Fräulein weiß zu berichten, dass im Votivpark heuer Sessel statt der Bänke aufgestellt werden sollen — vier Heller pro Person. Eine kleine Wiener Parkökonomie am Rande; Schauplatz ist der Votivpark nicht.",
+    "quote": "»Im Votivpark sollen dieses Jahr Sessel aufgestellt werden statt der Bänke«, erzählte das Fräulein. »Vier Heller pro Person.«",
+    "srcText": "Im Votivpark sollen dieses Jahr Sessel aufgestellt werden",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.358344,
+     48.215752
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 3,
+    "story": "Chapter 3",
+    "name": "Maria-Theresien-Straße 18",
+    "kind": "place",
+    "gloss": "Alice Leitners Dienstadresse beim kaiserlichen Rat Adalbert Füchsel — die Adresse, die sich Demba partout nicht notieren kann (und deren Grund er nicht preisgeben mag); am Ende weiß er nur noch »Alice und kaiserlicher Rat Füchsel«. Nur im Dialog genannt, kein Schauplatz.",
+    "quote": "»Also notieren Sie sich meine Adresse: Alice Leitner, bei Herrn kaiserlichen Rat Adalbert Füchsel, neunter Bezirk, Maria-Theresien Straße 18.«",
+    "srcText": "neunter Bezirk, Maria-Theresien Straße 18",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.365977,
+     48.21628
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 1,
+    "story": "Chapter 1",
+    "name": "Arbeitsministerium",
+    "kind": "place",
+    "gloss": "Das k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse. Kein Wunder also, dass »der Herr aus dem Arbeitsministerium« seit Jahren täglich seinen feinen Aufschnitt bei Frau Püchl holt. Nur erwähnt, kein Schauplatz.",
+    "quote": "… und der Herr aus dem Arbeitsministerium, der seit Jahren täglich einen »feinen Aufschnitt« für sein zweites Frühstück im Geschäfte der Frau Püchl erstand.",
+    "srcText": "der Herr aus dem Arbeitsministerium",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.360108,
+     48.22128
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Kunsthistorisches Museum",
+    "kind": "place",
+    "gloss": "Arbeitsplatz Hofrat Klementis: Direktor der altorientalischen Spezialsammlung, vorübergehend auch mit der Oberleitung der ethnographisch-anthropologischen Abteilung betraut. Nur erwähnt, kein Schauplatz.",
+    "quote": "Hofrat Klementi, der Direktor der altorientalischen Spezialsammlung des kunsthistorischen Museums, derzeit vorübergehend auch mit der Oberleitung der ethnographisch-anthropologischen Abteilung betraut, muß den Lesern wohl nicht erst vorgestellt werden.",
+    "srcText": "der altorientalischen Spezialsammlung des kunsthistorischen Museums",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.361782,
+     48.203739
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Konsular-Akademie",
+    "kind": "place",
+    "gloss": "Lehrstätte Professor Ritter von Truxas. Die k.u.k. Konsularakademie bezog 1904 ihren Neubau in der Waisenhausgasse (seit 1913 Boltzmanngasse 16) — wenige Gehminuten vom Liechtensteinpark, wo die Gelehrten ihre Morgenrunde drehen. Nur erwähnt, kein Schauplatz.",
+    "quote": "Professor Ritter von Truxa, wirkliches Mitglied der Akademie der Wissenschaften (philosophisch-historische Klasse) und Lehrer an der Konsular-Akademie, ist weniger bekannt.",
+    "srcText": "und Lehrer an der Konsular-Akademie",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.356794,
+     48.22292
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Akademie der Wissenschaften",
+    "kind": "place",
+    "gloss": "Truxa ist wirkliches Mitglied (philosophisch-historische Klasse), Klementis Werk über die »Bildung altassyrischer Eigennamen« ist von ihr subventioniert. Nur erwähnt, kein Schauplatz.",
+    "quote": "Mit seinem grundlegenden, von der Akademie der Wissenschaften subventionierten Werke über die »Bildung altassyrischer Eigennamen« hat er sich in der Gelehrtenwelt eine angesehene Stellung gesichert …",
+    "srcText": "von der Akademie der Wissenschaften subventionierten Werke",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.377081,
+     48.208903
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Bureau der Firma Klebinder",
+    "kind": "place",
+    "character": "Demba, Sonja Hartmann, Klara Postelberg, Etelka Springer, Mister Brown, Neuhäusl",
+    "time": "gegen 10 bis halb 11",
+    "gloss": "Das Büro der Firma Oskar Klebinder, Modewestenstoffe en gros, am Franz-Josefs-Kai — Sonja Hartmanns Arbeitsplatz und der Motor der Handlung: Demba stellt sein Ultimatum, bis zum Abend 600 Kronen zu beschaffen, sonst fährt Sonja morgen früh mit Georg Weiner nach Venedig. Beim Faustschlag auf den Tisch »klirrt« es wieder; Sonja hält das verborgene Eisen für einen Browning. Demba stürmt davon — ohne seinen Hut, der am Kleiderhaken zurückbleibt. Hausnummer unbekannt, Lage auf dem Kai ungefähr.",
+    "quote": "»Claire« und »Ethel« sind für Angestellte einer Manufakturfirma am Franz-Josefs-Kai nicht gerade alltägliche Namen.",
+    "srcText": "einer Manufakturfirma am Franz-Josefs-Kai",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.370745,
+     48.217734
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Südbahnhof",
+    "kind": "place",
+    "gloss": "Von hier soll der Zug Sonja Hartmann morgen früh um neun »in märchenhafte Fernen entführen« — Wien–Triest–Venedig, mit Georg Weiner. Der historische Südbahnhof am Wiedner Gürtel (1874; 2010 abgetragen, heute Areal des Hauptbahnhofs). Nur erwähnt, kein Schauplatz.",
+    "quote": "In kaum vierundzwanzig Stunden ging der Zug ab, der Sonja Hartmann aus dem Südbahnperron in märchenhafte Fernen entführen sollte.",
+    "srcText": "aus dem Südbahnperron in märchenhafte Fernen",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.37721,
+     48.18616
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Rohrerhütte",
+    "kind": "place",
+    "gloss": "Hier, beim Gasthaus im Wienerwald, schwor Sonja »vorigen Herbst« nach dem Nachtmahl im Park, niemals einen andern als Demba zu lieben — »damals war ich ein halbes Kind«. Das beliebte Ausflugsgasthaus (um 1840 vom Forstaufseher J. Rohrer begründet) lag westlich des Schwarzenbergparks an der Straße nach Tulln, am Fuß des Exelbergs; 2000 abgerissen, heute Wohnbau. Lage ungefähr.",
+    "quote": "»Vorigen Herbst. In der Rohrerhütte. Wir gingen nach dem Nachtmahl in den Park und da –«",
+    "srcText": "Vorigen Herbst. In der Rohrerhütte",
+    "verified": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.2565,
+     48.2447
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Kottingbrunn",
+    "kind": "place",
+    "gloss": "Chef Klebinder ist mit dem Zehnuhrzug zum Nachmittagsrennen auf der Rennbahn Kottingbrunn gefahren — weshalb im Büro am Franz-Josefs-Kai gemütliche Stunden herrschen. Nur erwähnt, kein Schauplatz.",
+    "quote": "Man wußte, daß er mit dem Zehnuhrzug nach Kottingbrunn fahren wollte, wo nachmittag das Rennen stattfand.",
+    "srcText": "mit dem Zehnuhrzug nach Kottingbrunn",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.228519,
+     47.951359
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Mödling",
+    "kind": "place",
+    "gloss": "Georg Weiner telefoniert Sonja, dass er zu seinen Eltern nach Mödling fährt — er kommt erst am Abend nach Wien zurück. Nur erwähnt, kein Schauplatz.",
+    "quote": "»Er kommt erst am Abend nach Wien. Er hat mir eben telephoniert, daß er zu seinen Eltern nach Mödling fährt.«",
+    "srcText": "zu seinen Eltern nach Mödling",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.283353,
+     48.085592
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 7,
+    "story": "Chapter 7",
+    "name": "Café Hibernia",
+    "kind": "place",
+    "character": "Demba, Kellner Franz",
+    "time": "halb 12 bis 12",
+    "gloss": "Das stille Börsencafé zur Mittagsstunde: Demba lässt sich Lehmanns Wohnungsanzeiger, den kompletten kleinen Brockhaus, Armeeschematismus, Gotha, Hof- und Staatshandbuch und das Fremdwörterlexikon bringen — angeblich für seine »Dissertation über den Stand des menschlichen Wissens« — und isst hinter der Bücher-Bastei endlich ungesehen mit beiden Händen. Der Kellner Franz hält ihn für einen Herrn von der Zeitung. Café-Name wohl fiktionalisiert; Lage gegenüber der Börse, ungefähr.",
+    "quote": "Zwischen halb zwölf und zwölf Uhr mittags, wenn die Essensstunde heranrückte, war es meist sehr still im Café Hibernia gegenüber der Börse.",
+    "srcText": "im Café Hibernia gegenüber der Börse",
+    "verified": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.3652,
+     48.2167
+    ]
+   }
+  }
+ ]
+}

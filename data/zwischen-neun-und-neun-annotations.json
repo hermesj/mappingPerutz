@@ -1,0 +1,10 @@
+{
+  "_comment": "Editorial annotation overlay for the zwischen-neun-und-neun layer — original work by J. Hermes, applied on top of the base features at load time (the base GeoJSON is never modified). Key = stable feature id; value = a patch of fields to merge. Edited via pipeline/annotate-ui/.",
+  "work": "zwischen-neun-und-neun",
+  "annotations": {
+    "chapter-2/porzellangasse-querung": {
+      "lat": 48.224916,
+      "lon": 16.361725
+    }
+  }
+}

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>litmap demo</title>
-<meta name="description" content="A tiny, fictional demo of the litmap engine — config + data only, shared engine.">
+<title>Mapping Perutz — Zwischen neun und neun</title>
+<meta name="description" content="Eine interaktive OpenStreetMap-Karte der Stationen und Wege des Stanislaus Demba in Leo Perutz' Roman »Zwischen neun und neun« (Wien, 1918).">
+<meta property="og:title" content="Mapping Perutz — Zwischen neun und neun">
+<meta property="og:description" content="Stanislaus Dembas Tag in Wien, kartiert — gebaut mit der litmap-Engine.">
+<meta property="og:url" content="https://hermesj.github.io/mappingPerutz/">
+<meta property="og:type" content="website">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<!-- Reuses the SAME engine as the flagship example — no copy, no edits. -->
 <link rel="stylesheet" href="engine/engine.css">
 </head>
 <body>
@@ -16,7 +19,7 @@
 <div id="app">
 
   <header>
-    <h1 id="site-title">litmap demo</h1>
+    <h1 id="site-title">Mapping Perutz</h1>
     <!-- Work tabs are built from config.json by the engine. -->
     <span class="work-switch" id="work-switch"></span>
     <span class="tagline" id="tagline"></span>

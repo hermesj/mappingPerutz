@@ -330,6 +330,10 @@
       var label = lang === "de" ? g.de : g.key;
       if (numbered) label = (idx + 1) + ". " + label;
       var unverified = entries.some(function (e) { return e.verified === false; });
+      // Optional per-group badge — a small free-content chip on the group row
+      // (string or {en,de,…}). E.g. clock times where chapters map to hours of
+      // a single day, part labels, years … omitted groups render nothing.
+      var gbadge = g.badge && (typeof g.badge === "object" ? (g.badge[lang] || g.badge.en) : g.badge);
 
       // ── the group row (click = expand/collapse; swatch = layer on/off) ──
       var item = document.createElement("div");
@@ -338,6 +342,7 @@
         '<span class="caret">▸</span>' +
         '<span class="swatch" style="background:' + g.color + '" title="' + t.toggleLayer + '"></span>' +
         '<span class="story-name">' + esc(label) + "</span>" +
+        (gbadge ? '<span class="grp-badge">' + esc(gbadge) + "</span>" : "") +
         (unverified ? '<span class="grp-unverified">unverified yet</span>' : "") +
         '<span class="count">' + entries.length + "</span>";
 
