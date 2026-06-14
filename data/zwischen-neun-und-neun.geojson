@@ -38,7 +38,7 @@
     "kind": "place",
     "character": "Frau Schimek",
     "time": "kurz nach 9 Uhr",
-    "gloss": "Die Ecktrafik der alten Frau Schimek »in der Karl-Denk-Gasse« — der Straßenname ist im Roman umbenannt: gemeint ist die benachbarte Simon-Denk-Gasse (vgl. Alexander Peer, Wiener Zeitung, 2022). Platziert am Nordende der Gasse, der dem Greislerladen nächstgelegenen Ecke; welche Ecke genau, bleibt offen.",
+    "gloss": "Die Ecktrafik der alten Frau Schimek »in der Karl-Denk-Gasse« — der Straßenname ist im Roman umbenannt: gemeint ist wohl die benachbarte Simon-Denk-Gasse (vgl. Alexander Peer, Wiener Zeitung, 2022). Platziert am Nordende der Gasse, der dem Greislerladen nächstgelegenen Ecke; welche Ecke genau, bleibt offen.",
     "quote": "Kurz nach neun Uhr erschien die alte Frau Schimek, der die Ecktrafik in der Karl-Denk-Gasse gehörte, zu einem längeren Plausch.",
     "srcText": "die Ecktrafik in der Karl-Denk-Gasse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
@@ -114,8 +114,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.36135,
-     48.22365
+     16.361725,
+     48.224916
     ]
    }
   },
@@ -128,7 +128,7 @@
     "kind": "place",
     "character": "Demba, Alice Leitner, Frau Buresch",
     "time": "gegen dreiviertel 10",
-    "gloss": "Die Bank, auf der das Kinderfräulein Alice Leitner liest (»Hedda Gabler«) und Demba sich erschöpft niederlässt — er hebt weder Schirm noch Hut auf und flüchtet sich schließlich in die Behauptung, ein armloser Krüppel zu sein; seine Lügen-Identität (»Ingenieur in den Heurekawerken«) zitiert die Blechplakate aus Frau Püchls Laden. Der Park wird im Text nicht benannt — plausibel der belebte untere Liechtensteinpark, wo Demba kurz zuvor im Kindergewühl verschwand; Lage hypothetisch.",
+    "gloss": "Die Bank, auf der das Kinderfräulein Alice Leitner liest (»Hedda Gabler«) und Demba sich erschöpft niederlässt. Der Park wird im Text nicht benannt — plausibel der belebte untere Liechtensteinpark, wo Demba kurz zuvor im Kindergewühl (Spielplatz in der südwestlichen Ecke) verschwand; Lage hypothetisch.",
     "quote": "»Weil ich ein Krüppel bin,« sagte er mit tonloser Stimme. »Es muß heraus. Ich habe keine Arme.«",
     "srcText": "Es muß heraus. Ich habe keine Arme",
     "confidence": "medium"
@@ -188,7 +188,7 @@
     "story": "Chapter 1",
     "name": "Arbeitsministerium",
     "kind": "place",
-    "gloss": "Das k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse. Kein Wunder also, dass »der Herr aus dem Arbeitsministerium« seit Jahren täglich seinen feinen Aufschnitt bei Frau Püchl holt. Nur erwähnt, kein Schauplatz.",
+    "gloss": "Das k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse.",
     "quote": "… und der Herr aus dem Arbeitsministerium, der seit Jahren täglich einen »feinen Aufschnitt« für sein zweites Frühstück im Geschäfte der Frau Püchl erstand.",
     "srcText": "der Herr aus dem Arbeitsministerium",
     "confidence": "high"
@@ -270,7 +270,7 @@
     "kind": "place",
     "character": "Demba, Sonja Hartmann, Klara Postelberg, Etelka Springer, Mister Brown, Neuhäusl",
     "time": "gegen 10 bis halb 11",
-    "gloss": "Das Büro der Firma Oskar Klebinder, Modewestenstoffe en gros, am Franz-Josefs-Kai — Sonja Hartmanns Arbeitsplatz und der Motor der Handlung: Demba stellt sein Ultimatum, bis zum Abend 600 Kronen zu beschaffen, sonst fährt Sonja morgen früh mit Georg Weiner nach Venedig. Beim Faustschlag auf den Tisch »klirrt« es wieder; Sonja hält das verborgene Eisen für einen Browning. Demba stürmt davon — ohne seinen Hut, der am Kleiderhaken zurückbleibt. Hausnummer unbekannt, Lage auf dem Kai ungefähr.",
+    "gloss": "Das Büro der Firma Oskar Klebinder, Modewestenstoffe en gros, am Franz-Josefs-Kai — Sonja Hartmanns Arbeitsplatz. Nach dem Treffen stürmt Demba davon — ohne seinen Hut, der am Kleiderhaken zurückbleibt. Hausnummer unbekannt, Lage auf dem Kai ungefähr.",
     "quote": "»Claire« und »Ethel« sind für Angestellte einer Manufakturfirma am Franz-Josefs-Kai nicht gerade alltägliche Namen.",
     "srcText": "einer Manufakturfirma am Franz-Josefs-Kai",
     "confidence": "medium"
@@ -372,7 +372,7 @@
     "kind": "place",
     "character": "Demba, Kellner Franz",
     "time": "halb 12 bis 12",
-    "gloss": "Das stille Börsencafé zur Mittagsstunde: Demba lässt sich Lehmanns Wohnungsanzeiger, den kompletten kleinen Brockhaus, Armeeschematismus, Gotha, Hof- und Staatshandbuch und das Fremdwörterlexikon bringen — angeblich für seine »Dissertation über den Stand des menschlichen Wissens« — und isst hinter der Bücher-Bastei endlich ungesehen mit beiden Händen. Der Kellner Franz hält ihn für einen Herrn von der Zeitung. Laut Alexander Peer (Wiener Zeitung, 2022) ist das »Hibernia« das ehemalige Café Schottenring, vis-à-vis der Alten Börse.",
+    "gloss": "Das stille Börsencafé zur Mittagsstunde: Demba lässt sich Lehmanns Wohnungsanzeiger, den kompletten kleinen Brockhaus, Armeeschematismus, Gotha, Hof- und Staatshandbuch und das Fremdwörterlexikon bringen — angeblich für seine »Dissertation über den Stand des menschlichen Wissens« — und isst hinter der Bücher-Bastei. Der Kellner Franz hält ihn für einen Herrn von der Zeitung. Laut Alexander Peer (Wiener Zeitung, 2022) ist das »Hibernia« das ehemalige Café Schottenring, vis-à-vis der Alten Börse.",
     "quote": "Zwischen halb zwölf und zwölf Uhr mittags, wenn die Essensstunde heranrückte, war es meist sehr still im Café Hibernia gegenüber der Börse.",
     "srcText": "im Café Hibernia gegenüber der Börse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
@@ -402,7 +402,7 @@
     ],
     "character": "Demba, der Trödler, zwei Polizisten",
     "time": "9 Uhr morgens",
-    "gloss": "Hier beginnt Dembas Tag — und der Roman trägt die Stunde im Titel. Im wunderkammerartigen Arbeitszimmer des alten Trödlers will Demba den dritten gestohlenen Druck aus der Universitätsbibliothek verkaufen; der Alte erkennt Stempelspuren, holt zwei Polizisten — »Im Namen des Gesetzes«, Handschellen —, und Demba flieht über die dunkle Stiege in die Dachkammer und springt aus dem Fenster in den Garten, während die Kirchturmglocke neun schlägt (Kapitel 8). In Kapitel 9 erzählt er dieselbe Flucht Steffi Prokop noch einmal nach — das Gassengewirr, der ekelhafte Malzgeruch, die alte Frau, die am ebenerdigen Fenster vor seinen gefesselten Händen erstarrt. Die »Klettengasse« ist fiktiv; Verortung hier in Nußdorf zwischen Brauerei (Malzgeruch!) und Pfarrkirche St. Thomas; die »dritte Haltestelle der Heiligenstädter Straße« spräche alternativ fürs untere Heiligenstadt. Lage hypothetisch.",
+    "gloss": "Hier beginnt Dembas Tag — was Leser aber erst im Kapitel 8 erfahren – im wunderkammerartigen Arbeitszimmer des alten Trödlers (halb Sammler, halb Händler). Zwei Polizisten treffen auch ein. Demba gelangt über die dunkle Stiege in die Dachkammer und springt aus dem Fenster durch den Nußbaum in den Garten, während ein Grammophon den Prinz-Eugen-Marsch spielt und die Kirchturmglocke neun schlägt. Eine »Klettengasse« ist für Wien Anfang des 20. Jhdts nicht nachgewiesen und wohl fiktiv; Verortung hier in Nußdorf zwischen Brauerei (der Malzgeruch, der »die ganze Gasse erfüllt«!) und Pfarrkirche St. Thomas (die Neun-Uhr-Glocke). Alternative Lesart: »dritte Haltestelle« der Heiligenstädter Straße spräche für das untere Heiligenstadt um den Pfarrplatz. Lage höchst hypothetisch.",
     "quote": "Ich gab mir einen Ruck, verlor den Halt, ich hörte noch, wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann, und dann –",
     "srcText": "wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann",
     "confidence": "low"
@@ -422,7 +422,7 @@
     "story": "Chapter 8",
     "name": "Universitätsbibliothek",
     "kind": "place",
-    "gloss": "Ursprung des Unglückstags: Hier »entlieh« sich Demba vor über einem Jahr drei wertvolle alte Drucke für seine Calpurnius-Siculus-Studie — der Kustos wollte sie nicht nach Hause geben, also trug er sie einfach unter dem Mantel fort. Die Universitätsbibliothek war 1918 im Hauptgebäude der Universität am Ring untergebracht. Nur erzählt, kein Schauplatz des Tages.",
+    "gloss": "Ursprung des Unglückstags: Hier »entlieh« sich Demba vor über einem Jahr drei wertvolle alte Drucke für seine Calpurnius-Siculus-Studie. Die Universitätsbibliothek war 1918 im Hauptgebäude der Universität am Ring untergebracht. Nur erzählt, kein Schauplatz des Tages.",
     "quote": "Ich habe drei Bücher aus der Universitätsbibliothek einem Antiquitätenhändler verkauft. Das heißt, verkauft hab' ich nur zwei. Das dritte hab' ich heute morgen umsonst hergegeben.",
     "srcText": "drei Bücher aus der Universitätsbibliothek",
     "confidence": "high"
@@ -493,7 +493,7 @@
     ],
     "character": "Demba, Georg Weiner",
     "time": "gegen halb 8",
-    "gloss": "Georg Weiners »Absteigquartier« in der Liechtensteinstraße (zweiter Stock, Fenster neben dem Balkon, »Ausblick auf den Liechtensteinpark« — daher am parknahen Abschnitt verortet, Hausnummer unbekannt). Die Adresse kehrt mehrfach wieder: Schon im Büro zielt Dembas spitze Frage hierher (Kapitel 4), als »Absteigquartier« wird sie benannt (Kapitel 8), und gegen halb acht steht Demba selbst davor (Kapitel 16) — das erleuchtete Fenster erlischt (Eifersuchtsqual), doch Weiner tritt allein heraus, ruft einen Wagen und nennt dem vermeintlichen »Kollegen« arglos sein Ziel: den Residenzkeller. Pikant: dieselbe Straße, an deren Nordende das Arbeitsministerium residiert.",
+    "gloss": "Georg Weiners »Absteigquartier« in der Liechtensteinstraße (zweiter Stock, Fenster neben dem Balkon, »Ausblick auf den Liechtensteinpark« — daher am parknahen Abschnitt verortet, Hausnummer unbekannt). Die Adresse kehrt mehrfach wieder: Schon im Büro zielt Dembas Frage hierher (Kapitel 4), als »Absteigquartier« wird sie benannt (Kapitel 8), und gegen halb acht steht Demba selbst davor (Kapitel 16), Weiner tritt allein heraus, ruft einen Wagen und nennt dem vermeintlichen »Kollegen« arglos sein Ziel: den Residenzkeller. Pikant: dieselbe Straße, an deren Nordende das Arbeitsministerium residiert.",
     "quote": "Daß dieser Herr Weiner gerade in der Liechtensteinstraße wohnte, das konnte kein Grund sein, um einen Umweg zu machen.",
     "srcText": "gerade in der Liechtensteinstraße wohnte",
     "confidence": "medium"
@@ -501,8 +501,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.3605,
-     48.2222
+     16.360574,
+     48.219717
     ]
    }
   },
@@ -546,7 +546,7 @@
     "kind": "place",
     "character": "Demba, Frau Dr. Hirsch, Dr. Hirsch",
     "time": "kurz nach 2",
-    "gloss": "Geldjagd, nächster Fehlschlag: Bei der Familie des Hof- und Gerichtsadvokaten Dr. Hirsch, wo Demba die Söhne Georg und Erich unterrichtet, erbittet er den Monatsgehalt (80 Kronen) im Voraus — doch die versteckte Zigarre brennt ein Loch in die Pelerine, das Bücken »hat der Arzt verboten«, und das Geld auf dem Tisch kann er nicht nehmen. Sein Trick, per »verwickeltem Rechtsfall« allein mit den Scheinen im Salon zu bleiben, scheitert: Frau Hirsch steckt sie wieder ein. Zum Abschied zerschmettert Demba die Nippesfigur eines Briefträgers, die höhnisch einen Porzellan-Geldbrief hinhält — Echo des Geldbriefträger-Debakels vom Vormittag. Die Eßlinggasse nennt der Text; Hausnummer unbekannt (vgl. auch Alexander Peer, Wiener Zeitung 2022).",
+    "gloss": "Bei der Familie des Hof- und Gerichtsadvokaten Dr. Hirsch, wo Demba die Söhne Georg und Erich unterrichtet, erbittet er den Monatsgehalt (80 Kronen) im Voraus. Die Eßlinggasse nennt der Text; Hausnummer unbekannt (vgl. auch Alexander Peer, Wiener Zeitung 2022).",
     "quote": "Frau Dr. Hirsch, die Gattin des Hof- und Gerichtsadvokaten in der Eßlinggasse, kam ein wenig außer Atem in das Privatkontor ihres Mannes.",
     "srcText": "des Hof- und Gerichtsadvokaten in der Eßlinggasse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
@@ -589,7 +589,7 @@
     "kind": "place",
     "character": "Demba, Kallisthenes Skuludis",
     "time": "gegen 4",
-    "gloss": "Hier beginnt die Verfolgung: Der elegante Herr Kallisthenes Skuludis — Hochstapler und Taschendieb von internationalem Format, Besitzer von fast sechshundert Krawatten — kauft eine orangefarbene Seidenkrawatte, während Demba ihn vom Trottoir aus anstarrt: Es ist der Fremde, der am Mittag seine 70 Kronen vom Wachmann entgegennahm. Demba heftet sich an seine Fersen — über Blumengeschäft, Delikatessenladen und Friseursalon den Graben entlang. Genaues Geschäft unbekannt, Lage am Graben ungefähr.",
+    "gloss": "Der elegante Herr Kallisthenes Skuludis — Hochstapler und Taschendieb von internationalem Format, Besitzer von fast sechshundert Krawatten — kauft eine orangefarbene Seidenkrawatte, während Demba sich an seine Fersen heftet — über Blumengeschäft, Delikatessenladen und Friseursalon den Graben entlang. Genaues Geschäft unbekannt, Lage am Graben ungefähr.",
     "quote": "Herr Kallisthenes Skuludis trat in das große Herrenmodewarengeschäft auf dem Graben ein und ließ sich von der Verkäuferin Krawatten zeigen.",
     "srcText": "Herrenmodewarengeschäft auf dem Graben",
     "confidence": "medium"
@@ -611,7 +611,7 @@
     "kind": "place",
     "character": "Demba, Kallisthenes Skuludis",
     "time": "gegen 4",
-    "gloss": "Im Vorgarten eines (ungenannten) Kaffeehauses in Sichtweite der Oper kommt es zum Duell der Diskretionen: Demba fordert seine 70 Kronen zurück, Skuludis hält ihn erst für den Boten eines Hehlers, dann für einen Detektiv — und zahlt die Zeche boshaft mit einer von Dembas Banknoten. Auf der anschließenden Tramflucht verfängt sich Dembas Pelerine an der Griffstange: Skuludis sieht die Handschellen — als Einziger. Rollentausch: Demba flieht auf einen Autoomnibus, und der Berufsgauner sieht ihm mit kollegialer Sympathie nach. Lage ungefähr (»Gegenüber der Oper stand ein Polizist«).",
+    "gloss": "Im Vorgarten eines (ungenannten) Kaffeehauses in Sichtweite der Oper kommt es zum Aufeinandertreffen von Demba und Skuludis. Danach flieht Demba auf einen Autoomnibus, und der Berufsgauner sieht ihm mit kollegialer Sympathie nach. Lage ungefähr (»Gegenüber der Oper stand ein Polizist«).",
     "quote": "Gegenüber der Oper stand ein Polizist. Aber beide Herren schlugen ganz von selbst eine Richtung ein, in der auf tausend Schritte Entfernung weit und breit kein Wachmann zu sehen war.",
     "srcText": "Gegenüber der Oper stand ein Polizist",
     "confidence": "medium"
@@ -631,7 +631,7 @@
     "story": "Chapter 13",
     "name": "Praterstraße (Juwelenhändler)",
     "kind": "place",
-    "gloss": "Eine Stunde vor der Kaffeehaus-Szene verhandelte Skuludis hier mit einem »befreundeten« Juwelenhändler über Schmuckstücke, »die man nur ungern dem grellen Licht des Tages aussetzt« — vergeblich. Deshalb hält er Demba zunächst für den nachgeschickten Boten des Hehlers. Genaues Geschäft unbekannt, Lage auf der Straße ungefähr. Nur erwähnt, kein Schauplatz.",
+    "gloss": "Eine Stunde vor der Kaffeehaus-Szene verhandelte Skuludis hier mit einem »befreundeten« Juwelenhändler über Schmuckstücke, »die man nur ungern dem grellen Licht des Tages aussetzt« — vergeblich. Genaues Geschäft unbekannt, Lage auf der Straße ungefähr. Nur erwähnt, kein Schauplatz.",
     "quote": "Vor einer Stunde hatte er in der Praterstraße eine Unterredung sehr delikater Natur mit einem befreundeten Juwelenhändler gehabt, dem er Schmuckstücke jener Art, die man nur ungern dem grellen Licht des Tages aussetzt, zum Kaufe angeboten hatte.",
     "srcText": "in der Praterstraße eine Unterredung sehr delikater Natur",
     "confidence": "medium"
@@ -653,7 +653,7 @@
     "kind": "place",
     "character": "Demba",
     "time": "nach 4",
-    "gloss": "Endpunkt der Flucht vor Skuludis: Hier verlässt Demba den Autoomnibus und geht grübelnd die Straße hinunter — wer streckt noch vor? Die kleinlichen Steinbüchlers (Prokurist einer Regenschirmfabrik, Kleidersalon) scheiden aus; es bleibt Dr. Becker am Kohlmarkt. Zur Topografie der Verfolgungsjagd vgl. Alexander Peer (Wiener Zeitung, 2022). Lage auf der Straße ungefähr.",
+    "gloss": "Hier verlässt Demba den Autoomnibus und geht grübelnd die Straße hinunter. Zur Topografie der Verfolgungsjagd vgl. Alexander Peer (Wiener Zeitung, 2022). Lage auf der Straße ungefähr.",
     "quote": "Stanislaus Demba verließ den Omnibus und ging langsam die Mariahilferstraße hinunter.",
     "srcText": "ging langsam die Mariahilferstraße hinunter",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
@@ -676,7 +676,7 @@
     "kind": "place",
     "character": "Demba, Elly Becker, Viky, Anny, Frau Dr. Becker",
     "time": "gegen 5",
-    "gloss": "Vierter Stock eines neuen Hauses am Kohlmarkt, »Dozent Dr. R. Becker, ordiniert von zwei bis fünf«. Dembas Kompressen-Trick (das Taschentuch als Brandwunden-Verband) glückt zunächst herrlich: Elly füttert ihn mit Sandwiches und steckt ihm die Zigarette in den Mund, die Freundinnen tippen auf ein Duell (»Prim oder Terz?« — »Eine Sext«). Doch Frau Dr. Becker schickt ihn zum Verbandwechsel ausgerechnet zu ihrem Mann — und lässt die erbetenen 80 Kronen vom Doktor aushändigen. Geschlagen auf der ganzen Linie flieht Demba die Treppe hinunter. Hausnummer unbekannt, Lage am Kohlmarkt ungefähr.",
+    "gloss": "Vierter Stock eines neuen Hauses am Kohlmarkt, »Dozent Dr. R. Becker, ordiniert von zwei bis fünf«. Hausnummer unbekannt, Lage am Kohlmarkt ungefähr.",
     "quote": "Dr. Becker wohnte am Kohlmarkt im vierten Stock eines neuen Hauses.",
     "srcText": "Dr. Becker wohnte am Kohlmarkt",
     "confidence": "medium"
@@ -698,7 +698,7 @@
     "kind": "place",
     "character": "Demba, Hübel, Dr. Rübsam, Frau Suschitzky",
     "time": "gegen 7",
-    "gloss": "Das verhängte Hinterzimmer der Bukidomino-Runde — Dembas Dachkammer-Wunsch vom Morgen (»den Bauernfängern beim Bukispielen zusehen«) wird bittere Wirklichkeit: Aus Hübels 10 Schulden-Kronen werden »ohne einen Finger zu rühren« 30, 90, 270 Kronen — das Ziel zum Greifen nah. Dann verschwindet Dr. Rübsams goldene Uhr, alle lassen sich durchsuchen, nur Demba kann den Mantel nicht ablegen — und der abgebrannte Ex-Advokat kassiert Dembas Gewinn: »Not bricht Eisen.« Das Eisen hielt. Café-Name wohl fiktiv; Lage hypothetisch im Milieu der Runde zwischen Augartenbrücke und Praterstern (Leopoldstadt).",
+    "gloss": "Das verhängte Hinterzimmer der Bukidomino-Runde — Dembas Dachkammer-Wunsch vom Morgen (»den Bauernfängern beim Bukispielen zusehen«) wird bittere Wirklichkeit. Café-Name wohl fiktiv; Lage hypothetisch im Milieu der Runde zwischen Augartenbrücke und Praterstern (Leopoldstadt).",
     "quote": "In dem kleinen reservierten Zimmer des Café Turf, in das man durch eine sorgfältig verhängte und von einem Pikkolo bewachte Tür eintrat, saßen heute elf Personen.",
     "srcText": "Zimmer des Café Turf",
     "confidence": "low"
@@ -706,8 +706,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.381,
-     48.2184
+     16.380626,
+     48.217043
     ]
    }
   },
@@ -729,7 +729,7 @@
     ],
     "character": "Demba, Sonja Hartmann, Georg Weiner, Emil Horvath, Dr. Fuhrmann",
     "time": "gegen 8",
-    "gloss": "Schauplatz gleich dreier Kapitel und Dembas tiefster Sturz. Im Extrazimmer, wo Sonjas Freundeskreis sitzt, blamiert er sich vor Weiner, dem Disponenten Horvath und dem Bulldoggen-Dr. Fuhrmann — er trinkt sein Bier durch einen Strohhalm (die Hände!), erfindet eine Ehrenaffäre, gilt als betrunken, bis Horvath ihm Wein ins Gesicht schüttet (Kapitel 17). Sonjas Schrei »Er hat einen Revolver!« macht den vermeintlich Wehrlosen plötzlich mächtig; sie schleudert Weiner das Venedig-Heft ins Gesicht und kehrt zu Demba zurück (Kapitel 18). Doch im Handgemenge dreht Horvath die Hände unter dem Mantel hervor — »mit Ketten kläglich aneinander gefesselt« —, Demba flieht, Sonja verrät seine Wohnung (Kapitel 19). Lage hypothetisch: ein »Residenzkeller« ist für die Fischerstiege bezeugt, ob Perutz diesen meinte, bleibt unbestätigt.",
+    "gloss": "Schauplatz gleich dreier Kapitel. Im Extrazimmer, wo Sonjas Freundeskreis sitzt, blamiert sich Demba vor Weiner, dem Disponenten Horvath und dem Bulldoggen-Dr. Fuhrmann. Am Ende flieht er, Sonja verrät seine Wohnung (Kapitel 19). Lage hypothetisch: ein »Residenzkeller« ist für die Fischerstiege bezeugt, ob Perutz diesen meinte, ist unbestätigt.",
     "quote": "»In den Residenzkeller!« sagte Weiner. »In den Residenzkeller? Man ißt gut dort, nicht wahr?«",
     "srcText": "In den Residenzkeller!",
     "confidence": "low"
@@ -737,8 +737,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.3719,
-     48.2127
+     16.367512,
+     48.21015
     ]
    }
   },
@@ -760,7 +760,7 @@
     ],
     "character": "Demba, Steffi Prokop, Stephan Prokop",
     "time": "12 bis 2 Uhr",
-    "gloss": "Steffi Prokops Wohnung in der Kolingasse (Alsergrund, beim Liechtensteinpark), von Alexander Peer identifiziert. Hierher kommt Demba um zwölf Uhr und erzählt seiner einzigen Verbündeten die morgendliche Flucht aus dem Trödlerhaus (Kapitel 8); sie erkennt die Handschellen und holt die Feilen ihres Vaters — vergeblich, die Kette hält (Kapitel 9). Vater Stephan Prokop (bei dem Demba früher zur Untermiete wohnte) platzt herein, Demba tischt die Lüge vom überfahrenen Hund auf (Kapitel 10). Hier reift der Wachsabdruck-Plan: Der Schlosserlehrling von gegenüber soll bis acht Uhr abends den Schlüssel zu den Handschellen feilen. Lage straßengenau (keine Hausnummer im Text).",
+    "gloss": "Steffi Prokops Wohnung in der Kolingasse (Alsergrund, beim Liechtensteinpark), von Alexander Peer identifiziert. Hierher kommt Demba um zwölf Uhr an und bleibt für drei Kapitel hier. Lage straßengenau (keine Hausnummer im Text).",
     "quote": "»Ich gehe jetzt in die Kolingasse,« unterbrach ihn Stanislaus Demba.",
     "srcText": "Ich gehe jetzt in die Kolingasse",
     "essay": "https://derive.at/texte/in-ketten-durch-wien/",
@@ -790,7 +790,7 @@
     ],
     "character": "Demba, Oskar Miksch, Frau Pomeisl",
     "time": "gegen 11 Uhr",
-    "gloss": "Dembas dürftig möbliertes Untermietzimmer in Lichtental, das er seit einem halben Jahr mit dem Eisenbahner Oskar Miksch teilt (Nachtdienst — sie sehen sich kaum, verständigen sich per Zettel); Wirtin ist die kleinbürgerliche Frau Pomeisl, ihr Sohn Anton eingerückt. Hier kommt Demba mitvormittags heim, um sich — der eigene Mantel zerrissen — die Pelerine des Sohnes zu leihen, und verpasst aus Trotz das ersehnte Geld: Er weigert sich, dem Geldbriefträger zu quittieren. Lage nach Indizien (keine Hausnummer im Text): bescheidene Gasse im 9. Bezirk nahe »seinem« Greissler in der Wiesengasse, westlich der Liechtensteinstraße, die Kap. 16 als »kürzester Weg nach Hause« dient — keine Prachtstraße. Auch das Finale spielt hier.",
+    "gloss": "Dembas dürftig möbliertes Untermietzimmer in Lichtental, das er seit einem halben Jahr mit dem Eisenbahner Oskar Miksch teilt (Nachtdienst — sie sehen sich kaum, verständigen sich per Zettel); Wirtin ist die kleinbürgerliche Frau Pomeisl, ihr Sohn Anton eingerückt. Hier kommt Demba mitvormittags heim, um sich — der eigene Mantel zerrissen — die Pelerine des Sohnes zu leihen. Lage nach Indizien (keine Hausnummer im Text): bescheidene Gasse im 9. Bezirk nahe »seinem« Greissler in der Wiesengasse, westlich der Liechtensteinstraße, die Kap. 16 als »kürzester Weg nach Hause« dient — keine Prachtstraße. Auch eines der Finals spielt hier.",
     "quote": "Demba trat vor den Spiegel, der die Tür des Kleiderkastens und das Prunkstück des dürftig möblierten Zimmers bildete.",
     "srcText": "das Prunkstück des dürftig möblierten Zimmers",
     "confidence": "low"
@@ -798,8 +798,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.358859434478326,
-     48.22868564682357
+     16.357318,
+     48.227823
     ]
    }
   },
@@ -812,7 +812,7 @@
     "kind": "place",
     "character": "Demba",
     "time": "zwischen 11 und 12",
-    "gloss": "Von hier ruft Demba in Kapitel 6 Steffi Prokop an und verabredet sich für zwölf Uhr (»deswegen komme ich ja zu dir«) — draußen wartet schon ungeduldig ein Herr auf die Zelle. Eine Adresse nennt der Roman nicht; hypothetisch an der Berggasse verortet, wo das Telefon-Vermittlungsamt »Centrale II« (1897–99) stand — die einzige im 9. Bezirk dokumentierte frühe Telefoneinrichtung (gemeint ist freilich eine öffentliche Sprechstelle, nicht die Zentrale selbst). Danach trifft Demba auf der Straße den aufschneiderischen Bankbeamten Willy Eisner, dessen Floskeln »gebundene Hände« und »Sprung ins Ungewisse« ihn — den wahrhaft Gefesselten und aus dem Fenster Gesprungenen — in Wut versetzen.",
+    "gloss": "Von hier ruft Demba in Kapitel 6 Steffi Prokop an und verabredet sich für zwölf Uhr (»deswegen komme ich ja zu dir«) — draußen wartet schon ungeduldig ein Herr auf die Zelle. Eine Adresse nennt der Roman nicht; hypothetisch an der Berggasse verortet, wo das Telefon-Vermittlungsamt »Centrale II« (1897–99) stand — die einzige im 9. Bezirk dokumentierte frühe Telefoneinrichtung (gemeint ist freilich eine öffentliche Sprechstelle, nicht die Zentrale selbst).",
     "essay": "https://magazin.wienmuseum.at/die-anfaenge-der-telefonie-in-wien",
     "essaySource": "Wien Museum",
     "confidence": "low"
@@ -828,612 +828,35 @@
   {
    "type": "Feature",
    "properties": {
+    "group": 21,
+    "story": "Meta",
+    "name": "Leo Perutz' Wohnung (Porzellangasse 37)",
+    "kind": "place",
+    "gloss": "Leo Perutz wohnte mit seiner Familie 17 Jahre lang in der Porzellangasse 37 (9. Bezirk; vgl. Alexander Peer, verlinktes Essay). Kein Schauplatz des Romans, sondern ein biografischer Kontextpunkt — bemerkenswert: Perutz hat die Handlung des Romans in die eigene Nachbarschaft gesetzt.",
+    "essay": "https://derive.at/texte/in-ketten-durch-wien/",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.361067,
+     48.222556
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
     "group": 1,
     "story": "Chapter 1",
-    "name": "Weg: Kapitel 1 — vom Trödler in den Laden",
+    "name": "Weg: Kapitel 1 — im Lichtental",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Tagesauftakt: Vom Trödlerhaus in Heiligenstadt (»Klettengasse 6«), wo Demba beim Verkauf des dritten Bibliotheksdrucks ertappt und gefesselt wurde, zurück in die Stadt — »Man fährt durch die Heiligenstädter Straße« (Tram, hier über das Straßennetz als Schienen-Proxy geroutet) — bis zu »seinem« Greissler in der Wiesengasse und der Ecktrafik im Lichtental. Automatischer Erstentwurf; in BRouter verfeinerbar."
+    "gloss": "Kapitel 1: Dembas Morgen im Lichtental — vom Greislerladen der Frau Püchl die paar Schritte zur Ecktrafik. Hier beginnt der gezeichnete Tagesweg; die vorausgehende Tramfahrt findet sich in der Meta-Ebene unten."
    },
    "geometry": {
     "type": "LineString",
     "coordinates": [
-     [
-      16.364134,
-      48.258858
-     ],
-     [
-      16.364127,
-      48.258868
-     ],
-     [
-      16.364451,
-      48.258972
-     ],
-     [
-      16.364507,
-      48.258995
-     ],
-     [
-      16.364581,
-      48.259036
-     ],
-     [
-      16.364727,
-      48.259033
-     ],
-     [
-      16.366158,
-      48.258891
-     ],
-     [
-      16.36676,
-      48.258822
-     ],
-     [
-      16.367103,
-      48.258768
-     ],
-     [
-      16.367121,
-      48.258765
-     ],
-     [
-      16.367194,
-      48.258751
-     ],
-     [
-      16.367008,
-      48.258166
-     ],
-     [
-      16.366992,
-      48.258117
-     ],
-     [
-      16.366965,
-      48.25803
-     ],
-     [
-      16.366928,
-      48.257944
-     ],
-     [
-      16.366629,
-      48.257313
-     ],
-     [
-      16.366058,
-      48.256122
-     ],
-     [
-      16.365907,
-      48.25581
-     ],
-     [
-      16.36581,
-      48.255609
-     ],
-     [
-      16.365482,
-      48.254931
-     ],
-     [
-      16.365463,
-      48.254893
-     ],
-     [
-      16.365352,
-      48.254751
-     ],
-     [
-      16.365232,
-      48.254614
-     ],
-     [
-      16.365133,
-      48.254467
-     ],
-     [
-      16.365062,
-      48.254366
-     ],
-     [
-      16.364966,
-      48.254208
-     ],
-     [
-      16.364961,
-      48.254199
-     ],
-     [
-      16.364823,
-      48.253973
-     ],
-     [
-      16.364719,
-      48.253769
-     ],
-     [
-      16.364692,
-      48.253721
-     ],
-     [
-      16.3644,
-      48.253195
-     ],
-     [
-      16.364204,
-      48.252843
-     ],
-     [
-      16.363851,
-      48.252065
-     ],
-     [
-      16.363835,
-      48.25203
-     ],
-     [
-      16.363812,
-      48.251979
-     ],
-     [
-      16.363782,
-      48.25191
-     ],
-     [
-      16.363623,
-      48.251536
-     ],
-     [
-      16.363533,
-      48.251478
-     ],
-     [
-      16.363395,
-      48.251378
-     ],
-     [
-      16.363331,
-      48.25127
-     ],
-     [
-      16.363173,
-      48.250978
-     ],
-     [
-      16.363094,
-      48.250834
-     ],
-     [
-      16.362832,
-      48.250406
-     ],
-     [
-      16.362777,
-      48.2502
-     ],
-     [
-      16.362648,
-      48.249461
-     ],
-     [
-      16.362639,
-      48.249361
-     ],
-     [
-      16.36267,
-      48.249262
-     ],
-     [
-      16.362697,
-      48.249138
-     ],
-     [
-      16.362674,
-      48.249075
-     ],
-     [
-      16.362652,
-      48.249016
-     ],
-     [
-      16.362626,
-      48.248948
-     ],
-     [
-      16.362608,
-      48.248906
-     ],
-     [
-      16.362593,
-      48.248863
-     ],
-     [
-      16.362367,
-      48.248255
-     ],
-     [
-      16.362233,
-      48.247917
-     ],
-     [
-      16.36214,
-      48.247658
-     ],
-     [
-      16.361937,
-      48.246736
-     ],
-     [
-      16.361747,
-      48.245704
-     ],
-     [
-      16.361727,
-      48.245547
-     ],
-     [
-      16.361665,
-      48.245257
-     ],
-     [
-      16.361661,
-      48.245207
-     ],
-     [
-      16.361634,
-      48.244851
-     ],
-     [
-      16.361631,
-      48.244824
-     ],
-     [
-      16.361626,
-      48.244682
-     ],
-     [
-      16.361613,
-      48.244557
-     ],
-     [
-      16.361569,
-      48.244232
-     ],
-     [
-      16.361551,
-      48.244051
-     ],
-     [
-      16.361487,
-      48.243726
-     ],
-     [
-      16.361447,
-      48.243532
-     ],
-     [
-      16.361398,
-      48.243275
-     ],
-     [
-      16.36126,
-      48.242651
-     ],
-     [
-      16.361105,
-      48.241874
-     ],
-     [
-      16.360981,
-      48.241542
-     ],
-     [
-      16.360955,
-      48.241505
-     ],
-     [
-      16.360798,
-      48.241279
-     ],
-     [
-      16.360747,
-      48.241229
-     ],
-     [
-      16.360723,
-      48.241206
-     ],
-     [
-      16.360668,
-      48.241153
-     ],
-     [
-      16.360634,
-      48.24111
-     ],
-     [
-      16.360573,
-      48.241039
-     ],
-     [
-      16.360507,
-      48.240963
-     ],
-     [
-      16.360111,
-      48.240475
-     ],
-     [
-      16.359626,
-      48.239863
-     ],
-     [
-      16.359373,
-      48.239559
-     ],
-     [
-      16.358966,
-      48.239095
-     ],
-     [
-      16.358665,
-      48.238738
-     ],
-     [
-      16.358147,
-      48.238142
-     ],
-     [
-      16.35796,
-      48.237894
-     ],
-     [
-      16.357492,
-      48.237188
-     ],
-     [
-      16.357422,
-      48.237083
-     ],
-     [
-      16.357336,
-      48.236954
-     ],
-     [
-      16.357131,
-      48.236659
-     ],
-     [
-      16.357084,
-      48.236591
-     ],
-     [
-      16.356937,
-      48.236388
-     ],
-     [
-      16.356854,
-      48.236261
-     ],
-     [
-      16.356831,
-      48.236227
-     ],
-     [
-      16.35679,
-      48.236161
-     ],
-     [
-      16.356754,
-      48.236095
-     ],
-     [
-      16.356715,
-      48.236009
-     ],
-     [
-      16.35669,
-      48.23594
-     ],
-     [
-      16.356668,
-      48.235863
-     ],
-     [
-      16.356661,
-      48.235711
-     ],
-     [
-      16.356576,
-      48.235416
-     ],
-     [
-      16.356508,
-      48.23519
-     ],
-     [
-      16.356416,
-      48.234832
-     ],
-     [
-      16.356266,
-      48.234309
-     ],
-     [
-      16.356211,
-      48.234114
-     ],
-     [
-      16.356144,
-      48.233881
-     ],
-     [
-      16.356095,
-      48.233644
-     ],
-     [
-      16.356093,
-      48.233637
-     ],
-     [
-      16.356071,
-      48.233526
-     ],
-     [
-      16.35602,
-      48.233342
-     ],
-     [
-      16.356006,
-      48.233291
-     ],
-     [
-      16.355979,
-      48.233157
-     ],
-     [
-      16.355988,
-      48.232958
-     ],
-     [
-      16.355999,
-      48.232839
-     ],
-     [
-      16.356002,
-      48.23281
-     ],
-     [
-      16.356002,
-      48.232802
-     ],
-     [
-      16.356007,
-      48.232783
-     ],
-     [
-      16.356028,
-      48.232689
-     ],
-     [
-      16.35604,
-      48.232638
-     ],
-     [
-      16.356047,
-      48.232575
-     ],
-     [
-      16.356061,
-      48.232149
-     ],
-     [
-      16.356062,
-      48.232106
-     ],
-     [
-      16.356074,
-      48.231103
-     ],
-     [
-      16.356075,
-      48.231043
-     ],
-     [
-      16.356079,
-      48.230701
-     ],
-     [
-      16.356083,
-      48.2306
-     ],
-     [
-      16.356083,
-      48.230581
-     ],
-     [
-      16.356088,
-      48.23045
-     ],
-     [
-      16.356105,
-      48.22997
-     ],
-     [
-      16.356256,
-      48.229972
-     ],
-     [
-      16.356551,
-      48.229986
-     ],
-     [
-      16.356637,
-      48.229964
-     ],
-     [
-      16.357099,
-      48.22971
-     ],
-     [
-      16.357295,
-      48.229562
-     ],
-     [
-      16.357433,
-      48.22948
-     ],
-     [
-      16.357503,
-      48.229444
-     ],
-     [
-      16.357577,
-      48.22941
-     ],
-     [
-      16.357952,
-      48.22923
-     ],
-     [
-      16.357974,
-      48.229224
-     ],
-     [
-      16.358507,
-      48.229078
-     ],
-     [
-      16.358569,
-      48.229063
-     ],
-     [
-      16.35888,
-      48.228987
-     ],
-     [
-      16.358856,
-      48.228943
-     ],
-     [
-      16.358766,
-      48.228775
-     ],
-     [
-      16.357951,
-      48.228471
-     ],
-     [
-      16.358155,
-      48.22799
-     ],
-     [
-      16.35817,
-      48.227955
-     ],
      [
       16.358208,
       48.227862
@@ -1469,10 +892,6 @@
      [
       16.359236,
       48.226439
-     ],
-     [
-      16.359236,
-      48.226439
      ]
     ]
    }
@@ -1485,7 +904,7 @@
     "name": "Weg: Kapitel 2 — in den Liechtensteinpark",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Vom Laden-Block hinunter in den Liechtensteinpark, zur Bank und in den unteren Parkteil. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Dembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, zur Bank und in den unteren Parkteil."
    },
    "geometry": {
     "type": "LineString",
@@ -1641,7 +1060,7 @@
     "name": "Weg: Kapitel 3 — im Park",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Kurzer Weg im Park zur Bank des Fräuleins (Alice Leitner). Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Kurzer Weg Dembas im Park zur Bank des Fräuleins (Alice Leitner)."
    },
    "geometry": {
     "type": "LineString",
@@ -1709,7 +1128,7 @@
     "name": "Weg: Kapitel 4 — zum Bureau Klebinder",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Aus dem Park zum Bureau Klebinder am Franz-Josefs-Kai. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Der Weg Dembas im Kapitel 4: Aus dem Park zum Bureau Klebinder am Franz-Josefs-Kai."
    },
    "geometry": {
     "type": "LineString",
@@ -2073,7 +1492,7 @@
     "name": "Weg: Kapitel 5 — Heim-Abstecher (Pelerine)",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Heim-Abstecher: zurück nach Lichtental, um Antons Pelerine zu holen — das große V nach Norden. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Heim-Abstecher: zurück nach Lichtental, um Antons Pelerine zu holen."
    },
    "geometry": {
     "type": "LineString",
@@ -2545,7 +1964,7 @@
     "name": "Weg: Kapitel 6 — zum Telephon (Berggasse)",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Kapitel 6: Vom Zimmer (Lichtental) zur Telephonzelle in der Berggasse, von wo Demba Steffi anruft. Foot-Routing (BRouter), in BRouter verfeinerbar."
+    "gloss": "Kapitel 6: Vom Zimmer (Lichtental) zur Telephonzelle in der Berggasse, von wo Demba Steffi anruft."
    },
    "geometry": {
     "type": "LineString",
@@ -2893,7 +2312,7 @@
     "name": "Weg: Kapitel 7 — ins Café Hibernia",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Kapitel 7: Von der Berggasse ins Café Hibernia (Café Schottenring) — er ist zu früh dran und vertrödelt die Zeit bis zum Mittagstreffen mit Steffi. Foot-Routing (BRouter)."
+    "gloss": "Von Steffis Wohnung ins Café Hibernia (Café Schottenring)."
    },
    "geometry": {
     "type": "LineString",
@@ -3093,7 +2512,7 @@
     "name": "Weg: Kapitel 8 — Café → Steffis Wohnung",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Kapitel 8: Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr). Foot-Routing (BRouter)."
+    "gloss": "Kapitel 8: Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr)."
    },
    "geometry": {
     "type": "LineString",
@@ -3249,7 +2668,7 @@
     "name": "Weg: Kapitel 11 — zur Eßlinggasse",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Kapitel 11: Von Steffis Wohnung (Kolingasse) zur Wohnung Dr. Hirsch in der Eßlinggasse — Demba nimmt die Geldjagd wieder auf. Foot-Routing (BRouter)."
+    "gloss": "Kapitel 11: Von Steffis Wohnung (Kolingasse) zur Wohnung Dr. Hirsch in der Eßlinggasse."
    },
    "geometry": {
     "type": "LineString",
@@ -3409,7 +2828,7 @@
     "name": "Weg: Kapitel 13 — Skuludis-Verfolgung",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Skuludis-Verfolgung: vom Krawattengeschäft am Graben zum Kaffeehaus nahe der Oper. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Skuludis-Verfolgung: vom Krawattengeschäft am Graben zum Kaffeehaus nahe der Oper."
    },
    "geometry": {
     "type": "LineString",
@@ -3777,7 +3196,7 @@
     "name": "Weg: Kapitel 14 — Omnibus & Innere Stadt",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Oper→Mariahilferstraße als OMNIBUS-Fahrt (über das Straßennetz geroutet), dann zu Fuß zur Wohnung Dr. Becker am Kohlmarkt. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Oper→Mariahilferstraße als OMNIBUS-Fahrt (über das Straßennetz geroutet), dann zu Fuß zur Wohnung Dr. Becker am Kohlmarkt."
    },
    "geometry": {
     "type": "LineString",
@@ -4489,7 +3908,7 @@
     "name": "Weg: Kapitel 15 — ins Café Turf",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Zum (fiktiven) Café Turf in der Leopoldstadt. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Zum (fiktiven) Café Turf in der Leopoldstadt."
    },
    "geometry": {
     "type": "LineString",
@@ -4889,7 +4308,7 @@
     "name": "Weg: Kapitel 16 — Mahnwache",
     "kind": "route",
     "character": "Demba",
-    "gloss": "Heimwärts, Halt zur Mahnwache vor Weiners Wohnung in der Liechtensteinstraße. Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "Heimwärts, Halt zur Mahnwache vor Weiners Wohnung in der Liechtensteinstraße."
    },
    "geometry": {
     "type": "LineString",
@@ -5321,7 +4740,7 @@
     "name": "Weg: Kapitel 17 — Fiaker zum Residenzkeller",
     "kind": "route",
     "character": "Demba",
-    "gloss": "FIAKER-Fahrt in den Residenzkeller (über das fahrbare Straßennetz, keine engen Fußgängergassen). Automatischer Erstentwurf (BRouter Fuß / OSRM für Omnibus & Fiaker) — in BRouter verfeinerbar; Knotenpunkte bleiben fix."
+    "gloss": "FIAKER-Fahrt in den Residenzkeller (über das fahrbare Straßennetz, keine engen Fußgängergassen)."
    },
    "geometry": {
     "type": "LineString",
@@ -5681,6 +5100,618 @@
      [
       16.367512,
       48.21015
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 21,
+    "story": "Meta",
+    "name": "Tramfahrt: Trödler → Laden (rekonstruiert)",
+    "kind": "route",
+    "gloss": "Rekonstruierter Tagesauftakt: Früh am Morgen bringt Demba den dritten Bibliotheksdruck mit der Tram zum Trödler nach Heiligenstadt (»Man fährt durch die Heiligenstädter Straße, steigt bei der dritten Haltestelle aus«), wird gefesselt, flieht und kehrt in die Stadt zurück. Davon erfahren wir erst rückblickend in Kapitel 8 — deshalb steht diese Fahrt nicht im gezeichneten Tagesweg, sondern hier in der Kontext-Ebene. Über das Straßennetz als Schienen-Proxy geroutet.",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      16.364127,
+      48.258868
+     ],
+     [
+      16.364451,
+      48.258972
+     ],
+     [
+      16.364507,
+      48.258995
+     ],
+     [
+      16.364581,
+      48.259036
+     ],
+     [
+      16.364727,
+      48.259033
+     ],
+     [
+      16.366158,
+      48.258891
+     ],
+     [
+      16.36676,
+      48.258822
+     ],
+     [
+      16.367103,
+      48.258768
+     ],
+     [
+      16.367121,
+      48.258765
+     ],
+     [
+      16.367194,
+      48.258751
+     ],
+     [
+      16.367008,
+      48.258166
+     ],
+     [
+      16.366992,
+      48.258117
+     ],
+     [
+      16.366965,
+      48.25803
+     ],
+     [
+      16.366928,
+      48.257944
+     ],
+     [
+      16.366629,
+      48.257313
+     ],
+     [
+      16.366058,
+      48.256122
+     ],
+     [
+      16.365907,
+      48.25581
+     ],
+     [
+      16.36581,
+      48.255609
+     ],
+     [
+      16.365482,
+      48.254931
+     ],
+     [
+      16.365463,
+      48.254893
+     ],
+     [
+      16.365352,
+      48.254751
+     ],
+     [
+      16.365232,
+      48.254614
+     ],
+     [
+      16.365133,
+      48.254467
+     ],
+     [
+      16.365062,
+      48.254366
+     ],
+     [
+      16.364966,
+      48.254208
+     ],
+     [
+      16.364961,
+      48.254199
+     ],
+     [
+      16.364823,
+      48.253973
+     ],
+     [
+      16.364719,
+      48.253769
+     ],
+     [
+      16.364692,
+      48.253721
+     ],
+     [
+      16.3644,
+      48.253195
+     ],
+     [
+      16.364204,
+      48.252843
+     ],
+     [
+      16.363851,
+      48.252065
+     ],
+     [
+      16.363835,
+      48.25203
+     ],
+     [
+      16.363812,
+      48.251979
+     ],
+     [
+      16.363782,
+      48.25191
+     ],
+     [
+      16.363623,
+      48.251536
+     ],
+     [
+      16.363533,
+      48.251478
+     ],
+     [
+      16.363395,
+      48.251378
+     ],
+     [
+      16.363331,
+      48.25127
+     ],
+     [
+      16.363173,
+      48.250978
+     ],
+     [
+      16.363094,
+      48.250834
+     ],
+     [
+      16.362832,
+      48.250406
+     ],
+     [
+      16.362777,
+      48.2502
+     ],
+     [
+      16.362648,
+      48.249461
+     ],
+     [
+      16.362639,
+      48.249361
+     ],
+     [
+      16.36267,
+      48.249262
+     ],
+     [
+      16.362697,
+      48.249138
+     ],
+     [
+      16.362674,
+      48.249075
+     ],
+     [
+      16.362652,
+      48.249016
+     ],
+     [
+      16.362626,
+      48.248948
+     ],
+     [
+      16.362608,
+      48.248906
+     ],
+     [
+      16.362593,
+      48.248863
+     ],
+     [
+      16.362367,
+      48.248255
+     ],
+     [
+      16.362233,
+      48.247917
+     ],
+     [
+      16.36214,
+      48.247658
+     ],
+     [
+      16.361937,
+      48.246736
+     ],
+     [
+      16.361747,
+      48.245704
+     ],
+     [
+      16.361727,
+      48.245547
+     ],
+     [
+      16.361665,
+      48.245257
+     ],
+     [
+      16.361661,
+      48.245207
+     ],
+     [
+      16.361634,
+      48.244851
+     ],
+     [
+      16.361631,
+      48.244824
+     ],
+     [
+      16.361626,
+      48.244682
+     ],
+     [
+      16.361613,
+      48.244557
+     ],
+     [
+      16.361569,
+      48.244232
+     ],
+     [
+      16.361551,
+      48.244051
+     ],
+     [
+      16.361487,
+      48.243726
+     ],
+     [
+      16.361447,
+      48.243532
+     ],
+     [
+      16.361398,
+      48.243275
+     ],
+     [
+      16.36126,
+      48.242651
+     ],
+     [
+      16.361105,
+      48.241874
+     ],
+     [
+      16.360981,
+      48.241542
+     ],
+     [
+      16.360955,
+      48.241505
+     ],
+     [
+      16.360798,
+      48.241279
+     ],
+     [
+      16.360747,
+      48.241229
+     ],
+     [
+      16.360723,
+      48.241206
+     ],
+     [
+      16.360668,
+      48.241153
+     ],
+     [
+      16.360634,
+      48.24111
+     ],
+     [
+      16.360573,
+      48.241039
+     ],
+     [
+      16.360507,
+      48.240963
+     ],
+     [
+      16.360111,
+      48.240475
+     ],
+     [
+      16.359626,
+      48.239863
+     ],
+     [
+      16.359373,
+      48.239559
+     ],
+     [
+      16.358966,
+      48.239095
+     ],
+     [
+      16.358665,
+      48.238738
+     ],
+     [
+      16.358147,
+      48.238142
+     ],
+     [
+      16.35796,
+      48.237894
+     ],
+     [
+      16.357492,
+      48.237188
+     ],
+     [
+      16.357422,
+      48.237083
+     ],
+     [
+      16.357336,
+      48.236954
+     ],
+     [
+      16.357131,
+      48.236659
+     ],
+     [
+      16.357084,
+      48.236591
+     ],
+     [
+      16.356937,
+      48.236388
+     ],
+     [
+      16.356854,
+      48.236261
+     ],
+     [
+      16.356831,
+      48.236227
+     ],
+     [
+      16.35679,
+      48.236161
+     ],
+     [
+      16.356754,
+      48.236095
+     ],
+     [
+      16.356715,
+      48.236009
+     ],
+     [
+      16.35669,
+      48.23594
+     ],
+     [
+      16.356668,
+      48.235863
+     ],
+     [
+      16.356661,
+      48.235711
+     ],
+     [
+      16.356576,
+      48.235416
+     ],
+     [
+      16.356508,
+      48.23519
+     ],
+     [
+      16.356416,
+      48.234832
+     ],
+     [
+      16.356266,
+      48.234309
+     ],
+     [
+      16.356211,
+      48.234114
+     ],
+     [
+      16.356144,
+      48.233881
+     ],
+     [
+      16.356095,
+      48.233644
+     ],
+     [
+      16.356093,
+      48.233637
+     ],
+     [
+      16.356071,
+      48.233526
+     ],
+     [
+      16.35602,
+      48.233342
+     ],
+     [
+      16.356006,
+      48.233291
+     ],
+     [
+      16.355979,
+      48.233157
+     ],
+     [
+      16.355988,
+      48.232958
+     ],
+     [
+      16.355999,
+      48.232839
+     ],
+     [
+      16.356002,
+      48.23281
+     ],
+     [
+      16.356002,
+      48.232802
+     ],
+     [
+      16.356007,
+      48.232783
+     ],
+     [
+      16.356028,
+      48.232689
+     ],
+     [
+      16.35604,
+      48.232638
+     ],
+     [
+      16.356047,
+      48.232575
+     ],
+     [
+      16.356061,
+      48.232149
+     ],
+     [
+      16.356062,
+      48.232106
+     ],
+     [
+      16.356074,
+      48.231103
+     ],
+     [
+      16.356075,
+      48.231043
+     ],
+     [
+      16.356079,
+      48.230701
+     ],
+     [
+      16.356083,
+      48.2306
+     ],
+     [
+      16.356083,
+      48.230581
+     ],
+     [
+      16.356088,
+      48.23045
+     ],
+     [
+      16.356105,
+      48.22997
+     ],
+     [
+      16.356256,
+      48.229972
+     ],
+     [
+      16.356551,
+      48.229986
+     ],
+     [
+      16.356637,
+      48.229964
+     ],
+     [
+      16.357099,
+      48.22971
+     ],
+     [
+      16.357295,
+      48.229562
+     ],
+     [
+      16.357433,
+      48.22948
+     ],
+     [
+      16.357503,
+      48.229444
+     ],
+     [
+      16.357577,
+      48.22941
+     ],
+     [
+      16.357952,
+      48.22923
+     ],
+     [
+      16.357974,
+      48.229224
+     ],
+     [
+      16.358507,
+      48.229078
+     ],
+     [
+      16.358569,
+      48.229063
+     ],
+     [
+      16.35888,
+      48.228987
+     ],
+     [
+      16.358856,
+      48.228943
+     ],
+     [
+      16.358766,
+      48.228775
+     ],
+     [
+      16.357951,
+      48.228471
+     ],
+     [
+      16.358155,
+      48.22799
+     ],
+     [
+      16.35817,
+      48.227955
+     ],
+     [
+      16.358208,
+      48.227862
      ]
     ]
    }

@@ -190,6 +190,11 @@
           "de": "Kapitel 20",
           "color": "#4e342e",
           "badge": "9 Uhr früh"
+        },
+        {
+          "key": "Meta",
+          "de": "Meta / Kontext",
+          "color": "#8a8178"
         }
       ],
       "essay": {

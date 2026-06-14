@@ -1,51 +1,5 @@
 {
   "_comment": "Editorial annotation overlay for the zwischen-neun-und-neun layer — original work by J. Hermes, applied on top of the base features at load time (the base GeoJSON is never modified). Key = stable feature id; value = a patch of fields to merge. Edited via pipeline/annotate-ui/.",
   "work": "zwischen-neun-und-neun",
-  "annotations": {
-    "chapter-1/arbeitsministerium": {
-      "gloss": "Das k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse."
-    },
-    "chapter-1/weg-kapitel-1-vom-tr-dler-in-den-laden": {
-      "gloss": "Tagesauftakt: Vom Trödlerhaus in Heiligenstadt (»Klettengasse 6«), wo Demba beim Verkauf des dritten Bibliotheksdrucks ertappt und gefesselt wurde, zurück in die Stadt — »Man fährt durch die Heiligenstädter Straße« (Tram, hier über das Straßennetz als Schienen-Proxy geroutet) — bis zu »seinem« Greissler in der Wiesengasse und der Ecktrafik im Lichtental."
-    },
-    "chapter-15/caf-turf": {
-      "lat": 48.217043,
-      "lon": 16.380626
-    },
-    "chapter-16/weiners-wohnung-liechtensteinstra-e": {
-      "lat": 48.219717,
-      "lon": 16.360574
-    },
-    "chapter-17/residenzkeller": {
-      "lat": 48.21015,
-      "lon": 16.367512
-    },
-    "chapter-2/porzellangasse-querung": {
-      "lat": 48.224916,
-      "lon": 16.361725
-    },
-    "chapter-2/weg-kapitel-2-in-den-liechtensteinpark": {
-      "gloss": "Dembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, zur Bank und in den unteren Parkteil."
-    },
-    "chapter-3/weg-kapitel-3-im-park": {
-      "gloss": "Kurzer Weg Dembas im Park zur Bank des Fräuleins (Alice Leitner)."
-    },
-    "chapter-4/weg-kapitel-4-zum-bureau-klebinder": {
-      "gloss": "Der Weg Dembas im Kapitel 4: Aus dem Park zum Bureau Klebinder am Franz-Josefs-Kai."
-    },
-    "chapter-5/dembas-zimmer-bei-frau-pomeisl": {
-      "gloss": "Dembas dürftig möbliertes Untermietzimmer in Lichtental, das er seit einem halben Jahr mit dem Eisenbahner Oskar Miksch teilt (Nachtdienst — sie sehen sich kaum, verständigen sich per Zettel); Wirtin ist die kleinbürgerliche Frau Pomeisl, ihr Sohn Anton eingerückt. Hier kommt Demba mitvormittags heim, um sich — der eigene Mantel zerrissen — die Pelerine des Sohnes zu leihen, und verpasst aus Trotz das ersehnte Geld: Er weigert sich, dem Geldbriefträger zu quittieren. Lage nach Indizien (keine Hausnummer im Text): bescheidene Gasse im 9. Bezirk nahe »seinem« Greissler in der Wiesengasse, westlich der Liechtensteinstraße, die Kap. 16 als »kürzester Weg nach Hause« dient — keine Prachtstraße. Auch eines der Finals spielt hier.",
-      "lat": 48.227823,
-      "lon": 16.357318
-    },
-    "chapter-5/weg-kapitel-5-heim-abstecher-pelerine": {
-      "gloss": "Heim-Abstecher: zurück nach Lichtental, um Antons Pelerine zu holen."
-    },
-    "chapter-7/weg-kapitel-7-ins-caf-hibernia": {
-      "gloss": "Von Steffis Wohnung ins Café Hibernia (Café Schottenring)."
-    },
-    "chapter-8/haus-des-tr-dlers-klettengasse-6": {
-      "gloss": "Hier beginnt Dembas Tag — was Leser aber erst im Kapitel 8 erfahren – im wunderkammerartigen Arbeitszimmer des alten Trödlers (halb Sammler, halb Händler). Zwei Polizisten treffen auch ein. Demba gelangt über die dunkle Stiege in die Dachkammer und springt aus dem Fenster durch den Nußbaum in den Garten, während ein Grammophon den Prinz-Eugen-Marsch spielt und die Kirchturmglocke neun schlägt. Eine »Klettengasse« ist für Wien Anfang des 20. Jhdts nicht nachgewiesen und wohl fiktiv; Verortung hier in Nußdorf zwischen Brauerei (der Malzgeruch, der »die ganze Gasse erfüllt«!) und Pfarrkirche St. Thomas (die Neun-Uhr-Glocke). Alternative Lesart: »dritte Haltestelle« der Heiligenstädter Straße spräche für das untere Heiligenstadt um den Pfarrplatz. Lage höchst hypothetisch."
-    }
-  }
+  "annotations": {}
 }
