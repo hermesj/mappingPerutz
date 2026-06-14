@@ -14,7 +14,17 @@
   var lang = "en";   // set from config.site.defaultLang once loaded
   var work;          // set from ?work= or config.site.defaultWork once loaded
 
-  var map, layers = {}, bounds = {}, placesByGroup = {};
+  var map, layers = {}, bounds = {}, placesByGroup = {}, confLegend;
+  // Optional location-certainty halo behind a point marker: a soft, muted disc
+  // whose colour and size encode how sure the placement is (low = larger, more
+  // diffuse). Driven by a feature's `confidence` ("high"|"medium"|"low"); markers
+  // without it render exactly as before. Colours stay fixed across works; the
+  // legend labels come from each work's `confidence` config block.
+  var CONF = {
+    high:   { color: "#6f8f5e", r: 8 },
+    medium: { color: "#c2a24a", r: 11 },
+    low:    { color: "#b06a52", r: 15 }
+  };
   var selectedRoute = null;   // stays highlighted after its popup closes, until another feature is picked
 
   function groupsOf() { return WORKS[work].groups; }
@@ -23,6 +33,46 @@
   }
   function colorFor(story) { var g = groupFor(story); return g ? g.color : "#777"; }
   function titleFor(story) { var g = groupFor(story); return g ? (lang === "de" ? g.de : g.key) : story; }
+  // A feature renders one marker, in its PRIMARY group (`p.story` → colour,
+  // layer, ordinal). When a place is a scene of several groups, the pipeline
+  // also emits `p.stories` (a list of group keys, primary first); the marker is
+  // then listed in the sidebar under EACH of those groups, all focusing the one
+  // marker. Features without `p.stories` behave exactly as before.
+  function storyKeysOf(p) {
+    return (p.stories && p.stories.length) ? p.stories : [p.story];
+  }
+  // `group` may be a scalar (one chapter) or an array (primary first); reduce to
+  // the primary ordinal for popup labelling and fallbacks.
+  function primaryGroup(p) { return Array.isArray(p.group) ? p.group[0] : p.group; }
+  // The popup's second line. For a single-group feature it's just the story
+  // title. For a multi-group one it names every chapter the place appears in —
+  // collapsed to "Kapitel 7, 9, 10" when the titles share a prefix + number,
+  // else the full titles joined ("Two Gallants · Counterparts").
+  function storyLine(p) {
+    var titles = storyKeysOf(p).map(titleFor);
+    if (titles.length < 2) return titles[0];
+    var m0 = /^(.*?)(\d+)\s*$/.exec(titles[0]), prefix, nums = [], ok = !!m0;
+    if (ok) {
+      prefix = m0[1];
+      titles.forEach(function (tt) {
+        var m = /^(.*?)(\d+)\s*$/.exec(tt);
+        if (!m || m[1] !== prefix) ok = false; else nums.push(m[2]);
+      });
+    }
+    return ok ? prefix + nums.join(", ") : titles.join(" · ");
+  }
+  // Inline location-certainty tag shown right after the popup title (non-bold,
+  // in the muted legend colour) — e.g. "Residenzkeller · hypothetisch". Empty
+  // when the work has no `confidence` config or the feature carries no level.
+  function confLabel(p) {
+    var cc = WORKS[work].confidence, conf = p.confidence && CONF[p.confidence];
+    if (!cc || !conf) return "";
+    var lo = cc.levels && cc.levels[p.confidence];
+    var adj = lo && (lo[lang] || lo.en || lo);
+    if (!adj) return "";
+    return ' <span style="font-weight:400;font-size:0.8rem;color:#9a8a7a">·</span>' +
+      ' <span style="font-weight:400;font-size:0.8rem;color:' + conf.color + '">' + esc(adj) + "</span>";
+  }
 
   // Route line styling: thin dashed by default; when its popup is open the route
   // is emphasised (thick, solid, on top) so it stands out from sibling routes
@@ -80,7 +130,7 @@
     // group list (Gutenberg HTML anchors run chap01, chap02 … in that order).
     // Falls back to the numeric `group` if the story isn't found.
     var idx = groupsOf().findIndex(function (g) { return g.key === p.story; });
-    var gn = idx >= 0 ? idx + 1 : p.group;
+    var gn = idx >= 0 ? idx + 1 : primaryGroup(p);
     var anchor = (st.anchor || "").replace("{n2}", String(gn).padStart(2, "0"))
                                   .replace("{n}", String(gn));
     // A fixed `srcText` (verbatim from the source page) wins over a fragment
@@ -102,7 +152,10 @@
     var lo = e.label && e.label[kind];
     var lbl = (lo && (lo[lang] || lo.en || lo)) ||
               (kind === "route" ? "about this route" : "about this place");
-    var src = e.source ? " (" + e.source + ")" : "";
+    // Byline: a feature may override the work-wide source (e.g. one node citing
+    // a different publication) via its own `essaySource`.
+    var byline = p.essaySource || e.source;
+    var src = byline ? " (" + byline + ")" : "";
     return '<a class="pop-essay" target="_blank" rel="noopener" href="' +
       esc(p.essay) + '">📖 ' + esc(lbl) + esc(src) + " →</a>";
   }
@@ -122,10 +175,11 @@
     var t = UI[lang];
     var h = '<div class="pop-name">' + esc(p.name);
     if (p.kind === "route") h += ' <span style="font-weight:400;color:#9a8a7a">(' + t.route + ")</span>";
+    h += confLabel(p);
     h += "</div>";
-    var sub = titleFor(p.story);
+    var sub = storyLine(p);
     // The data schema carries the group number as `group` (geocode_source.py).
-    var epNum = p.group;
+    var epNum = primaryGroup(p);
     var gp = WORKS[work].groupPrefix;          // e.g. {en:"Episode"} or null
     if (gp && epNum != null) sub = gp[lang] + " " + epNum + " · " + sub;
     h += '<div class="pop-story">' + esc(sub);
@@ -260,6 +314,11 @@
           var layer;
           if (f.geometry.type === "Point") {
             var ll = [f.geometry.coordinates[1], f.geometry.coordinates[0]];
+            var conf = p.confidence && CONF[p.confidence];
+            if (conf) {
+              L.circleMarker(ll, { pane: "halos", radius: conf.r, stroke: false,
+                fillColor: conf.color, fillOpacity: 0.3, interactive: false }).addTo(grp);
+            }
             layer = L.circleMarker(ll, { radius: 6, weight: 1.5, color: "#fff",
               fillColor: colorFor(p.story), fillOpacity: 0.9 });
             all.extend(ll); if (inRegion(ll[0], ll[1])) region.extend(ll);
@@ -278,17 +337,22 @@
             // the popup fully into view below the header.
             layer.bindPopup(popupHtml(p), { maxWidth: 300, maxHeight: popupMaxHeight() });
             layer.addTo(grp);
-            (placesByGroup[p.story] || (placesByGroup[p.story] = [])).push({
+            var entry = {
               name: p.name,
               kind: p.kind || (f.geometry.type === "LineString" ? "route" : "place"),
               verified: p.verified,
+              primary: p.story,   // the layer the one marker actually lives in
               layer: layer
+            };
+            storyKeysOf(p).forEach(function (key) {
+              (placesByGroup[key] || (placesByGroup[key] = [])).push(entry);
             });
           }
         });
         if (region.isValid()) map.fitBounds(region.pad(0.05));
         else if (all.isValid()) map.fitBounds(all.pad(0.05));
         buildSidebar();
+        buildConfLegend();
         });
       })
       .catch(function (e) {
@@ -297,9 +361,37 @@
       });
   }
 
+  // Map legend for the location-certainty halos — only when the work defines a
+  // `confidence` config block ({label:{lang}, levels:{high|medium|low:{lang}}}),
+  // so works without certainty data (and other projects) show nothing.
+  function buildConfLegend() {
+    if (confLegend) { map.removeControl(confLegend); confLegend = null; }
+    var cc = WORKS[work].confidence;
+    if (!cc) return;
+    confLegend = L.control({ position: "bottomleft" });
+    confLegend.onAdd = function () {
+      var div = L.DomUtil.create("div", "conf-legend");
+      var lv = cc.levels || {};
+      function row(key) {
+        var lo = lv[key], txt = lo ? (lo[lang] || lo.en || lo) : key;
+        return '<span class="conf-row"><span class="conf-dot" style="background:' +
+          CONF[key].color + '"></span>' + esc(txt) + "</span>";
+      }
+      var title = cc.label && (cc.label[lang] || cc.label.en);
+      div.innerHTML = (title ? '<span class="conf-title">' + esc(title) + "</span>" : "") +
+        row("high") + row("medium") + row("low");
+      return div;
+    };
+    confLegend.addTo(map);
+  }
+
   // Pan/zoom to a single place and open its popup, making sure its group
   // layer is switched on first.
   function focusPlace(groupKey, entry, item) {
+    // The marker lives in its primary group's layer, which may differ from the
+    // sidebar group it was clicked under — switch that on so it's actually shown.
+    var homeKey = entry.primary || groupKey;
+    if (layers[homeKey] && !map.hasLayer(layers[homeKey])) layers[homeKey].addTo(map);
     if (!map.hasLayer(layers[groupKey])) {
       layers[groupKey].addTo(map);
       if (item) item.classList.remove("off");
@@ -490,6 +582,10 @@
         // longer overlap at the bottom of the map.
         map = L.map("map", { zoomControl: true, attributionControl: false })
           .setView(cfg.view.center, cfg.view.zoom);
+        // Certainty halos render in their own pane, below the markers/routes
+        // (overlayPane = 400) but above the tiles, so a halo never tints the
+        // neighbouring marker it overlaps.
+        map.createPane("halos").style.zIndex = 350;
         L.tileLayer(cfg.basemap.url, { maxZoom: cfg.basemap.maxZoom }).addTo(map);
 
         // Central popup sizing + placement, for every open path (sidebar click

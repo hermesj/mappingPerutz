@@ -116,14 +116,20 @@ def main(src_path, out_path, region=None):
             print(f"{lat}, {lon}")
 
         gn = place.get("group", place.get("episode"))
-        g = by_n.get(gn, {})
+        # `group` may be a single chapter (int) or a list of chapters a place is
+        # a scene of (primary first). The marker lives in the primary group; the
+        # engine reads `stories` to list it under each additional group too.
+        primary = gn[0] if isinstance(gn, list) else gn
+        g = by_n.get(primary, {})
         props = {
             "group": gn,
-            "story": g.get("en", str(gn)),
+            "story": g.get("en", str(primary)),
             "name": place["name"],
             "kind": place.get("kind", "place"),
         }
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay"):
+        if isinstance(gn, list):
+            props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
+        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence"):
             if place.get(k):
                 props[k] = place[k]
         if "verified" in place:           # boolean → presence check, not truthiness
@@ -156,12 +162,15 @@ def main(src_path, out_path, region=None):
             print(f"{len(coords)} points")
 
         gn = r.get("group", r.get("episode"))
-        g = by_n.get(gn, {})
+        primary = gn[0] if isinstance(gn, list) else gn
+        g = by_n.get(primary, {})
         props = {
-            "group": gn, "story": g.get("en", str(gn)),
+            "group": gn, "story": g.get("en", str(primary)),
             "name": r["name"], "kind": "route",
         }
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay"):
+        if isinstance(gn, list):
+            props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
+        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence"):
             if r.get(k):
                 props[k] = r[k]
         if "verified" in r:
@@ -190,7 +199,7 @@ def main(src_path, out_path, region=None):
     }
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(fc, f, ensure_ascii=False, indent=1)
-    ngroups = len({x["properties"]["group"] for x in features})
+    ngroups = len({x["properties"]["story"] for x in features})
     print(f"\nWrote {len(features)} features across {ngroups} groups -> {out_path}")
 
 

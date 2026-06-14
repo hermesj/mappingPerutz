@@ -80,6 +80,13 @@ def check_work(root, key, w):
             err("feature %r has no story" % name)
         elif p["story"] not in group_keys:
             err("feature %r: story %r matches no config group → invisible" % (name, p["story"]))
+        # A multi-chapter place also lists itself under each key in `stories`;
+        # any that matches no config group would silently fail to render there.
+        for s in p.get("stories", []):
+            if s not in group_keys:
+                err("feature %r: stories entry %r matches no config group → invisible" % (name, s))
+        if p.get("confidence") and p["confidence"] not in ("high", "medium", "low"):
+            warn("feature %r: confidence %r not in high|medium|low → halo won't render" % (name, p["confidence"]))
         g = f.get("geometry") or {}
         if g.get("type") not in ("Point", "LineString"):
             err("feature %r: unsupported geometry %r" % (name, g.get("type")))

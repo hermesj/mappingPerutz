@@ -95,6 +95,14 @@
       if (!seen[f.story]) { seen[f.story] = []; order.push(f.story); }
       seen[f.story].push(f);
     });
+    // Group headings follow the config chapter/story order (state.groups), not
+    // the feature load order — so "Chapter 2" never sorts after "Chapter 10".
+    var gi = {};
+    state.groups.forEach(function (g, i) { gi[g.key] = i; });
+    order.sort(function (a, b) {
+      var ia = gi[a] == null ? Infinity : gi[a], ib = gi[b] == null ? Infinity : gi[b];
+      return ia - ib || (a < b ? -1 : a > b ? 1 : 0);
+    });
     $("list").innerHTML = order.map(function (story) {
       return '<div class="grp">' + esc(story) + "</div>" + seen[story].map(function (f) {
         return '<div class="row' + (f.id === state.selId ? " sel" : "") + '" data-id="' + esc(f.id) + '">' +

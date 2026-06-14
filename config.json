@@ -170,27 +170,30 @@
         {
           "key": "Chapter 17",
           "de": "Kapitel 17",
-          "color": "#e07b16"
+          "color": "#e07b16",
+          "badge": "gegen 8"
         },
         {
           "key": "Chapter 18",
           "de": "Kapitel 18",
-          "color": "#5d6d7e"
+          "color": "#5d6d7e",
+          "badge": "kurz vor halb 9"
         },
         {
           "key": "Chapter 19",
           "de": "Kapitel 19",
-          "color": "#7e1620"
+          "color": "#7e1620",
+          "badge": "halb 9"
         },
         {
           "key": "Chapter 20",
           "de": "Kapitel 20",
           "color": "#4e342e",
-          "badge": "gegen 9 Uhr abends"
+          "badge": "9 Uhr früh"
         }
       ],
       "essay": {
-        "source": "Wiener Zeitung",
+        "source": "Alexander Peer",
         "label": {
           "place": {
             "de": "über diesen Ort",
@@ -199,6 +202,26 @@
           "route": {
             "de": "über diese Route",
             "en": "about this route"
+          }
+        }
+      },
+      "confidence": {
+        "label": {
+          "de": "Sicherheit der Verortung",
+          "en": "Location certainty"
+        },
+        "levels": {
+          "high": {
+            "de": "gesichert",
+            "en": "confirmed"
+          },
+          "medium": {
+            "de": "straßengenau",
+            "en": "street-level"
+          },
+          "low": {
+            "de": "hypothetisch",
+            "en": "approximate"
           }
         }
       }
