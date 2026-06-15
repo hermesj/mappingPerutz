@@ -1,0 +1,1915 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.377081,
+          48.208903
+        ]
+      },
+      "properties": {
+        "id": "chapter-2/akademie-der-wissenschaften",
+        "name": "Akademie der Wissenschaften",
+        "description": "**Kapitel 2 · gesichert**\n\nTruxa ist wirkliches Mitglied (philosophisch-historische Klasse), Klementis Werk über die »Bildung altassyrischer Eigennamen« ist von ihr subventioniert. Nur erwähnt, kein Schauplatz.\n\n> Mit seinem grundlegenden, von der Akademie der Wissenschaften subventionierten Werke über die »Bildung altassyrischer Eigennamen« hat er sich in der Gelehrtenwelt eine angesehene Stellung gesichert …",
+        "kapitel": "Kapitel 2",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 1
+        }
+      },
+      "id": "m5VyW"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.37594,
+          48.20361
+        ]
+      },
+      "properties": {
+        "id": "chapter-8/antiquariat-in-der-johannesgasse",
+        "name": "Antiquariat in der Johannesgasse",
+        "description": "**Kapitel 8 · straßengenau**\n\nErste Station der Bücher-Odyssee (vor einem halben Jahr): Die Antiquitätenläden der Innenstadt wollten für die alten Drucke nichts geben — »einer von ihnen wollte sie nach dem Gewicht kaufen«. Genaues Geschäft unbekannt, Lage auf der Gasse ungefähr. Nur erzählt, kein Schauplatz des Tages.\n\n> Ich trug sie in die Antiquitätenläden in der Johannesgasse und in der Weihburggasse. Aber dort wollte man mir nichts dafür geben.",
+        "kapitel": "Kapitel 8",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#2980b9",
+          "weight": 1
+        }
+      },
+      "id": "0DVvD"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.372588,
+          48.20701
+        ]
+      },
+      "properties": {
+        "id": "chapter-8/antiquariat-in-der-weihburggasse",
+        "name": "Antiquariat in der Weihburggasse",
+        "description": "**Kapitel 8 · straßengenau**\n\nZweite Station der Bücher-Odyssee (vor einem halben Jahr) — auch hier kein Verständnis für alte Drucke. Erst der Trödler in Nußdorf/Heiligenstadt »verstand wirklich etwas von Büchern«. Genaues Geschäft unbekannt, Lage auf der Gasse ungefähr. Nur erzählt, kein Schauplatz des Tages.\n\n> Ich trug sie in die Antiquitätenläden in der Johannesgasse und in der Weihburggasse. Aber dort wollte man mir nichts dafür geben.",
+        "kapitel": "Kapitel 8",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#2980b9",
+          "weight": 1
+        }
+      },
+      "id": "xiWLa"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.360108,
+          48.22128
+        ]
+      },
+      "properties": {
+        "id": "chapter-1/arbeitsministerium",
+        "name": "Arbeitsministerium",
+        "description": "**Kapitel 1 · gesichert**\n\nDas k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse.\n\n> … und der Herr aus dem Arbeitsministerium, der seit Jahren täglich einen »feinen Aufschnitt« für sein zweites Frühstück im Geschäfte der Frau Püchl erstand.",
+        "kapitel": "Kapitel 1",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#b5651d",
+          "weight": 1
+        }
+      },
+      "id": "igNGU"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.359894,
+          48.224042
+        ]
+      },
+      "properties": {
+        "id": "chapter-2/bank-im-liechtensteinpark",
+        "name": "Bank im Liechtensteinpark",
+        "description": "**Kapitel 2 · gegen halb 10 · straßengenau**\n🚶 Demba, Hofrat Klementi, Professor Truxa, Cyrus\n\nDas Lieblingsplätzchen der beiden Gelehrten im oberen, abgelegenen Teil des Liechtensteinparks — hinter einer Sandsteingruppe verborgen, von zwei Akazien beschattet. Hier frühstückt Demba das Butterbrot aus der Wiesengasse, der Hund Cyrus frisst ihm die Extrawurst weg, und der Fußtritt für Cyrus trägt Demba die Diagnose »Haschisch!« ein. Lage der Bank hypothetisch; zur Topografie des Parks vgl. Alexander Peer (Wiener Zeitung, 2022).\n\n> Auf der Bank saß Stanislaus Demba. Er war beim Frühstück.\n\n[📖 Alexander Peer](https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens)",
+        "kapitel": "Kapitel 2",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 1
+        }
+      },
+      "id": "EarVe"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.371544,
+          48.216127
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-4/bureau-der-firma-klebinder",
+        "name": "Bureau der Firma Klebinder",
+        "description": "**Kapitel 4 · gegen 10 bis halb 11 · straßengenau**\n🚶 Demba, Sonja Hartmann, Klara Postelberg, Etelka Springer, Mister Brown, Neuhäusl\n\nDas Büro der Firma Oskar Klebinder, Modewestenstoffe en gros, am Franz-Josefs-Kai — Sonja Hartmanns Arbeitsplatz. Nach dem Treffen stürmt Demba davon — ohne seinen Hut, der am Kleiderhaken zurückbleibt. Hausnummer unbekannt, Lage auf dem Kai ungefähr.\n\n> »Claire« und »Ethel« sind für Angestellte einer Manufakturfirma am Franz-Josefs-Kai nicht gerade alltägliche Namen.",
+        "kapitel": "Kapitel 4",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 1
+        }
+      },
+      "id": "WpCmb"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.367374,
+          48.215803
+        ]
+      },
+      "properties": {
+        "id": "chapter-7/caf-hibernia-caf-schottenring",
+        "name": "Café Hibernia (Café Schottenring)",
+        "description": "**Kapitel 7 · halb 12 bis 12 · gesichert**\n🚶 Demba, Kellner Franz\n\nDas stille Börsencafé zur Mittagsstunde: Demba lässt sich Lehmanns Wohnungsanzeiger, den kompletten kleinen Brockhaus, Armeeschematismus, Gotha, Hof- und Staatshandbuch und das Fremdwörterlexikon bringen — angeblich für seine »Dissertation über den Stand des menschlichen Wissens« — und isst hinter der Bücher-Bastei. Der Kellner Franz hält ihn für einen Herrn von der Zeitung. Laut Alexander Peer (Wiener Zeitung, 2022) ist das »Hibernia« das ehemalige Café Schottenring, vis-à-vis der Alten Börse.\n\n> Zwischen halb zwölf und zwölf Uhr mittags, wenn die Essensstunde heranrückte, war es meist sehr still im Café Hibernia gegenüber der Börse.\n\n[📖 Alexander Peer](https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens)",
+        "kapitel": "Kapitel 7",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#a67c00",
+          "weight": 1
+        }
+      },
+      "id": "NDQoq"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.385078,
+          48.221399
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-15/caf-turf",
+        "name": "Café Turf",
+        "description": "**Kapitel 15 · gegen 7 · hypothetisch**\n🚶 Demba, Hübel, Dr. Rübsam, Frau Suschitzky\n\nDas verhängte Hinterzimmer der Bukidomino-Runde — Dembas Dachkammer-Wunsch vom Morgen (»den Bauernfängern beim Bukispielen zusehen«) wird bittere Wirklichkeit. Café-Name wohl fiktiv; Lage hypothetisch im Milieu der Runde zwischen Augartenbrücke und Praterstern (Leopoldstadt).\n\n> In dem kleinen reservierten Zimmer des Café Turf, in das man durch eine sorgfältig verhängte und von einem Pikkolo bewachte Tür eintrat, saßen heute elf Personen.",
+        "kapitel": "Kapitel 15",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#34495e",
+          "weight": 1
+        }
+      },
+      "id": "sdNGV"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.357318,
+          48.227823
+        ]
+      },
+      "properties": {
+        "id": "chapter-5/dembas-zimmer-bei-frau-pomeisl",
+        "name": "Dembas Zimmer (bei Frau Pomeisl)",
+        "description": "**Kapitel 5, 20 · gegen 11 Uhr · hypothetisch**\n🚶 Demba, Oskar Miksch, Frau Pomeisl\n\nDembas dürftig möbliertes Untermietzimmer in Lichtental, das er seit einem halben Jahr mit dem Eisenbahner Oskar Miksch teilt (Nachtdienst — sie sehen sich kaum, verständigen sich per Zettel); Wirtin ist die kleinbürgerliche Frau Pomeisl, ihr Sohn Anton eingerückt. Hier kommt Demba mitvormittags heim, um sich — der eigene Mantel zerrissen — die Pelerine des Sohnes zu leihen. Lage nach Indizien (keine Hausnummer im Text): bescheidene Gasse im 9. Bezirk nahe »seinem« Greissler in der Wiesengasse, westlich der Liechtensteinstraße, die Kap. 16 als »kürzester Weg nach Hause« dient — keine Prachtstraße. Auch eines der Finals spielt hier.\n\n> Demba trat vor den Spiegel, der die Tür des Kleiderkastens und das Prunkstück des dürftig möblierten Zimmers bildete.",
+        "kapitel": "Kapitel 5, 20",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#c0392b",
+          "weight": 1
+        }
+      },
+      "id": "Xcd40"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.359236,
+          48.226439
+        ]
+      },
+      "properties": {
+        "id": "chapter-1/ecktrafik-der-frau-schimek",
+        "name": "Ecktrafik der Frau Schimek",
+        "description": "**Kapitel 1 · kurz nach 9 Uhr · straßengenau**\n🚶 Frau Schimek\n\nDie Ecktrafik der alten Frau Schimek »in der Karl-Denk-Gasse« — der Straßenname ist im Roman umbenannt: gemeint ist wohl die benachbarte Simon-Denk-Gasse (vgl. Alexander Peer, Wiener Zeitung, 2022). Platziert am Nordende der Gasse, der dem Greislerladen nächstgelegenen Ecke; welche Ecke genau, bleibt offen.\n\n> Kurz nach neun Uhr erschien die alte Frau Schimek, der die Ecktrafik in der Karl-Denk-Gasse gehörte, zu einem längeren Plausch.\n\n[📖 Alexander Peer](https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens)",
+        "kapitel": "Kapitel 1",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#b5651d",
+          "weight": 1
+        }
+      },
+      "id": "WgqFD"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.358229,
+          48.227866
+        ]
+      },
+      "properties": {
+        "id": "chapter-1/greislerladen-der-frau-p-chl",
+        "name": "Greislerladen der Frau Püchl",
+        "description": "**Kapitel 1 · kurz nach 9 Uhr · straßengenau**\n🚶 Demba, Frau Püchl, Frau Schimek\n\nDer Greislerladen der Frau Johanna Püchl in der Wiesengasse (Lichtental, 9. Bezirk) — hier beginnt der Roman: Demba kauft ein Butterbrot, drückt die Klinke mit dem Ellbogen, lässt sich das Brot kleinschneiden und verschwindet schließlich, das Geld abgezählt auf dem Ladentisch. Zur Verortung vgl. Alexander Peers Stadtspaziergang (Wiener Zeitung, 2022).\n\n> Die Greislerin in der Wiesengasse, Frau Johanna Püchl, trat an diesem Morgen gegen halb acht Uhr aus dem Laden auf die Straße.\n\n[📖 Alexander Peer](https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens)",
+        "kapitel": "Kapitel 1",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#b5651d",
+          "weight": 1
+        }
+      },
+      "id": "Fvfet"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.364134,
+          48.258858
+        ]
+      },
+      "properties": {
+        "id": "chapter-8/haus-des-tr-dlers-klettengasse-6",
+        "name": "Haus des Trödlers (»Klettengasse 6«)",
+        "description": "**Kapitel 8, 9 · 9 Uhr morgens · hypothetisch**\n🚶 Demba, der Trödler, zwei Polizisten\n\nHier beginnt Dembas Tag — was Leser aber erst im Kapitel 8 erfahren – im wunderkammerartigen Arbeitszimmer des alten Trödlers (halb Sammler, halb Händler). Zwei Polizisten treffen auch ein. Demba gelangt über die dunkle Stiege in die Dachkammer und springt aus dem Fenster durch den Nußbaum in den Garten, während ein Grammophon den Prinz-Eugen-Marsch spielt und die Kirchturmglocke neun schlägt. Eine »Klettengasse« ist für Wien Anfang des 20. Jhdts nicht nachgewiesen und wohl fiktiv; Verortung hier in Nußdorf zwischen Brauerei (der Malzgeruch, der »die ganze Gasse erfüllt«!) und Pfarrkirche St. Thomas (die Neun-Uhr-Glocke). Alternative Lesart: »dritte Haltestelle« der Heiligenstädter Straße spräche für das untere Heiligenstadt um den Pfarrplatz. Lage höchst hypothetisch.\n\n> Ich gab mir einen Ruck, verlor den Halt, ich hörte noch, wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann, und dann –",
+        "kapitel": "Kapitel 8, 9",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#2980b9",
+          "weight": 1
+        }
+      },
+      "id": "3TpvR"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.369339,
+          48.204784
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-13/kaffeehaus-vorgarten-nahe-der-oper",
+        "name": "Kaffeehaus-Vorgarten nahe der Oper",
+        "description": "**Kapitel 13 · gegen 4 · straßengenau**\n🚶 Demba, Kallisthenes Skuludis\n\nIm Vorgarten eines (ungenannten) Kaffeehauses in Sichtweite der Oper kommt es zum Aufeinandertreffen von Demba und Skuludis. Danach flieht Demba auf einen Autoomnibus, und der Berufsgauner sieht ihm mit kollegialer Sympathie nach. Lage ungefähr (»Gegenüber der Oper stand ein Polizist«).\n\n> Gegenüber der Oper stand ein Polizist. Aber beide Herren schlugen ganz von selbst eine Richtung ein, in der auf tausend Schritte Entfernung weit und breit kein Wachmann zu sehen war.",
+        "kapitel": "Kapitel 13",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#1565a0",
+          "weight": 1
+        }
+      },
+      "id": "tvYqc"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.363363,
+          48.216188
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-8/kolingasse-steffi-prokop",
+        "name": "Kolingasse (Steffi Prokop)",
+        "description": "**Kapitel 8, 9, 10 · 12 bis 2 Uhr · straßengenau**\n🚶 Demba, Steffi Prokop, Stephan Prokop\n\nSteffi Prokops Wohnung in der Kolingasse (Alsergrund, beim Liechtensteinpark), von Alexander Peer identifiziert. Hierher kommt Demba um zwölf Uhr an und bleibt für drei Kapitel hier. Lage straßengenau (keine Hausnummer im Text).\n\n> »Ich gehe jetzt in die Kolingasse,« unterbrach ihn Stanislaus Demba.\n\n[📖 Alexander Peer](https://derive.at/texte/in-ketten-durch-wien/)",
+        "kapitel": "Kapitel 8, 9, 10",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#2980b9",
+          "weight": 1
+        }
+      },
+      "id": "PFx0A"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.356794,
+          48.22292
+        ]
+      },
+      "properties": {
+        "id": "chapter-2/konsular-akademie",
+        "name": "Konsular-Akademie",
+        "description": "**Kapitel 2 · gesichert**\n\nLehrstätte Professor Ritter von Truxas. Die k.u.k. Konsularakademie bezog 1904 ihren Neubau in der Waisenhausgasse (seit 1913 Boltzmanngasse 16) — wenige Gehminuten vom Liechtensteinpark, wo die Gelehrten ihre Morgenrunde drehen. Nur erwähnt, kein Schauplatz.\n\n> Professor Ritter von Truxa, wirkliches Mitglied der Akademie der Wissenschaften (philosophisch-historische Klasse) und Lehrer an der Konsular-Akademie, ist weniger bekannt.",
+        "kapitel": "Kapitel 2",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 1
+        }
+      },
+      "id": "qRiZJ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.228519,
+          47.951359
+        ]
+      },
+      "properties": {
+        "id": "chapter-4/kottingbrunn",
+        "name": "Kottingbrunn",
+        "description": "**Kapitel 4 · gesichert**\n\nChef Klebinder ist mit dem Zehnuhrzug zum Nachmittagsrennen auf der Rennbahn Kottingbrunn gefahren — weshalb im Büro am Franz-Josefs-Kai gemütliche Stunden herrschen. Nur erwähnt, kein Schauplatz.\n\n> Man wußte, daß er mit dem Zehnuhrzug nach Kottingbrunn fahren wollte, wo nachmittag das Rennen stattfand.",
+        "kapitel": "Kapitel 4",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 1
+        }
+      },
+      "id": "niz6Q"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.371351,
+          48.20818
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-13/krawattengesch-ft-am-graben",
+        "name": "Krawattengeschäft am Graben",
+        "description": "**Kapitel 13 · gegen 4 · straßengenau**\n🚶 Demba, Kallisthenes Skuludis\n\nDer elegante Herr Kallisthenes Skuludis — Hochstapler und Taschendieb von internationalem Format, Besitzer von fast sechshundert Krawatten — kauft eine orangefarbene Seidenkrawatte, während Demba sich an seine Fersen heftet — über Blumengeschäft, Delikatessenladen und Friseursalon den Graben entlang. Genaues Geschäft unbekannt, Lage am Graben ungefähr.\n\n> Herr Kallisthenes Skuludis trat in das große Herrenmodewarengeschäft auf dem Graben ein und ließ sich von der Verkäuferin Krawatten zeigen.",
+        "kapitel": "Kapitel 13",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#1565a0",
+          "weight": 1
+        }
+      },
+      "id": "9MjiC"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.361782,
+          48.203739
+        ]
+      },
+      "properties": {
+        "id": "chapter-2/kunsthistorisches-museum",
+        "name": "Kunsthistorisches Museum",
+        "description": "**Kapitel 2 · gesichert**\n\nArbeitsplatz Hofrat Klementis: Direktor der altorientalischen Spezialsammlung, vorübergehend auch mit der Oberleitung der ethnographisch-anthropologischen Abteilung betraut. Nur erwähnt, kein Schauplatz.\n\n> Hofrat Klementi, der Direktor der altorientalischen Spezialsammlung des kunsthistorischen Museums, derzeit vorübergehend auch mit der Oberleitung der ethnographisch-anthropologischen Abteilung betraut, muß den Lesern wohl nicht erst vorgestellt werden.",
+        "kapitel": "Kapitel 2",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 1
+        }
+      },
+      "id": "uSs5s"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.361067,
+          48.222556
+        ]
+      },
+      "properties": {
+        "id": "meta/leo-perutz-wohnung-porzellangasse-37",
+        "name": "Leo Perutz' Wohnung (Porzellangasse 37)",
+        "description": "**Meta / Kontext · gesichert**\n\nLeo Perutz wohnte mit seiner Familie 17 Jahre lang in der Porzellangasse 37 (9. Bezirk; vgl. Alexander Peer, verlinktes Essay). Kein Schauplatz des Romans, sondern ein biografischer Kontextpunkt — bemerkenswert: Perutz hat die Handlung des Romans in die eigene Nachbarschaft gesetzt.\n\n[📖 Alexander Peer](https://derive.at/texte/in-ketten-durch-wien/)",
+        "kapitel": "Meta / Kontext",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#8a8178",
+          "weight": 1
+        }
+      },
+      "id": "obG6y"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.365977,
+          48.21628
+        ]
+      },
+      "properties": {
+        "id": "chapter-3/maria-theresien-stra-e-18",
+        "name": "Maria-Theresien-Straße 18",
+        "description": "**Kapitel 3 · gesichert**\n\nAlice Leitners Dienstadresse beim kaiserlichen Rat Adalbert Füchsel — die Adresse, die sich Demba partout nicht notieren kann (und deren Grund er nicht preisgeben mag); am Ende weiß er nur noch »Alice und kaiserlicher Rat Füchsel«. Nur im Dialog genannt, kein Schauplatz.\n\n> »Also notieren Sie sich meine Adresse: Alice Leitner, bei Herrn kaiserlichen Rat Adalbert Füchsel, neunter Bezirk, Maria-Theresien Straße 18.«",
+        "kapitel": "Kapitel 3",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#8e44ad",
+          "weight": 1
+        }
+      },
+      "id": "SO3Bt"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.353085,
+          48.199464
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-14/mariahilferstra-e",
+        "name": "Mariahilferstraße",
+        "description": "**Kapitel 14 · nach 4 · straßengenau**\n🚶 Demba\n\nHier verlässt Demba den Autoomnibus und geht grübelnd die Straße hinunter. Zur Topografie der Verfolgungsjagd vgl. Alexander Peer (Wiener Zeitung, 2022). Lage auf der Straße ungefähr.\n\n> Stanislaus Demba verließ den Omnibus und ging langsam die Mariahilferstraße hinunter.\n\n[📖 Alexander Peer](https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens)",
+        "kapitel": "Kapitel 14",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#7b3f00",
+          "weight": 1
+        }
+      },
+      "id": "GFAUv"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.283353,
+          48.085592
+        ]
+      },
+      "properties": {
+        "id": "chapter-4/m-dling",
+        "name": "Mödling",
+        "description": "**Kapitel 4 · gesichert**\n\nGeorg Weiner telefoniert Sonja, dass er zu seinen Eltern nach Mödling fährt — er kommt erst am Abend nach Wien zurück. Nur erwähnt, kein Schauplatz.\n\n> »Er kommt erst am Abend nach Wien. Er hat mir eben telephoniert, daß er zu seinen Eltern nach Mödling fährt.«",
+        "kapitel": "Kapitel 4",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 1
+        }
+      },
+      "id": "lnymq"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.358371,
+          48.223185
+        ]
+      },
+      "properties": {
+        "id": "chapter-3/parkbank-des-fr-uleins",
+        "name": "Parkbank des Fräuleins",
+        "description": "**Kapitel 3 · gegen dreiviertel 10 · straßengenau**\n🚶 Demba, Alice Leitner, Frau Buresch\n\nDie Bank, auf der das Kinderfräulein Alice Leitner liest (»Hedda Gabler«) und Demba sich erschöpft niederlässt. Der Park wird im Text nicht benannt — plausibel der belebte untere Liechtensteinpark, wo Demba kurz zuvor im Kindergewühl (Spielplatz in der südwestlichen Ecke) verschwand; Lage hypothetisch.\n\n> »Weil ich ein Krüppel bin,« sagte er mit tonloser Stimme. »Es muß heraus. Ich habe keine Arme.«",
+        "kapitel": "Kapitel 3",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#8e44ad",
+          "weight": 1
+        }
+      },
+      "id": "YBu22"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.384719,
+          48.221441
+        ]
+      },
+      "properties": {
+        "id": "chapter-12/pazmanitenstra-e-11-egon-m-ller",
+        "name": "Pazmanitenstraße 11 (»Egon Müller«)",
+        "description": "**Kapitel 12 · straßengenau**\n\nDie Adresse des »gewissen Egon Müller«, dessen Heft-Exemplar Gegenbauer angeblich für 70 Kronen abkaufen müsste — der Hebel von Dembas elegantestem Trick des Tages. Ob Müller existiert oder Dembas Erfindung ist, lässt der Text offen; auffällig ist die präzise Hausnummer. Real heißt die Gasse in der Leopoldstadt Pazmanitengasse — Perutz schreibt »Pazmanitenstraße«. Nur erwähnt, kein Schauplatz.\n\n> »Bitte, reden Sie selbst mit dem Müller und geben Sie mir dann die Hefte. Er wohnt Pazmanitenstraße, elf.«",
+        "kapitel": "Kapitel 12",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#33691e",
+          "weight": 1
+        }
+      },
+      "id": "j0axM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.361725,
+          48.224916
+        ]
+      },
+      "properties": {
+        "id": "chapter-2/porzellangasse-querung",
+        "name": "Porzellangasse (Querung)",
+        "description": "**Kapitel 2 · gegen halb 10 · straßengenau**\n🚶 Hofrat Klementi, Professor Truxa, Cyrus\n\nAuf dem morgendlichen Weg in den Park: Professor Truxa hat »seine liebe Not«, den in Gedanken stehenbleibenden Hofrat heil über die Gleise der elektrischen Tramway zu bringen. Genaue Querungsstelle offen.\n\n> Professor Truxa hatte seine liebe Not, den Freund beim Überqueren der Porzellangasse glücklich aus dem Gefahrenbereich der elektrischen Tramway zu bringen.",
+        "kapitel": "Kapitel 2",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 1
+        }
+      },
+      "id": "OlY2b"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.38278,
+          48.213647
+        ]
+      },
+      "properties": {
+        "id": "chapter-13/praterstra-e-juwelenh-ndler",
+        "name": "Praterstraße (Juwelenhändler)",
+        "description": "**Kapitel 13 · straßengenau**\n\nEine Stunde vor der Kaffeehaus-Szene verhandelte Skuludis hier mit einem »befreundeten« Juwelenhändler über Schmuckstücke, »die man nur ungern dem grellen Licht des Tages aussetzt« — vergeblich. Genaues Geschäft unbekannt, Lage auf der Straße ungefähr. Nur erwähnt, kein Schauplatz.\n\n> Vor einer Stunde hatte er in der Praterstraße eine Unterredung sehr delikater Natur mit einem befreundeten Juwelenhändler gehabt, dem er Schmuckstücke jener Art, die man nur ungern dem grellen Licht des Tages aussetzt, zum Kaufe angeboten hatte.",
+        "kapitel": "Kapitel 13",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#1565a0",
+          "weight": 1
+        }
+      },
+      "id": "0ijiN"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.367512,
+          48.21015
+        ]
+      },
+      "properties": {
+        "id": "chapter-17/residenzkeller",
+        "name": "Residenzkeller",
+        "description": "**Kapitel 17, 18, 19 · gegen 8 · hypothetisch**\n🚶 Demba, Sonja Hartmann, Georg Weiner, Emil Horvath, Dr. Fuhrmann\n\nSchauplatz gleich dreier Kapitel. Im Extrazimmer, wo Sonjas Freundeskreis sitzt, blamiert sich Demba vor Weiner, dem Disponenten Horvath und dem Bulldoggen-Dr. Fuhrmann. Am Ende flieht er, Sonja verrät seine Wohnung (Kapitel 19). Lage hypothetisch: ein »Residenzkeller« ist für die Fischerstiege bezeugt, ob Perutz diesen meinte, ist unbestätigt.\n\n> »In den Residenzkeller!« sagte Weiner. »In den Residenzkeller? Man ißt gut dort, nicht wahr?«",
+        "kapitel": "Kapitel 17, 18, 19",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#e07b16",
+          "weight": 1
+        }
+      },
+      "id": "WDZdA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.2565,
+          48.2447
+        ]
+      },
+      "properties": {
+        "id": "chapter-4/rohrerh-tte",
+        "name": "Rohrerhütte",
+        "description": "**Kapitel 4 · hypothetisch**\n\nHier, beim Gasthaus im Wienerwald, schwor Sonja »vorigen Herbst« nach dem Nachtmahl im Park, niemals einen andern als Demba zu lieben — »damals war ich ein halbes Kind«. Das beliebte Ausflugsgasthaus (um 1840 vom Forstaufseher J. Rohrer begründet) lag westlich des Schwarzenbergparks an der Straße nach Tulln, am Fuß des Exelbergs; 2000 abgerissen, heute Wohnbau. Lage ungefähr.\n\n> »Vorigen Herbst. In der Rohrerhütte. Wir gingen nach dem Nachtmahl in den Park und da –«",
+        "kapitel": "Kapitel 4",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 1
+        }
+      },
+      "id": "XoZc5"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.37721,
+          48.18616
+        ]
+      },
+      "properties": {
+        "id": "chapter-4/s-dbahnhof",
+        "name": "Südbahnhof",
+        "description": "**Kapitel 4 · gesichert**\n\nVon hier soll der Zug Sonja Hartmann morgen früh um neun »in märchenhafte Fernen entführen« — Wien–Triest–Venedig, mit Georg Weiner. Der historische Südbahnhof am Wiedner Gürtel (1874; 2010 abgetragen, heute Areal des Hauptbahnhofs). Nur erwähnt, kein Schauplatz.\n\n> In kaum vierundzwanzig Stunden ging der Zug ab, der Sonja Hartmann aus dem Südbahnperron in märchenhafte Fernen entführen sollte.",
+        "kapitel": "Kapitel 4",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 1
+        }
+      },
+      "id": "LRMmr"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.361754,
+          48.218082
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-6/telephonzelle-in-der-berggasse",
+        "name": "Telephonzelle in der Berggasse",
+        "description": "**Kapitel 6 · zwischen 11 und 12 · hypothetisch**\n🚶 Demba\n\nVon hier ruft Demba in Kapitel 6 Steffi Prokop an und verabredet sich für zwölf Uhr (»deswegen komme ich ja zu dir«) — draußen wartet schon ungeduldig ein Herr auf die Zelle. Eine Adresse nennt der Roman nicht; hypothetisch an der Berggasse verortet, wo das Telefon-Vermittlungsamt »Centrale II« (1897–99) stand — die einzige im 9. Bezirk dokumentierte frühe Telefoneinrichtung (gemeint ist freilich eine öffentliche Sprechstelle, nicht die Zentrale selbst).\n\n[📖 Wien Museum](https://magazin.wienmuseum.at/die-anfaenge-der-telefonie-in-wien)",
+        "kapitel": "Kapitel 6",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#16735b",
+          "weight": 1
+        }
+      },
+      "id": "nprIE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.364134,
+            48.258858
+          ],
+          [
+            16.364608,
+            48.259056
+          ],
+          [
+            16.367247,
+            48.258763
+          ],
+          [
+            16.362462,
+            48.248855
+          ],
+          [
+            16.361282,
+            48.241853
+          ],
+          [
+            16.356883,
+            48.236265
+          ],
+          [
+            16.356046,
+            48.23292
+          ],
+          [
+            16.356132,
+            48.229962
+          ],
+          [
+            16.356111,
+            48.229118
+          ],
+          [
+            16.35655,
+            48.229125
+          ],
+          [
+            16.356878,
+            48.229136
+          ],
+          [
+            16.357242,
+            48.228282
+          ],
+          [
+            16.357951,
+            48.228464
+          ],
+          [
+            16.358229,
+            48.227866
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "meta/tramfahrt-tr-dler-laden-rekonstruiert",
+        "name": "Tramfahrt: Trödler → Laden (rekonstruiert)",
+        "description": "**Meta / Kontext · hypothetisch**\n\nRekonstruierter Tagesauftakt: Früh am Morgen bringt Demba den dritten Bibliotheksdruck mit der Tram zum Trödler nach Heiligenstadt (»Man fährt durch die Heiligenstädter Straße, steigt bei der dritten Haltestelle aus«), wird gefesselt, flieht und kehrt in die Stadt zurück. Davon erfahren wir erst rückblickend in Kapitel 8 — deshalb steht diese Fahrt nicht im gezeichneten Tagesweg, sondern hier in der Kontext-Ebene. Über das Straßennetz als Schienen-Proxy geroutet.",
+        "kapitel": "Meta / Kontext",
+        "confidence": "low",
+        "_umap_options": {
+          "color": "#8a8178",
+          "weight": 5
+        }
+      },
+      "id": "Hwdrs"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.360685,
+          48.213128
+        ]
+      },
+      "properties": {
+        "id": "chapter-8/universit-tsbibliothek",
+        "name": "Universitätsbibliothek",
+        "description": "**Kapitel 8 · gesichert**\n\nUrsprung des Unglückstags: Hier »entlieh« sich Demba vor über einem Jahr drei wertvolle alte Drucke für seine Calpurnius-Siculus-Studie. Die Universitätsbibliothek war 1918 im Hauptgebäude der Universität am Ring untergebracht. Nur erzählt, kein Schauplatz des Tages.\n\n> Ich habe drei Bücher aus der Universitätsbibliothek einem Antiquitätenhändler verkauft. Das heißt, verkauft hab' ich nur zwei. Das dritte hab' ich heute morgen umsonst hergegeben.",
+        "kapitel": "Kapitel 8",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#2980b9",
+          "weight": 1
+        }
+      },
+      "id": "r8huF"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.359,
+          48.2232
+        ]
+      },
+      "properties": {
+        "id": "chapter-2/unterer-liechtensteinpark",
+        "name": "Unterer Liechtensteinpark",
+        "description": "**Kapitel 2 · gegen halb 10 · straßengenau**\n🚶 Demba, Hofrat Klementi, Professor Truxa\n\nDie Gelehrten jagen dem vermeintlichen Haschischraucher nach — und vergessen dabei den an die Bank gebundenen Cyrus. Im unteren, belebten Teil des Parks verliert sich Dembas Spur im Gewühl der spielenden Kinder. Lage ungefähr (südlicher Parkteil).\n\n> Als die beiden Gelehrten atemlos den unteren Teil des Parkes erreichten, war der Haschischtrunkene schon lange im Gewühle der spielenden Kinder verschwunden.",
+        "kapitel": "Kapitel 2",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 1
+        }
+      },
+      "id": "Hlqll"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.3326,
+          45.4371
+        ]
+      },
+      "properties": {
+        "id": "chapter-4/venedig",
+        "name": "Venedig",
+        "description": "**Kapitel 4, 5, 8, 18 · gesichert**\n\nDas Sehnsuchtsziel, auf das der ganze Tag zuläuft — von Anfang bis Schluss immer wieder beschworen. Sonjas Rundreisebillett zweiter Klasse Wien–Triest–Venedig–Wien (mit Semmering, Adelsberger Grotte, Pirano, Padua und Ennstal-Wanderung) ist der Einsatz der Geldjagd (Kapitel 4); Demba will an Weiners Stelle mit ihr fahren (Kapitel 5); und am Ende schleudert Sonja eben dieses Rundreiseheft Weiner ins Gesicht (Kapitel 18) — das Objekt, das Demba den ganzen Tag erjagen wollte, liegt da wertlos am Boden. Weit entferntes Motiv, kein Schauplatz.\n\n> »Werdet ihr mir alle nach Venedig schreiben?« fragte sie und ließ eine Rauchwolke zur Decke schweben. »Venetia, posta grande.«",
+        "kapitel": "Kapitel 4, 5, 8, 18",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 1
+        }
+      },
+      "id": "krSfO"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.358344,
+          48.215752
+        ]
+      },
+      "properties": {
+        "id": "chapter-3/votivpark",
+        "name": "Votivpark",
+        "description": "**Kapitel 3 · gesichert**\n\nNur Gesprächsstoff auf der Parkbank: Das Fräulein weiß zu berichten, dass im Votivpark heuer Sessel statt der Bänke aufgestellt werden sollen — vier Heller pro Person. Eine kleine Wiener Parkökonomie am Rande; Schauplatz ist der Votivpark nicht.\n\n> »Im Votivpark sollen dieses Jahr Sessel aufgestellt werden statt der Bänke«, erzählte das Fräulein. »Vier Heller pro Person.«",
+        "kapitel": "Kapitel 3",
+        "confidence": "high",
+        "_umap_options": {
+          "color": "#8e44ad",
+          "weight": 1
+        }
+      },
+      "id": "Qbv64"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.358229,
+            48.227866
+          ],
+          [
+            16.358873,
+            48.226324
+          ],
+          [
+            16.359236,
+            48.226439
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-1/weg-kapitel-1-im-lichtental",
+        "name": "Weg: Kapitel 1 — im Lichtental",
+        "description": "**Kapitel 1**\n🚶 Demba\n\nKapitel 1: Dembas Morgen im Lichtental — vom Greislerladen der Frau Püchl die paar Schritte zur Ecktrafik. Hier beginnt der gezeichnete Tagesweg; die vorausgehende Tramfahrt findet sich in der Meta-Ebene unten.",
+        "kapitel": "Kapitel 1",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#b5651d",
+          "weight": 5
+        }
+      },
+      "id": "6yh52"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.359236,
+            48.226439
+          ],
+          [
+            16.359683,
+            48.225212
+          ],
+          [
+            16.359925,
+            48.224612
+          ],
+          [
+            16.360123,
+            48.224187
+          ],
+          [
+            16.359894,
+            48.224042
+          ],
+          [
+            16.359624,
+            48.223954
+          ],
+          [
+            16.35949,
+            48.223729
+          ],
+          [
+            16.359404,
+            48.223626
+          ],
+          [
+            16.359243,
+            48.223547
+          ],
+          [
+            16.358868,
+            48.223458
+          ],
+          [
+            16.359,
+            48.2232
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-2/weg-kapitel-2-in-den-liechtensteinpark",
+        "name": "Weg: Kapitel 2 — in den Liechtensteinpark",
+        "description": "**Kapitel 2**\n🚶 Demba\n\nDembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, zur Bank und in den unteren Parkteil.",
+        "kapitel": "Kapitel 2",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#1f6f6f",
+          "weight": 5
+        }
+      },
+      "id": "gDfR0"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.359,
+            48.2232
+          ],
+          [
+            16.358814,
+            48.223404
+          ],
+          [
+            16.358739,
+            48.223586
+          ],
+          [
+            16.358374,
+            48.223743
+          ],
+          [
+            16.358171,
+            48.223643
+          ],
+          [
+            16.357967,
+            48.223443
+          ],
+          [
+            16.358133,
+            48.223261
+          ],
+          [
+            16.358289,
+            48.223111
+          ],
+          [
+            16.358371,
+            48.223185
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-3/weg-kapitel-3-im-park",
+        "name": "Weg: Kapitel 3 — im Park",
+        "description": "**Kapitel 3**\n🚶 Demba\n\nKurzer Weg Dembas im Park zur Bank des Fräuleins (Alice Leitner).",
+        "kapitel": "Kapitel 3",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#8e44ad",
+          "weight": 5
+        }
+      },
+      "id": "LDaod"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.358407,
+            48.223215
+          ],
+          [
+            16.358691,
+            48.222829
+          ],
+          [
+            16.359023,
+            48.222643
+          ],
+          [
+            16.359179,
+            48.222225
+          ],
+          [
+            16.359753,
+            48.222332
+          ],
+          [
+            16.359919,
+            48.221853
+          ],
+          [
+            16.359823,
+            48.221817
+          ],
+          [
+            16.359651,
+            48.221803
+          ],
+          [
+            16.359324,
+            48.221753
+          ],
+          [
+            16.35942,
+            48.22161
+          ],
+          [
+            16.359774,
+            48.221199
+          ],
+          [
+            16.359951,
+            48.221063
+          ],
+          [
+            16.360295,
+            48.220655
+          ],
+          [
+            16.36111,
+            48.219054
+          ],
+          [
+            16.361861,
+            48.217968
+          ],
+          [
+            16.364329,
+            48.218918
+          ],
+          [
+            16.366174,
+            48.219161
+          ],
+          [
+            16.367912,
+            48.219583
+          ],
+          [
+            16.36817,
+            48.219283
+          ],
+          [
+            16.369554,
+            48.218039
+          ],
+          [
+            16.371367,
+            48.216309
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-4/weg-kapitel-4-zum-bureau-klebinder",
+        "name": "Weg: Kapitel 4 — zum Bureau Klebinder",
+        "description": "**Kapitel 4**\n🚶 Demba\n\nDer Weg Dembas im Kapitel 4: Aus dem Park zum Bureau Klebinder am Franz-Josefs-Kai.",
+        "kapitel": "Kapitel 4",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#2c7a3f",
+          "weight": 5
+        }
+      },
+      "id": "cayAj"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.371485,
+            48.216198
+          ],
+          [
+            16.368181,
+            48.21934
+          ],
+          [
+            16.367183,
+            48.221999
+          ],
+          [
+            16.367226,
+            48.223386
+          ],
+          [
+            16.366968,
+            48.224787
+          ],
+          [
+            16.366035,
+            48.225981
+          ],
+          [
+            16.364629,
+            48.226974
+          ],
+          [
+            16.363707,
+            48.226617
+          ],
+          [
+            16.362269,
+            48.226045
+          ],
+          [
+            16.360681,
+            48.225473
+          ],
+          [
+            16.3586,
+            48.225051
+          ],
+          [
+            16.357741,
+            48.227189
+          ],
+          [
+            16.357462,
+            48.227818
+          ],
+          [
+            16.357318,
+            48.227823
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-5/weg-kapitel-5-heim-abstecher-pelerine",
+        "name": "Weg: Kapitel 5 — Heim-Abstecher (Pelerine)",
+        "description": "**Kapitel 5**\n🚶 Demba\n\nHeim-Abstecher: zurück nach Lichtental, um Antons Pelerine zu holen.",
+        "kapitel": "Kapitel 5",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#c0392b",
+          "weight": 5
+        }
+      },
+      "id": "tsxUa"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.357318,
+            48.227823
+          ],
+          [
+            16.357516,
+            48.227782
+          ],
+          [
+            16.357795,
+            48.227153
+          ],
+          [
+            16.357076,
+            48.227081
+          ],
+          [
+            16.35757,
+            48.225916
+          ],
+          [
+            16.357012,
+            48.225802
+          ],
+          [
+            16.357784,
+            48.223443
+          ],
+          [
+            16.360102,
+            48.220813
+          ],
+          [
+            16.361786,
+            48.217982
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-6/weg-kapitel-6-zum-telephon-berggasse",
+        "name": "Weg: Kapitel 6 — zum Telephon (Berggasse)",
+        "description": "**Kapitel 6**\n🚶 Demba\n\nKapitel 6: Vom Zimmer (Lichtental) zur Telephonzelle in der Berggasse, von wo Demba Steffi anruft.",
+        "kapitel": "Kapitel 6",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#16735b",
+          "weight": 5
+        }
+      },
+      "id": "TSfwN"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.361797,
+            48.218025
+          ],
+          [
+            16.364865,
+            48.214951
+          ],
+          [
+            16.366882,
+            48.215809
+          ],
+          [
+            16.367374,
+            48.215803
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-7/weg-kapitel-7-ins-caf-hibernia",
+        "name": "Weg: Kapitel 7 — ins Café Hibernia",
+        "description": "**Kapitel 7**\n🚶 Demba\n\nVon Steffis Wohnung ins Café Hibernia (Café Schottenring).",
+        "kapitel": "Kapitel 7",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#a67c00",
+          "weight": 5
+        }
+      },
+      "id": "ml6CM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.367408,
+            48.215794
+          ],
+          [
+            16.366861,
+            48.215916
+          ],
+          [
+            16.365434,
+            48.215258
+          ],
+          [
+            16.364157,
+            48.216531
+          ],
+          [
+            16.363471,
+            48.216216
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-8/weg-kapitel-8-caf-steffis-wohnung",
+        "name": "Weg: Kapitel 8 — Café → Steffis Wohnung",
+        "description": "**Kapitel 8**\n🚶 Demba\n\nKapitel 8: Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr).",
+        "kapitel": "Kapitel 8",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#2980b9",
+          "weight": 5
+        }
+      },
+      "id": "HCkUE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.363395,
+            48.216181
+          ],
+          [
+            16.365777,
+            48.214043
+          ],
+          [
+            16.366475,
+            48.214322
+          ],
+          [
+            16.367944,
+            48.214858
+          ],
+          [
+            16.370981,
+            48.216166
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-11/weg-kapitel-11-zur-e-linggasse",
+        "name": "Weg: Kapitel 11 — zur Eßlinggasse",
+        "description": "**Kapitel 11**\n🚶 Demba\n\nKapitel 11: Von Steffis Wohnung (Kolingasse) zur Wohnung Dr. Hirsch in der Eßlinggasse.",
+        "kapitel": "Kapitel 11",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#9b1d4f",
+          "weight": 5
+        }
+      },
+      "id": "sMTre"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.370981,
+            48.216188
+          ],
+          [
+            16.371303,
+            48.216381
+          ],
+          [
+            16.371893,
+            48.215841
+          ],
+          [
+            16.372451,
+            48.215319
+          ],
+          [
+            16.373067,
+            48.21479
+          ],
+          [
+            16.373481,
+            48.214365
+          ],
+          [
+            16.372848,
+            48.214043
+          ],
+          [
+            16.372654,
+            48.213793
+          ],
+          [
+            16.373212,
+            48.213421
+          ],
+          [
+            16.372697,
+            48.212935
+          ],
+          [
+            16.372815,
+            48.211934
+          ],
+          [
+            16.372032,
+            48.211262
+          ],
+          [
+            16.370155,
+            48.209775
+          ],
+          [
+            16.369618,
+            48.20946
+          ],
+          [
+            16.36964,
+            48.209231
+          ],
+          [
+            16.369414,
+            48.209063
+          ],
+          [
+            16.370423,
+            48.208427
+          ],
+          [
+            16.371351,
+            48.208173
+          ],
+          [
+            16.371265,
+            48.208034
+          ],
+          [
+            16.371099,
+            48.207673
+          ],
+          [
+            16.370643,
+            48.206883
+          ],
+          [
+            16.370938,
+            48.206804
+          ],
+          [
+            16.370755,
+            48.206286
+          ],
+          [
+            16.370584,
+            48.206239
+          ],
+          [
+            16.370557,
+            48.206057
+          ],
+          [
+            16.370342,
+            48.205685
+          ],
+          [
+            16.369854,
+            48.205352
+          ],
+          [
+            16.369393,
+            48.204698
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-13/weg-kapitel-13-skuludis-verfolgung",
+        "name": "Weg: Kapitel 13 — Skuludis-Verfolgung",
+        "description": "**Kapitel 13**\n🚶 Demba\n\nSkuludis-Verfolgung: vom Krawattengeschäft am Graben zum Kaffeehaus nahe der Oper.",
+        "kapitel": "Kapitel 13",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#1565a0",
+          "weight": 5
+        }
+      },
+      "id": "lENOu"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.369414,
+            48.204684
+          ],
+          [
+            16.369328,
+            48.204734
+          ],
+          [
+            16.368873,
+            48.204044
+          ],
+          [
+            16.368497,
+            48.203969
+          ],
+          [
+            16.367912,
+            48.204391
+          ],
+          [
+            16.366373,
+            48.203672
+          ],
+          [
+            16.365944,
+            48.203347
+          ],
+          [
+            16.363857,
+            48.203854
+          ],
+          [
+            16.361518,
+            48.202424
+          ],
+          [
+            16.358771,
+            48.200923
+          ],
+          [
+            16.353042,
+            48.199464
+          ],
+          [
+            16.35184,
+            48.202167
+          ],
+          [
+            16.351497,
+            48.204212
+          ],
+          [
+            16.354029,
+            48.204083
+          ],
+          [
+            16.356497,
+            48.204412
+          ],
+          [
+            16.358149,
+            48.205099
+          ],
+          [
+            16.360381,
+            48.206343
+          ],
+          [
+            16.363728,
+            48.208087
+          ],
+          [
+            16.366646,
+            48.208173
+          ],
+          [
+            16.367924,
+            48.208882
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-14/weg-kapitel-14-omnibus-innere-stadt",
+        "name": "Weg: Kapitel 14 — Omnibus & Innere Stadt",
+        "description": "**Kapitel 14**\n🚶 Demba\n\nOper→Mariahilferstraße als OMNIBUS-Fahrt (über das Straßennetz geroutet), dann zu Fuß zur Wohnung Dr. Becker am Kohlmarkt.",
+        "kapitel": "Kapitel 14",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#7b3f00",
+          "weight": 5
+        }
+      },
+      "id": "iYj8h"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.36802,
+            48.20891
+          ],
+          [
+            16.36862,
+            48.209346
+          ],
+          [
+            16.370444,
+            48.208316
+          ],
+          [
+            16.371646,
+            48.207987
+          ],
+          [
+            16.37289,
+            48.20916
+          ],
+          [
+            16.375444,
+            48.210926
+          ],
+          [
+            16.377665,
+            48.2135
+          ],
+          [
+            16.379918,
+            48.214064
+          ],
+          [
+            16.380744,
+            48.216495
+          ],
+          [
+            16.382986,
+            48.220119
+          ],
+          [
+            16.384242,
+            48.219919
+          ],
+          [
+            16.385036,
+            48.221592
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-15/weg-kapitel-15-ins-caf-turf",
+        "name": "Weg: Kapitel 15 — ins Café Turf",
+        "description": "**Kapitel 15**\n🚶 Demba\n\nZum (fiktiven) Café Turf in der Leopoldstadt.",
+        "kapitel": "Kapitel 15",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#34495e",
+          "weight": 5
+        }
+      },
+      "id": "BjD3W"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.385175,
+            48.221463
+          ],
+          [
+            16.384928,
+            48.22151
+          ],
+          [
+            16.384757,
+            48.221192
+          ],
+          [
+            16.38275,
+            48.222225
+          ],
+          [
+            16.380894,
+            48.223132
+          ],
+          [
+            16.381055,
+            48.223472
+          ],
+          [
+            16.380932,
+            48.223633
+          ],
+          [
+            16.38032,
+            48.223765
+          ],
+          [
+            16.379119,
+            48.224369
+          ],
+          [
+            16.378491,
+            48.22424
+          ],
+          [
+            16.378303,
+            48.224322
+          ],
+          [
+            16.377643,
+            48.223751
+          ],
+          [
+            16.373684,
+            48.225613
+          ],
+          [
+            16.373368,
+            48.225477
+          ],
+          [
+            16.372971,
+            48.225545
+          ],
+          [
+            16.372789,
+            48.225741
+          ],
+          [
+            16.37281,
+            48.226045
+          ],
+          [
+            16.370906,
+            48.226795
+          ],
+          [
+            16.370412,
+            48.226295
+          ],
+          [
+            16.36994,
+            48.226452
+          ],
+          [
+            16.369554,
+            48.226867
+          ],
+          [
+            16.369039,
+            48.226695
+          ],
+          [
+            16.368867,
+            48.226352
+          ],
+          [
+            16.368073,
+            48.226181
+          ],
+          [
+            16.366915,
+            48.227224
+          ],
+          [
+            16.366228,
+            48.227767
+          ],
+          [
+            16.362172,
+            48.225995
+          ],
+          [
+            16.358782,
+            48.225094
+          ],
+          [
+            16.35728,
+            48.225037
+          ],
+          [
+            16.357151,
+            48.225337
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-16/weg-kapitel-16-mahnwache",
+        "name": "Weg: Kapitel 16 — Mahnwache",
+        "description": "**Kapitel 16**\n🚶 Demba\n\nHeimwärts, Halt zur Mahnwache vor Weiners Wohnung in der Liechtensteinstraße.",
+        "kapitel": "Kapitel 16",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#6a5acd",
+          "weight": 5
+        }
+      },
+      "id": "ruGPs"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            16.356905,
+            48.225345
+          ],
+          [
+            16.354158,
+            48.224658
+          ],
+          [
+            16.353257,
+            48.222414
+          ],
+          [
+            16.355703,
+            48.220641
+          ],
+          [
+            16.356497,
+            48.220134
+          ],
+          [
+            16.357055,
+            48.219497
+          ],
+          [
+            16.358471,
+            48.218111
+          ],
+          [
+            16.36096,
+            48.215294
+          ],
+          [
+            16.363986,
+            48.212492
+          ],
+          [
+            16.364136,
+            48.212034
+          ],
+          [
+            16.366045,
+            48.211419
+          ],
+          [
+            16.367108,
+            48.210926
+          ],
+          [
+            16.367741,
+            48.210468
+          ],
+          [
+            16.367448,
+            48.210221
+          ]
+        ],
+        "type": "LineString"
+      },
+      "properties": {
+        "id": "chapter-17/weg-kapitel-17-fiaker-zum-residenzkeller",
+        "name": "Weg: Kapitel 17 — Fiaker zum Residenzkeller",
+        "description": "**Kapitel 17**\n🚶 Demba\n\nFIAKER-Fahrt in den Residenzkeller (über das fahrbare Straßennetz, keine engen Fußgängergassen).",
+        "kapitel": "Kapitel 17",
+        "confidence": "",
+        "_umap_options": {
+          "color": "#e07b16",
+          "weight": 5
+        }
+      },
+      "id": "V37eH"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.356969,
+          48.225244
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-16/weiners-wohnung-liechtensteinstra-e",
+        "name": "Weiners Wohnung (Liechtensteinstraße)",
+        "description": "**Kapitel 16, 4, 8 · gegen halb 8 · straßengenau**\n🚶 Demba, Georg Weiner\n\nGeorg Weiners »Absteigquartier« in der Liechtensteinstraße (zweiter Stock, Fenster neben dem Balkon, »Ausblick auf den Liechtensteinpark« — daher am parknahen Abschnitt verortet, Hausnummer unbekannt). Die Adresse kehrt mehrfach wieder: Schon im Büro zielt Dembas Frage hierher (Kapitel 4), als »Absteigquartier« wird sie benannt (Kapitel 8), und gegen halb acht steht Demba selbst davor (Kapitel 16), Weiner tritt allein heraus, ruft einen Wagen und nennt dem vermeintlichen »Kollegen« arglos sein Ziel: den Residenzkeller. Pikant: dieselbe Straße, an deren Nordende das Arbeitsministerium residiert.\n\n> Daß dieser Herr Weiner gerade in der Liechtensteinstraße wohnte, das konnte kein Grund sein, um einen Umweg zu machen.",
+        "kapitel": "Kapitel 16, 4, 8",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#6a5acd",
+          "weight": 1
+        }
+      },
+      "id": "6pLtW"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.367924,
+          48.208882
+        ]
+      },
+      "properties": {
+        "id": "chapter-14/wohnung-dr-becker-kohlmarkt",
+        "name": "Wohnung Dr. Becker (Kohlmarkt)",
+        "description": "**Kapitel 14 · gegen 5 · straßengenau**\n🚶 Demba, Elly Becker, Viky, Anny, Frau Dr. Becker\n\nVierter Stock eines neuen Hauses am Kohlmarkt, »Dozent Dr. R. Becker, ordiniert von zwei bis fünf«. Hausnummer unbekannt, Lage am Kohlmarkt ungefähr.\n\n> Dr. Becker wohnte am Kohlmarkt im vierten Stock eines neuen Hauses.",
+        "kapitel": "Kapitel 14",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#7b3f00",
+          "weight": 1
+        }
+      },
+      "id": "jPNKx"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          16.37097,
+          48.216191
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "id": "chapter-11/wohnung-und-kanzlei-dr-hirsch",
+        "name": "Wohnung und Kanzlei Dr. Hirsch",
+        "description": "**Kapitel 11 · kurz nach 2 · straßengenau**\n🚶 Demba, Frau Dr. Hirsch, Dr. Hirsch\n\nBei der Familie des Hof- und Gerichtsadvokaten Dr. Hirsch, wo Demba die Söhne Georg und Erich unterrichtet, erbittet er den Monatsgehalt (80 Kronen) im Voraus. Die Eßlinggasse nennt der Text; Hausnummer unbekannt (vgl. auch Alexander Peer, Wiener Zeitung 2022).\n\n> Frau Dr. Hirsch, die Gattin des Hof- und Gerichtsadvokaten in der Eßlinggasse, kam ein wenig außer Atem in das Privatkontor ihres Mannes.\n\n[📖 Alexander Peer](https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens)",
+        "kapitel": "Kapitel 11",
+        "confidence": "medium",
+        "_umap_options": {
+          "color": "#9b1d4f",
+          "weight": 1
+        }
+      },
+      "id": "jBMLO"
+    }
+  ]
+}
