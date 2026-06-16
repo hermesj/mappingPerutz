@@ -1,0 +1,48 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "title": "zwischen-neun-und-neun",
+  "note": "Dataset compiled from a public-domain text. Coordinates via OpenStreetMap/Nominatim; routes via OSRM (driving) / BRouter (foot).",
+  "license": "CC BY-NC 4.0"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Damaskus",
+    "kind": "place",
+    "gloss": "Professor Ritter von Truxa war offenbar vor kurzem noch auf einer mehrmonatigen Studienreise im nördlichen Hurangebiet, das südlich von Damaskus liegt. Dabei scheint er auch Damaskus selbst besucht zu haben.",
+    "quote": "Ich habe gesehen, wie ein Nachtwächter in Damaskus einem harmlosen Spaziergänger ohne jeden Anlaß einen solchen Tritt in den Magen versetzte, daß der arme Teufel vom Fleck weg ins Spital gebracht werden mußte.",
+    "source": "own"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.296828,
+     33.511048
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 2,
+    "story": "Chapter 2",
+    "name": "Aleppo",
+    "kind": "place",
+    "gloss": "Professor Truxa bereiste nach eigenen Angaben auch Aleppo, möglicherweise auf dem Weg ins nördliche Haurangebiet (das sich südlich von Damaskus befindet).",
+    "quote": "Ein Limonadenverkäufer in Aleppo, den ich im Rauschzustande beobachten konnte, hielt sich für den Erzengel Gabriel.",
+    "source": "own"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.147772,
+     36.203665
+    ]
+   }
+  }
+ ]
+}

@@ -10,7 +10,8 @@
     { k: "name", t: "text" }, { k: "story", t: "group" },
     { k: "character", t: "text" }, { k: "time", t: "text" }, { k: "seq", t: "number" },
     { k: "gloss", t: "area" }, { k: "quote", t: "area" }, { k: "ref", t: "text" },
-    { k: "srcText", t: "text" }, { k: "essay", t: "text" }, { k: "verified", t: "tri" }
+    { k: "srcText", t: "text" }, { k: "essay", t: "text" },
+    { k: "confidence", t: "conf" }, { k: "verified", t: "tri" }
   ];
   // lat/lon (points) and coords (routes) are handled in a dedicated Location block.
 
@@ -127,6 +128,14 @@
       return '<select id="f_' + k + '"' + dis + ">" + state.groups.map(function (g) {
         return '<option value="' + esc(g.key) + '"' + (g.key === v ? " selected" : "") + ">" + esc(g.label) + "</option>";
       }).join("") + "</select>";
+    }
+    if (fld.t === "conf") {
+      var cv = val == null ? "" : val;
+      return '<select id="f_' + k + '"' + dis + ">" +
+        ['<option value="">(none)</option>',
+         '<option value="high"' + (cv === "high" ? " selected" : "") + ">high</option>",
+         '<option value="medium"' + (cv === "medium" ? " selected" : "") + ">medium</option>",
+         '<option value="low"' + (cv === "low" ? " selected" : "") + ">low</option>"].join("") + "</select>";
     }
     if (fld.t === "tri") {
       var cur = val === true ? "true" : (val === false ? "false" : "");
@@ -273,7 +282,9 @@
     $("panel").innerHTML =
       '<div class="ctx"><h2>New object</h2><div class="sub">added to your own layer (source: own)</div></div>' +
       '<form id="newForm">' +
-      '<div class="fieldrow"><label>group / story</label><select id="n_group">' + grp + "</select></div>" +
+      '<div class="fieldrow"><label>group / story (primary)</label><select id="n_group">' + grp + "</select></div>" +
+      '<div class="fieldrow"><label>weitere Kapitel (optional, z. B. 9,10) — macht den Knoten mehrkapitlig</label>' +
+        '<input id="n_groups_extra" type="text" placeholder="Komma-getrennte Kapitelnummern"></div>' +
       '<div class="fieldrow"><label>name *</label><input id="n_name" type="text"></div>' +
       '<fieldset><legend>location</legend>' +
         '<div class="fieldrow"><label>paste GeoJSON — Point or LineString (BRouter / uMap export)</label>' +
@@ -282,6 +293,9 @@
         '<input id="n_geocode" type="text" placeholder="findable address, Dublin, Ireland"></div></fieldset>' +
       opt("character") + opt("time") + opt("seq") + opt("gloss", "area") + opt("quote", "area") +
       opt("ref") + opt("srcText") + opt("essay") +
+      '<div class="fieldrow"><label>confidence</label><select id="n_confidence">' +
+        '<option value="">(none)</option><option value="high">high</option>' +
+        '<option value="medium">medium</option><option value="low">low</option></select></div>' +
       '<div class="editbar" style="border:none"><button type="button" class="save" id="createBtn">Create</button>' +
       '<button type="button" class="edit" id="cancelNew">Cancel</button><span id="status"></span></div></form>';
     $("cancelNew").onclick = function () { $("panel").innerHTML = '<p class="empty">Pick a feature to edit, or “+ New object”.</p>'; };
@@ -291,8 +305,12 @@
   function createObject() {
     var v = function (k) { var el = $("n_" + k); return el ? el.value.trim() : ""; };
     if (!v("name")) { setStatus("name is required", true); return; }
-    var body = { group: $("n_group").value, name: v("name") };
-    ["character", "time", "ref", "srcText", "essay", "gloss", "quote"].forEach(function (k) { if (v(k)) body[k] = v(k); });
+    var primary = parseInt($("n_group").value, 10);
+    var extra = v("groups_extra")
+      ? v("groups_extra").split(/[\s,]+/).map(function (x) { return parseInt(x, 10); }).filter(function (x) { return !isNaN(x); })
+      : [];
+    var body = { group: extra.length ? [primary].concat(extra) : primary, name: v("name") };
+    ["character", "time", "ref", "srcText", "essay", "confidence", "gloss", "quote"].forEach(function (k) { if (v(k)) body[k] = v(k); });
     if (v("seq")) body.seq = parseInt(v("seq"), 10);
     var gj = v("geojson");
     if (gj) {

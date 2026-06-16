@@ -33,7 +33,8 @@ import geocode_source as gs   # noqa: E402
 
 # Fields shown read-only as base context.
 CONTEXT_FIELDS = ["name", "story", "character", "time", "seq", "gloss",
-                  "quote", "ref", "srcText", "essay", "verified", "source"]
+                  "quote", "ref", "srcText", "essay", "essaySource",
+                  "confidence", "verified", "source"]
 ROOT = HERE  # set in main()
 
 
@@ -145,8 +146,12 @@ def create_feature(cfg, work_key, body):
     src.setdefault("places", []); src.setdefault("routes", []); src["source"] = "own"
 
     kind = body.get("kind", "place")
-    entry = {"group": int(body["group"]), "name": body["name"].strip()}
-    for k in ("gloss", "quote", "character", "time", "ref", "srcText", "essay"):
+    # `group` may be a single chapter (int) or a list of chapters (primary first,
+    # for a multi-chapter place). The frontend sends ints; cast defensively.
+    grp = body["group"]
+    grp = [int(x) for x in grp] if isinstance(grp, list) else int(grp)
+    entry = {"group": grp, "name": body["name"].strip()}
+    for k in ("gloss", "quote", "character", "time", "ref", "srcText", "essay", "essaySource", "confidence"):
         if body.get(k):
             entry[k] = body[k]
     if body.get("seq") not in (None, ""):

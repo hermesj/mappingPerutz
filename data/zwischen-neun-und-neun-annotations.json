@@ -1,5 +1,192 @@
 {
   "_comment": "Editorial annotation overlay for the zwischen-neun-und-neun layer — original work by J. Hermes, applied on top of the base features at load time (the base GeoJSON is never modified). Key = stable feature id; value = a patch of fields to merge. Edited via pipeline/annotate-ui/.",
   "work": "zwischen-neun-und-neun",
-  "annotations": {}
+  "annotations": {
+    "chapter-1/ecktrafik-der-frau-schimek": {
+      "lat": 48.226478,
+      "lon": 16.358935
+    },
+    "chapter-1/weg-kapitel-1-im-lichtental": {
+      "gloss": "Kapitel 1: Dembas Morgen im Lichtental — aus dem Greislerladen der Frau Püchl ist er am Ende verschwunden und wahrscheinlich in Richtung Park gegangen; die vorausgehende Tramfahrt findet sich in der Meta-Ebene unten."
+    },
+    "chapter-11/weg-kapitel-11-zur-e-linggasse": {
+      "gloss": "Von Steffis Wohnung (Kolingasse) zur Wohnung Dr. Hirsch in der Eßlinggasse."
+    },
+    "chapter-17/weg-kapitel-17-fiaker-zum-residenzkeller": {
+      "gloss": "FIAKER-Fahrt von Weimers Wohnung in den Residenzkeller (über das fahrbare Straßennetz, keine engen Fußgängergassen).",
+      "coords": [
+        [
+          16.356905,
+          48.225345
+        ],
+        [
+          16.357017,
+          48.225291
+        ],
+        [
+          16.35699,
+          48.224962
+        ],
+        [
+          16.356518,
+          48.225034
+        ],
+        [
+          16.356035,
+          48.22503
+        ],
+        [
+          16.355547,
+          48.225009
+        ],
+        [
+          16.354845,
+          48.224848
+        ],
+        [
+          16.354238,
+          48.224705
+        ],
+        [
+          16.354035,
+          48.224447
+        ],
+        [
+          16.353723,
+          48.223533
+        ],
+        [
+          16.353208,
+          48.222328
+        ],
+        [
+          16.353337,
+          48.222146
+        ],
+        [
+          16.355703,
+          48.220555
+        ],
+        [
+          16.356137,
+          48.220269
+        ],
+        [
+          16.356502,
+          48.219973
+        ],
+        [
+          16.356786,
+          48.21969
+        ],
+        [
+          16.357103,
+          48.219397
+        ],
+        [
+          16.35779,
+          48.218708
+        ],
+        [
+          16.358412,
+          48.217982
+        ],
+        [
+          16.359726,
+          48.216642
+        ],
+        [
+          16.360359,
+          48.215984
+        ],
+        [
+          16.360606,
+          48.215594
+        ],
+        [
+          16.360955,
+          48.215212
+        ],
+        [
+          16.361722,
+          48.214518
+        ],
+        [
+          16.362044,
+          48.214354
+        ],
+        [
+          16.362285,
+          48.214114
+        ],
+        [
+          16.363165,
+          48.213317
+        ],
+        [
+          16.363551,
+          48.212888
+        ],
+        [
+          16.363873,
+          48.212467
+        ],
+        [
+          16.364136,
+          48.212034
+        ],
+        [
+          16.364463,
+          48.211791
+        ],
+        [
+          16.364608,
+          48.211812
+        ],
+        [
+          16.365348,
+          48.211666
+        ],
+        [
+          16.366045,
+          48.211419
+        ],
+        [
+          16.367108,
+          48.210926
+        ],
+        [
+          16.367741,
+          48.210468
+        ],
+        [
+          16.367448,
+          48.210221
+        ]
+      ]
+    },
+    "chapter-2/aleppo": {
+      "verified": true
+    },
+    "chapter-2/damaskus": {
+      "confidence": "high",
+      "verified": true
+    },
+    "chapter-2/weg-kapitel-2-in-den-liechtensteinpark": {
+      "gloss": "Dembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, erst zur versteckten Bank, wo ihn bald Truxa, Klementi und Cyrus stören, dann in den belebteren unteren Parkteil."
+    },
+    "chapter-3/weg-kapitel-3-im-park": {
+      "gloss": "Kurzer Weg Dembas im unteren Parkteil zur Bank des Fräuleins (Alice Leitner)."
+    },
+    "chapter-5/weg-kapitel-5-heim-abstecher-pelerine": {
+      "gloss": "Zurück vom Büro Klebinder in die Wohnung nach Lichtental, um Antons Pelerine zu holen."
+    },
+    "chapter-7/weg-kapitel-7-ins-caf-hibernia": {
+      "gloss": "Von der Telefonzelle ins Café Hibernia (Café Schottenring)."
+    },
+    "chapter-8/weg-kapitel-8-caf-steffis-wohnung": {
+      "name": "Weg: Kapitel 8 — Zu Steffis Wohnung",
+      "gloss": "Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr)."
+    }
+  }
 }

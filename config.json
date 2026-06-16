@@ -49,7 +49,10 @@
         "en": "Between Nine and Nine",
         "de": "Zwischen neun und neun"
       },
-      "data": "data/zwischen-neun-und-neun.geojson",
+      "data": [
+        "data/zwischen-neun-und-neun.geojson",
+        "data/zwischen-neun-und-neun-own.geojson"
+      ],
       "annotations": "data/zwischen-neun-und-neun-annotations.json",
       "experimental": false,
       "numberedGroups": false,

@@ -1,0 +1,130 @@
+{
+  "work": "zwischen-neun-und-neun",
+  "source": "own",
+  "groups": [
+    {
+      "n": 1,
+      "en": "Chapter 1",
+      "de": ""
+    },
+    {
+      "n": 2,
+      "en": "Chapter 2",
+      "de": ""
+    },
+    {
+      "n": 3,
+      "en": "Chapter 3",
+      "de": ""
+    },
+    {
+      "n": 4,
+      "en": "Chapter 4",
+      "de": ""
+    },
+    {
+      "n": 5,
+      "en": "Chapter 5",
+      "de": ""
+    },
+    {
+      "n": 6,
+      "en": "Chapter 6",
+      "de": ""
+    },
+    {
+      "n": 7,
+      "en": "Chapter 7",
+      "de": ""
+    },
+    {
+      "n": 8,
+      "en": "Chapter 8",
+      "de": ""
+    },
+    {
+      "n": 9,
+      "en": "Chapter 9",
+      "de": ""
+    },
+    {
+      "n": 10,
+      "en": "Chapter 10",
+      "de": ""
+    },
+    {
+      "n": 11,
+      "en": "Chapter 11",
+      "de": ""
+    },
+    {
+      "n": 12,
+      "en": "Chapter 12",
+      "de": ""
+    },
+    {
+      "n": 13,
+      "en": "Chapter 13",
+      "de": ""
+    },
+    {
+      "n": 14,
+      "en": "Chapter 14",
+      "de": ""
+    },
+    {
+      "n": 15,
+      "en": "Chapter 15",
+      "de": ""
+    },
+    {
+      "n": 16,
+      "en": "Chapter 16",
+      "de": ""
+    },
+    {
+      "n": 17,
+      "en": "Chapter 17",
+      "de": ""
+    },
+    {
+      "n": 18,
+      "en": "Chapter 18",
+      "de": ""
+    },
+    {
+      "n": 19,
+      "en": "Chapter 19",
+      "de": ""
+    },
+    {
+      "n": 20,
+      "en": "Chapter 20",
+      "de": ""
+    },
+    {
+      "n": 21,
+      "en": "Meta",
+      "de": ""
+    }
+  ],
+  "places": [
+    {
+      "group": 2,
+      "name": "Damaskus",
+      "gloss": "Professor Ritter von Truxa war offenbar vor kurzem noch auf einer mehrmonatigen Studienreise im nördlichen Hurangebiet, das südlich von Damaskus liegt. Dabei scheint er auch Damaskus selbst besucht zu haben.",
+      "quote": "Ich habe gesehen, wie ein Nachtwächter in Damaskus einem harmlosen Spaziergänger ohne jeden Anlaß einen solchen Tritt in den Magen versetzte, daß der arme Teufel vom Fleck weg ins Spital gebracht werden mußte.",
+      "lat": 33.511048,
+      "lon": 36.296828
+    },
+    {
+      "group": 2,
+      "name": "Aleppo",
+      "gloss": "Professor Truxa bereiste nach eigenen Angaben auch Aleppo, möglicherweise auf dem Weg ins nördliche Haurangebiet (das sich südlich von Damaskus befindet).",
+      "quote": "Ein Limonadenverkäufer in Aleppo, den ich im Rauschzustande beobachten konnte, hielt sich für den Erzengel Gabriel.",
+      "lat": 36.203665,
+      "lon": 37.147772
+    }
+  ],
+  "routes": []
+}
