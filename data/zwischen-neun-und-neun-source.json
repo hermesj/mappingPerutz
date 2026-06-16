@@ -656,6 +656,26 @@
       "confidence": "high",
       "essay": "https://derive.at/texte/in-ketten-durch-wien/",
       "gloss": "Leo Perutz wohnte mit seiner Familie 17 Jahre lang in der Porzellangasse 37 (9. Bezirk; vgl. Alexander Peer, verlinktes Essay). Kein Schauplatz des Romans, sondern ein biografischer Kontextpunkt — bemerkenswert: Perutz hat die Handlung des Romans in die eigene Nachbarschaft gesetzt."
+    },
+    {
+      "group": 21,
+      "name": "Sigmund Freuds Praxis (Berggasse 19)",
+      "lat": 48.218659,
+      "lon": 16.363054,
+      "confidence": "high",
+      "gloss": "Sigmund Freuds Wohnung und psychoanalytische Praxis in der Berggasse 19 (heute Sigmund-Freud-Museum). Zur Zeit des Romans (1918) längst etabliert — während Stanislaus Demba durch den 9. Bezirk irrt, empfängt Freud nur wenige Schritte entfernt seine Patienten. Biografischer Kontextpunkt, kein Schauplatz.",
+      "essay": "https://de.wikipedia.org/wiki/Sigmund_Freud_Museum",
+      "essaySource": "Wikipedia"
+    },
+    {
+      "group": 21,
+      "name": "Café Herrenhof (Herrengasse 10)",
+      "lat": 48.20984,
+      "lon": 16.366289,
+      "confidence": "high",
+      "essay": "https://de.wikipedia.org/wiki/Caf%C3%A9_Herrenhof",
+      "essaySource": "Wikipedia",
+      "gloss": "Das berühmte Wiener Literatencafé Herrenhof (Herrengasse 10), Treffpunkt der literarischen Moderne — und Leo Perutz' Stammcafé. Biografischer Kontextpunkt, kein Schauplatz des Romans."
     }
   ],
   "routes": [
