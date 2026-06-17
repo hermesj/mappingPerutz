@@ -43,6 +43,20 @@
     if (!Array.isArray(line) || line.length < 2) throw new Error("LineString needs ≥2 points");
     return { type: "LineString", coords: line.map(function (c) { return [r6(c[0]), r6(c[1])]; }) };
   }
+  // A bare "lat, lon" decimal pair as copied from Google Maps (note: lat first,
+  // the opposite of GeoJSON's lon,lat). Returns a Point, or null if not such a pair.
+  function parseLatLon(text) {
+    var m = /^\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*$/.exec(text);
+    if (!m) return null;
+    var a = parseFloat(m[1]), b = parseFloat(m[2]), lat = a, lon = b;
+    if (Math.abs(a) > 90 && Math.abs(b) <= 90) { lat = b; lon = a; }   // tolerate a swapped pair
+    if (Math.abs(lat) > 90 || Math.abs(lon) > 180) throw new Error("coordinates out of range");
+    return { type: "Point", lat: r6(lat), lon: r6(lon) };
+  }
+  // Accept either a raw Google-Maps coordinate pair or a pasted GeoJSON.
+  function parseLocation(text) {
+    return parseLatLon(text) || parseGeoJSON(text);
+  }
 
   function api(path, opts) {
     return fetch(path, opts).then(function (r) {
@@ -156,9 +170,9 @@
       ? ((f.patch && f.patch.coords) ? f.patch.coords.length : (f.geom ? f.geom.npts : 0)) + " points"
       : effVal(f, "lat") + ", " + effVal(f, "lon");
     var rev = (editing && ov) ? '<span class="revert" data-k="' + (route ? "coords" : "latlon") + '">revert to base</span>' : "";
-    var paste = editing ? '<div class="fieldrow"><label>paste GeoJSON to replace the location ' +
-      "(Feature / FeatureCollection / geometry — leave empty to keep)</label>" +
-      '<textarea id="f_geojson" placeholder="paste a BRouter / uMap export…"></textarea></div>' : "";
+    var paste = editing ? '<div class="fieldrow"><label>paste GeoJSON or a Google-Maps coordinate pair ' +
+      "(lat, lon) to replace the location — leave empty to keep</label>" +
+      '<textarea id="f_geojson" placeholder="BRouter / uMap GeoJSON — or e.g. 48.2082, 16.3719"></textarea></div>' : "";
     return '<fieldset class="' + (ov ? "overridden" : "") + '"><legend>location' +
       (ov ? " — override" : "") + rev + "</legend>" +
       '<div class="group-hint">current: ' + esc(cur) + (ov ? " (overridden)" : "") + "</div>" + paste + "</fieldset>";
@@ -247,7 +261,7 @@
     var gjEl = $("f_geojson"), gj = gjEl ? gjEl.value.trim() : "";
     if (gj !== "") {
       var loc;
-      try { loc = parseGeoJSON(gj); } catch (e) { setStatus("GeoJSON: " + e.message, true); return; }
+      try { loc = parseLocation(gj); } catch (e) { setStatus("location: " + e.message, true); return; }
       if (f.kind === "route") {
         if (loc.type !== "LineString") { setStatus("this is a route — paste a LineString", true); return; }
         patch.coords = loc.coords;
@@ -287,8 +301,8 @@
         '<input id="n_groups_extra" type="text" placeholder="Komma-getrennte Kapitelnummern"></div>' +
       '<div class="fieldrow"><label>name *</label><input id="n_name" type="text"></div>' +
       '<fieldset><legend>location</legend>' +
-        '<div class="fieldrow"><label>paste GeoJSON — Point or LineString (BRouter / uMap export)</label>' +
-        '<textarea id="n_geojson" placeholder="the kind (place / route) is taken from the geometry"></textarea></div>' +
+        '<div class="fieldrow"><label>paste GeoJSON (Point / LineString) — or a Google-Maps coordinate pair (lat, lon)</label>' +
+        '<textarea id="n_geojson" placeholder="e.g. a BRouter / uMap export — or  48.2082, 16.3719"></textarea></div>' +
         '<div class="fieldrow"><label>…or geocode query (creates a place)</label>' +
         '<input id="n_geocode" type="text" placeholder="findable address, Dublin, Ireland"></div></fieldset>' +
       opt("character") + opt("time") + opt("seq") + opt("gloss", "area") + opt("quote", "area") +
@@ -315,11 +329,11 @@
     var gj = v("geojson");
     if (gj) {
       var loc;
-      try { loc = parseGeoJSON(gj); } catch (e) { setStatus("GeoJSON: " + e.message, true); return; }
+      try { loc = parseLocation(gj); } catch (e) { setStatus("location: " + e.message, true); return; }
       if (loc.type === "LineString") { body.kind = "route"; body.coords = loc.coords; }
       else { body.kind = "place"; body.lat = loc.lat; body.lon = loc.lon; }
     } else if (v("geocode")) { body.kind = "place"; body.geocode = v("geocode"); }
-    else { setStatus("paste GeoJSON, or give a geocode query", true); return; }
+    else { setStatus("paste GeoJSON or coordinates (lat, lon), or give a geocode query", true); return; }
     setStatus("creating… (geocoding may take a second)", false);
     api("/api/create?work=" + encodeURIComponent(state.work), {
       method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body)

@@ -197,7 +197,14 @@
         {
           "key": "Meta",
           "de": "Meta / Kontext",
-          "color": "#8a8178"
+          "color": "#8a8178",
+          "hidden": true
+        },
+        {
+          "key": "Reiseziele",
+          "de": "Reiseziele",
+          "color": "#4f7c9e",
+          "hidden": true
         }
       ],
       "essay": {

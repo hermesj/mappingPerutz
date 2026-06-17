@@ -281,7 +281,10 @@
     // A work may narrow the opening-view region (e.g. Dubliners' outlying
     // seaside points would otherwise zoom the start view far out).
     REGION = WORKS[work].regionBBox || CFG.view.regionBBox;
-    groupsOf().forEach(function (g) { layers[g.key] = L.layerGroup().addTo(map); });
+    groupsOf().forEach(function (g) {
+      layers[g.key] = L.layerGroup();
+      if (!g.hidden) layers[g.key].addTo(map);   // groups flagged `hidden:true` start off
+    });
 
     placesByGroup = {};
     groupsOf().forEach(function (g) { placesByGroup[g.key] = []; });
@@ -429,7 +432,7 @@
 
       // ── the group row (click = expand/collapse; swatch = layer on/off) ──
       var item = document.createElement("div");
-      item.className = "story-item";
+      item.className = "story-item" + (map.hasLayer(layers[g.key]) ? "" : " off");
       item.innerHTML =
         '<span class="caret">▸</span>' +
         '<span class="swatch" style="background:' + g.color + '" title="' + t.toggleLayer + '"></span>' +

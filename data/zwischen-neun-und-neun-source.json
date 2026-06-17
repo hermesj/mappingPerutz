@@ -199,6 +199,11 @@
       "n": 21,
       "en": "Meta",
       "de": "Meta / Kontext"
+    },
+    {
+      "n": 22,
+      "en": "Reiseziele",
+      "de": "Reiseziele"
     }
   ],
   "places": [
@@ -477,7 +482,8 @@
         4,
         5,
         8,
-        18
+        18,
+        22
       ],
       "name": "Venedig",
       "lat": 45.4371,
