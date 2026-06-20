@@ -154,7 +154,7 @@ def check_work(root, key, w):
 
 def check_mirror(root, mirror):
     print("· mirror drift (%s)" % mirror)
-    shared = ["engine/engine.js", "engine/engine.css",
+    shared = ["engine/engine.js", "engine/engine.css", "engine/VERSION",
               "pipeline/geocode_source.py", "pipeline/overlay.py", "pipeline/check.py",
               "pipeline/annotate-ui/serve.py", "pipeline/annotate-ui/app.js",
               "pipeline/annotate-ui/index.html", "docs/ARCHITECTURE.md"]
