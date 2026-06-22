@@ -17,7 +17,17 @@
   select { padding:.25em .5em; border:1px solid var(--rule); border-radius:4px; background:#fffdfa; }
   #sidebar { border-right:1px solid var(--rule); background:var(--panel); overflow-y:auto; padding:.4em 0; }
   #search { width:calc(100% - 1.2em); margin:.3em .6em .5em; padding:.4em .6em; border:1px solid var(--rule); border-radius:4px; }
-  .grp { font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:#9a8a7a; padding:.5em 1em .2em; }
+  .grp { display:flex; align-items:center; font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:#9a8a7a; padding:.5em 1em .2em; }
+  .grp-nm { flex:1 1 auto; }
+  .grp-edit { cursor:pointer; padding:0 .4em; color:#9a8a7a; font-size:.8rem; }
+  .grp-edit:hover { color:#b5651d; }
+  .row .ord { display:flex; gap:1px; margin-left:auto; opacity:0; }
+  .row:hover .ord { opacity:1; }
+  .mv { border:1px solid var(--rule); background:#fffdfa; border-radius:3px; cursor:pointer; font-size:.58rem; line-height:1; padding:1px 3px; color:var(--soft); }
+  .mv:disabled { opacity:.3; cursor:default; }
+  .grp-ord { display:flex; gap:1px; opacity:0; }
+  .grp:hover .grp-ord { opacity:1; }
+  .gmv { border:1px solid var(--rule); background:#fffdfa; border-radius:3px; cursor:pointer; font-size:.58rem; line-height:1; padding:1px 3px; color:var(--soft); }
   .row { display:flex; align-items:center; gap:.5em; padding:.32em 1em; cursor:pointer; font-size:.85rem; line-height:1.2; }
   .row:hover { background:rgba(0,0,0,.05); }
   .row.sel { background:rgba(181,101,29,.16); }
@@ -56,6 +66,9 @@
   .fieldrow.overridden input, .fieldrow.overridden textarea, .fieldrow.overridden select { border-color:#b5651d; }
   .editbar { position:sticky; top:0; background:var(--paper); padding:.5em 0; display:flex; gap:.6em; align-items:center; border-bottom:1px solid var(--rule); margin-bottom:.6em; z-index:2; }
   button.edit { background:none; border:1px solid var(--rule); border-radius:4px; padding:.4em 1em; cursor:pointer; color:var(--soft); }
+  button.del { background:#fff; border:1px solid #d99; border-radius:4px; padding:.4em .9em; cursor:pointer; color:#b00020; }
+  button.del:hover { background:#fdecec; }
+  .delconfirm { font-size:.78rem; color:#b00020; }
   .group-hint { font-size:.66rem; color:#9a8a7a; }
   fieldset { border:1px solid var(--rule); border-radius:5px; margin:.6em 0; padding:.5em .8em; }
   fieldset legend { font-size:.64rem; text-transform:uppercase; letter-spacing:.05em; color:#9a8a7a; padding:0 .4em; }
@@ -67,6 +80,7 @@
     <h1>Annotate</h1>
     <select id="workSel"></select>
     <button id="newBtn" class="newbtn">+ New object</button>
+    <button id="newGroupBtn" class="newbtn" style="background:#4f7c9e">+ New group</button>
     <span class="meta" id="meta"></span>
   </header>
   <nav id="sidebar">

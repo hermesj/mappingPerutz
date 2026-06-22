@@ -88,7 +88,7 @@
   function loadWork(key) {
     return api("/api/features?work=" + encodeURIComponent(key)).then(function (p) {
       state.work = key; state.groups = p.groups; state.features = p.features; state.configured = p.configured;
-      state.byId = {}; p.features.forEach(function (f) { state.byId[f.id] = f; });
+      state.byId = {}; p.features.forEach(function (f, i) { f.__i = i; state.byId[f.id] = f; });
       state.selId = null; state.editing = false;
       updateMeta(); $("search").value = ""; renderList("");
       $("panel").innerHTML = '<p class="empty">Pick a feature to edit, or “+ New object”.</p>';
@@ -106,30 +106,88 @@
     filter = (filter || "").toLowerCase();
     var order = [], seen = {};
     state.features.forEach(function (f) {
-      if (filter && (f.name + " " + f.story).toLowerCase().indexOf(filter) < 0) return;
-      if (!seen[f.story]) { seen[f.story] = []; order.push(f.story); }
-      seen[f.story].push(f);
+      var st = effVal(f, "story");                       // honour overlay group moves
+      if (filter && ((effVal(f, "name") || "") + " " + st).toLowerCase().indexOf(filter) < 0) return;
+      if (!seen[st]) { seen[st] = []; order.push(st); }
+      seen[st].push(f);
     });
-    // Group headings follow the config chapter/story order (state.groups), not
-    // the feature load order — so "Chapter 2" never sorts after "Chapter 10".
+    // Group headings follow config order; within a group, objects follow `seq`.
     var gi = {};
     state.groups.forEach(function (g, i) { gi[g.key] = i; });
     order.sort(function (a, b) {
       var ia = gi[a] == null ? Infinity : gi[a], ib = gi[b] == null ? Infinity : gi[b];
       return ia - ib || (a < b ? -1 : a > b ? 1 : 0);
     });
+    function bySeq(a, b) {
+      var sa = effVal(a, "seq"), sb = effVal(b, "seq");
+      sa = sa == null ? Infinity : sa; sb = sb == null ? Infinity : sb;
+      return sa - sb || (a.__i - b.__i);
+    }
     $("list").innerHTML = order.map(function (story) {
-      return '<div class="grp">' + esc(story) + "</div>" + seen[story].map(function (f) {
-        return '<div class="row' + (f.id === state.selId ? " sel" : "") + '" data-id="' + esc(f.id) + '">' +
-          '<span class="dot' + (hasPatch(f) ? " on" : "") + '"></span>' +
-          '<span class="nm">' + esc(effVal(f, "name")) + "</span>" +
-          (f.kind === "route" ? '<span class="rt">route</span>' : "") +
-          (f.source === "own" ? '<span class="own">own</span>' : "") + "</div>";
-      }).join("");
+      var rows = seen[story].slice().sort(bySeq);
+      return '<div class="grp"><span class="grp-nm">' + esc(story) + "</span>" +
+        '<span class="grp-ord">' +
+          '<button class="gmv" data-grp="' + esc(story) + '" data-dir="up" title="move group up">▲</button>' +
+          '<button class="gmv" data-grp="' + esc(story) + '" data-dir="down" title="move group down">▼</button>' +
+        "</span>" +
+        '<span class="grp-edit" data-grp="' + esc(story) + '" title="edit group">✎</span></div>' +
+        rows.map(function (f, i) {
+          return '<div class="row' + (f.id === state.selId ? " sel" : "") + '" data-id="' + esc(f.id) + '">' +
+            '<span class="dot' + (hasPatch(f) ? " on" : "") + '"></span>' +
+            '<span class="nm">' + esc(effVal(f, "name")) + "</span>" +
+            (f.kind === "route" ? '<span class="rt">route</span>' : "") +
+            (f.source === "own" ? '<span class="own">own</span>' : "") +
+            '<span class="ord">' +
+              '<button class="mv" data-id="' + esc(f.id) + '" data-dir="up"' + (i === 0 ? " disabled" : "") + ">▲</button>" +
+              '<button class="mv" data-id="' + esc(f.id) + '" data-dir="down"' + (i === rows.length - 1 ? " disabled" : "") + ">▼</button>" +
+            "</span></div>";
+        }).join("");
     }).join("") || '<p class="empty" style="padding:1em">no matches</p>';
     Array.prototype.forEach.call($("list").querySelectorAll(".row"), function (el) {
-      el.onclick = function () { select(el.getAttribute("data-id")); };
+      el.onclick = function (e) { if (e.target.closest(".ord")) return; select(el.getAttribute("data-id")); };
     });
+    Array.prototype.forEach.call($("list").querySelectorAll(".mv"), function (el) {
+      el.onclick = function (e) { e.stopPropagation(); moveRow(el.getAttribute("data-id"), el.getAttribute("data-dir")); };
+    });
+    Array.prototype.forEach.call($("list").querySelectorAll(".grp-edit"), function (el) {
+      el.onclick = function (e) { e.stopPropagation(); editGroup(el.getAttribute("data-grp")); };
+    });
+    Array.prototype.forEach.call($("list").querySelectorAll(".gmv"), function (el) {
+      el.onclick = function (e) { e.stopPropagation(); moveGroup(el.getAttribute("data-grp"), el.getAttribute("data-dir")); };
+    });
+  }
+
+  // Reorder groups relative to each other (writes the new order to config.json).
+  function moveGroup(key, dir) {
+    var keys = state.groups.map(function (g) { return g.key; });
+    var i = keys.indexOf(key), j = dir === "up" ? i - 1 : i + 1;
+    if (i < 0 || j < 0 || j >= keys.length) return;
+    var t = keys[i]; keys[i] = keys[j]; keys[j] = t;
+    api("/api/group-order?work=" + encodeURIComponent(state.work), {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ keys: keys })
+    }).then(function () { loadWork(state.work); }).catch(fail);
+  }
+
+  // Reorder within a group: rebuild the group's seq-order, swap with the neighbour,
+  // and persist a clean 1..N renumbering via the overlay.
+  function moveRow(id, dir) {
+    var f = state.byId[id]; if (!f) return;
+    var st = effVal(f, "story");
+    var grp = state.features.filter(function (x) { return effVal(x, "story") === st; });
+    grp.sort(function (a, b) {
+      var sa = effVal(a, "seq"), sb = effVal(b, "seq");
+      sa = sa == null ? Infinity : sa; sb = sb == null ? Infinity : sb;
+      return sa - sb || (a.__i - b.__i);
+    });
+    var idx = grp.map(function (x) { return x.id; }).indexOf(id);
+    var j = dir === "up" ? idx - 1 : idx + 1;
+    if (j < 0 || j >= grp.length) return;
+    var t = grp[idx]; grp[idx] = grp[j]; grp[j] = t;
+    api("/api/reorder?work=" + encodeURIComponent(state.work), {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ids: grp.map(function (x) { return x.id; }) })
+    }).then(function () { loadWork(state.work); }).catch(fail);
   }
 
   // ── field rendering ──
@@ -183,7 +241,7 @@
     var ov = isOverridden(f, fld.k);
     var revert = (editing && ov) ? '<span class="revert" data-k="' + fld.k + '">revert to base</span>' : "";
     return '<div class="fieldrow' + (ov ? " overridden" : "") + '">' +
-      "<label>" + fld.k + (ov ? ' <span class="ov">override</span>' : "") + revert + "</label>" +
+      "<label>" + (fld.k === "story" ? "group" : fld.k) + (ov ? ' <span class="ov">override</span>' : "") + revert + "</label>" +
       fieldControl(f, fld, editing) + "</div>";
   }
 
@@ -203,7 +261,8 @@
 
     var bar = '<div class="editbar">' + (editing
       ? '<button class="save" id="saveBtn">Save</button><button class="edit" id="cancelBtn">Cancel</button>'
-      : '<button class="edit" id="editBtn">✎ Edit</button>') +
+      : '<button class="edit" id="editBtn">✎ Edit</button>' +
+        (f.source === "own" ? '<button class="del" id="delBtn">🗑 Delete</button>' : "")) +
       '<span id="status"></span></div>';
 
     var loc = locationHtml(f, editing);
@@ -222,7 +281,20 @@
       });
     } else {
       $("editBtn").onclick = function () { state.editing = true; renderFeature(); };
+      if ($("delBtn")) $("delBtn").onclick = function () {
+        $("delBtn").outerHTML =
+          '<span class="delconfirm">Delete “' + esc(effVal(f, "name")) + '” from your own layer? ' +
+          '<button class="del" id="delYes">Yes, delete</button> <button class="edit" id="delNo">Cancel</button></span>';
+        $("delYes").onclick = function () { deleteFeature(f.id); };
+        $("delNo").onclick = function () { renderFeature(); };
+      };
     }
+  }
+
+  function deleteFeature(id) {
+    api("/api/delete?work=" + encodeURIComponent(state.work), {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: id })
+    }).then(function () { state.selId = null; loadWork(state.work); }).catch(fail);
   }
 
   function revertField(k) {
@@ -288,7 +360,7 @@
   // ── new object ──
   function newObject() {
     state.selId = null; renderList($("search").value);
-    var grp = state.groups.map(function (g) { return '<option value="' + g.n + '">' + esc(g.label) + "</option>"; }).join("");
+    var grp = state.groups.map(function (g) { return '<option value="' + esc(g.key) + '">' + esc(g.label) + "</option>"; }).join("");
     var opt = function (k, t) {
       if (t === "area") return '<div class="fieldrow"><label>' + k + '</label><textarea id="n_' + k + '"></textarea></div>';
       return '<div class="fieldrow"><label>' + k + '</label><input id="n_' + k + '" type="text"></div>';
@@ -319,9 +391,10 @@
   function createObject() {
     var v = function (k) { var el = $("n_" + k); return el ? el.value.trim() : ""; };
     if (!v("name")) { setStatus("name is required", true); return; }
-    var primary = parseInt($("n_group").value, 10);
+    var primary = $("n_group").value;                 // a group KEY
+    // "weitere Kapitel": chapter numbers → keys at those positions in the current order
     var extra = v("groups_extra")
-      ? v("groups_extra").split(/[\s,]+/).map(function (x) { return parseInt(x, 10); }).filter(function (x) { return !isNaN(x); })
+      ? v("groups_extra").split(/[\s,]+/).map(function (x) { var g = state.groups[parseInt(x, 10) - 1]; return g ? g.key : null; }).filter(Boolean)
       : [];
     var body = { group: extra.length ? [primary].concat(extra) : primary, name: v("name") };
     ["character", "time", "ref", "srcText", "essay", "confidence", "gloss", "quote"].forEach(function (k) { if (v(k)) body[k] = v(k); });
@@ -343,10 +416,54 @@
     }).catch(function (e) { setStatus("error: " + e.message, true); });
   }
 
+  // ── groups (write to config.json) ──
+  function gv(k) { var el = $("g_" + k); return el ? el.value.trim() : ""; }
+
+  function newGroup() {
+    state.selId = null; renderList($("search").value);
+    $("panel").innerHTML =
+      '<div class="ctx"><h2>New group</h2><div class="sub">added to config.json</div></div>' +
+      '<form id="grpForm">' +
+      '<div class="fieldrow"><label>key — story id, e.g. "Chapter 21" or "Reiseziele" *</label><input id="g_key" type="text"></div>' +
+      '<div class="fieldrow"><label>label (shown in the sidebar)</label><input id="g_de" type="text"></div>' +
+      '<div class="fieldrow"><label>badge (optional)</label><input id="g_badge" type="text"></div>' +
+      '<div class="hint">A colour is auto-assigned from the palette — change it later via ✎ on the group.</div>' +
+      '<div class="editbar" style="border:none"><button type="button" class="save" id="grpCreate">Create</button>' +
+      '<button type="button" class="edit" id="grpCancel">Cancel</button><span id="status"></span></div></form>';
+    $("grpCancel").onclick = clearPanel;
+    $("grpCreate").onclick = function () { saveGroup({ key: gv("key"), de: gv("de"), badge: gv("badge") }, true); };
+  }
+
+  function editGroup(story) {
+    var g = state.groups.filter(function (x) { return x.key === story; })[0]; if (!g) return;
+    state.selId = null; renderList($("search").value);
+    $("panel").innerHTML =
+      '<div class="ctx"><h2>Group: ' + esc(g.key) + '</h2><div class="sub">config.json</div></div>' +
+      '<form id="grpForm">' +
+      '<div class="fieldrow"><label>label</label><input id="g_de" type="text" value="' + esc(g.de || g.key) + '"></div>' +
+      '<div class="fieldrow"><label>color</label><input id="g_color" type="color" value="' + esc(g.color || "#777777") + '"></div>' +
+      '<div class="fieldrow"><label>badge</label><input id="g_badge" type="text" value="' + esc(g.badge || "") + '"></div>' +
+      '<div class="editbar" style="border:none"><button type="button" class="save" id="grpSave">Save</button>' +
+      '<button type="button" class="edit" id="grpCancel">Cancel</button><span id="status"></span></div></form>';
+    $("grpCancel").onclick = clearPanel;
+    $("grpSave").onclick = function () { saveGroup({ key: g.key, de: gv("de"), color: $("g_color").value, badge: gv("badge") }, false); };
+  }
+
+  function saveGroup(body, isNew) {
+    if (isNew && !body.key) { setStatus("key is required", true); return; }
+    setStatus("saving…", false);
+    api("/api/group?work=" + encodeURIComponent(state.work), {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body)
+    }).then(function () { loadWork(state.work); setStatus("saved ✓ (reload the map)", false); })
+      .catch(function (e) { setStatus("error: " + e.message, true); });
+  }
+  function clearPanel() { $("panel").innerHTML = '<p class="empty">Pick a feature to edit, or “+ New object”.</p>'; }
+
   function setStatus(msg, err) { var s = $("status"); if (s) { s.textContent = msg; s.className = err ? "err" : ""; } }
   function fail(e) { $("panel").innerHTML = '<p class="empty" style="color:#b00020">' + esc(e.message) + "</p>"; }
 
   $("search").addEventListener("input", function () { renderList(this.value); });
   $("newBtn").addEventListener("click", newObject);
+  if ($("newGroupBtn")) $("newGroupBtn").addEventListener("click", newGroup);
   loadWorks();
 })();

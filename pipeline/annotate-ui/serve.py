@@ -62,7 +62,8 @@ def groups_of(cfg, work_key):
     out = []
     for i, g in enumerate(cfg["works"][work_key].get("groups", []), start=1):
         out.append({"n": i, "key": g.get("key"),
-                    "label": (g.get(lang) if lang != "en" else g.get("key")) or g.get("key")})
+                    "label": (g.get(lang) if lang != "en" else g.get("key")) or g.get("key"),
+                    "de": g.get("de"), "color": g.get("color"), "badge": g.get("badge")})
     return out
 
 
@@ -140,16 +141,14 @@ def create_feature(cfg, work_key, body):
     if os.path.exists(src_path):
         src = json.load(open(src_path, encoding="utf-8"))
     else:
-        src = {"work": work_key, "source": "own",
-               "groups": [{"n": g["n"], "en": g["key"], "de": ""} for g in groups_of(cfg, work_key)],
-               "places": [], "routes": []}
+        src = {"work": work_key, "source": "own", "places": [], "routes": []}
     src.setdefault("places", []); src.setdefault("routes", []); src["source"] = "own"
 
     kind = body.get("kind", "place")
-    # `group` may be a single chapter (int) or a list of chapters (primary first,
-    # for a multi-chapter place). The frontend sends ints; cast defensively.
+    # Group(s) are referenced by KEY (story id) — a single key or a list (primary
+    # first). Keys are stable, so reordering the config groups never invalidates
+    # them. (geocode_source resolves an unknown key straight to the story title.)
     grp = body["group"]
-    grp = [int(x) for x in grp] if isinstance(grp, list) else int(grp)
     entry = {"group": grp, "name": body["name"].strip()}
     for k in ("gloss", "quote", "character", "time", "ref", "srcText", "essay", "essaySource", "confidence"):
         if body.get(k):
@@ -186,6 +185,100 @@ def create_feature(cfg, work_key, body):
         hint = ('Add  "data/%s-own.geojson"  to works.%s.data in config.json so the '
                 'map loads your additions.' % (work_key, work_key))
     return {"ok": True, "configHint": hint}
+
+
+# A spread of distinct hues for auto-assigning new-group colours.
+PALETTE = ["#b5651d", "#1f6f6f", "#8e44ad", "#2c7a3f", "#c0392b", "#16735b",
+           "#a67c00", "#2980b9", "#7d5a2b", "#6b8e23", "#9b1d4f", "#33691e",
+           "#1565a0", "#7b3f00", "#34495e", "#6a5acd", "#e07b16", "#5d6d7e",
+           "#7e1620", "#4e342e", "#8a8178", "#4f7c9e", "#557b83", "#9c6b30"]
+
+
+def save_group(cfg, work_key, body):
+    """Create or update a config group {key, de, color, badge}. On create with no
+    colour, auto-assigns the next unused palette hue. Writes config.json."""
+    key = (body.get("key") or "").strip()
+    if not key:
+        raise ValueError("group key required")
+    groups = cfg["works"][work_key].setdefault("groups", [])
+    grp = next((g for g in groups if g.get("key") == key), None)
+    if grp:                                   # update existing
+        for k in ("de", "color", "badge"):
+            if body.get(k) not in (None, ""):
+                grp[k] = body[k]
+    else:                                     # create
+        used = {g.get("color") for g in groups}
+        color = body.get("color") or next((c for c in PALETTE if c not in used),
+                                           PALETTE[len(groups) % len(PALETTE)])
+        grp = {"key": key, "de": body.get("de") or key, "color": color}
+        if body.get("badge"):
+            grp["badge"] = body["badge"]
+        groups.append(grp)
+    with open(os.path.join(ROOT, "config.json"), "w", encoding="utf-8") as f:
+        json.dump(cfg, f, ensure_ascii=False, indent=2)
+    return {"ok": True, "group": grp}
+
+
+def delete_own(cfg, work_key, fid):
+    """Delete an OWN feature (the only deletable kind) by its derived id. Removes
+    it from <work>-own-source.json positionally (so duplicate names are precise),
+    drops any overlay patch, and re-renders <work>-own.geojson."""
+    w = cfg["works"][work_key]
+    feats = ov.load_work_features(ROOT, w)
+    ids = ov.feature_ids(feats)
+    own_pos, k = -1, -1
+    for i, f in enumerate(feats):
+        if f["properties"].get("source") == "own":
+            k += 1
+            if ids[i] == fid:
+                own_pos = k
+                break
+    if own_pos < 0:
+        raise ValueError("not an own feature — only own additions can be deleted here")
+    src_path = own_source_path(work_key)
+    src = json.load(open(src_path, encoding="utf-8"))
+    places, routes = src.setdefault("places", []), src.setdefault("routes", [])
+    # own features render places-then-routes, matching this combined order
+    if own_pos < len(places):
+        removed = places.pop(own_pos)
+    else:
+        removed = routes.pop(own_pos - len(places))
+    with open(src_path, "w", encoding="utf-8") as f:
+        json.dump(src, f, ensure_ascii=False, indent=2)
+    path = ov.overlay_path(ROOT, work_key, w)        # drop any overlay patch → no orphan
+    ann, _ = ov.load_overlay(path)
+    if fid in ann:
+        ann.pop(fid); ov.save_overlay(path, work_key, ann)
+    region = (cfg.get("view") or {}).get("regionBBox")
+    gs.main(src_path, os.path.join(ROOT, "data", work_key + "-own.geojson"), region)
+    return {"ok": True, "deleted": removed.get("name")}
+
+
+def reorder_groups(cfg, work_key, keys):
+    """Reorder a work's config groups to match `keys` (the new display order);
+    any group not listed keeps its relative order at the end. Writes config.json."""
+    groups = cfg["works"][work_key].get("groups", [])
+    by_key = {g.get("key"): g for g in groups}
+    listed = set(keys)
+    new = [by_key[k] for k in keys if k in by_key] + [g for g in groups if g.get("key") not in listed]
+    cfg["works"][work_key]["groups"] = new
+    with open(os.path.join(ROOT, "config.json"), "w", encoding="utf-8") as f:
+        json.dump(cfg, f, ensure_ascii=False, indent=2)
+    return {"ok": True, "count": len(new)}
+
+
+def reorder_overlay(cfg, work_key, ids):
+    """Renumber `seq` (1..N) for the given feature ids via the overlay — merged
+    onto any existing patch. Lets the sidebar/map order be edited in place."""
+    w = cfg["works"][work_key]
+    path = ov.overlay_path(ROOT, work_key, w)
+    ann, _ = ov.load_overlay(path)
+    for i, fid in enumerate(ids, start=1):
+        patch = ann.get(fid, {})
+        patch["seq"] = i
+        ann[fid] = patch
+    ov.save_overlay(path, work_key, ann)
+    return {"ok": True, "count": len(ids)}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -244,6 +337,14 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json(200, save_patch(cfg, wk, body["id"], body.get("patch", {})))
             if u.path == "/api/create":
                 return self._json(200, create_feature(cfg, wk, body))
+            if u.path == "/api/group":
+                return self._json(200, save_group(cfg, wk, body))
+            if u.path == "/api/reorder":
+                return self._json(200, reorder_overlay(cfg, wk, body.get("ids", [])))
+            if u.path == "/api/group-order":
+                return self._json(200, reorder_groups(cfg, wk, body.get("keys", [])))
+            if u.path == "/api/delete":
+                return self._json(200, delete_own(cfg, wk, body["id"]))
             self._send(404, "not found", "text/plain")
         except Exception as e:
             self._json(500, {"error": str(e)})

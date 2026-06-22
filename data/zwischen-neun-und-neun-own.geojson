@@ -300,6 +300,88 @@
   {
    "type": "Feature",
    "properties": {
+    "group": 23,
+    "story": "GELEHRTENORTE",
+    "name": "Erlangen",
+    "kind": "place",
+    "gloss": "Laut Demba hat ein Professor Haase aus Erlangen seine Arbeit zu einer neuen Wortbedeutung verteildigt.",
+    "quote": "Eine große Diskussion hat sich über ein Wort, für das ich eine neue Deutung gegeben habe, entsponnen. Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
+    "source": "own"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.981207,
+     49.589157
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 23,
+    "story": "GELEHRTENORTE",
+    "name": "Graz (Uni)",
+    "kind": "place",
+    "gloss": "Demba führt einen Prof. Mayer in Graz an, der seine eigene Arbeit zu einer neu gefundenen Wortbedeutung verteidigt haben soll.",
+    "quote": "Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
+    "srcText": "Professor Mayer in Graz",
+    "confidence": "high",
+    "source": "own"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.449596,
+     47.077564
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 23,
+    "story": "GELEHRTENORTE",
+    "name": "Göttingen (Uni)",
+    "kind": "place",
+    "gloss": "Demba führt \"dem berühmten Riemenschmidt\" in Göttingen an, der seine Untersuchung \"scharfsinnig\" genannt haben soll.",
+    "quote": "Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
+    "srcText": "der berühmte Riemenschmidt in Göttingen",
+    "confidence": "high",
+    "source": "own"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.937869,
+     51.534076
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 23,
+    "story": "GELEHRTENORTE",
+    "name": "München (Uni)",
+    "kind": "place",
+    "gloss": "Wirth in München wird von Truxa Vertreter der These angeführt, dass Massenpsychosen auf Drogen zurückgeführt werden könnten.",
+    "quote": "»Ich möchte doch lieber auf gesichertem, wissenschaftlichem Boden bleiben,« warf Professor Truxa ein. »Wirth in München geht ja noch viel weiter als Sie, ohne übrigens auch nur den Schatten eines ernstzunehmenden Beweises für seine Theorien zu erbringen. Nach seiner Behauptung wären die großen Massenpsychosen der Vergangenheit, der Flagellantismus ebenso wie die merkwürdigen Tanzepidemien, als Folgen des übermäßigen Genusses des Haschischs oder eines Narkotikons von ähnlicher Wirkung anzusehen.«",
+    "srcText": "Wirth in München",
+    "confidence": "high",
+    "source": "own"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.57939,
+     48.151047
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
     "group": 22,
     "story": "Reiseziele",
     "name": "Geplante Venedigreise",

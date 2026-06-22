@@ -165,18 +165,43 @@
         ]
       ]
     },
+    "chapter-2/akademie-der-wissenschaften": {
+      "seq": 6
+    },
     "chapter-2/aleppo": {
+      "story": "GELEHRTENORTE",
+      "seq": 2,
       "verified": true
+    },
+    "chapter-2/bank-im-liechtensteinpark": {
+      "seq": 2
     },
     "chapter-2/damaskus": {
-      "confidence": "high",
+      "story": "GELEHRTENORTE",
+      "seq": 3,
       "verified": true
     },
+    "chapter-2/konsular-akademie": {
+      "seq": 5
+    },
+    "chapter-2/kunsthistorisches-museum": {
+      "seq": 4
+    },
+    "chapter-2/porzellangasse-querung": {
+      "seq": 1
+    },
+    "chapter-2/unterer-liechtensteinpark": {
+      "seq": 3
+    },
     "chapter-2/weg-kapitel-2-in-den-liechtensteinpark": {
-      "gloss": "Dembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, erst zur versteckten Bank, wo ihn bald Truxa, Klementi und Cyrus stören, dann in den belebteren unteren Parkteil."
+      "gloss": "Dembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, erst zur versteckten Bank, wo ihn bald Truxa, Klementi und Cyrus stören, dann in den belebteren unteren Parkteil.",
+      "seq": 7
     },
     "chapter-3/weg-kapitel-3-im-park": {
       "gloss": "Kurzer Weg Dembas im unteren Parkteil zur Bank des Fräuleins (Alice Leitner)."
+    },
+    "chapter-4/venedig": {
+      "story": "Reiseziele"
     },
     "chapter-5/weg-kapitel-5-heim-abstecher-pelerine": {
       "gloss": "Zurück vom Büro Klebinder in die Wohnung nach Lichtental, um Antons Pelerine zu holen."
@@ -187,6 +212,22 @@
     "chapter-8/weg-kapitel-8-caf-steffis-wohnung": {
       "name": "Weg: Kapitel 8 — Zu Steffis Wohnung",
       "gloss": "Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr)."
+    },
+    "gelehrtenorte/erlangen": {
+      "name": "Erlangen (Uni)",
+      "seq": 4
+    },
+    "gelehrtenorte/g-ttingen-uni": {
+      "seq": 6
+    },
+    "gelehrtenorte/graz-uni": {
+      "seq": 5
+    },
+    "gelehrtenorte/m-nchen-uni": {
+      "seq": 1
+    },
+    "reiseziele/graz": {
+      "name": "Graz (Bhf)"
     }
   }
 }

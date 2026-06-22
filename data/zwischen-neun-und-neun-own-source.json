@@ -5,112 +5,117 @@
     {
       "n": 1,
       "en": "Chapter 1",
-      "de": ""
+      "de": "Kapitel 1"
     },
     {
       "n": 2,
       "en": "Chapter 2",
-      "de": ""
+      "de": "Kapitel 2"
     },
     {
       "n": 3,
       "en": "Chapter 3",
-      "de": ""
+      "de": "Kapitel 3"
     },
     {
       "n": 4,
       "en": "Chapter 4",
-      "de": ""
+      "de": "Kapitel 4"
     },
     {
       "n": 5,
       "en": "Chapter 5",
-      "de": ""
+      "de": "Kapitel 5"
     },
     {
       "n": 6,
       "en": "Chapter 6",
-      "de": ""
+      "de": "Kapitel 6"
     },
     {
       "n": 7,
       "en": "Chapter 7",
-      "de": ""
+      "de": "Kapitel 7"
     },
     {
       "n": 8,
       "en": "Chapter 8",
-      "de": ""
+      "de": "Kapitel 8"
     },
     {
       "n": 9,
       "en": "Chapter 9",
-      "de": ""
+      "de": "Kapitel 9"
     },
     {
       "n": 10,
       "en": "Chapter 10",
-      "de": ""
+      "de": "Kapitel 10"
     },
     {
       "n": 11,
       "en": "Chapter 11",
-      "de": ""
+      "de": "Kapitel 11"
     },
     {
       "n": 12,
       "en": "Chapter 12",
-      "de": ""
+      "de": "Kapitel 12"
     },
     {
       "n": 13,
       "en": "Chapter 13",
-      "de": ""
+      "de": "Kapitel 13"
     },
     {
       "n": 14,
       "en": "Chapter 14",
-      "de": ""
+      "de": "Kapitel 14"
     },
     {
       "n": 15,
       "en": "Chapter 15",
-      "de": ""
+      "de": "Kapitel 15"
     },
     {
       "n": 16,
       "en": "Chapter 16",
-      "de": ""
+      "de": "Kapitel 16"
     },
     {
       "n": 17,
       "en": "Chapter 17",
-      "de": ""
+      "de": "Kapitel 17"
     },
     {
       "n": 18,
       "en": "Chapter 18",
-      "de": ""
+      "de": "Kapitel 18"
     },
     {
       "n": 19,
       "en": "Chapter 19",
-      "de": ""
+      "de": "Kapitel 19"
     },
     {
       "n": 20,
       "en": "Chapter 20",
-      "de": ""
+      "de": "Kapitel 20"
     },
     {
       "n": 21,
       "en": "Meta",
-      "de": ""
+      "de": "Meta / Kontext"
     },
     {
       "n": 22,
       "en": "Reiseziele",
       "de": "Reiseziele"
+    },
+    {
+      "n": 23,
+      "en": "GELEHRTENORTE",
+      "de": "Orte der Gelehrten"
     }
   ],
   "places": [
@@ -239,6 +244,45 @@
       "lon": 13.767604,
       "confidence": "high",
       "gloss": "Abschluss der Rundreise: eine Fußwanderung durchs Ennstal (Sonja + Weiner)."
+    },
+    {
+      "group": 23,
+      "name": "Erlangen",
+      "gloss": "Laut Demba hat ein Professor Haase aus Erlangen seine Arbeit zu einer neuen Wortbedeutung verteildigt.",
+      "quote": "Eine große Diskussion hat sich über ein Wort, für das ich eine neue Deutung gegeben habe, entsponnen. Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
+      "geocode": "Erlangen",
+      "lat": 49.589157,
+      "lon": 10.981207
+    },
+    {
+      "group": 23,
+      "name": "Graz (Uni)",
+      "gloss": "Demba führt einen Prof. Mayer in Graz an, der seine eigene Arbeit zu einer neu gefundenen Wortbedeutung verteidigt haben soll.",
+      "quote": "Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
+      "srcText": "Professor Mayer in Graz",
+      "confidence": "high",
+      "lat": 47.077564,
+      "lon": 15.449596
+    },
+    {
+      "group": 23,
+      "name": "Göttingen (Uni)",
+      "gloss": "Demba führt \"dem berühmten Riemenschmidt\" in Göttingen an, der seine Untersuchung \"scharfsinnig\" genannt haben soll.",
+      "quote": "Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
+      "srcText": "der berühmte Riemenschmidt in Göttingen",
+      "confidence": "high",
+      "lat": 51.534076,
+      "lon": 9.937869
+    },
+    {
+      "group": 23,
+      "name": "München (Uni)",
+      "gloss": "Wirth in München wird von Truxa Vertreter der These angeführt, dass Massenpsychosen auf Drogen zurückgeführt werden könnten.",
+      "quote": "»Ich möchte doch lieber auf gesichertem, wissenschaftlichem Boden bleiben,« warf Professor Truxa ein. »Wirth in München geht ja noch viel weiter als Sie, ohne übrigens auch nur den Schatten eines ernstzunehmenden Beweises für seine Theorien zu erbringen. Nach seiner Behauptung wären die großen Massenpsychosen der Vergangenheit, der Flagellantismus ebenso wie die merkwürdigen Tanzepidemien, als Folgen des übermäßigen Genusses des Haschischs oder eines Narkotikons von ähnlicher Wirkung anzusehen.«",
+      "srcText": "Wirth in München",
+      "confidence": "high",
+      "lat": 48.151047,
+      "lon": 11.57939
     }
   ],
   "routes": [

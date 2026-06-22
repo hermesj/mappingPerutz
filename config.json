@@ -205,6 +205,11 @@
           "de": "Reiseziele",
           "color": "#4f7c9e",
           "hidden": true
+        },
+        {
+          "key": "GELEHRTENORTE",
+          "de": "Orte der Gelehrten",
+          "color": "#557b83"
         }
       ],
       "essay": {
