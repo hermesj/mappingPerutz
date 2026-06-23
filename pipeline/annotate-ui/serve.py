@@ -63,7 +63,8 @@ def groups_of(cfg, work_key):
     for i, g in enumerate(cfg["works"][work_key].get("groups", []), start=1):
         out.append({"n": i, "key": g.get("key"),
                     "label": (g.get(lang) if lang != "en" else g.get("key")) or g.get("key"),
-                    "de": g.get("de"), "color": g.get("color"), "badge": g.get("badge")})
+                    "de": g.get("de"), "color": g.get("color"), "badge": g.get("badge"),
+                    "hidden": bool(g.get("hidden"))})
     return out
 
 
@@ -206,6 +207,11 @@ def save_group(cfg, work_key, body):
         for k in ("de", "color", "badge"):
             if body.get(k) not in (None, ""):
                 grp[k] = body[k]
+        if "hidden" in body:                  # default-visibility toggle
+            if body["hidden"]:
+                grp["hidden"] = True
+            else:
+                grp.pop("hidden", None)
     else:                                     # create
         used = {g.get("color") for g in groups}
         color = body.get("color") or next((c for c in PALETTE if c not in used),
@@ -213,6 +219,8 @@ def save_group(cfg, work_key, body):
         grp = {"key": key, "de": body.get("de") or key, "color": color}
         if body.get("badge"):
             grp["badge"] = body["badge"]
+        if body.get("hidden"):
+            grp["hidden"] = True
         groups.append(grp)
     with open(os.path.join(ROOT, "config.json"), "w", encoding="utf-8") as f:
         json.dump(cfg, f, ensure_ascii=False, indent=2)

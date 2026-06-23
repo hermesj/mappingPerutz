@@ -209,11 +209,17 @@
         {
           "key": "GELEHRTENORTE",
           "de": "Orte der Gelehrten",
-          "color": "#557b83"
+          "color": "#557b83",
+          "hidden": true
+        },
+        {
+          "key": "Betrüger",
+          "de": "Orte der Betrüger",
+          "color": "#8c3a52",
+          "hidden": true
         }
       ],
       "essay": {
-        "source": "Alexander Peer",
         "label": {
           "place": {
             "de": "über diesen Ort",

@@ -10,7 +10,7 @@
     { k: "name", t: "text" }, { k: "story", t: "group" },
     { k: "character", t: "text" }, { k: "time", t: "text" }, { k: "seq", t: "number" },
     { k: "gloss", t: "area" }, { k: "quote", t: "area" }, { k: "ref", t: "text" },
-    { k: "srcText", t: "text" }, { k: "essay", t: "text" },
+    { k: "srcText", t: "text" }, { k: "essay", t: "text" }, { k: "essaySource", t: "text" },
     { k: "confidence", t: "conf" }, { k: "verified", t: "tri" }
   ];
   // lat/lon (points) and coords (routes) are handled in a dedicated Location block.
@@ -241,7 +241,7 @@
     var ov = isOverridden(f, fld.k);
     var revert = (editing && ov) ? '<span class="revert" data-k="' + fld.k + '">revert to base</span>' : "";
     return '<div class="fieldrow' + (ov ? " overridden" : "") + '">' +
-      "<label>" + (fld.k === "story" ? "group" : fld.k) + (ov ? ' <span class="ov">override</span>' : "") + revert + "</label>" +
+      "<label>" + (fld.k === "story" ? "group" : fld.k === "essaySource" ? "essay source — leer = keine Quelle (nur 📖)" : fld.k) + (ov ? ' <span class="ov">override</span>' : "") + revert + "</label>" +
       fieldControl(f, fld, editing) + "</div>";
   }
 
@@ -378,7 +378,7 @@
         '<div class="fieldrow"><label>…or geocode query (creates a place)</label>' +
         '<input id="n_geocode" type="text" placeholder="findable address, Dublin, Ireland"></div></fieldset>' +
       opt("character") + opt("time") + opt("seq") + opt("gloss", "area") + opt("quote", "area") +
-      opt("ref") + opt("srcText") + opt("essay") +
+      opt("ref") + opt("srcText") + opt("essay") + opt("essaySource") +
       '<div class="fieldrow"><label>confidence</label><select id="n_confidence">' +
         '<option value="">(none)</option><option value="high">high</option>' +
         '<option value="medium">medium</option><option value="low">low</option></select></div>' +
@@ -397,7 +397,7 @@
       ? v("groups_extra").split(/[\s,]+/).map(function (x) { var g = state.groups[parseInt(x, 10) - 1]; return g ? g.key : null; }).filter(Boolean)
       : [];
     var body = { group: extra.length ? [primary].concat(extra) : primary, name: v("name") };
-    ["character", "time", "ref", "srcText", "essay", "confidence", "gloss", "quote"].forEach(function (k) { if (v(k)) body[k] = v(k); });
+    ["character", "time", "ref", "srcText", "essay", "essaySource", "confidence", "gloss", "quote"].forEach(function (k) { if (v(k)) body[k] = v(k); });
     if (v("seq")) body.seq = parseInt(v("seq"), 10);
     var gj = v("geojson");
     if (gj) {
@@ -443,10 +443,11 @@
       '<div class="fieldrow"><label>label</label><input id="g_de" type="text" value="' + esc(g.de || g.key) + '"></div>' +
       '<div class="fieldrow"><label>color</label><input id="g_color" type="color" value="' + esc(g.color || "#777777") + '"></div>' +
       '<div class="fieldrow"><label>badge</label><input id="g_badge" type="text" value="' + esc(g.badge || "") + '"></div>' +
+      '<div class="fieldrow"><label><input id="g_hidden" type="checkbox"' + (g.hidden ? " checked" : "") + '> beim Laden der Karte ausgeblendet</label></div>' +
       '<div class="editbar" style="border:none"><button type="button" class="save" id="grpSave">Save</button>' +
       '<button type="button" class="edit" id="grpCancel">Cancel</button><span id="status"></span></div></form>';
     $("grpCancel").onclick = clearPanel;
-    $("grpSave").onclick = function () { saveGroup({ key: g.key, de: gv("de"), color: $("g_color").value, badge: gv("badge") }, false); };
+    $("grpSave").onclick = function () { saveGroup({ key: g.key, de: gv("de"), color: $("g_color").value, badge: gv("badge"), hidden: $("g_hidden").checked }, false); };
   }
 
   function saveGroup(body, isNew) {

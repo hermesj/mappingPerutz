@@ -2,6 +2,24 @@
   "_comment": "Editorial annotation overlay for the zwischen-neun-und-neun layer — original work by J. Hermes, applied on top of the base features at load time (the base GeoJSON is never modified). Key = stable feature id; value = a patch of fields to merge. Edited via pipeline/annotate-ui/.",
   "work": "zwischen-neun-und-neun",
   "annotations": {
+    "betr-ger/bagdad": {
+      "seq": 5
+    },
+    "betr-ger/budapest-bahnhof": {
+      "seq": 1
+    },
+    "betr-ger/bukarest": {
+      "seq": 3
+    },
+    "betr-ger/eilzug-wien-budapest-skuludis": {
+      "seq": 6
+    },
+    "betr-ger/kairo": {
+      "seq": 4
+    },
+    "betr-ger/petersburg": {
+      "seq": 2
+    },
     "chapter-1/ecktrafik-der-frau-schimek": {
       "lat": 48.226478,
       "lon": 16.358935
@@ -11,6 +29,36 @@
     },
     "chapter-11/weg-kapitel-11-zur-e-linggasse": {
       "gloss": "Von Steffis Wohnung (Kolingasse) zur Wohnung Dr. Hirsch in der Eßlinggasse."
+    },
+    "chapter-12/krawattengesch-ft-praterstra-e": {
+      "confidence": "medium"
+    },
+    "chapter-12/weg-kapitel-12-gegenbauer-verlorenes-kuvert": {
+      "gloss": "Von der Kanzlei Dr. Hirsch in die Nähe der Praterstraße, wo Demba sein Kuvert verliert."
+    },
+    "chapter-13/weg-kapitel-13-skuludis-verfolgung": {
+      "gloss": "Skuludis-Verfolgung: vom Krawattengeschäft in der Praterstraße über das Krawattengeschäft am Graben und das Kaffeehaus nahe der Oper zum Autobus."
+    },
+    "chapter-14/hauptwerkst-tte-der-st-dtischen-stra-enbahnen": {
+      "seq": 4,
+      "quote": "Unfall in der Hauptwerkstätte der städtischen Straßenbahnen."
+    },
+    "chapter-14/mariahilferstra-e": {
+      "seq": 1
+    },
+    "chapter-14/selbstmord-in-der-babenbergerstra-e": {
+      "seq": 3,
+      "gloss": "In gleich zwei Kapiteln wird erwähnt, dass die Zeitung unter den Lokalnotizen über einen Selbstmord in der Babenbergerstraße (in direkter Nachbarschaft zum Kunsthistorischen Museum) berichtet. Nur berichtet, nicht Schauplatz der Handlung.",
+      "quote": "Ein Selbstmordversuch, halt. Was ist das? Die Gattin des Realschulprofessors Ernest W., Frau Kamilla W., hat gestern in ihrer in der Babenbergerstraße gelegenen Wohnung Veronal –, nichts!"
+    },
+    "chapter-14/weg-kapitel-14-omnibus-innere-stadt": {
+      "seq": 5
+    },
+    "chapter-14/wohnung-dr-becker-kohlmarkt": {
+      "seq": 2
+    },
+    "chapter-16/weiners-wohnung-liechtensteinstra-e": {
+      "gloss": "Georg Weiners »Absteigquartier« in der Liechtensteinstraße (zweiter Stock, Fenster neben dem Balkon, Ostseite (Morgensonne) »Ausblick auf den Liechtensteinpark« — daher am parknahen Abschnitt verortet, Hausnummer unbekannt). Die Adresse kehrt mehrfach wieder: Schon im Büro zielt Dembas Frage hierher (Kapitel 4), als »Absteigquartier« wird sie benannt (Kapitel 8), und gegen halb acht steht Demba selbst davor (Kapitel 16), Weiner tritt allein heraus, ruft einen Wagen und nennt dem vermeintlichen »Kollegen« arglos sein Ziel: den Residenzkeller. Pikant: dieselbe Straße, an deren Nordende das Arbeitsministerium residiert."
     },
     "chapter-17/weg-kapitel-17-fiaker-zum-residenzkeller": {
       "gloss": "FIAKER-Fahrt von Weimers Wohnung in den Residenzkeller (über das fahrbare Straßennetz, keine engen Fußgängergassen).",
@@ -209,9 +257,15 @@
     "chapter-7/weg-kapitel-7-ins-caf-hibernia": {
       "gloss": "Von der Telefonzelle ins Café Hibernia (Café Schottenring)."
     },
+    "chapter-8/haus-des-tr-dlers-klettengasse-6": {
+      "gloss": "Hier beginnt Dembas Tag — was Leser aber erst im Kapitel 8 erfahren – im wunderkammerartigen Arbeitszimmer des alten Trödlers (halb Sammler, halb Händler). Zwei Polizisten treffen auch ein. Demba gelangt über die dunkle Stiege in die Dachkammer und springt aus dem Fenster durch den Nußbaum in den Garten, während ein Grammophon den Prinz-Eugen-Marsch spielt und die Kirchturmglocke neun schlägt. Eine »Klettengasse« ist für Wien Anfang des 20. Jhdts nicht nachgewiesen und wohl fiktiv; Verortung hier in Nußdorf zwischen Brauerei (der Malzgeruch, der »die ganze Gasse erfüllt«!) und Pfarrkirche St. Thomas (die Neun-Uhr-Glocke). Alternative Lesart: »dritte Haltestelle« der Heiligenstädter Straße spräche für das untere Heiligenstadt um den Pfarrplatz. Lage höchst hypothetisch. Für die längere Fahrt spricht aber, dass Demba auf der Rückfahrt mehr Stationen passiert haben muss: \"Ich fuhr ein Stück Wegs mit, und als dann der Schaffner in meine Nähe kam, stieg ich aus, als hätte ich mein Fahrziel erreicht und ging zu Fuß bis zur nächsten Haltestelle. Das machte ich drei- oder viermal.\""
+    },
     "chapter-8/weg-kapitel-8-caf-steffis-wohnung": {
       "name": "Weg: Kapitel 8 — Zu Steffis Wohnung",
       "gloss": "Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr)."
+    },
+    "chapter-9/barbier-rasur": {
+      "gloss": "Von Demba bei Steffi nacherzählt (Kap. 9): Er ließ sich heute den Schnurrbart »englisch stutzen« – Teil seiner Tarnung. ELage unbekannt – der Text nennt keinen Ort; hier ungefähr auf den schon gezeichneten Weg (Café Hibernia → Kolingasse) gesetzt, da die Rasur zeitlich vor dem Steffi-Besuch liegt."
     },
     "gelehrtenorte/erlangen": {
       "name": "Erlangen (Uni)",

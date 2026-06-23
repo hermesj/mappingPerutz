@@ -14,7 +14,7 @@
   var lang = "en";   // set from config.site.defaultLang once loaded
   var work;          // set from ?work= or config.site.defaultWork once loaded
 
-  var map, layers = {}, bounds = {}, placesByGroup = {}, confLegend;
+  var map, groupVisible = {}, allEntries = [], bounds = {}, placesByGroup = {}, confLegend;
   // Optional location-certainty halo behind a point marker: a soft, muted disc
   // whose colour and size encode how sure the placement is (low = larger, more
   // diffuse). Driven by a feature's `confidence` ("high"|"medium"|"low"); markers
@@ -209,11 +209,27 @@
   }
 
   function clearLayers() {
-    Object.keys(layers).forEach(function (k) {
-      if (map.hasLayer(layers[k])) map.removeLayer(layers[k]);
+    allEntries.forEach(function (e) {
+      if (e.layer && map.hasLayer(e.layer)) map.removeLayer(e.layer);
+      if (e.halo && map.hasLayer(e.halo)) map.removeLayer(e.halo);
     });
-    layers = {}; bounds = {};
+    allEntries = []; groupVisible = {}; bounds = {};
   }
+
+  // ── visibility ────────────────────────────────────────────────────────────
+  // A feature has ONE marker but may belong to several groups (storyKeysOf →
+  // entry.stories). It is shown whenever ANY of its groups is currently on —
+  // not just its primary layer. groupVisible[key] tracks each group's state;
+  // toggling a group recomputes every marker. For single-group features this is
+  // identical to the old per-layer behaviour.
+  function entryShown(e) { return e.stories.some(function (k) { return groupVisible[k]; }); }
+  function setOnMap(l, on) {
+    if (!l) return;
+    if (on) { if (!map.hasLayer(l)) l.addTo(map); }
+    else if (map.hasLayer(l)) map.removeLayer(l);
+  }
+  function showEntry(e) { var on = entryShown(e); setOnMap(e.layer, on); setOnMap(e.halo, on); }
+  function refreshVisibility() { allEntries.forEach(showEntry); }
 
   // Cap a popup to the map pane's pixel height (minus room for the tip,
   // wrapper chrome and autoPan padding). The pane sits below the header, so a
@@ -281,13 +297,11 @@
     // A work may narrow the opening-view region (e.g. Dubliners' outlying
     // seaside points would otherwise zoom the start view far out).
     REGION = WORKS[work].regionBBox || CFG.view.regionBBox;
-    groupsOf().forEach(function (g) {
-      layers[g.key] = L.layerGroup();
-      if (!g.hidden) layers[g.key].addTo(map);   // groups flagged `hidden:true` start off
-    });
-
     placesByGroup = {};
-    groupsOf().forEach(function (g) { placesByGroup[g.key] = []; });
+    groupsOf().forEach(function (g) {
+      groupVisible[g.key] = !g.hidden;   // groups flagged `hidden:true` start off
+      placesByGroup[g.key] = [];
+    });
 
     // `data` may be one file (string) or several. An array entry can be a bare
     // URL or { url, source } — the source is stamped onto each loaded feature
@@ -312,15 +326,15 @@
         sortBySeq(features);           // honour an optional `seq` ordering key
         var all = L.latLngBounds([]), region = L.latLngBounds([]);
         features.forEach(function (f) {
-          var p = f.properties, grp = layers[p.story];
-          if (!grp) return;
-          var layer;
+          var p = f.properties;
+          if (!(p.story in groupVisible)) return;   // story matches no config group
+          var layer, halo = null;
           if (f.geometry.type === "Point") {
             var ll = [f.geometry.coordinates[1], f.geometry.coordinates[0]];
             var conf = p.confidence && CONF[p.confidence];
             if (conf) {
-              L.circleMarker(ll, { pane: "halos", radius: conf.r, stroke: false,
-                fillColor: conf.color, fillOpacity: 0.3, interactive: false }).addTo(grp);
+              halo = L.circleMarker(ll, { pane: "halos", radius: conf.r, stroke: false,
+                fillColor: conf.color, fillOpacity: 0.3, interactive: false });
             }
             layer = L.circleMarker(ll, { radius: 6, weight: 1.5, color: "#fff",
               fillColor: colorFor(p.story), fillOpacity: 0.9 });
@@ -339,15 +353,17 @@
             // when a long quote would otherwise overflow; autoPan then nudges
             // the popup fully into view below the header.
             layer.bindPopup(popupHtml(p), { maxWidth: 300, maxHeight: popupMaxHeight() });
-            layer.addTo(grp);
             var entry = {
               name: p.name,
               kind: p.kind || (f.geometry.type === "LineString" ? "route" : "place"),
               verified: p.verified,
-              primary: p.story,   // the layer the one marker actually lives in
-              layer: layer
+              stories: storyKeysOf(p),   // every group this one marker belongs to
+              layer: layer,
+              halo: halo
             };
-            storyKeysOf(p).forEach(function (key) {
+            allEntries.push(entry);
+            showEntry(entry);   // on the map iff one of its groups is visible
+            entry.stories.forEach(function (key) {
               (placesByGroup[key] || (placesByGroup[key] = [])).push(entry);
             });
           }
@@ -391,14 +407,13 @@
   // Pan/zoom to a single place and open its popup, making sure its group
   // layer is switched on first.
   function focusPlace(groupKey, entry, item) {
-    // The marker lives in its primary group's layer, which may differ from the
-    // sidebar group it was clicked under — switch that on so it's actually shown.
-    var homeKey = entry.primary || groupKey;
-    if (layers[homeKey] && !map.hasLayer(layers[homeKey])) layers[homeKey].addTo(map);
-    if (!map.hasLayer(layers[groupKey])) {
-      layers[groupKey].addTo(map);
+    // Make the group it was clicked under visible; the one marker is shown
+    // whenever any of its groups is on, so flipping this one suffices.
+    if (!groupVisible[groupKey]) {
+      groupVisible[groupKey] = true;
       if (item) item.classList.remove("off");
     }
+    refreshVisibility();
     // Open the popup only once the camera has settled: opening mid-flight lets
     // the in-progress flyTo re-centre the marker and override the popup's
     // autoPan, which is what pushed tall popups up behind the header.
@@ -432,7 +447,7 @@
 
       // ── the group row (click = expand/collapse; swatch = layer on/off) ──
       var item = document.createElement("div");
-      item.className = "story-item" + (map.hasLayer(layers[g.key]) ? "" : " off");
+      item.className = "story-item" + (groupVisible[g.key] ? "" : " off");
       item.innerHTML =
         '<span class="caret">▸</span>' +
         '<span class="swatch" style="background:' + g.color + '" title="' + t.toggleLayer + '"></span>' +
@@ -461,16 +476,16 @@
         var opening = sub.hidden;
         sub.hidden = !opening;
         item.classList.toggle("expanded", opening);
-        if (opening && !map.hasLayer(layers[g.key])) {
-          layers[g.key].addTo(map);
+        if (opening && !groupVisible[g.key]) {
+          groupVisible[g.key] = true; refreshVisibility();
           item.classList.remove("off");
         }
       });
 
       item.querySelector(".swatch").addEventListener("click", function (ev) {
         ev.stopPropagation();
-        var turnOn = !map.hasLayer(layers[g.key]);
-        if (turnOn) layers[g.key].addTo(map); else map.removeLayer(layers[g.key]);
+        var turnOn = !groupVisible[g.key];
+        groupVisible[g.key] = turnOn; refreshVisibility();
         item.classList.toggle("off", !turnOn);
       });
 
@@ -483,8 +498,9 @@
     document.querySelectorAll(".story-item").forEach(function (item, i) {
       var key = groupsOf()[i].key;
       item.classList.toggle("off", !show);
-      if (show) layers[key].addTo(map); else map.removeLayer(layers[key]);
+      groupVisible[key] = show;
     });
+    refreshVisibility();
   }
 
   function applyLang() {

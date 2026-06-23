@@ -19,6 +19,7 @@
     "quote": "Die Greislerin in der Wiesengasse, Frau Johanna Püchl, trat an diesem Morgen gegen halb acht Uhr aus dem Laden auf die Straße.",
     "srcText": "Die Greislerin in der Wiesengasse, Frau Johanna Püchl",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "essaySource": "Wiener Zeitung",
     "confidence": "medium"
    },
    "geometry": {
@@ -42,6 +43,7 @@
     "quote": "Kurz nach neun Uhr erschien die alte Frau Schimek, der die Ecktrafik in der Karl-Denk-Gasse gehörte, zu einem längeren Plausch.",
     "srcText": "die Ecktrafik in der Karl-Denk-Gasse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "essaySource": "Wiener Zeitung",
     "confidence": "medium"
    },
    "geometry": {
@@ -65,6 +67,7 @@
     "quote": "Auf der Bank saß Stanislaus Demba. Er war beim Frühstück.",
     "srcText": "Auf der Bank saß Stanislaus Demba",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "essaySource": "Wiener Zeitung",
     "confidence": "medium"
    },
    "geometry": {
@@ -376,6 +379,7 @@
     "quote": "Zwischen halb zwölf und zwölf Uhr mittags, wenn die Essensstunde heranrückte, war es meist sehr still im Café Hibernia gegenüber der Börse.",
     "srcText": "im Café Hibernia gegenüber der Börse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "essaySource": "Wiener Zeitung",
     "confidence": "high"
    },
    "geometry": {
@@ -552,6 +556,7 @@
     "quote": "Frau Dr. Hirsch, die Gattin des Hof- und Gerichtsadvokaten in der Eßlinggasse, kam ein wenig außer Atem in das Privatkontor ihres Mannes.",
     "srcText": "des Hof- und Gerichtsadvokaten in der Eßlinggasse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "essaySource": "Wiener Zeitung",
     "confidence": "medium"
    },
    "geometry": {
@@ -659,6 +664,7 @@
     "quote": "Stanislaus Demba verließ den Omnibus und ging langsam die Mariahilferstraße hinunter.",
     "srcText": "ging langsam die Mariahilferstraße hinunter",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
+    "essaySource": "Wiener Zeitung",
     "confidence": "medium"
    },
    "geometry": {
@@ -766,6 +772,7 @@
     "quote": "»Ich gehe jetzt in die Kolingasse,« unterbrach ihn Stanislaus Demba.",
     "srcText": "Ich gehe jetzt in die Kolingasse",
     "essay": "https://derive.at/texte/in-ketten-durch-wien/",
+    "essaySource": "Alexander Peer",
     "confidence": "medium"
    },
    "geometry": {
@@ -836,6 +843,7 @@
     "kind": "place",
     "gloss": "Leo Perutz wohnte mit seiner Familie 17 Jahre lang in der Porzellangasse 37 (9. Bezirk; vgl. Alexander Peer, verlinktes Essay). Kein Schauplatz des Romans, sondern ein biografischer Kontextpunkt — bemerkenswert: Perutz hat die Handlung des Romans in die eigene Nachbarschaft gesetzt.",
     "essay": "https://derive.at/texte/in-ketten-durch-wien/",
+    "essaySource": "Alexander Peer",
     "confidence": "high"
    },
    "geometry": {
@@ -883,6 +891,132 @@
     "coordinates": [
      16.366289,
      48.20984
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 12,
+    "story": "Chapter 12",
+    "name": "Krawattengeschäft (Praterstraße)",
+    "kind": "place",
+    "character": "Demba, Kallisthenes Skuludis",
+    "time": "gegen 3",
+    "gloss": "Hier verliert Demba das Kuvert mit den 70 Kronen: Ein Wachmann hebt es auf, Demba verleugnet es aus Angst vor Verhaftung, und der Beamte reicht es dem eleganten Fremden, der vor dem Schaufenster steht – Kallisthenes Skuludis, der das Geld einsteckt. Die Straße bleibt in Kap. 12 unbenannt; Kap. 13 verrät jedoch, dass Skuludis kurz zuvor in der Praterstraße (beim Juwelenhändler) war und Demba ihm von hier aus folgt – daher die Verortung nahe dem Juwelier. Genaues Geschäft unbekannt.",
+    "quote": "Er ging auf einen Passanten zu, der kurz vor Stanislaus Demba die Straße überquert hatte und nun vor dem Schaufenster eines Kravattengeschäftes stand.",
+    "srcText": "nun vor dem Schaufenster eines Kravattengeschäftes stand",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.383162,
+     48.214253
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 12,
+    "story": "Chapter 12",
+    "name": "Wohnung Gegenbauer",
+    "kind": "place",
+    "character": "Demba, Gegenbauer",
+    "time": "gegen 3",
+    "gloss": "Gegenbauers Wohnung – Schauplatz von Dembas elegantestem Trick: Mit der erfundenen Geschichte vom »Egon Müller«, der ein Heft-Exemplar für 70 Kronen verkaufe (siehe Pazmanitenstraße 11), lässt Demba sich die Summe »ersetzen«. Beim Hinausgehen passiert er zwei Duell-Sekundanten, die im Vorzimmer warten. Die Adresse nennt der Text nicht; hier nach Vorschlag an die Kreuzung Komödiengasse/Zirkusgasse (Leopoldstadt) gesetzt – nahe der Praterstraße, wo Demba das Geld gleich darauf verliert.",
+    "quote": "Und Demba verließ, die Beute in der Tasche, die Wohnung, an zwei unnahbaren Herren im Gehrock vorbei, die im Vorzimmer standen und in düsterer Entschlossenheit auf den Fußboden starrten.",
+    "srcText": "an zwei unnahbaren Herren im Gehrock vorbei, die im Vorzimmer standen",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.382746,
+     48.214783
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Dianabad",
+    "kind": "place",
+    "gloss": "Reale Wiener Badeanstalt (Leopoldstadt, am Donaukanal). Nur erwähnt: Hier gewann Sonjas Kollegin Etelka (»Ethel«) Springer einen zweiten Preis im Wettschwimmen – seither gibt sie sich als »sporting girl« mit gefürchtetem Händedruck. Kolorit des Klebinder-Büros (Kap. 4).",
+    "quote": "…seit sie in einem Wettschwimmen im Dianabad den zweiten Preis erzielt hatte, ganz als »sporting girl«.",
+    "srcText": "ein Wettschwimmen im Dianabad",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.377233,
+     48.214288
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Bauernmarkt",
+    "kind": "place",
+    "gloss": "Nur erwähnt: Beispiel für Dembas Besserwisser-Erudition – Klara Postelberg referiert, er habe ihr erklärt, »warum die Obstweiber gerade am Bauernmarkt stehen«. Reale Gasse der Inneren Stadt. (Kap. 4)",
+    "quote": "Unlängst hat er mir erklärt, warum die Obstweiber gerade am Bauernmarkt stehen, alle, und die Blumenweiber in der verlängerten Kärntnerstraße.",
+    "srcText": "die Obstweiber gerade am Bauernmarkt",
+    "confidence": "high"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.374049,
+     48.211068
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 4,
+    "story": "Chapter 4",
+    "name": "Verlängerte Kärntnerstraße",
+    "kind": "place",
+    "gloss": "Nur erwähnt: die Blumenweiber-Hälfte derselben Anekdote (Dembas Erklärung, referiert von Klara Postelberg). »Verlängerte Kärntnerstraße« = die Fortsetzung jenseits des Rings; hier ungefähr auf der inneren Kärntner Straße verortet. (Kap. 4)",
+    "quote": "Unlängst hat er mir erklärt, warum die Obstweiber gerade am Bauernmarkt stehen, alle, und die Blumenweiber in der verlängerten Kärntnerstraße.",
+    "srcText": "die Blumenweiber in der verlängerten Kärntnerstraße",
+    "confidence": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.371388,
+     48.206005
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 9,
+    "story": "Chapter 9",
+    "name": "Barbier (Rasur)",
+    "kind": "place",
+    "character": "Demba, Friseurgehilfe",
+    "time": "um die Mittagszeit",
+    "gloss": "Von Demba bei Steffi nacherzählt (Kap. 9): Er ließ sich heute den Schnurrbart »englisch stutzen« – Teil seiner Tarnung. Eine klassische »Hände-verstecken«-Miniatur: Vor dem Laden nahm er in einem Haustor das Geld aus der Tasche, hielt während der Rasur die 50 Heller in der gefesselten Hand und ließ sie zum Zahlen scheinbar ungeschickt fallen – woraufhin ein Zwanzigheller-Stück verschwand und der Friseurgehilfe ihn fast für einen Betrüger hielt. Lage unbekannt – der Text nennt keinen Ort; hier ungefähr auf den schon gezeichneten Weg (Café Hibernia → Kolingasse) gesetzt, da die Rasur zeitlich vor dem Steffi-Besuch liegt.",
+    "quote": "schließlich hab' ich mir heute den Schnurrbart englisch stutzen lassen.",
+    "srcText": "den Schnurrbart englisch stutzen lassen",
+    "confidence": "low"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.365434,
+     48.215258
     ]
    }
   },
@@ -1368,72 +1502,408 @@
     "type": "LineString",
     "coordinates": [
      [
-      16.370981,
-      48.216188
+      16.383288,
+      48.214165
      ],
      [
-      16.371303,
-      48.216381
+      16.383285,
+      48.214164
      ],
      [
-      16.371893,
-      48.215841
+      16.383259,
+      48.214134
+     ],
+     [
+      16.383239,
+      48.21411
+     ],
+     [
+      16.383031,
+      48.213973
+     ],
+     [
+      16.382993,
+      48.213962
+     ],
+     [
+      16.382951,
+      48.213948
+     ],
+     [
+      16.382822,
+      48.213863
+     ],
+     [
+      16.382752,
+      48.21378
+     ],
+     [
+      16.382744,
+      48.213737
+     ],
+     [
+      16.382709,
+      48.213712
+     ],
+     [
+      16.382664,
+      48.213709
+     ],
+     [
+      16.38262,
+      48.213705
+     ],
+     [
+      16.382582,
+      48.213667
+     ],
+     [
+      16.382213,
+      48.213518
+     ],
+     [
+      16.381875,
+      48.21338
+     ],
+     [
+      16.381514,
+      48.213209
+     ],
+     [
+      16.381136,
+      48.213005
+     ],
+     [
+      16.380866,
+      48.212869
+     ],
+     [
+      16.380635,
+      48.21278
+     ],
+     [
+      16.38039,
+      48.212716
+     ],
+     [
+      16.380281,
+      48.212665
+     ],
+     [
+      16.380229,
+      48.212627
+     ],
+     [
+      16.380131,
+      48.212589
+     ],
+     [
+      16.380051,
+      48.212581
+     ],
+     [
+      16.379992,
+      48.212582
+     ],
+     [
+      16.379471,
+      48.212645
+     ],
+     [
+      16.379341,
+      48.212628
+     ],
+     [
+      16.379325,
+      48.21266
+     ],
+     [
+      16.37926,
+      48.212657
+     ],
+     [
+      16.379225,
+      48.212659
+     ],
+     [
+      16.379168,
+      48.212663
+     ],
+     [
+      16.379092,
+      48.212671
+     ],
+     [
+      16.379006,
+      48.212604
+     ],
+     [
+      16.378946,
+      48.212638
+     ],
+     [
+      16.378753,
+      48.212675
+     ],
+     [
+      16.378525,
+      48.21273
+     ],
+     [
+      16.378214,
+      48.212797
+     ],
+     [
+      16.377945,
+      48.212868
+     ],
+     [
+      16.377869,
+      48.212907
+     ],
+     [
+      16.377747,
+      48.212945
+     ],
+     [
+      16.377567,
+      48.21301
+     ],
+     [
+      16.377463,
+      48.213026
+     ],
+     [
+      16.377437,
+      48.213031
+     ],
+     [
+      16.377421,
+      48.213012
+     ],
+     [
+      16.377387,
+      48.212976
+     ],
+     [
+      16.377347,
+      48.212932
+     ],
+     [
+      16.37733,
+      48.212912
+     ],
+     [
+      16.377309,
+      48.212922
+     ],
+     [
+      16.377284,
+      48.212933
+     ],
+     [
+      16.377266,
+      48.212941
+     ],
+     [
+      16.37725,
+      48.212948
+     ],
+     [
+      16.377232,
+      48.212956
+     ],
+     [
+      16.377194,
+      48.212972
+     ],
+     [
+      16.377101,
+      48.213021
+     ],
+     [
+      16.377082,
+      48.212999
+     ],
+     [
+      16.376549,
+      48.212409
+     ],
+     [
+      16.376533,
+      48.212384
+     ],
+     [
+      16.376486,
+      48.212315
+     ],
+     [
+      16.3764,
+      48.212197
+     ],
+     [
+      16.376337,
+      48.212123
+     ],
+     [
+      16.376311,
+      48.212091
+     ],
+     [
+      16.376299,
+      48.212078
+     ],
+     [
+      16.37626,
+      48.212033
+     ],
+     [
+      16.376233,
+      48.212002
+     ],
+     [
+      16.376336,
+      48.211959
+     ],
+     [
+      16.376257,
+      48.211879
+     ],
+     [
+      16.376194,
+      48.211817
+     ],
+     [
+      16.376164,
+      48.211783
+     ],
+     [
+      16.376024,
+      48.211625
+     ],
+     [
+      16.375924,
+      48.211514
+     ],
+     [
+      16.375815,
+      48.211392
+     ],
+     [
+      16.375717,
+      48.211273
+     ],
+     [
+      16.3755,
+      48.211016
+     ],
+     [
+      16.375452,
+      48.210958
+     ],
+     [
+      16.37524,
+      48.210861
+     ],
+     [
+      16.374983,
+      48.210741
+     ],
+     [
+      16.37482,
+      48.210627
+     ],
+     [
+      16.374703,
+      48.210546
+     ],
+     [
+      16.374446,
+      48.210344
+     ],
+     [
+      16.374295,
+      48.210227
+     ],
+     [
+      16.374154,
+      48.210131
+     ],
+     [
+      16.374104,
+      48.210095
+     ],
+     [
+      16.374064,
+      48.210066
+     ],
+     [
+      16.37364,
+      48.209762
+     ],
+     [
+      16.373491,
+      48.209647
+     ],
+     [
+      16.372904,
+      48.209163
+     ],
+     [
+      16.372889,
+      48.20915
+     ],
+     [
+      16.372777,
+      48.209203
+     ],
+     [
+      16.372749,
+      48.209176
+     ],
+     [
+      16.372744,
+      48.209167
+     ],
+     [
+      16.372691,
+      48.209066
      ],
      [
       16.372451,
-      48.215319
+      48.20881
      ],
      [
-      16.373067,
-      48.21479
+      16.372317,
+      48.208676
      ],
      [
-      16.373481,
-      48.214365
+      16.37208,
+      48.20838
      ],
      [
-      16.372848,
-      48.214043
+      16.371908,
+      48.208217
      ],
      [
-      16.372654,
-      48.213793
+      16.371629,
+      48.208279
      ],
      [
-      16.373212,
-      48.213421
+      16.371577,
+      48.208247
      ],
      [
-      16.372697,
-      48.212935
+      16.371517,
+      48.208227
      ],
      [
-      16.372815,
-      48.211934
+      16.371444,
+      48.208214
      ],
      [
-      16.372032,
-      48.211262
-     ],
-     [
-      16.370155,
-      48.209775
-     ],
-     [
-      16.369618,
-      48.20946
-     ],
-     [
-      16.36964,
-      48.209231
-     ],
-     [
-      16.369414,
-      48.209063
-     ],
-     [
-      16.370423,
-      48.208427
+      16.371357,
+      48.208213
      ],
      [
       16.371351,
@@ -1918,6 +2388,400 @@
      [
       16.358229,
       48.227866
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "group": 12,
+    "story": "Chapter 12",
+    "name": "Weg: Kapitel 12 — Gegenbauer & verlorenes Kuvert",
+    "kind": "route"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      16.370949,
+      48.21621
+     ],
+     [
+      16.371231,
+      48.216341
+     ],
+     [
+      16.371303,
+      48.216356
+     ],
+     [
+      16.371336,
+      48.216352
+     ],
+     [
+      16.371868,
+      48.215857
+     ],
+     [
+      16.371952,
+      48.215802
+     ],
+     [
+      16.372216,
+      48.215545
+     ],
+     [
+      16.37249,
+      48.2153
+     ],
+     [
+      16.372584,
+      48.21526
+     ],
+     [
+      16.373459,
+      48.214412
+     ],
+     [
+      16.373473,
+      48.214399
+     ],
+     [
+      16.373484,
+      48.214388
+     ],
+     [
+      16.373512,
+      48.214359
+     ],
+     [
+      16.373522,
+      48.214349
+     ],
+     [
+      16.37366,
+      48.21421
+     ],
+     [
+      16.373846,
+      48.213989
+     ],
+     [
+      16.373797,
+      48.213921
+     ],
+     [
+      16.373854,
+      48.213868
+     ],
+     [
+      16.373937,
+      48.213797
+     ],
+     [
+      16.374424,
+      48.213346
+     ],
+     [
+      16.374571,
+      48.21319
+     ],
+     [
+      16.374592,
+      48.213204
+     ],
+     [
+      16.37467,
+      48.213242
+     ],
+     [
+      16.374702,
+      48.213255
+     ],
+     [
+      16.374803,
+      48.213289
+     ],
+     [
+      16.374922,
+      48.213314
+     ],
+     [
+      16.375045,
+      48.213336
+     ],
+     [
+      16.375286,
+      48.213133
+     ],
+     [
+      16.375647,
+      48.21288
+     ],
+     [
+      16.376026,
+      48.212651
+     ],
+     [
+      16.376533,
+      48.212384
+     ],
+     [
+      16.376549,
+      48.212409
+     ],
+     [
+      16.377082,
+      48.212999
+     ],
+     [
+      16.377101,
+      48.213021
+     ],
+     [
+      16.377194,
+      48.212972
+     ],
+     [
+      16.377232,
+      48.212956
+     ],
+     [
+      16.37725,
+      48.212948
+     ],
+     [
+      16.377266,
+      48.212941
+     ],
+     [
+      16.377284,
+      48.212933
+     ],
+     [
+      16.377309,
+      48.212922
+     ],
+     [
+      16.37733,
+      48.212912
+     ],
+     [
+      16.377347,
+      48.212932
+     ],
+     [
+      16.377387,
+      48.212976
+     ],
+     [
+      16.377421,
+      48.213012
+     ],
+     [
+      16.377437,
+      48.213031
+     ],
+     [
+      16.377463,
+      48.213026
+     ],
+     [
+      16.377567,
+      48.21301
+     ],
+     [
+      16.377747,
+      48.212945
+     ],
+     [
+      16.377869,
+      48.212907
+     ],
+     [
+      16.377945,
+      48.212868
+     ],
+     [
+      16.378214,
+      48.212797
+     ],
+     [
+      16.378525,
+      48.21273
+     ],
+     [
+      16.378753,
+      48.212675
+     ],
+     [
+      16.378946,
+      48.212638
+     ],
+     [
+      16.379006,
+      48.212604
+     ],
+     [
+      16.379092,
+      48.212671
+     ],
+     [
+      16.379168,
+      48.212663
+     ],
+     [
+      16.379225,
+      48.212659
+     ],
+     [
+      16.37926,
+      48.212657
+     ],
+     [
+      16.379325,
+      48.21266
+     ],
+     [
+      16.379341,
+      48.212628
+     ],
+     [
+      16.379471,
+      48.212645
+     ],
+     [
+      16.379992,
+      48.212582
+     ],
+     [
+      16.380051,
+      48.212581
+     ],
+     [
+      16.380131,
+      48.212589
+     ],
+     [
+      16.380229,
+      48.212627
+     ],
+     [
+      16.380281,
+      48.212665
+     ],
+     [
+      16.38039,
+      48.212716
+     ],
+     [
+      16.380635,
+      48.21278
+     ],
+     [
+      16.380866,
+      48.212869
+     ],
+     [
+      16.381136,
+      48.213005
+     ],
+     [
+      16.381514,
+      48.213209
+     ],
+     [
+      16.381875,
+      48.21338
+     ],
+     [
+      16.382213,
+      48.213518
+     ],
+     [
+      16.382127,
+      48.213559
+     ],
+     [
+      16.382085,
+      48.213596
+     ],
+     [
+      16.382079,
+      48.21364
+     ],
+     [
+      16.382094,
+      48.21367
+     ],
+     [
+      16.382409,
+      48.214001
+     ],
+     [
+      16.382326,
+      48.214093
+     ],
+     [
+      16.382392,
+      48.214162
+     ],
+     [
+      16.382665,
+      48.21446
+     ],
+     [
+      16.382835,
+      48.214659
+     ],
+     [
+      16.38275,
+      48.214688
+     ],
+     [
+      16.382693,
+      48.214708
+     ],
+     [
+      16.38271,
+      48.214732
+     ],
+     [
+      16.382693,
+      48.214708
+     ],
+     [
+      16.38275,
+      48.214688
+     ],
+     [
+      16.382835,
+      48.214659
+     ],
+     [
+      16.382934,
+      48.214625
+     ],
+     [
+      16.383174,
+      48.214912
+     ],
+     [
+      16.383841,
+      48.214704
+     ],
+     [
+      16.383975,
+      48.214597
+     ],
+     [
+      16.383631,
+      48.214389
+     ],
+     [
+      16.383288,
+      48.214165
      ]
     ]
    }
