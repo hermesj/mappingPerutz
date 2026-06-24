@@ -18,7 +18,7 @@ touching engine code.**
 | **engine/** | Leaflet rendering, accordion sidebar, layer/work toggle, popups (character trajectories *planned*) | No — generic |
 | **config.json** | declares works, groups, colours, i18n strings, default view + region, basemap + attribution, per-work group numbering + source-text links | **Yes** |
 | **data/** | GeoJSON (rendered) + `*-source.json` (hand-editable) per work | **Yes** |
-| **pipeline/** | geocode + routing (OSRM/BRouter); optional KML export + uMap round-trip | No — generic, parametrised |
+| **pipeline/** | geocode + routing (OSRM/BRouter); annotate-ui; uMap round-trip (export/import); KML export; `consolidate` | No — generic, parametrised |
 | **text/** | episode/section splitter (markers/regex/incipits), NER annotate + candidates | splitter config is project-specific; NER is generic |
 
 The engine (`engine.js`) is **fully config-driven** (Phase B, done): every
@@ -210,6 +210,30 @@ else), with provenance recorded in `data/NOTICE.md`.
 The source may use `episode` as the per-place group key (Ulysses) or `group`;
 `pipeline/geocode_source.py` normalises it to `group` and turns source →
 GeoJSON.
+
+## Editing & consolidation workflow
+
+The data is edited through local, stdlib-only tools (no deploy, no LLM):
+
+- **`pipeline/annotate-ui/`** — the browser tool: create/edit nodes, groups,
+  ordering, confidence and default visibility; paste Google-Maps coordinates or
+  GeoJSON. Edits to *existing* features go to the overlay
+  (`data/<work>-annotations.json`); *new* objects go to a separate own-layer
+  (`data/<work>-own-source.json` → `-own.geojson`).
+- **uMap round-trip** — `pipeline/export_umap.py` writes one
+  `exports/<work>-umap.geojson` (stable ids, group colours, markdown popups,
+  overlay merged in); after reshaping points/lines in uMap,
+  `pipeline/import_umap.py <edited>.geojson <work>-source.json` writes the edited
+  geometry back (matched by name).
+- **`pipeline/consolidate.py`** — end-of-session step: bakes the overlay into the
+  source, merges the own-layer into the main source (normalising every `group`
+  to its config key), drops the own files from `config.data`, and re-renders.
+  Afterwards everything lives in one key-based `<work>-source.json`; the
+  annotator simply re-creates a fresh own-layer next time.
+
+Run `pipeline/check.py` before committing. A `group` may be the config **key**
+(`"Chapter 5"`, `"Reiseziele"`) or a legacy numeric value; both resolve, but
+`consolidate.py` normalises everything to keys.
 
 ## Rights model (per layer — important for a public template)
 

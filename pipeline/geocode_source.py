@@ -129,7 +129,7 @@ def main(src_path, out_path, region=None):
         }
         if isinstance(gn, list):
             props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence"):
+        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq"):
             if place.get(k):
                 props[k] = place[k]
         if "verified" in place:           # boolean → presence check, not truthiness
@@ -170,7 +170,7 @@ def main(src_path, out_path, region=None):
         }
         if isinstance(gn, list):
             props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence"):
+        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq"):
             if r.get(k):
                 props[k] = r[k]
         if "verified" in r:

@@ -12,12 +12,22 @@ between nine in the morning and nine at night**.
 
 ## What it shows
 
-The novel's 20 chapters as colour-coded layers; each mapped place carries the
-clock time of Demba's passage (the book's twelve hours invite Ulysses-style
-time chips), an editorial gloss and, sparingly, a short quotation.
+The novel's 20 chapters as colour-coded layers, plus thematic layers that group
+places across the book — *Reiseziele* (the imagined journeys), *Orte der
+Gelehrten* (the scholars' places), *Orte der Betrüger* (the cities the swindlers
+name-drop) and *Meta / Kontext*. Demba's day is also traced as colour-coded
+**route segments**, chapter by chapter.
 
-> The dataset is **experimental and under construction** — places are being
-> added chapter by chapter.
+Each scene of the day carries the **clock time** of Demba's passage (the book's
+twelve hours invite Ulysses-style time chips) and the **characters** present;
+places that are merely mentioned stay deliberately chip-less. A muted
+green–yellow–red **halo** shows how certain each location is (*gesichert /
+straßengenau / hypothetisch*). Every node has an editorial gloss and, sparingly,
+a short quotation. On first load only the chapter layers are shown; the thematic
+layers can be switched on in the sidebar.
+
+> All twenty chapters are mapped — a first complete version; context nodes and
+> route shapes may still be refined.
 
 ## Rights (important, and different from Joyce)
 
@@ -41,18 +51,37 @@ See [`NOTICE.md`](NOTICE.md).
 
 ## Editing the data
 
-The hand-curated source is `data/zwischen-neun-und-neun-source.json`
-(20 chapter groups; add `places`/`routes`), rendered with the generic geocoder:
+Everything lives in one key-based source,
+`data/zwischen-neun-und-neun-source.json` (chapter **and** thematic groups; add
+`places` / `routes`), rendered with the generic geocoder:
 
 ```bash
 python3 pipeline/geocode_source.py data/zwischen-neun-und-neun-source.json \
         data/zwischen-neun-und-neun.geojson --region=48.12,16.25,48.28,16.50
 ```
 
-Or use the local annotation/edit tool (create new places, override fields):
+For interactive work, the local annotation tool creates and edits nodes, groups,
+ordering, confidence and default visibility, and accepts pasted Google-Maps
+coordinates or GeoJSON. New objects land in a separate `…-own-source.json` layer:
 
 ```bash
 python3 pipeline/annotate-ui/serve.py     # → http://127.0.0.1:8765/
+```
+
+Geometry can also be round-tripped through [uMap](https://umap.openstreetmap.fr/):
+
+```bash
+python3 pipeline/export_umap.py           # → exports/zwischen-neun-und-neun-umap.geojson
+# …reshape points/lines in uMap, export, then write the geometry back:
+python3 pipeline/import_umap.py <edited>.geojson \
+        data/zwischen-neun-und-neun-source.json
+```
+
+To fold the working layers (own-layer + annotation overlay) back into the single
+source and re-render — the end-of-session step, no LLM needed:
+
+```bash
+python3 pipeline/consolidate.py
 ```
 
 Before committing, lint:
