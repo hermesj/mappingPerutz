@@ -1,0 +1,156 @@
+{
+  "Budapest Keleti": {
+    "q": "Budapest Keleti pályaudvar",
+    "node": "Budapest (Bahnhof)",
+    "hits": [
+      {
+        "id": "Q841167",
+        "label": "Budapest Keleti pályaudvar",
+        "desc": "Kopfbahnhof in Budapest"
+      }
+    ]
+  },
+  "Budapest Nyugati": {
+    "q": "Budapest Nyugati pályaudvar",
+    "node": "Budapest (Bahnhof)",
+    "hits": [
+      {
+        "id": "Q522868",
+        "label": "Budapest Nyugati pályaudvar",
+        "desc": "Kopfbahnhof in Budapest"
+      }
+    ]
+  },
+  "Praterstraße": {
+    "q": "Praterstraße Wien",
+    "node": "Praterstraße (Juwelenhändler)",
+    "hits": []
+  },
+  "Graben": {
+    "q": "Graben Wien Innere Stadt",
+    "node": "Krawattengeschäft am Graben",
+    "hits": []
+  },
+  "Mariahilfer Straße": {
+    "q": "Mariahilfer Straße",
+    "node": "Mariahilferstraße",
+    "hits": [
+      {
+        "id": "Q699930",
+        "label": "Mariahilfer Straße",
+        "desc": "Straße in Wien"
+      },
+      {
+        "id": "Q107257275",
+        "label": "Mariahilfer Straße 10-18",
+        "desc": "Gebäude in Wien"
+      }
+    ]
+  },
+  "Kärntner Straße": {
+    "q": "Kärntner Straße Wien",
+    "node": "Verlängerte Kärntnerstraße",
+    "hits": []
+  },
+  "Kohlmarkt": {
+    "q": "Kohlmarkt Wien",
+    "node": "Wohnung Dr. Becker (Kohlmarkt)",
+    "hits": []
+  },
+  "Berggasse": {
+    "q": "Berggasse Wien",
+    "node": "Telephonzelle in der Berggasse",
+    "hits": []
+  },
+  "Liechtensteinstraße": {
+    "q": "Liechtensteinstraße Wien",
+    "node": "Weiners Wohnung (Liechtensteinstraße)",
+    "hits": []
+  },
+  "Naglergasse": {
+    "q": "Naglergasse Wien",
+    "node": "Residenzkeller",
+    "hits": []
+  },
+  "Eßlinggasse": {
+    "q": "Eßlinggasse Wien",
+    "node": "Wohnung und Kanzlei Dr. Hirsch",
+    "hits": []
+  },
+  "Johannesgasse": {
+    "q": "Johannesgasse Wien",
+    "node": "Antiquariat in der Johannesgasse",
+    "hits": []
+  },
+  "Weihburggasse": {
+    "q": "Weihburggasse Wien",
+    "node": "Antiquariat in der Weihburggasse",
+    "hits": []
+  },
+  "Wiesengasse": {
+    "q": "Wiesengasse Wien Alsergrund",
+    "node": "Greislerladen der Frau Püchl",
+    "hits": []
+  },
+  "Porzellangasse": {
+    "q": "Porzellangasse Wien",
+    "node": "Porzellangasse (Querung)",
+    "hits": []
+  },
+  "Kolingasse": {
+    "q": "Kolingasse Wien",
+    "node": "Kolingasse (Steffi Prokop)",
+    "hits": []
+  },
+  "Babenbergerstraße": {
+    "q": "Babenbergerstraße Wien",
+    "node": "Selbstmord in der Babenbergerstraße",
+    "hits": []
+  },
+  "Maria-Theresien-Straße": {
+    "q": "Maria-Theresien-Straße Wien",
+    "node": "Maria-Theresien-Straße 18",
+    "hits": []
+  },
+  "Bauernmarkt": {
+    "q": "Bauernmarkt Wien",
+    "node": "Bauernmarkt",
+    "hits": []
+  },
+  "Liechtensteinpark": {
+    "q": "Liechtensteinpark Wien",
+    "node": "Bank im Liechtensteinpark",
+    "hits": []
+  },
+  "Sigmund-Freud-Park": {
+    "q": "Sigmund-Freud-Park Wien",
+    "node": "Votivpark",
+    "hits": []
+  },
+  "Wiener Staatsoper": {
+    "q": "Wiener Staatsoper",
+    "node": "Kaffeehaus-Vorgarten nahe der Oper",
+    "hits": [
+      {
+        "id": "Q209937",
+        "label": "Wiener Staatsoper",
+        "desc": "Opernhaus in Wien"
+      },
+      {
+        "id": "Q113044719",
+        "label": "Wiener Staatsoper",
+        "desc": "österreichische Opernkompagnie"
+      }
+    ]
+  },
+  "Pazmanitengasse": {
+    "q": "Pazmanitengasse Wien",
+    "node": "Pazmanitenstraße 11 (»Egon Müller«)",
+    "hits": []
+  },
+  "Simon-Denk-Gasse": {
+    "q": "Simon-Denk-Gasse Wien",
+    "node": "Ecktrafik der Frau Schimek",
+    "hits": []
+  }
+}

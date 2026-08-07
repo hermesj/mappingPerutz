@@ -20,10 +20,18 @@ def slugify(s):
 
 
 def feature_ids(features):
-    """List of stable ids, one per feature, in the given order (dedup-aware)."""
+    """List of stable ids, one per feature, in the given order.
+
+    A feature carrying an explicit `properties.id` (the frozen loc-/rte- entity
+    id) uses it verbatim; otherwise the id is derived from slug(story)/slug(name)
+    with -2/-3 for duplicates (legacy projects without stored ids). The same
+    rule lives in engine.js (assignIds)."""
     seen, ids = {}, []
     for f in features:
         p = f.get("properties", {})
+        if p.get("id"):
+            ids.append(p["id"])
+            continue
         base = slugify(p.get("story")) + "/" + slugify(p.get("name"))
         seen[base] = seen.get(base, 0) + 1
         ids.append(base if seen[base] == 1 else "{}-{}".format(base, seen[base]))

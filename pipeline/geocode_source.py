@@ -127,9 +127,11 @@ def main(src_path, out_path, region=None):
             "name": place["name"],
             "kind": place.get("kind", "place"),
         }
+        if place.get("id"):        # stable entity id (loc-/rte-…), frozen once published
+            props["id"] = place["id"]
         if isinstance(gn, list):
             props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq"):
+        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq", "wikidata", "sameAs", "fictional", "evidence", "color"):
             if place.get(k):
                 props[k] = place[k]
         if "verified" in place:           # boolean → presence check, not truthiness
@@ -168,9 +170,11 @@ def main(src_path, out_path, region=None):
             "group": gn, "story": g.get("en", str(primary)),
             "name": r["name"], "kind": "route",
         }
+        if r.get("id"):
+            props["id"] = r["id"]
         if isinstance(gn, list):
             props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq"):
+        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq", "wikidata", "sameAs", "fictional", "evidence", "color"):
             if r.get(k):
                 props[k] = r[k]
         if "verified" in r:
@@ -197,6 +201,8 @@ def main(src_path, out_path, region=None):
         },
         "features": features,
     }
+    if src.get("persons"):      # prosopography register: [{id, name, aliases, …}]
+        fc["persons"] = src["persons"]
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(fc, f, ensure_ascii=False, indent=1)
     ngroups = len({x["properties"]["story"] for x in features})

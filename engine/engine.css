@@ -201,6 +201,55 @@ header .tagline {
   white-space: nowrap;
 }
 
+/* ── persons register: its own section, set apart below the groups ── */
+.person-sec {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  margin-top: 0.9em;
+  padding: 0.5em 1em 0.4em;
+  border-top: 2px solid rgba(60, 40, 20, 0.16);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6a5037;
+}
+.person-sec:hover { background: rgba(0, 0, 0, 0.04); }
+.person-sec.expanded .caret { transform: rotate(90deg); }
+.person-sec .count { margin-left: auto; font-size: 0.72rem; font-weight: 400; color: #9a8a7a; }
+.person-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45em;
+  padding: 0.32em 1em 0.32em 1.5em;
+  cursor: pointer;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+.person-item:hover { background: rgba(0, 0, 0, 0.04); }
+.person-item.expanded .caret { transform: rotate(90deg); }
+.person-item .person-role {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.66rem;
+  font-style: italic;
+  color: #9a8a7a;
+}
+.person-item .count { flex: 0 0 auto; font-size: 0.72rem; color: #9a8a7a; }
+.person-item .p-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  align-self: center;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
 /* ── collapsible place list under each group ── */
 .place-list {
   border-bottom: 1px solid rgba(60, 40, 20, 0.06);
@@ -328,6 +377,13 @@ header .tagline {
   letter-spacing: 0.03em;
   color: #a05a1a;
 }
+.pop-authority {
+  margin-top: 0.5em;
+  font-size: 0.72rem;
+}
+.pop-fictional { color: #b06a52; font-style: italic; }
+.pop-wd { color: #1565a0; text-decoration: none; }
+.pop-wd:hover { text-decoration: underline; }
 .pop-source {
   margin-top: 0.6em;
   padding-top: 0.4em;

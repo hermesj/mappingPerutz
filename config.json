@@ -74,144 +74,168 @@
       },
       "groups": [
         {
+          "id": "grp-chapter-01",
           "key": "Chapter 1",
           "de": "Kapitel 1",
           "color": "#b5651d",
           "badge": "kurz nach 9 Uhr"
         },
         {
+          "id": "grp-chapter-02",
           "key": "Chapter 2",
           "de": "Kapitel 2",
           "color": "#1f6f6f",
           "badge": "gegen halb 10"
         },
         {
+          "id": "grp-chapter-03",
           "key": "Chapter 3",
           "de": "Kapitel 3",
           "color": "#8e44ad",
           "badge": "gegen dreiviertel 10"
         },
         {
+          "id": "grp-chapter-04",
           "key": "Chapter 4",
           "de": "Kapitel 4",
           "color": "#2c7a3f",
           "badge": "gegen 10 bis halb 11"
         },
         {
+          "id": "grp-chapter-05",
           "key": "Chapter 5",
           "de": "Kapitel 5",
           "color": "#c0392b",
           "badge": "gegen 11 Uhr"
         },
         {
+          "id": "grp-chapter-06",
           "key": "Chapter 6",
           "de": "Kapitel 6",
           "color": "#16735b",
           "badge": "zwischen 11 und 12"
         },
         {
+          "id": "grp-chapter-07",
           "key": "Chapter 7",
           "de": "Kapitel 7",
           "color": "#a67c00",
           "badge": "halb 12 bis 12"
         },
         {
+          "id": "grp-chapter-08",
           "key": "Chapter 8",
           "de": "Kapitel 8",
           "color": "#2980b9",
           "badge": "kurz nach 12"
         },
         {
+          "id": "grp-chapter-09",
           "key": "Chapter 9",
           "de": "Kapitel 9",
           "color": "#7d5a2b",
           "badge": "gegen halb 1"
         },
         {
+          "id": "grp-chapter-10",
           "key": "Chapter 10",
           "de": "Kapitel 10",
           "color": "#6b8e23",
           "badge": "gegen 1 Uhr"
         },
         {
+          "id": "grp-chapter-11",
           "key": "Chapter 11",
           "de": "Kapitel 11",
           "color": "#9b1d4f",
           "badge": "kurz nach 2"
         },
         {
+          "id": "grp-chapter-12",
           "key": "Chapter 12",
           "de": "Kapitel 12",
           "color": "#33691e",
           "badge": "gegen 3"
         },
         {
+          "id": "grp-chapter-13",
           "key": "Chapter 13",
           "de": "Kapitel 13",
           "color": "#1565a0",
           "badge": "gegen 4"
         },
         {
+          "id": "grp-chapter-14",
           "key": "Chapter 14",
           "de": "Kapitel 14",
           "color": "#7b3f00",
           "badge": "zwischen 4 und 5"
         },
         {
+          "id": "grp-chapter-15",
           "key": "Chapter 15",
           "de": "Kapitel 15",
           "color": "#34495e",
           "badge": "gegen 7"
         },
         {
+          "id": "grp-chapter-16",
           "key": "Chapter 16",
           "de": "Kapitel 16",
           "color": "#6a5acd",
           "badge": "gegen halb 8"
         },
         {
+          "id": "grp-chapter-17",
           "key": "Chapter 17",
           "de": "Kapitel 17",
           "color": "#e07b16",
           "badge": "gegen 8"
         },
         {
+          "id": "grp-chapter-18",
           "key": "Chapter 18",
           "de": "Kapitel 18",
           "color": "#5d6d7e",
           "badge": "kurz vor halb 9"
         },
         {
+          "id": "grp-chapter-19",
           "key": "Chapter 19",
           "de": "Kapitel 19",
           "color": "#7e1620",
           "badge": "halb 9"
         },
         {
+          "id": "grp-chapter-20",
           "key": "Chapter 20",
           "de": "Kapitel 20",
           "color": "#4e342e",
           "badge": "9 Uhr früh"
         },
         {
+          "id": "grp-meta",
           "key": "Meta",
           "de": "Meta / Kontext",
           "color": "#8a8178",
           "hidden": true
         },
         {
+          "id": "grp-destinations",
           "key": "Reiseziele",
           "de": "Reiseziele",
           "color": "#4f7c9e",
           "hidden": true
         },
         {
+          "id": "grp-scholars",
           "key": "GELEHRTENORTE",
           "de": "Orte der Gelehrten",
           "color": "#557b83",
           "hidden": true
         },
         {
+          "id": "grp-swindlers",
           "key": "Betrüger",
           "de": "Orte der Betrüger",
           "color": "#8c3a52",

@@ -15,6 +15,8 @@
   var work;          // set from ?work= or config.site.defaultWork once loaded
 
   var map, groupVisible = {}, allEntries = [], bounds = {}, placesByGroup = {}, confLegend;
+  var PERSONS = {};   // prosopography register (per- id → {name, …}), from the data files
+  var placesByPerson = {};   // per- id → [sidebar entries] (features whose character lists the id)
   // Optional location-certainty halo behind a point marker: a soft, muted disc
   // whose colour and size encode how sure the placement is (low = larger, more
   // diffuse). Driven by a feature's `confidence` ("high"|"medium"|"low"); markers
@@ -32,6 +34,9 @@
     return groupsOf().find(function (g) { return g.key === story; });
   }
   function colorFor(story) { var g = groupFor(story); return g ? g.color : "#777"; }
+  // A feature's own `color` (e.g. per-character route colours) wins over its
+  // group colour; features without one behave as before.
+  function featColor(p) { return p.color || colorFor(p.story); }
   function titleFor(story) { var g = groupFor(story); return g ? (lang === "de" ? g.de : g.key) : story; }
   // A feature renders one marker, in its PRIMARY group (`p.story` → colour,
   // layer, ordinal). When a place is a scene of several groups, the pipeline
@@ -171,6 +176,30 @@
     return txt ? '<div class="pop-source">' + esc(txt) + "</div>" : "";
   }
 
+  // Authority/fiction line: a ↗ Wikidata link for a place with a real referent
+  // (for a fictional establishment the link is its real street anchor) plus a
+  // marker for invented places. Factual metadata — independent of the rights of
+  // the source text. Sits in the popup footer.
+  function authorityLine(p) {
+    var bits = [];
+    if (p.fictional) bits.push('<span class="pop-fictional">✦ ' + (lang === "de" ? "fiktiver Ort" : "fictional place") + "</span>");
+    if (p.wikidata) bits.push('<a class="pop-wd" target="_blank" rel="noopener" href="https://www.wikidata.org/wiki/' +
+      esc(p.wikidata) + '">↗ Wikidata</a>');
+    return bits.length ? '<div class="pop-authority">' + bits.join(' · ') + "</div>" : "";
+  }
+
+  // Character chips: `character` is a list of per- ids (resolved to display
+  // names via the PERSONS register) or a legacy free-text string — unknown
+  // tokens pass through verbatim, so projects without a register are unchanged.
+  function charLine(p) {
+    var c = p.character;
+    if (!c) return "";
+    var toks = Array.isArray(c) ? c : String(c).split(/\s*,\s*/);
+    return toks.map(function (t) {
+      return PERSONS[t] ? PERSONS[t].name : t;
+    }).join(", ");
+  }
+
   function popupHtml(p) {
     var t = UI[lang];
     var h = '<div class="pop-name">' + esc(p.name);
@@ -185,7 +214,7 @@
     h += '<div class="pop-story">' + esc(sub);
     if (p.time) h += ' <span class="pop-time">' + esc(p.time) + "</span>";
     h += "</div>";
-    if (p.character) h += '<div class="pop-char">' + esc(p.character) + "</div>";
+    if (p.character) h += '<div class="pop-char">' + esc(charLine(p)) + "</div>";
     if (p.gloss) h += '<div class="pop-gloss">' + esc(p.gloss) + "</div>";
     if (p.quote) {
       h += '<div class="pop-quote">' + esc(p.quote);
@@ -196,6 +225,7 @@
       h += "</div>";
     }
     h += essayLink(p);
+    h += authorityLine(p);
     if (p.verified === false) h += '<div class="pop-unverified">⚠ not yet verified</div>';
     h += sourceByline(p);
     return h;
@@ -251,8 +281,12 @@
       .replace(/['’.]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   }
   function assignIds(features) {
+    // An explicit `properties.id` (frozen loc-/rte- entity id) wins; features
+    // without one fall back to the derived slug(story)/slug(name) — so legacy
+    // projects keep working unchanged. Mirrors pipeline/overlay.py.
     var seen = {}, ids = [];
     features.forEach(function (f) {
+      if (f.properties.id) { ids.push(f.properties.id); return; }
       var b = annSlug(f.properties.story) + "/" + annSlug(f.properties.name);
       seen[b] = (seen[b] || 0) + 1;
       ids.push(seen[b] === 1 ? b : b + "-" + seen[b]);
@@ -294,6 +328,7 @@
 
   function loadWork() {
     clearLayers();
+    PERSONS = {}; placesByPerson = {};
     // A work may narrow the opening-view region (e.g. Dubliners' outlying
     // seaside points would otherwise zoom the start view far out).
     REGION = WORKS[work].regionBBox || CFG.view.regionBBox;
@@ -313,6 +348,9 @@
     entries = entries.map(function (e) { return typeof e === "string" ? { url: e } : e; });
     Promise.all(entries.map(function (e) {
       return fetch(e.url).then(function (r) { return r.json(); }).then(function (geo) {
+        (geo.persons || []).forEach(function (pr) {   // merge each file's register
+          if (pr.id) PERSONS[pr.id] = pr;
+        });
         geo.features.forEach(function (f) {
           if (e.source && f.properties.source == null) f.properties.source = e.source;
         });
@@ -337,12 +375,12 @@
                 fillColor: conf.color, fillOpacity: 0.3, interactive: false });
             }
             layer = L.circleMarker(ll, { radius: 6, weight: 1.5, color: "#fff",
-              fillColor: colorFor(p.story), fillOpacity: 0.9 });
+              fillColor: featColor(p), fillOpacity: 0.9 });
             all.extend(ll); if (inRegion(ll[0], ll[1])) region.extend(ll);
             (bounds[p.story] = bounds[p.story] || L.latLngBounds([])).extend(ll);
           } else if (f.geometry.type === "LineString") {
             var lls = f.geometry.coordinates.map(function (c) { return [c[1], c[0]]; });
-            layer = L.polyline(lls, routeStyle(colorFor(p.story)));
+            layer = L.polyline(lls, routeStyle(featColor(p)));
             lls.forEach(function (ll) {
               all.extend(ll); if (inRegion(ll[0], ll[1])) region.extend(ll);
               (bounds[p.story] = bounds[p.story] || L.latLngBounds([])).extend(ll);
@@ -365,6 +403,10 @@
             showEntry(entry);   // on the map iff one of its groups is visible
             entry.stories.forEach(function (key) {
               (placesByGroup[key] || (placesByGroup[key] = [])).push(entry);
+            });
+            // per-id character refs → the persons index (legacy strings skip)
+            (Array.isArray(p.character) ? p.character : []).forEach(function (pid) {
+              (placesByPerson[pid] || (placesByPerson[pid] = [])).push(entry);
             });
           }
         });
@@ -492,6 +534,60 @@
       box.appendChild(item);
       box.appendChild(sub);
     });
+
+    // ── persons register (prosopography) — set apart below the groups; only
+    // rendered when the work ships a `persons` register (others: no section) ──
+    var pids = Object.keys(PERSONS);
+    if (pids.length) {
+      var pLabel = (t && t.persons) || (lang === "de" ? "Personen" : "Persons");
+      var sec = document.createElement("div");
+      sec.className = "person-sec";
+      sec.innerHTML = '<span class="caret">▸</span>' +
+        '<span class="person-sec-name">' + esc(pLabel) + "</span>" +
+        '<span class="count">' + pids.length + "</span>";
+      var wrap = document.createElement("div");
+      wrap.className = "person-wrap";
+      wrap.hidden = true;                       // collapsed by default
+      pids.forEach(function (pid) {             // register (source) order
+        var pr = PERSONS[pid];
+        var entries = placesByPerson[pid] || [];
+        var row = document.createElement("div");
+        row.className = "person-item";
+        row.innerHTML = '<span class="caret">▸</span>' +
+          (pr.color ? '<span class="p-swatch" style="background:' + esc(pr.color) + '"></span>' : "") +
+          '<span class="person-name">' + esc(pr.name) + "</span>" +
+          (pr.role ? '<span class="person-role">' + esc(pr.role) + "</span>" : "") +
+          '<span class="count">' + entries.length + "</span>";
+        var sub2 = document.createElement("div");
+        sub2.className = "place-list";
+        sub2.hidden = true;
+        entries.forEach(function (e) {
+          var pi = document.createElement("div");
+          pi.className = "place-item";
+          pi.innerHTML = esc(e.name) +
+            (e.kind === "route" ? ' <span class="pl-route">' + t.route + "</span>" : "");
+          pi.addEventListener("click", function (ev) {
+            ev.stopPropagation();
+            focusPlace(e.stories[0], e, null);
+          });
+          sub2.appendChild(pi);
+        });
+        row.addEventListener("click", function () {
+          var opening = sub2.hidden;
+          sub2.hidden = !opening;
+          row.classList.toggle("expanded", opening);
+        });
+        wrap.appendChild(row);
+        wrap.appendChild(sub2);
+      });
+      sec.addEventListener("click", function () {
+        var opening = wrap.hidden;
+        wrap.hidden = !opening;
+        sec.classList.toggle("expanded", opening);
+      });
+      box.appendChild(sec);
+      box.appendChild(wrap);
+    }
   }
 
   function setVisible(show) {

@@ -29,11 +29,15 @@ def ann_slug(s):
 
 
 def assign_ids(features):
-    """Derive the overlay id for each feature (annSlug(story)/annSlug(name),
-    with -2/-3 suffixes for duplicates) — identical to overlay.py / engine.js."""
+    """Stable id per feature: an explicit `properties.id` wins; otherwise the
+    derived annSlug(story)/annSlug(name) with -2/-3 for duplicates — identical
+    to overlay.py / engine.js."""
     seen, ids = {}, []
     for f in features:
         p = f.get("properties", {})
+        if p.get("id"):
+            ids.append(p["id"])
+            continue
         b = ann_slug(p.get("story")) + "/" + ann_slug(p.get("name"))
         seen[b] = seen.get(b, 0) + 1
         ids.append(b if seen[b] == 1 else b + "-" + str(seen[b]))
@@ -110,7 +114,10 @@ def main():
                  "kapitel": g["label"]}
         if p.get("confidence"):
             props["confidence"] = p["confidence"]
-        props["_umap_options"] = {"color": g["color"], "weight": 5 if is_line else 1}
+        # a feature's own colour (per-character routes) wins over the group colour,
+        # mirroring engine.js featColor()
+        props["_umap_options"] = {"color": p.get("color") or g["color"],
+                                  "weight": 5 if is_line else 1}
         out_feats.append({"type": "Feature", "id": fid,
                           "geometry": f["geometry"], "properties": props})
 

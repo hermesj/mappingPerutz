@@ -13,14 +13,22 @@
     "story": "Chapter 1",
     "name": "Greislerladen der Frau Püchl",
     "kind": "place",
-    "character": "Demba, Frau Püchl, Frau Schimek",
+    "id": "loc-greislerladen-puechl",
+    "character": [
+     "per-demba-stanislaus",
+     "per-puechl-johanna",
+     "per-schimek"
+    ],
     "time": "kurz nach 9 Uhr",
     "gloss": "Der Greislerladen der Frau Johanna Püchl in der Wiesengasse (Lichtental, 9. Bezirk) — hier beginnt der Roman: Demba kauft ein Butterbrot, drückt die Klinke mit dem Ellbogen, lässt sich das Brot kleinschneiden und verschwindet schließlich, das Geld abgezählt auf dem Ladentisch. Zur Verortung vgl. Alexander Peers Stadtspaziergang (Wiener Zeitung, 2022).",
     "quote": "Die Greislerin in der Wiesengasse, Frau Johanna Püchl, trat an diesem Morgen gegen halb acht Uhr aus dem Laden auf die Straße.",
     "srcText": "Die Greislerin in der Wiesengasse, Frau Johanna Püchl",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q106194700",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -37,14 +45,19 @@
     "story": "Chapter 1",
     "name": "Ecktrafik der Frau Schimek",
     "kind": "place",
-    "character": "Frau Schimek",
+    "id": "loc-ecktrafik-schimek",
+    "character": [
+     "per-schimek"
+    ],
     "time": "kurz nach 9 Uhr",
     "gloss": "Die Ecktrafik der alten Frau Schimek »in der Karl-Denk-Gasse« — der Straßenname ist im Roman umbenannt: gemeint ist wohl die benachbarte Simon-Denk-Gasse (vgl. Alexander Peer, Wiener Zeitung, 2022). Platziert am Nordende der Gasse, der dem Greislerladen nächstgelegenen Ecke; welche Ecke genau, bleibt offen.",
     "quote": "Kurz nach neun Uhr erschien die alte Frau Schimek, der die Ecktrafik in der Karl-Denk-Gasse gehörte, zu einem längeren Plausch.",
     "srcText": "die Ecktrafik in der Karl-Denk-Gasse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
-    "confidence": "medium"
+    "confidence": "medium",
+    "fictional": true,
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -61,7 +74,13 @@
     "story": "Chapter 2",
     "name": "Bank im Liechtensteinpark",
     "kind": "place",
-    "character": "Demba, Hofrat Klementi, Professor Truxa, Cyrus",
+    "id": "loc-liechtensteinpark-bank",
+    "character": [
+     "per-demba-stanislaus",
+     "per-klementi",
+     "per-truxa",
+     "per-cyrus"
+    ],
     "time": "gegen halb 10",
     "gloss": "Das Lieblingsplätzchen der beiden Gelehrten im oberen, abgelegenen Teil des Liechtensteinparks — hinter einer Sandsteingruppe verborgen, von zwei Akazien beschattet. Hier frühstückt Demba das Butterbrot aus der Wiesengasse, der Hund Cyrus frisst ihm die Extrawurst weg, und der Fußtritt für Cyrus trägt Demba die Diagnose »Haschisch!« ein. Lage der Bank hypothetisch; zur Topografie des Parks vgl. Alexander Peer (Wiener Zeitung, 2022).",
     "quote": "Auf der Bank saß Stanislaus Demba. Er war beim Frühstück.",
@@ -69,7 +88,9 @@
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
-    "seq": 2
+    "seq": 2,
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -86,13 +107,20 @@
     "story": "Chapter 2",
     "name": "Unterer Liechtensteinpark",
     "kind": "place",
-    "character": "Demba, Hofrat Klementi, Professor Truxa",
+    "id": "loc-liechtensteinpark-unten",
+    "character": [
+     "per-demba-stanislaus",
+     "per-klementi",
+     "per-truxa"
+    ],
     "time": "gegen halb 10",
     "gloss": "Die Gelehrten jagen dem vermeintlichen Haschischraucher nach — und vergessen dabei den an die Bank gebundenen Cyrus. Im unteren, belebten Teil des Parks verliert sich Dembas Spur im Gewühl der spielenden Kinder. Lage ungefähr (südlicher Parkteil).",
     "quote": "Als die beiden Gelehrten atemlos den unteren Teil des Parkes erreichten, war der Haschischtrunkene schon lange im Gewühle der spielenden Kinder verschwunden.",
     "srcText": "den unteren Teil des Parkes erreichten",
     "confidence": "medium",
-    "seq": 3
+    "seq": 3,
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -109,13 +137,20 @@
     "story": "Chapter 2",
     "name": "Porzellangasse (Querung)",
     "kind": "place",
-    "character": "Hofrat Klementi, Professor Truxa, Cyrus",
+    "id": "loc-porzellangasse-querung",
+    "character": [
+     "per-klementi",
+     "per-truxa",
+     "per-cyrus"
+    ],
     "time": "gegen halb 10",
     "gloss": "Auf dem morgendlichen Weg in den Park: Professor Truxa hat »seine liebe Not«, den in Gedanken stehenbleibenden Hofrat heil über die Gleise der elektrischen Tramway zu bringen. Genaue Querungsstelle offen.",
     "quote": "Professor Truxa hatte seine liebe Not, den Freund beim Überqueren der Porzellangasse glücklich aus dem Gefahrenbereich der elektrischen Tramway zu bringen.",
     "srcText": "beim Überqueren der Porzellangasse",
     "confidence": "medium",
-    "seq": 1
+    "seq": 1,
+    "wikidata": "Q106194249",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -132,12 +167,19 @@
     "story": "Chapter 3",
     "name": "Parkbank des Fräuleins",
     "kind": "place",
-    "character": "Demba, Alice Leitner, Frau Buresch",
+    "id": "loc-parkbank-fraeulein",
+    "character": [
+     "per-demba-stanislaus",
+     "per-leitner-alice",
+     "per-buresch"
+    ],
     "time": "gegen dreiviertel 10",
     "gloss": "Die Bank, auf der das Kinderfräulein Alice Leitner liest (»Hedda Gabler«) und Demba sich erschöpft niederlässt. Der Park wird im Text nicht benannt — plausibel der belebte untere Liechtensteinpark, wo Demba kurz zuvor im Kindergewühl (Spielplatz in der südwestlichen Ecke) verschwand; Lage hypothetisch.",
     "quote": "»Weil ich ein Krüppel bin,« sagte er mit tonloser Stimme. »Es muß heraus. Ich habe keine Arme.«",
     "srcText": "Es muß heraus. Ich habe keine Arme",
-    "confidence": "medium"
+    "confidence": "medium",
+    "fictional": true,
+    "evidence": "conjectural"
    },
    "geometry": {
     "type": "Point",
@@ -154,10 +196,13 @@
     "story": "Chapter 3",
     "name": "Votivpark",
     "kind": "place",
+    "id": "loc-votivpark",
     "gloss": "Nur Gesprächsstoff auf der Parkbank: Das Fräulein weiß zu berichten, dass im Votivpark heuer Sessel statt der Bänke aufgestellt werden sollen — vier Heller pro Person. Eine kleine Wiener Parkökonomie am Rande; Schauplatz ist der Votivpark nicht.",
     "quote": "»Im Votivpark sollen dieses Jahr Sessel aufgestellt werden statt der Bänke«, erzählte das Fräulein. »Vier Heller pro Person.«",
     "srcText": "Im Votivpark sollen dieses Jahr Sessel aufgestellt werden",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q110088387",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -174,10 +219,13 @@
     "story": "Chapter 3",
     "name": "Maria-Theresien-Straße 18",
     "kind": "place",
+    "id": "loc-maria-theresien-strasse",
     "gloss": "Alice Leitners Dienstadresse beim kaiserlichen Rat Adalbert Füchsel — die Adresse, die sich Demba partout nicht notieren kann (und deren Grund er nicht preisgeben mag); am Ende weiß er nur noch »Alice und kaiserlicher Rat Füchsel«. Nur im Dialog genannt, kein Schauplatz.",
     "quote": "»Also notieren Sie sich meine Adresse: Alice Leitner, bei Herrn kaiserlichen Rat Adalbert Füchsel, neunter Bezirk, Maria-Theresien Straße 18.«",
     "srcText": "neunter Bezirk, Maria-Theresien Straße 18",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q106194078",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -194,10 +242,12 @@
     "story": "Chapter 1",
     "name": "Arbeitsministerium",
     "kind": "place",
+    "id": "loc-arbeitsministerium",
     "gloss": "Das k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse.",
     "quote": "… und der Herr aus dem Arbeitsministerium, der seit Jahren täglich einen »feinen Aufschnitt« für sein zweites Frühstück im Geschäfte der Frau Püchl erstand.",
     "srcText": "der Herr aus dem Arbeitsministerium",
-    "confidence": "high"
+    "confidence": "high",
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -214,11 +264,14 @@
     "story": "Chapter 2",
     "name": "Kunsthistorisches Museum",
     "kind": "place",
+    "id": "loc-kunsthistorisches-museum",
     "gloss": "Arbeitsplatz Hofrat Klementis: Direktor der altorientalischen Spezialsammlung, vorübergehend auch mit der Oberleitung der ethnographisch-anthropologischen Abteilung betraut. Nur erwähnt, kein Schauplatz.",
     "quote": "Hofrat Klementi, der Direktor der altorientalischen Spezialsammlung des kunsthistorischen Museums, derzeit vorübergehend auch mit der Oberleitung der ethnographisch-anthropologischen Abteilung betraut, muß den Lesern wohl nicht erst vorgestellt werden.",
     "srcText": "der altorientalischen Spezialsammlung des kunsthistorischen Museums",
     "confidence": "high",
-    "seq": 4
+    "seq": 4,
+    "wikidata": "Q95569",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -235,11 +288,14 @@
     "story": "Chapter 2",
     "name": "Konsular-Akademie",
     "kind": "place",
+    "id": "loc-konsularakademie",
     "gloss": "Lehrstätte Professor Ritter von Truxas. Die k.u.k. Konsularakademie bezog 1904 ihren Neubau in der Waisenhausgasse (seit 1913 Boltzmanngasse 16) — wenige Gehminuten vom Liechtensteinpark, wo die Gelehrten ihre Morgenrunde drehen. Nur erwähnt, kein Schauplatz.",
     "quote": "Professor Ritter von Truxa, wirkliches Mitglied der Akademie der Wissenschaften (philosophisch-historische Klasse) und Lehrer an der Konsular-Akademie, ist weniger bekannt.",
     "srcText": "und Lehrer an der Konsular-Akademie",
     "confidence": "high",
-    "seq": 5
+    "seq": 5,
+    "wikidata": "Q876973",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -256,11 +312,14 @@
     "story": "Chapter 2",
     "name": "Akademie der Wissenschaften",
     "kind": "place",
+    "id": "loc-akademie-wissenschaften",
     "gloss": "Truxa ist wirkliches Mitglied (philosophisch-historische Klasse), Klementis Werk über die »Bildung altassyrischer Eigennamen« ist von ihr subventioniert. Nur erwähnt, kein Schauplatz.",
     "quote": "Mit seinem grundlegenden, von der Akademie der Wissenschaften subventionierten Werke über die »Bildung altassyrischer Eigennamen« hat er sich in der Gelehrtenwelt eine angesehene Stellung gesichert …",
     "srcText": "von der Akademie der Wissenschaften subventionierten Werke",
     "confidence": "high",
-    "seq": 6
+    "seq": 6,
+    "wikidata": "Q299015",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -277,12 +336,22 @@
     "story": "Chapter 4",
     "name": "Bureau der Firma Klebinder",
     "kind": "place",
-    "character": "Demba, Sonja Hartmann, Klara Postelberg, Etelka Springer, Mister Brown, Neuhäusl",
+    "id": "loc-klebinder-bureau",
+    "character": [
+     "per-demba-stanislaus",
+     "per-hartmann-sonja",
+     "per-postelberg-klara",
+     "per-springer-etelka",
+     "per-braun",
+     "per-neuhaeusl"
+    ],
     "time": "gegen 10 bis halb 11",
     "gloss": "Das Büro der Firma Oskar Klebinder, Modewestenstoffe en gros, am Franz-Josefs-Kai — Sonja Hartmanns Arbeitsplatz. Nach dem Treffen stürmt Demba davon — ohne seinen Hut, der am Kleiderhaken zurückbleibt. Hausnummer unbekannt, Lage auf dem Kai ungefähr.",
     "quote": "»Claire« und »Ethel« sind für Angestellte einer Manufakturfirma am Franz-Josefs-Kai nicht gerade alltägliche Namen.",
     "srcText": "einer Manufakturfirma am Franz-Josefs-Kai",
-    "confidence": "medium"
+    "confidence": "medium",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -299,10 +368,13 @@
     "story": "Chapter 4",
     "name": "Südbahnhof",
     "kind": "place",
+    "id": "loc-suedbahnhof",
     "gloss": "Von hier soll der Zug Sonja Hartmann morgen früh um neun »in märchenhafte Fernen entführen« — Wien–Triest–Venedig, mit Georg Weiner. Der historische Südbahnhof am Wiedner Gürtel (1874; 2010 abgetragen, heute Areal des Hauptbahnhofs). Nur erwähnt, kein Schauplatz.",
     "quote": "In kaum vierundzwanzig Stunden ging der Zug ab, der Sonja Hartmann aus dem Südbahnperron in märchenhafte Fernen entführen sollte.",
     "srcText": "aus dem Südbahnperron in märchenhafte Fernen",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q519025",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -319,10 +391,12 @@
     "story": "Chapter 4",
     "name": "Rohrerhütte",
     "kind": "place",
+    "id": "loc-rohrerhuette",
     "gloss": "Hier, beim Gasthaus im Wienerwald, schwor Sonja »vorigen Herbst« nach dem Nachtmahl im Park, niemals einen andern als Demba zu lieben — »damals war ich ein halbes Kind«. Das beliebte Ausflugsgasthaus (um 1840 vom Forstaufseher J. Rohrer begründet) lag westlich des Schwarzenbergparks an der Straße nach Tulln, am Fuß des Exelbergs; 2000 abgerissen, heute Wohnbau. Lage ungefähr.",
     "quote": "»Vorigen Herbst. In der Rohrerhütte. Wir gingen nach dem Nachtmahl in den Park und da –«",
     "srcText": "Vorigen Herbst. In der Rohrerhütte",
-    "confidence": "low"
+    "confidence": "low",
+    "evidence": "conjectural"
    },
    "geometry": {
     "type": "Point",
@@ -339,10 +413,13 @@
     "story": "Chapter 4",
     "name": "Kottingbrunn",
     "kind": "place",
+    "id": "loc-kottingbrunn",
     "gloss": "Chef Klebinder ist mit dem Zehnuhrzug zum Nachmittagsrennen auf der Rennbahn Kottingbrunn gefahren — weshalb im Büro am Franz-Josefs-Kai gemütliche Stunden herrschen. Nur erwähnt, kein Schauplatz.",
     "quote": "Man wußte, daß er mit dem Zehnuhrzug nach Kottingbrunn fahren wollte, wo nachmittag das Rennen stattfand.",
     "srcText": "mit dem Zehnuhrzug nach Kottingbrunn",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q681531",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -359,10 +436,13 @@
     "story": "Chapter 4",
     "name": "Mödling",
     "kind": "place",
+    "id": "loc-moedling",
     "gloss": "Georg Weiner telefoniert Sonja, dass er zu seinen Eltern nach Mödling fährt — er kommt erst am Abend nach Wien zurück. Nur erwähnt, kein Schauplatz.",
     "quote": "»Er kommt erst am Abend nach Wien. Er hat mir eben telephoniert, daß er zu seinen Eltern nach Mödling fährt.«",
     "srcText": "zu seinen Eltern nach Mödling",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q277965",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -379,14 +459,20 @@
     "story": "Chapter 7",
     "name": "Café Hibernia (Café Schottenring)",
     "kind": "place",
-    "character": "Demba, Kellner Franz",
+    "id": "loc-cafe-hibernia",
+    "character": [
+     "per-demba-stanislaus",
+     "per-franz"
+    ],
     "time": "halb 12 bis 12",
     "gloss": "Das stille Börsencafé zur Mittagsstunde: Demba lässt sich Lehmanns Wohnungsanzeiger, den kompletten kleinen Brockhaus, Armeeschematismus, Gotha, Hof- und Staatshandbuch und das Fremdwörterlexikon bringen — angeblich für seine »Dissertation über den Stand des menschlichen Wissens« — und isst hinter der Bücher-Bastei. Der Kellner Franz hält ihn für einen Herrn von der Zeitung. Laut Alexander Peer (Wiener Zeitung, 2022) ist das »Hibernia« das ehemalige Café Schottenring, vis-à-vis der Alten Börse.",
     "quote": "Zwischen halb zwölf und zwölf Uhr mittags, wenn die Essensstunde heranrückte, war es meist sehr still im Café Hibernia gegenüber der Börse.",
     "srcText": "im Café Hibernia gegenüber der Börse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
-    "confidence": "high"
+    "confidence": "high",
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -406,16 +492,24 @@
     "story": "Chapter 8",
     "name": "Haus des Trödlers (»Klettengasse 6«)",
     "kind": "place",
+    "id": "loc-troedler-haus",
     "stories": [
      "Chapter 8",
      "Chapter 9"
     ],
-    "character": "Demba, der Trödler, zwei Polizisten",
+    "character": [
+     "per-demba-stanislaus",
+     "per-troedler",
+     "per-polizist-1",
+     "per-polizist-2"
+    ],
     "time": "9 Uhr morgens",
     "gloss": "Hier beginnt Dembas Tag — was Leser aber erst im Kapitel 8 erfahren – im wunderkammerartigen Arbeitszimmer des alten Trödlers (halb Sammler, halb Händler). Zwei Polizisten treffen auch ein. Demba gelangt über die dunkle Stiege in die Dachkammer und springt aus dem Fenster durch den Nußbaum in den Garten, während ein Grammophon den Prinz-Eugen-Marsch spielt und die Kirchturmglocke neun schlägt. Eine »Klettengasse« ist für Wien Anfang des 20. Jhdts nicht nachgewiesen und wohl fiktiv; Verortung hier in Nußdorf zwischen Brauerei (der Malzgeruch, der »die ganze Gasse erfüllt«!) und Pfarrkirche St. Thomas (die Neun-Uhr-Glocke). Alternative Lesart: »dritte Haltestelle« der Heiligenstädter Straße spräche für das untere Heiligenstadt um den Pfarrplatz. Lage höchst hypothetisch. Für die längere Fahrt spricht aber, dass Demba auf der Rückfahrt mehr Stationen passiert haben muss: \"Ich fuhr ein Stück Wegs mit, und als dann der Schaffner in meine Nähe kam, stieg ich aus, als hätte ich mein Fahrziel erreicht und ging zu Fuß bis zur nächsten Haltestelle. Das machte ich drei- oder viermal.\"",
     "quote": "Ich gab mir einen Ruck, verlor den Halt, ich hörte noch, wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann, und dann –",
     "srcText": "wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "conjectural"
    },
    "geometry": {
     "type": "Point",
@@ -432,10 +526,13 @@
     "story": "Chapter 8",
     "name": "Universitätsbibliothek",
     "kind": "place",
+    "id": "loc-universitaetsbibliothek",
     "gloss": "Ursprung des Unglückstags: Hier »entlieh« sich Demba vor über einem Jahr drei wertvolle alte Drucke für seine Calpurnius-Siculus-Studie. Die Universitätsbibliothek war 1918 im Hauptgebäude der Universität am Ring untergebracht. Nur erzählt, kein Schauplatz des Tages.",
     "quote": "Ich habe drei Bücher aus der Universitätsbibliothek einem Antiquitätenhändler verkauft. Das heißt, verkauft hab' ich nur zwei. Das dritte hab' ich heute morgen umsonst hergegeben.",
     "srcText": "drei Bücher aus der Universitätsbibliothek",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q1478417",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -452,10 +549,14 @@
     "story": "Chapter 8",
     "name": "Antiquariat in der Johannesgasse",
     "kind": "place",
+    "id": "loc-antiquariat-johannesgasse",
     "gloss": "Erste Station der Bücher-Odyssee (vor einem halben Jahr): Die Antiquitätenläden der Innenstadt wollten für die alten Drucke nichts geben — »einer von ihnen wollte sie nach dem Gewicht kaufen«. Genaues Geschäft unbekannt, Lage auf der Gasse ungefähr. Nur erzählt, kein Schauplatz des Tages.",
     "quote": "Ich trug sie in die Antiquitätenläden in der Johannesgasse und in der Weihburggasse. Aber dort wollte man mir nichts dafür geben.",
     "srcText": "in die Antiquitätenläden in der Johannesgasse",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q106193866",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -472,10 +573,14 @@
     "story": "Chapter 8",
     "name": "Antiquariat in der Weihburggasse",
     "kind": "place",
+    "id": "loc-antiquariat-weihburggasse",
     "gloss": "Zweite Station der Bücher-Odyssee (vor einem halben Jahr) — auch hier kein Verständnis für alte Drucke. Erst der Trödler in Nußdorf/Heiligenstadt »verstand wirklich etwas von Büchern«. Genaues Geschäft unbekannt, Lage auf der Gasse ungefähr. Nur erzählt, kein Schauplatz des Tages.",
     "quote": "Ich trug sie in die Antiquitätenläden in der Johannesgasse und in der Weihburggasse. Aber dort wollte man mir nichts dafür geben.",
     "srcText": "in der Johannesgasse und in der Weihburggasse",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q106194688",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -496,17 +601,24 @@
     "story": "Chapter 16",
     "name": "Weiners Wohnung (Liechtensteinstraße)",
     "kind": "place",
+    "id": "loc-weiner-wohnung",
     "stories": [
      "Chapter 16",
      "Chapter 4",
      "Chapter 8"
     ],
-    "character": "Demba, Georg Weiner",
+    "character": [
+     "per-demba-stanislaus",
+     "per-weiner-georg"
+    ],
     "time": "gegen halb 8",
     "gloss": "Georg Weiners »Absteigquartier« in der Liechtensteinstraße (zweiter Stock, Fenster neben dem Balkon, Ostseite (Morgensonne) »Ausblick auf den Liechtensteinpark« — daher am parknahen Abschnitt verortet, Hausnummer unbekannt). Die Adresse kehrt mehrfach wieder: Schon im Büro zielt Dembas Frage hierher (Kapitel 4), als »Absteigquartier« wird sie benannt (Kapitel 8), und gegen halb acht steht Demba selbst davor (Kapitel 16), Weiner tritt allein heraus, ruft einen Wagen und nennt dem vermeintlichen »Kollegen« arglos sein Ziel: den Residenzkeller. Pikant: dieselbe Straße, an deren Nordende das Arbeitsministerium residiert.",
     "quote": "Daß dieser Herr Weiner gerade in der Liechtensteinstraße wohnte, das konnte kein Grund sein, um einen Umweg zu machen.",
     "srcText": "gerade in der Liechtensteinstraße wohnte",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q96959925",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -529,6 +641,7 @@
     "story": "Reiseziele",
     "name": "Venedig",
     "kind": "place",
+    "id": "loc-venedig",
     "stories": [
      "Reiseziele",
      "Chapter 4",
@@ -539,7 +652,9 @@
     "gloss": "Das Sehnsuchtsziel, auf das der ganze Tag zuläuft — von Anfang bis Schluss immer wieder beschworen. Sonjas Rundreisebillett zweiter Klasse Wien–Triest–Venedig–Wien (mit Semmering, Adelsberger Grotte, Pirano, Padua und Ennstal-Wanderung) ist der Einsatz der Geldjagd (Kapitel 4); Demba will an Weiners Stelle mit ihr fahren (Kapitel 5); und am Ende schleudert Sonja eben dieses Rundreiseheft Weiner ins Gesicht (Kapitel 18) — das Objekt, das Demba den ganzen Tag erjagen wollte, liegt da wertlos am Boden. Weit entferntes Motiv, kein Schauplatz.",
     "quote": "»Werdet ihr mir alle nach Venedig schreiben?« fragte sie und ließ eine Rauchwolke zur Decke schweben. »Venetia, posta grande.«",
     "srcText": "Werdet ihr mir alle nach Venedig schreiben",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q641",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -556,14 +671,22 @@
     "story": "Chapter 11",
     "name": "Wohnung und Kanzlei Dr. Hirsch",
     "kind": "place",
-    "character": "Demba, Frau Dr. Hirsch, Dr. Hirsch",
+    "id": "loc-kanzlei-hirsch",
+    "character": [
+     "per-demba-stanislaus",
+     "per-hirsch-2",
+     "per-hirsch"
+    ],
     "time": "kurz nach 2",
     "gloss": "Bei der Familie des Hof- und Gerichtsadvokaten Dr. Hirsch, wo Demba die Söhne Georg und Erich unterrichtet, erbittet er den Monatsgehalt (80 Kronen) im Voraus. Die Eßlinggasse nennt der Text; Hausnummer unbekannt (vgl. auch Alexander Peer, Wiener Zeitung 2022).",
     "quote": "Frau Dr. Hirsch, die Gattin des Hof- und Gerichtsadvokaten in der Eßlinggasse, kam ein wenig außer Atem in das Privatkontor ihres Mannes.",
     "srcText": "des Hof- und Gerichtsadvokaten in der Eßlinggasse",
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q19971190",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -580,10 +703,13 @@
     "story": "Chapter 12",
     "name": "Pazmanitenstraße 11 (»Egon Müller«)",
     "kind": "place",
+    "id": "loc-pazmanitenstrasse-mueller",
     "gloss": "Die Adresse des »gewissen Egon Müller«, dessen Heft-Exemplar Gegenbauer angeblich für 70 Kronen abkaufen müsste — der Hebel von Dembas elegantestem Trick des Tages. Ob Müller existiert oder Dembas Erfindung ist, lässt der Text offen; auffällig ist die präzise Hausnummer. Real heißt die Gasse in der Leopoldstadt Pazmanitengasse — Perutz schreibt »Pazmanitenstraße«. Nur erwähnt, kein Schauplatz.",
     "quote": "»Bitte, reden Sie selbst mit dem Müller und geben Sie mir dann die Hefte. Er wohnt Pazmanitenstraße, elf.«",
     "srcText": "Er wohnt Pazmanitenstraße, elf",
-    "confidence": "medium"
+    "confidence": "medium",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -600,12 +726,19 @@
     "story": "Chapter 13",
     "name": "Krawattengeschäft am Graben",
     "kind": "place",
-    "character": "Demba, Kallisthenes Skuludis",
+    "id": "loc-krawatten-graben",
+    "character": [
+     "per-demba-stanislaus",
+     "per-skuludis-kallisthenes"
+    ],
     "time": "gegen 4",
     "gloss": "Der elegante Herr Kallisthenes Skuludis — Hochstapler und Taschendieb von internationalem Format, Besitzer von fast sechshundert Krawatten — kauft eine orangefarbene Seidenkrawatte, während Demba sich an seine Fersen heftet — über Blumengeschäft, Delikatessenladen und Friseursalon den Graben entlang. Genaues Geschäft unbekannt, Lage am Graben ungefähr.",
     "quote": "Herr Kallisthenes Skuludis trat in das große Herrenmodewarengeschäft auf dem Graben ein und ließ sich von der Verkäuferin Krawatten zeigen.",
     "srcText": "Herrenmodewarengeschäft auf dem Graben",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q699937",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -622,12 +755,19 @@
     "story": "Chapter 13",
     "name": "Kaffeehaus-Vorgarten nahe der Oper",
     "kind": "place",
-    "character": "Demba, Kallisthenes Skuludis",
+    "id": "loc-kaffeehaus-oper",
+    "character": [
+     "per-demba-stanislaus",
+     "per-skuludis-kallisthenes"
+    ],
     "time": "gegen 4",
     "gloss": "Im Vorgarten eines (ungenannten) Kaffeehauses in Sichtweite der Oper kommt es zum Aufeinandertreffen von Demba und Skuludis. Danach flieht Demba auf einen Autoomnibus, und der Berufsgauner sieht ihm mit kollegialer Sympathie nach. Lage ungefähr (»Gegenüber der Oper stand ein Polizist«).",
     "quote": "Gegenüber der Oper stand ein Polizist. Aber beide Herren schlugen ganz von selbst eine Richtung ein, in der auf tausend Schritte Entfernung weit und breit kein Wachmann zu sehen war.",
     "srcText": "Gegenüber der Oper stand ein Polizist",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q209937",
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -644,10 +784,14 @@
     "story": "Chapter 13",
     "name": "Praterstraße (Juwelenhändler)",
     "kind": "place",
+    "id": "loc-juwelier-praterstrasse",
     "gloss": "Eine Stunde vor der Kaffeehaus-Szene verhandelte Skuludis hier mit einem »befreundeten« Juwelenhändler über Schmuckstücke, »die man nur ungern dem grellen Licht des Tages aussetzt« — vergeblich. Genaues Geschäft unbekannt, Lage auf der Straße ungefähr. Nur erwähnt, kein Schauplatz.",
     "quote": "Vor einer Stunde hatte er in der Praterstraße eine Unterredung sehr delikater Natur mit einem befreundeten Juwelenhändler gehabt, dem er Schmuckstücke jener Art, die man nur ungern dem grellen Licht des Tages aussetzt, zum Kaufe angeboten hatte.",
     "srcText": "in der Praterstraße eine Unterredung sehr delikater Natur",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q2107895",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -664,7 +808,10 @@
     "story": "Chapter 14",
     "name": "Mariahilferstraße",
     "kind": "place",
-    "character": "Demba",
+    "id": "loc-mariahilferstrasse",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "time": "nach 4",
     "gloss": "Hier verlässt Demba den Autoomnibus und geht grübelnd die Straße hinunter. Zur Topografie der Verfolgungsjagd vgl. Alexander Peer (Wiener Zeitung, 2022). Lage auf der Straße ungefähr.",
     "quote": "Stanislaus Demba verließ den Omnibus und ging langsam die Mariahilferstraße hinunter.",
@@ -672,7 +819,9 @@
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
-    "seq": 1
+    "seq": 1,
+    "wikidata": "Q699930",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -689,13 +838,23 @@
     "story": "Chapter 14",
     "name": "Wohnung Dr. Becker (Kohlmarkt)",
     "kind": "place",
-    "character": "Demba, Elly Becker, Viky, Anny, Frau Dr. Becker",
+    "id": "loc-becker-wohnung",
+    "character": [
+     "per-demba-stanislaus",
+     "per-becker-elly",
+     "per-viky",
+     "per-anny",
+     "per-becker-2"
+    ],
     "time": "gegen 5",
     "gloss": "Vierter Stock eines neuen Hauses am Kohlmarkt, »Dozent Dr. R. Becker, ordiniert von zwei bis fünf«. Hausnummer unbekannt, Lage am Kohlmarkt ungefähr.",
     "quote": "Dr. Becker wohnte am Kohlmarkt im vierten Stock eines neuen Hauses.",
     "srcText": "Dr. Becker wohnte am Kohlmarkt",
     "confidence": "medium",
-    "seq": 2
+    "seq": 2,
+    "wikidata": "Q695132",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -712,12 +871,20 @@
     "story": "Chapter 15",
     "name": "Café Turf",
     "kind": "place",
-    "character": "Demba, Hübel, Dr. Rübsam, Frau Suschitzky",
+    "id": "loc-cafe-turf",
+    "character": [
+     "per-demba-stanislaus",
+     "per-huebel",
+     "per-ruebsam",
+     "per-suschitzky"
+    ],
     "time": "gegen 7",
     "gloss": "Das verhängte Hinterzimmer der Bukidomino-Runde — Dembas Dachkammer-Wunsch vom Morgen (»den Bauernfängern beim Bukispielen zusehen«) wird bittere Wirklichkeit. Café-Name wohl fiktiv; Lage hypothetisch im Milieu der Runde zwischen Augartenbrücke und Praterstern (Leopoldstadt).",
     "quote": "In dem kleinen reservierten Zimmer des Café Turf, in das man durch eine sorgfältig verhängte und von einem Pikkolo bewachte Tür eintrat, saßen heute elf Personen.",
     "srcText": "Zimmer des Café Turf",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "conjectural"
    },
    "geometry": {
     "type": "Point",
@@ -738,17 +905,26 @@
     "story": "Chapter 17",
     "name": "Residenzkeller",
     "kind": "place",
+    "id": "loc-residenzkeller",
     "stories": [
      "Chapter 17",
      "Chapter 18",
      "Chapter 19"
     ],
-    "character": "Demba, Sonja Hartmann, Georg Weiner, Emil Horvath, Dr. Fuhrmann",
+    "character": [
+     "per-demba-stanislaus",
+     "per-hartmann-sonja",
+     "per-weiner-georg",
+     "per-horvath-emil",
+     "per-fuhrmann"
+    ],
     "time": "gegen 8",
     "gloss": "Schauplatz gleich dreier Kapitel. Im Extrazimmer, wo Sonjas Freundeskreis sitzt, blamiert sich Demba vor Weiner, dem Disponenten Horvath und dem Bulldoggen-Dr. Fuhrmann. Am Ende flieht er, Sonja verrät seine Wohnung (Kapitel 19). Lage hypothetisch: hier ans südöstliche Ende der Naglergasse (Richtung Graben) gesetzt.",
     "quote": "»In den Residenzkeller!« sagte Weiner. »In den Residenzkeller? Man ißt gut dort, nicht wahr?«",
     "srcText": "In den Residenzkeller!",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "conjectural"
    },
    "geometry": {
     "type": "Point",
@@ -769,19 +945,27 @@
     "story": "Chapter 8",
     "name": "Kolingasse (Steffi Prokop)",
     "kind": "place",
+    "id": "loc-prokop-kolingasse",
     "stories": [
      "Chapter 8",
      "Chapter 9",
      "Chapter 10"
     ],
-    "character": "Demba, Steffi Prokop, Stephan Prokop",
+    "character": [
+     "per-demba-stanislaus",
+     "per-prokop-steffi",
+     "per-prokop-stephan"
+    ],
     "time": "12 bis 2 Uhr",
     "gloss": "Steffi Prokops Wohnung in der Kolingasse (Alsergrund, beim Liechtensteinpark), von Alexander Peer identifiziert. Hierher kommt Demba um zwölf Uhr an und bleibt für drei Kapitel hier. Lage straßengenau (keine Hausnummer im Text).",
     "quote": "»Ich gehe jetzt in die Kolingasse,« unterbrach ihn Stanislaus Demba.",
     "srcText": "Ich gehe jetzt in die Kolingasse",
     "essay": "https://derive.at/texte/in-ketten-durch-wien/",
     "essaySource": "Alexander Peer",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q106193945",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -801,16 +985,23 @@
     "story": "Chapter 5",
     "name": "Dembas Zimmer (bei Frau Pomeisl)",
     "kind": "place",
+    "id": "loc-demba-zimmer",
     "stories": [
      "Chapter 5",
      "Chapter 20"
     ],
-    "character": "Demba, Oskar Miksch, Frau Pomeisl",
+    "character": [
+     "per-demba-stanislaus",
+     "per-miksch-oskar",
+     "per-pomeisl"
+    ],
     "time": "gegen 11 Uhr",
     "gloss": "Dembas dürftig möbliertes Untermietzimmer in Lichtental, das er seit einem halben Jahr mit dem Eisenbahner Oskar Miksch teilt (Nachtdienst — sie sehen sich kaum, verständigen sich per Zettel); Wirtin ist die kleinbürgerliche Frau Pomeisl, ihr Sohn Anton eingerückt. Hier kommt Demba mitvormittags heim, um sich — der eigene Mantel zerrissen — die Pelerine des Sohnes zu leihen. Lage nach Indizien (keine Hausnummer im Text): bescheidene Gasse im 9. Bezirk nahe »seinem« Greissler in der Wiesengasse, westlich der Liechtensteinstraße, die Kap. 16 als »kürzester Weg nach Hause« dient — keine Prachtstraße. Auch eines der Finals spielt hier.",
     "quote": "Demba trat vor den Spiegel, der die Tür des Kleiderkastens und das Prunkstück des dürftig möblierten Zimmers bildete.",
     "srcText": "das Prunkstück des dürftig möblierten Zimmers",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -827,12 +1018,17 @@
     "story": "Chapter 6",
     "name": "Telephonzelle in der Berggasse",
     "kind": "place",
-    "character": "Demba",
+    "id": "loc-telefonzelle-berggasse",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "time": "zwischen 11 und 12",
     "gloss": "Von hier ruft Demba in Kapitel 6 Steffi Prokop an und verabredet sich für zwölf Uhr (»deswegen komme ich ja zu dir«) — draußen wartet schon ungeduldig ein Herr auf die Zelle. Eine Adresse nennt der Roman nicht; hypothetisch an der Berggasse verortet, wo das Telefon-Vermittlungsamt »Centrale II« (1897–99) stand — die einzige im 9. Bezirk dokumentierte frühe Telefoneinrichtung (gemeint ist freilich eine öffentliche Sprechstelle, nicht die Zentrale selbst).",
     "essay": "https://magazin.wienmuseum.at/die-anfaenge-der-telefonie-in-wien",
     "essaySource": "Wien Museum",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -849,10 +1045,12 @@
     "story": "Meta",
     "name": "Leo Perutz' Wohnung (Porzellangasse 37)",
     "kind": "place",
+    "id": "loc-perutz-wohnung",
     "gloss": "Leo Perutz wohnte mit seiner Familie 17 Jahre lang in der Porzellangasse 37 (9. Bezirk; vgl. Alexander Peer, verlinktes Essay). Kein Schauplatz des Romans, sondern ein biografischer Kontextpunkt — bemerkenswert: Perutz hat die Handlung des Romans in die eigene Nachbarschaft gesetzt.",
     "essay": "https://derive.at/texte/in-ketten-durch-wien/",
     "essaySource": "Alexander Peer",
-    "confidence": "high"
+    "confidence": "high",
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -869,10 +1067,13 @@
     "story": "Meta",
     "name": "Sigmund Freuds Praxis (Berggasse 19)",
     "kind": "place",
+    "id": "loc-freud-praxis",
     "gloss": "Sigmund Freuds Wohnung und psychoanalytische Praxis in der Berggasse 19 (heute Sigmund-Freud-Museum). Zur Zeit des Romans (1918) längst etabliert — während Stanislaus Demba durch den 9. Bezirk irrt, empfängt Freud nur wenige Schritte entfernt seine Patienten. Biografischer Kontextpunkt, kein Schauplatz.",
     "essay": "https://de.wikipedia.org/wiki/Sigmund_Freud_Museum",
     "essaySource": "Wikipedia",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q694810",
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -889,10 +1090,13 @@
     "story": "Meta",
     "name": "Café Herrenhof (Herrengasse 10)",
     "kind": "place",
+    "id": "loc-cafe-herrenhof",
     "gloss": "Das berühmte Wiener Literatencafé Herrenhof (Herrengasse 10), Treffpunkt der literarischen Moderne — und Leo Perutz' Stammcafé. Biografischer Kontextpunkt, kein Schauplatz des Romans.",
     "essay": "https://de.wikipedia.org/wiki/Caf%C3%A9_Herrenhof",
     "essaySource": "Wikipedia",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q262857",
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -909,12 +1113,18 @@
     "story": "Chapter 12",
     "name": "Krawattengeschäft (Praterstraße)",
     "kind": "place",
-    "character": "Demba, Kallisthenes Skuludis",
+    "id": "loc-krawatten-praterstrasse",
+    "character": [
+     "per-demba-stanislaus",
+     "per-skuludis-kallisthenes"
+    ],
     "time": "gegen 3",
     "gloss": "Hier verliert Demba das Kuvert mit den 70 Kronen: Ein Wachmann hebt es auf, Demba verleugnet es aus Angst vor Verhaftung, und der Beamte reicht es dem eleganten Fremden, der vor dem Schaufenster steht – Kallisthenes Skuludis, der das Geld einsteckt. Die Straße bleibt in Kap. 12 unbenannt; Kap. 13 verrät jedoch, dass Skuludis kurz zuvor in der Praterstraße (beim Juwelenhändler) war und Demba ihm von hier aus folgt – daher die Verortung nahe dem Juwelier. Genaues Geschäft unbekannt.",
     "quote": "Er ging auf einen Passanten zu, der kurz vor Stanislaus Demba die Straße überquert hatte und nun vor dem Schaufenster eines Kravattengeschäftes stand.",
     "srcText": "nun vor dem Schaufenster eines Kravattengeschäftes stand",
-    "confidence": "medium"
+    "confidence": "medium",
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -931,12 +1141,18 @@
     "story": "Chapter 12",
     "name": "Wohnung Gegenbauer",
     "kind": "place",
-    "character": "Demba, Gegenbauer",
+    "id": "loc-gegenbauer-wohnung",
+    "character": [
+     "per-demba-stanislaus",
+     "per-gegenbauer-fritz"
+    ],
     "time": "gegen 3",
     "gloss": "Gegenbauers Wohnung – Schauplatz von Dembas elegantestem Trick: Mit der erfundenen Geschichte vom »Egon Müller«, der ein Heft-Exemplar für 70 Kronen verkaufe (siehe Pazmanitenstraße 11), lässt Demba sich die Summe »ersetzen«. Beim Hinausgehen passiert er zwei Duell-Sekundanten, die im Vorzimmer warten. Die Adresse nennt der Text nicht; hier nach Vorschlag an die Kreuzung Komödiengasse/Zirkusgasse (Leopoldstadt) gesetzt – nahe der Praterstraße, wo Demba das Geld gleich darauf verliert.",
     "quote": "Und Demba verließ, die Beute in der Tasche, die Wohnung, an zwei unnahbaren Herren im Gehrock vorbei, die im Vorzimmer standen und in düsterer Entschlossenheit auf den Fußboden starrten.",
     "srcText": "an zwei unnahbaren Herren im Gehrock vorbei, die im Vorzimmer standen",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -953,10 +1169,13 @@
     "story": "Chapter 4",
     "name": "Dianabad",
     "kind": "place",
+    "id": "loc-dianabad",
     "gloss": "Reale Wiener Badeanstalt (Leopoldstadt, am Donaukanal). Nur erwähnt: Hier gewann Sonjas Kollegin Etelka (»Ethel«) Springer einen zweiten Preis im Wettschwimmen – seither gibt sie sich als »sporting girl« mit gefürchtetem Händedruck. Kolorit des Klebinder-Büros (Kap. 4).",
     "quote": "…seit sie in einem Wettschwimmen im Dianabad den zweiten Preis erzielt hatte, ganz als »sporting girl«.",
     "srcText": "ein Wettschwimmen im Dianabad",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q1208912",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -973,10 +1192,13 @@
     "story": "Chapter 4",
     "name": "Bauernmarkt",
     "kind": "place",
+    "id": "loc-bauernmarkt",
     "gloss": "Nur erwähnt: Beispiel für Dembas Besserwisser-Erudition – Klara Postelberg referiert, er habe ihr erklärt, »warum die Obstweiber gerade am Bauernmarkt stehen«. Reale Gasse der Inneren Stadt. (Kap. 4)",
     "quote": "Unlängst hat er mir erklärt, warum die Obstweiber gerade am Bauernmarkt stehen, alle, und die Blumenweiber in der verlängerten Kärntnerstraße.",
     "srcText": "die Obstweiber gerade am Bauernmarkt",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q811289",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -993,10 +1215,13 @@
     "story": "Chapter 4",
     "name": "Verlängerte Kärntnerstraße",
     "kind": "place",
+    "id": "loc-kaerntnerstrasse-verlaengert",
     "gloss": "Nur erwähnt: die Blumenweiber-Hälfte derselben Anekdote (Dembas Erklärung, referiert von Klara Postelberg). »Verlängerte Kärntnerstraße« = die Fortsetzung jenseits des Rings; hier ungefähr auf der inneren Kärntner Straße verortet. (Kap. 4)",
     "quote": "Unlängst hat er mir erklärt, warum die Obstweiber gerade am Bauernmarkt stehen, alle, und die Blumenweiber in der verlängerten Kärntnerstraße.",
     "srcText": "die Blumenweiber in der verlängerten Kärntnerstraße",
-    "confidence": "medium"
+    "confidence": "medium",
+    "wikidata": "Q699947",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1013,12 +1238,18 @@
     "story": "Chapter 9",
     "name": "Barbier (Rasur)",
     "kind": "place",
-    "character": "Demba, Friseurgehilfe",
+    "id": "loc-barbier",
+    "character": [
+     "per-demba-stanislaus",
+     "per-friseurgehilfe"
+    ],
     "time": "um die Mittagszeit",
     "gloss": "Von Demba bei Steffi nacherzählt (Kap. 9): Er ließ sich heute den Schnurrbart »englisch stutzen« – Teil seiner Tarnung. ELage unbekannt – der Text nennt keinen Ort; hier ungefähr auf den schon gezeichneten Weg (Café Hibernia → Kolingasse) gesetzt, da die Rasur zeitlich vor dem Steffi-Besuch liegt.",
     "quote": "schließlich hab' ich mir heute den Schnurrbart englisch stutzen lassen.",
     "srcText": "den Schnurrbart englisch stutzen lassen",
-    "confidence": "low"
+    "confidence": "low",
+    "fictional": true,
+    "evidence": "conjectural"
    },
    "geometry": {
     "type": "Point",
@@ -1038,16 +1269,21 @@
     "story": "GELEHRTENORTE",
     "name": "Damaskus",
     "kind": "place",
+    "id": "loc-damaskus",
     "stories": [
      "GELEHRTENORTE",
      "Betrüger"
     ],
-    "character": "Professor von Truxa (Kap. 2), Stanislaus Demba (Kap. 17)",
+    "character": [
+     "per-truxa",
+     "per-demba-stanislaus"
+    ],
     "gloss": "Professor Ritter von Truxa war offenbar vor kurzem noch auf einer mehrmonatigen Studienreise im nördlichen Hurangebiet, das südlich von Damaskus liegt. Dabei scheint er auch Damaskus selbst besucht zu haben. – Zugleich ein »Ort der Betrüger«: Demba beruft sich in Kap. 17 auf »Bagdad und Damaskus«, wo das Trinken durch den Strohhalm angeblich überall üblich sei, um seinen Bluff am Wirtshaustisch zu beglaubigen.",
     "quote": "Ich habe gesehen, wie ein Nachtwächter in Damaskus einem harmlosen Spaziergänger ohne jeden Anlaß einen solchen Tritt in den Magen versetzte, daß der arme Teufel vom Fleck weg ins Spital gebracht werden mußte.",
     "confidence": "high",
     "seq": 3,
-    "verified": true
+    "wikidata": "Q3766",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1064,11 +1300,13 @@
     "story": "GELEHRTENORTE",
     "name": "Aleppo",
     "kind": "place",
+    "id": "loc-aleppo",
     "gloss": "Professor Truxa bereiste nach eigenen Angaben auch Aleppo, möglicherweise auf dem Weg ins nördliche Haurangebiet (das sich südlich von Damaskus befindet).",
     "quote": "Ein Limonadenverkäufer in Aleppo, den ich im Rauschzustande beobachten konnte, hielt sich für den Erzengel Gabriel.",
     "confidence": "high",
     "seq": 2,
-    "verified": true
+    "wikidata": "Q41183",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1085,9 +1323,12 @@
     "story": "Reiseziele",
     "name": "Triest",
     "kind": "place",
+    "id": "loc-triest",
     "gloss": "Zusätzliches Reiseziel von Sonja und Georg Weiner, von dem aus kleinere Ausflüge geplant waren. Außerdem standen noch Laibach (Ljubljana) und Padua auf dem Programm.",
     "quote": "Für die Besichtigung Laibachs – Graz kannte Sonja Hartmann schon – und für den Besuch der Adelsberger Grotte war je ein halber Tag vorgesehen. Von Triest aus sollten größere und kleinere Ausflüge nach Pirano, Capo d'Istria und Grado unternommen und der mehrtägige Aufenthalt in Venedig durch einen Abstecher nach Padua unterbrochen werden. Denn Padua – hatte Georg Weiner erklärt –, war doch nicht solch ein Allerweltsreiseziel wie Venedig, sondern lag abseits vom Strome der Globetrotter, und schon eher im Herzen Italiens. Wer in Venedig war, der kennt nur die Fransen Italiens, wer aber in Padua war, kennt auch das Innere, – hatte auch Herr Zerkowitz bestätigt. Padua stand also gleichfalls auf dem Reiseplan, obwohl Sonja eigentlich einen längeren Aufenthalt auf dem Lido vorgezogen hätte.",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q546",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1104,9 +1345,12 @@
     "story": "Reiseziele",
     "name": "Budweis",
     "kind": "place",
+    "id": "loc-budweis",
     "gloss": "Wohnort von Sonjas Tante, angebliches Ziel für ihre Reise, die in Wirklichkeit mit Weiner nach Venedig führt.",
     "quote": "»Er hat gar keine Ursache, sich aufzuregen,«\nsagte Sonja gelassen. »Ich hab' es ihm schon wiederholt gesagt, daß es zwischen mir und ihm ein für allemal aus ist. Übrigens könnt ihr ihm ja wirklich sagen, daß ich nach Budweis zu meiner Tante gefahren bin.«",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q16506",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1126,14 +1370,20 @@
     "story": "Reiseziele",
     "name": "Paris",
     "kind": "place",
+    "id": "loc-paris",
     "stories": [
      "Reiseziele",
      "Betrüger"
     ],
-    "character": "Stanislaus Demba, Kallisthenes Skuludis",
+    "character": [
+     "per-demba-stanislaus",
+     "per-skuludis-kallisthenes"
+    ],
     "gloss": "Alternatives Reiseziel (Kap. 4), das Demba Sonja statt Venedig mit Weiner vorgeschlagen hat. – Zugleich ein »Ort der Betrüger«: Skuludis rühmt sich der »Sympathien der guten Gesellschaft« von Paris (Kap. 13), und Demba beruft sich auf Paris, um seinen erfundenen Strohhalm-»Brauch« zu beglaubigen (Kap. 17).",
     "quote": "»Anfangs war er sehr aufgeregt, zum Schluß ist ihm dann eine Idee gekommen, da hat er sich beruhigt. Von sechshundert Kronen hat er etwas gesagt, die er sich verschaffen will, und damit wird er mit dem Fräulein Hartmann nach Paris fahren, hat er gesagt, oder an die Riviera.«\n\nAuf Sonja Hartmann machte diese Eröffnung keinen Eindruck, Fräulein Postelberg hingegen geriet\ndurch die bloße Erwähnung von »Paris« in Ekstase.\n\n»Sonja!« rief sie verzückt, lehnte den Kopf zurück und blickte schwärmerisch zur Decke empor. »Paris! Die Boulevards! Der Père Lachaise! Der Montmartre!«",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q90",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1150,9 +1400,12 @@
     "story": "Chapter 6",
     "name": "Café Imperial",
     "kind": "place",
+    "id": "loc-cafe-imperial",
     "gloss": "Wiener Café mit langer Geschichte. Erwähnt von Willy Eisner im Gespräch mit Demba.",
     "quote": "Gestern fragt mich der Baron Reifflingen – kennen Sie den Reifflingen? Ich speise manchmal mit ihm im Imperial – gestern fragt er mich also: Was halten Sie eigentlich von der Gleisbacher Union, haben Sie Meinung für dieses Papier?",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q1630919",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1169,8 +1422,11 @@
     "story": "Reiseziele",
     "name": "Laibach",
     "kind": "place",
+    "id": "loc-laibach",
     "gloss": "Geplante Besichtigung (halber Tag) auf der Hinreise von Sonja Hartmann und Georg Weiner nach Venedig.",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q437",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1187,8 +1443,11 @@
     "story": "Reiseziele",
     "name": "Graz (Bhf)",
     "kind": "place",
+    "id": "loc-graz-bahnhof",
     "gloss": "Auf der Rundreise-Strecke gelegen, aber übersprungen — »Graz kannte Sonja Hartmann schon«.",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q873836",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -1205,8 +1464,11 @@
     "story": "Reiseziele",
     "name": "Adelsberger Grotte",
     "kind": "place",
+    "id": "loc-adelsberger-grotte",
     "gloss": "Halbtägiger Programmpunkt der Venedig-Rundreise (Sonja Hartmann + Georg Weiner).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q15903",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1223,8 +1485,11 @@
     "story": "Reiseziele",
     "name": "Pirano",
     "kind": "place",
+    "id": "loc-pirano",
     "gloss": "Tagesausflug ab Triest auf der Venedig-Rundreise (Sonja + Weiner).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q1382",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1241,8 +1506,11 @@
     "story": "Reiseziele",
     "name": "Capo d'Istria",
     "kind": "place",
+    "id": "loc-capo-distria",
     "gloss": "Tagesausflug ab Triest (Sonja + Weiner).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q1015",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1259,8 +1527,11 @@
     "story": "Reiseziele",
     "name": "Grado",
     "kind": "place",
+    "id": "loc-grado",
     "gloss": "Tagesausflug ab Triest (Sonja + Weiner).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q53130",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1277,8 +1548,11 @@
     "story": "Reiseziele",
     "name": "Padua",
     "kind": "place",
+    "id": "loc-padua",
     "gloss": "Mehrtägiger Abstecher der Rundreise — »wer in Padua war, kennt auch das Innere« Italiens (Sonja + Weiner).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q617",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1295,8 +1569,11 @@
     "story": "Reiseziele",
     "name": "Sonnwendstein",
     "kind": "place",
+    "id": "loc-sonnwendstein",
     "gloss": "Geplante Fahrtunterbrechung mit Besteigung des Sonnwendsteins am Semmering (Sonja + Weiner, Hinreise).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q1668878",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1313,8 +1590,11 @@
     "story": "Reiseziele",
     "name": "Ennstal",
     "kind": "place",
+    "id": "loc-ennstal",
     "gloss": "Abschluss der Rundreise: eine Fußwanderung durchs Ennstal (Sonja + Weiner).",
-    "confidence": "high"
+    "confidence": "high",
+    "wikidata": "Q21858133",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1331,9 +1611,12 @@
     "story": "GELEHRTENORTE",
     "name": "Erlangen (Uni)",
     "kind": "place",
+    "id": "loc-erlangen-uni",
     "gloss": "Laut Demba hat ein Professor Haase aus Erlangen seine Arbeit zu einer neuen Wortbedeutung verteildigt.",
     "quote": "Eine große Diskussion hat sich über ein Wort, für das ich eine neue Deutung gegeben habe, entsponnen. Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
-    "seq": 4
+    "seq": 4,
+    "wikidata": "Q40025",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -1350,11 +1633,14 @@
     "story": "GELEHRTENORTE",
     "name": "Graz (Uni)",
     "kind": "place",
+    "id": "loc-graz-uni",
     "gloss": "Demba führt einen Prof. Mayer in Graz an, der seine eigene Arbeit zu einer neu gefundenen Wortbedeutung verteidigt haben soll.",
     "quote": "Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
     "srcText": "Professor Mayer in Graz",
     "confidence": "high",
-    "seq": 5
+    "seq": 5,
+    "wikidata": "Q622683",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -1371,11 +1657,14 @@
     "story": "GELEHRTENORTE",
     "name": "Göttingen (Uni)",
     "kind": "place",
+    "id": "loc-goettingen-uni",
     "gloss": "Demba führt \"dem berühmten Riemenschmidt\" in Göttingen an, der seine Untersuchung \"scharfsinnig\" genannt haben soll.",
     "quote": "Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
     "srcText": "der berühmte Riemenschmidt in Göttingen",
     "confidence": "high",
-    "seq": 6
+    "seq": 6,
+    "wikidata": "Q152838",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -1392,11 +1681,14 @@
     "story": "GELEHRTENORTE",
     "name": "München (Uni)",
     "kind": "place",
+    "id": "loc-muenchen-uni",
     "gloss": "Wirth in München wird von Truxa Vertreter der These angeführt, dass Massenpsychosen auf Drogen zurückgeführt werden könnten.",
     "quote": "»Ich möchte doch lieber auf gesichertem, wissenschaftlichem Boden bleiben,« warf Professor Truxa ein. »Wirth in München geht ja noch viel weiter als Sie, ohne übrigens auch nur den Schatten eines ernstzunehmenden Beweises für seine Theorien zu erbringen. Nach seiner Behauptung wären die großen Massenpsychosen der Vergangenheit, der Flagellantismus ebenso wie die merkwürdigen Tanzepidemien, als Folgen des übermäßigen Genusses des Haschischs oder eines Narkotikons von ähnlicher Wirkung anzusehen.«",
     "srcText": "Wirth in München",
     "confidence": "high",
-    "seq": 1
+    "seq": 1,
+    "wikidata": "Q55044",
+    "evidence": "text-inferred"
    },
    "geometry": {
     "type": "Point",
@@ -1416,6 +1708,7 @@
     "story": "Chapter 14",
     "name": "Selbstmord in der Babenbergerstraße",
     "kind": "place",
+    "id": "loc-babenbergerstrasse-selbstmord",
     "stories": [
      "Chapter 14",
      "Chapter 17"
@@ -1423,7 +1716,10 @@
     "gloss": "In gleich zwei Kapiteln wird erwähnt, dass die Zeitung unter den Lokalnotizen über einen Selbstmord in der Babenbergerstraße (in direkter Nachbarschaft zum Kunsthistorischen Museum) berichtet. Nur berichtet, nicht Schauplatz der Handlung.",
     "quote": "Ein Selbstmordversuch, halt. Was ist das? Die Gattin des Realschulprofessors Ernest W., Frau Kamilla W., hat gestern in ihrer in der Babenbergerstraße gelegenen Wohnung Veronal –, nichts!",
     "confidence": "medium",
-    "seq": 3
+    "seq": 3,
+    "wikidata": "Q797630",
+    "fictional": true,
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1440,12 +1736,14 @@
     "story": "Chapter 14",
     "name": "Hauptwerkstätte der städtischen Straßenbahnen",
     "kind": "place",
+    "id": "loc-hauptwerkstaette-strassenbahn",
     "gloss": "Demba liest in den Lokalnotizen, dass sich in der Hauptwerkstätte der städtischen Straßenbahnen ein Unfall ereignet hat. Die Werkstätte befand sich damals in der Remise Rudolfsheim, die heute ein Museum beherbergt.",
     "quote": "Unfall in der Hauptwerkstätte der städtischen Straßenbahnen.",
     "essay": "https://www.zeitenspruenge.at/bild/547",
     "essaySource": "Zeitensprünge",
     "confidence": "high",
-    "seq": 4
+    "seq": 4,
+    "evidence": "external"
    },
    "geometry": {
     "type": "Point",
@@ -1462,11 +1760,17 @@
     "story": "Betrüger",
     "name": "Petersburg",
     "kind": "place",
-    "character": "Kallisthenes Skuludis (Kap. 13), Stanislaus Demba (Kap. 17)",
+    "id": "loc-petersburg",
+    "character": [
+     "per-skuludis-kallisthenes",
+     "per-demba-stanislaus"
+    ],
     "gloss": "Erobertes Terrain der »vornehmen Zurückhaltung« des Hehlers Skuludis (Kap. 13). Auch Demba (Kap. 17) verlegt seinen Strohhalm-»Brauch« nach Petersburg – es »verstoße gegen den guten Ton«, das Glas direkt anzusetzen. Symbolisch in die Stadtmitte; reine Erwähnung.",
     "quote": "… die ihm die Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo im Fluge erobert hatten …",
     "srcText": "Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo",
-    "seq": 2
+    "seq": 2,
+    "wikidata": "Q656",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1483,11 +1787,16 @@
     "story": "Betrüger",
     "name": "Bukarest",
     "kind": "place",
-    "character": "Kallisthenes Skuludis",
+    "id": "loc-bukarest",
+    "character": [
+     "per-skuludis-kallisthenes"
+    ],
     "gloss": "Eine der Städte, deren »gute Gesellschaft« sich der elegante Hochstapler und Hehler Kallisthenes Skuludis (Kap. 13) erobert haben will. Symbolisch in die Stadtmitte; reine Erwähnung.",
     "quote": "… die ihm die Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo im Fluge erobert hatten …",
     "srcText": "Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo",
-    "seq": 3
+    "seq": 3,
+    "wikidata": "Q19660",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1504,11 +1813,16 @@
     "story": "Betrüger",
     "name": "Kairo",
     "kind": "place",
-    "character": "Kallisthenes Skuludis",
+    "id": "loc-kairo",
+    "character": [
+     "per-skuludis-kallisthenes"
+    ],
     "gloss": "Eine der Städte, deren »gute Gesellschaft« sich der elegante Hochstapler und Hehler Kallisthenes Skuludis (Kap. 13) erobert haben will. Symbolisch in die Stadtmitte; reine Erwähnung.",
     "quote": "… die ihm die Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo im Fluge erobert hatten …",
     "srcText": "Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo",
-    "seq": 4
+    "seq": 4,
+    "wikidata": "Q85",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1525,11 +1839,16 @@
     "story": "Betrüger",
     "name": "Bagdad",
     "kind": "place",
-    "character": "Stanislaus Demba",
+    "id": "loc-bagdad",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Demba (Kap. 17) verlegt den erfundenen Strohhalm-»Brauch« in immer entlegenere, unkontrollierbare Gegenden – zuletzt »aus Bagdad«. Reiner Bluff am Wirtshaustisch, um seine gefesselten Hände zu kaschieren. Symbolisch in die Stadtmitte; reine Erwähnung.",
     "quote": "»Eigentlich stammt der Brauch aus Bagdad,« erklärte er. »In Bagdad und Damaskus können Sie an jeder Straßenecke … Araber dutzendweis' sehen, die ihr Bier durch einen Strohhalm trinken.«",
     "srcText": "Eigentlich stammt der Brauch aus Bagdad",
-    "seq": 5
+    "seq": 5,
+    "wikidata": "Q1530",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1546,10 +1865,15 @@
     "story": "Meta",
     "name": "Belgrad",
     "kind": "place",
-    "character": "Stanislaus Demba",
+    "id": "loc-belgrad",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Kein Schauplatz, sondern eine Liedzeile: Aus einem Grammophon tönt »Prinz Eugen, der edle Ritter« (das Lied über die Eroberung Belgrads 1717). Der von der Polizei in die Enge getriebene Demba nimmt die Worte »Stadt und Festung Belgerad« als Absprung-Kommando für seinen Sprung aus dem Fenster (Kap. 8) – die Vorgeschichte zu den Handschellen. Perutz schreibt »Belgerad« (Liedform). Symbolisch in die Stadtmitte gesetzt.",
     "quote": "Ich faßte den Entschluß bei den Worten: Stadt und Festung Belgerad, bei ›Belgerad‹ wollte ich – wollte ich hinunter.",
-    "srcText": "Stadt und Festung Belgerad"
+    "srcText": "Stadt und Festung Belgerad",
+    "wikidata": "Q3711",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1566,11 +1890,14 @@
     "story": "Betrüger",
     "name": "Budapest (Bahnhof)",
     "kind": "place",
+    "id": "loc-budapest-bahnhof",
     "gloss": "Bloße Erwähnung als Reiseziel des Eilzuges Wien-Budapest, den Skuludis genommen haben soll.",
     "quote": "Auch trug er in seiner Rocktasche zwei goldene Uhren, ein Anhängsel, zwei Kravattennadeln und vier Brillantringe – kleine Ergebnisse seiner letzten Fahrt im Speisewagen des Eilzugs Wien-Budapest – bei sich, deren Verwertung ihm sehr am Herzen lag.",
     "srcText": "Eilzugs Wien-Budapest",
     "confidence": "high",
-    "seq": 1
+    "seq": 1,
+    "wikidata": "Q522868",
+    "evidence": "text-explicit"
    },
    "geometry": {
     "type": "Point",
@@ -1587,7 +1914,10 @@
     "story": "Chapter 1",
     "name": "Weg: Kapitel 1 — im Lichtental",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-01-lichtental",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Kapitel 1: Dembas Morgen im Lichtental — aus dem Greislerladen der Frau Püchl ist er am Ende verschwunden und wahrscheinlich in Richtung Park gegangen; die vorausgehende Tramfahrt findet sich in der Meta-Ebene unten."
    },
    "geometry": {
@@ -1615,7 +1945,10 @@
     "story": "Chapter 2",
     "name": "Weg: Kapitel 2 — in den Liechtensteinpark",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-02-liechtensteinpark",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Dembas Weg im zweiten Kapitel: Vom Laden-Block hinunter in den Liechtensteinpark, erst zur versteckten Bank, wo ihn bald Truxa, Klementi und Cyrus stören, dann in den belebteren unteren Parkteil.",
     "seq": 7
    },
@@ -1676,7 +2009,10 @@
     "story": "Chapter 3",
     "name": "Weg: Kapitel 3 — im Park",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-03-park",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Kurzer Weg Dembas im unteren Parkteil zur Bank des Fräuleins (Alice Leitner)."
    },
    "geometry": {
@@ -1728,7 +2064,10 @@
     "story": "Chapter 4",
     "name": "Weg: Kapitel 4 — zum Bureau Klebinder",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-04-klebinder",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Der Weg Dembas im Kapitel 4: Aus dem Park zum Bureau Klebinder am Franz-Josefs-Kai."
    },
    "geometry": {
@@ -1828,7 +2167,10 @@
     "story": "Chapter 5",
     "name": "Weg: Kapitel 5 — Heim-Abstecher (Pelerine)",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-05-pelerine",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Zurück vom Büro Klebinder in die Wohnung nach Lichtental, um Antons Pelerine zu holen."
    },
    "geometry": {
@@ -1960,7 +2302,10 @@
     "story": "Chapter 6",
     "name": "Weg: Kapitel 6 — zum Telephon (Berggasse)",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-06-telefon",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Kapitel 6: Vom Zimmer (Lichtental) zur Telephonzelle in der Berggasse, von wo Demba Steffi anruft."
    },
    "geometry": {
@@ -2040,7 +2385,10 @@
     "story": "Chapter 7",
     "name": "Weg: Kapitel 7 — ins Café Hibernia",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-07-hibernia",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Von der Telefonzelle ins Café Hibernia (Café Schottenring)."
    },
    "geometry": {
@@ -2088,7 +2436,10 @@
     "story": "Chapter 8",
     "name": "Weg: Kapitel 8 — Zu Steffis Wohnung",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-08-steffi",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Vom Café Hibernia den kurzen Weg hinüber zu Steffi Prokops Wohnung in der Kolingasse (Ankunft um zwölf Uhr)."
    },
    "geometry": {
@@ -2124,7 +2475,10 @@
     "story": "Chapter 11",
     "name": "Weg: Kapitel 11 — zur Eßlinggasse",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-11-esslinggasse",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Von Steffis Wohnung (Kolingasse) zur Wohnung Dr. Hirsch in der Eßlinggasse."
    },
    "geometry": {
@@ -2180,7 +2534,10 @@
     "story": "Chapter 13",
     "name": "Weg: Kapitel 13 — Skuludis-Verfolgung",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-13-skuludis",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Skuludis-Verfolgung: vom Krawattengeschäft in der Praterstraße über das Krawattengeschäft am Graben und das Kaffeehaus nahe der Oper zum Autobus."
    },
    "geometry": {
@@ -2284,7 +2641,10 @@
     "story": "Chapter 14",
     "name": "Weg: Kapitel 14 — Omnibus & Innere Stadt",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-14-omnibus",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Oper→Mariahilferstraße als OMNIBUS-Fahrt (über das Straßennetz geroutet), dann zu Fuß zur Wohnung Dr. Becker am Kohlmarkt.",
     "seq": 5
    },
@@ -2473,7 +2833,10 @@
     "story": "Chapter 15",
     "name": "Weg: Kapitel 15 — ins Café Turf",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-15-turf",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Zum (fiktiven) Café Turf in der Leopoldstadt."
    },
    "geometry": {
@@ -2601,7 +2964,10 @@
     "story": "Chapter 16",
     "name": "Weg: Kapitel 16 — Mahnwache",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-16-mahnwache",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "Heimwärts, Halt zur Mahnwache vor Weiners Wohnung in der Liechtensteinstraße."
    },
    "geometry": {
@@ -2757,7 +3123,10 @@
     "story": "Chapter 17",
     "name": "Weg: Kapitel 17 — Fiaker zum Residenzkeller",
     "kind": "route",
-    "character": "Demba",
+    "id": "rte-chapter-17-residenzkeller",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "gloss": "FIAKER-Fahrt von Weimers Wohnung in den Residenzkeller (über das fahrbare Straßennetz, keine engen Fußgängergassen)."
    },
    "geometry": {
@@ -2957,6 +3326,7 @@
     "story": "Meta",
     "name": "Tramfahrt: Trödler → Laden (rekonstruiert)",
     "kind": "route",
+    "id": "rte-meta-tram-troedler",
     "gloss": "Rekonstruierter Tagesauftakt: Früh am Morgen bringt Demba den dritten Bibliotheksdruck mit der Tram zum Trödler nach Heiligenstadt (»Man fährt durch die Heiligenstädter Straße, steigt bei der dritten Haltestelle aus«), wird gefesselt, flieht und kehrt in die Stadt zurück. Davon erfahren wir erst rückblickend in Kapitel 8 — deshalb steht diese Fahrt nicht im gezeichneten Tagesweg, sondern hier in der Kontext-Ebene. Über das Straßennetz als Schienen-Proxy geroutet.",
     "confidence": "low"
    },
@@ -3029,6 +3399,7 @@
     "story": "Chapter 12",
     "name": "Weg: Kapitel 12 — Gegenbauer & verlorenes Kuvert",
     "kind": "route",
+    "id": "rte-chapter-12-gegenbauer",
     "gloss": "Von der Kanzlei Dr. Hirsch in die Nähe der Praterstraße, wo Demba sein Kuvert verliert."
    },
    "geometry": {
@@ -3152,7 +3523,10 @@
     "story": "Chapter 20",
     "name": "Weg: Kapitel 20 — Flucht nach Hause",
     "kind": "route",
-    "character": "Stanislaus Demba",
+    "id": "rte-chapter-20-flucht",
+    "character": [
+     "per-demba-stanislaus"
+    ],
     "time": "gegen 9 Uhr abends",
     "gloss": "Dembas letzte Flucht: Nach der Entlarvung im Residenzkeller (Kap. 19) rennt er hinaus und eilt nach Hause in sein Zimmer bei Frau Pomeisl, wo Steffi schon auf ihn wartet (»Es ist gleich neun Uhr«). BRouter-Fußweg-Entwurf – in uMap verfeinerbar.",
     "srcText": "rannte zur Tür hinaus"
@@ -3322,6 +3696,7 @@
     "story": "Reiseziele",
     "name": "Geplante Venedigreise",
     "kind": "route",
+    "id": "rte-venedigreise",
     "gloss": "Geplante Reise von Sonja und Georg Weiner, die über Graz ohne Zwischenhalt) und Laibach (Ljubljana, mit Zwischenhalt), Triest (längerer Auenthalt mit Ausflügen) nach Venedig führt. Danach soll noch Padua angesteuert werden, als \"wahres\" Italien.",
     "confidence": "high"
    },
@@ -51010,6 +51385,7 @@
     "story": "Betrüger",
     "name": "Eilzug Wien-Budapest (Skuludis)",
     "kind": "route",
+    "id": "rte-eilzug-budapest",
     "gloss": "Die Fahrt im Speisewagen dieses Eilzug wird für Skuludis (im Kapitel 13) erwähnt.",
     "quote": "Auch trug er in seiner Rocktasche zwei goldene Uhren, ein Anhängsel, zwei Kravattennadeln und vier Brillantringe – kleine Ergebnisse seiner letzten Fahrt im Speisewagen des Eilzugs Wien-Budapest – bei sich, deren Verwertung ihm sehr am Herzen lag.",
     "srcText": "Eilzugs Wien-Budapest",
@@ -61061,6 +61437,248 @@
      ]
     ]
    }
+  }
+ ],
+ "persons": [
+  {
+   "id": "per-demba-stanislaus",
+   "name": "Stanislaus Demba",
+   "fictional": true,
+   "aliases": [
+    "Demba",
+    "Stanie"
+   ],
+   "role": "Hauslehrer / Student",
+   "note": "Protagonist."
+  },
+  {
+   "id": "per-prokop-steffi",
+   "name": "Steffi Prokop",
+   "fictional": true,
+   "role": "Dembas Vertraute"
+  },
+  {
+   "id": "per-prokop-stephan",
+   "name": "Stephan Prokop",
+   "fictional": true,
+   "role": "Steffis Vater"
+  },
+  {
+   "id": "per-hartmann-sonja",
+   "name": "Sonja Hartmann",
+   "fictional": true,
+   "role": "Kontoristin bei Klebinder, Dembas Verflossene"
+  },
+  {
+   "id": "per-weiner-georg",
+   "name": "Georg Weiner",
+   "fictional": true,
+   "role": "Sonjas Reisebegleiter"
+  },
+  {
+   "id": "per-skuludis-kallisthenes",
+   "name": "Kallisthenes Skuludis",
+   "fictional": true,
+   "role": "Hochstapler und Hehler"
+  },
+  {
+   "id": "per-klementi",
+   "name": "Hofrat Klementi",
+   "fictional": true,
+   "role": "Direktor der altorientalischen Spezialsammlung des Kunsthistorischen Museums"
+  },
+  {
+   "id": "per-truxa",
+   "name": "Professor Ritter von Truxa",
+   "fictional": true,
+   "role": "Orientalist, Mitglied der Akademie der Wissenschaften"
+  },
+  {
+   "id": "per-cyrus",
+   "name": "Cyrus",
+   "fictional": true,
+   "role": "Hund",
+   "note": "Hofrat Klementis Hund."
+  },
+  {
+   "id": "per-puechl-johanna",
+   "name": "Johanna Püchl",
+   "fictional": true,
+   "aliases": [
+    "Frau Püchl"
+   ],
+   "role": "Greislerin in der Wiesengasse"
+  },
+  {
+   "id": "per-schimek",
+   "name": "Frau Schimek",
+   "fictional": true,
+   "role": "Trafikantin"
+  },
+  {
+   "id": "per-leitner-alice",
+   "name": "Alice Leitner",
+   "fictional": true,
+   "role": "Erzieherin bei kaiserl. Rat Füchsel"
+  },
+  {
+   "id": "per-buresch",
+   "name": "Frau Buresch",
+   "fictional": true,
+   "role": "Parkbekanntschaft"
+  },
+  {
+   "id": "per-klebinder",
+   "name": "Oskar Klebinder",
+   "fictional": true,
+   "role": "Chef der Firma Klebinder, Modewestenstoffe"
+  },
+  {
+   "id": "per-postelberg-klara",
+   "name": "Klara Postelberg",
+   "fictional": true,
+   "aliases": [
+    "Claire"
+   ],
+   "role": "Kontoristin bei Klebinder"
+  },
+  {
+   "id": "per-springer-etelka",
+   "name": "Etelka Springer",
+   "fictional": true,
+   "aliases": [
+    "Ethel"
+   ],
+   "role": "ungarische Korrespondentin bei Klebinder"
+  },
+  {
+   "id": "per-braun",
+   "name": "Braun",
+   "fictional": true,
+   "aliases": [
+    "Mister Brown"
+   ],
+   "role": "Buchhalter bei Klebinder"
+  },
+  {
+   "id": "per-neuhaeusl",
+   "name": "Neuhäusl",
+   "fictional": true,
+   "role": "Angestellter bei Klebinder"
+  },
+  {
+   "id": "per-pomeisl",
+   "name": "Frau Pomeisl",
+   "fictional": true,
+   "role": "Dembas Wirtin (Lichtental)"
+  },
+  {
+   "id": "per-miksch-oskar",
+   "name": "Oskar Miksch",
+   "fictional": true,
+   "role": "Dembas Zimmerkollege"
+  },
+  {
+   "id": "per-franz",
+   "name": "Franz",
+   "fictional": true,
+   "role": "Kellner im Café Hibernia"
+  },
+  {
+   "id": "per-troedler",
+   "name": "der Trödler",
+   "fictional": true,
+   "role": "Altwarenhändler (Heiligenstadt)"
+  },
+  {
+   "id": "per-polizist-1",
+   "name": "Polizist (1)",
+   "fictional": true,
+   "role": "Polizist beim Trödler (Kap. 8)"
+  },
+  {
+   "id": "per-polizist-2",
+   "name": "Polizist (2)",
+   "fictional": true,
+   "role": "Polizist beim Trödler (Kap. 8)"
+  },
+  {
+   "id": "per-friseurgehilfe",
+   "name": "Friseurgehilfe",
+   "fictional": true,
+   "role": "Gehilfe beim Barbier (Kap. 9)"
+  },
+  {
+   "id": "per-hirsch",
+   "name": "Dr. Hirsch",
+   "fictional": true,
+   "role": "Hof- und Gerichtsadvokat"
+  },
+  {
+   "id": "per-hirsch-2",
+   "name": "Frau Dr. Hirsch",
+   "fictional": true,
+   "role": "Gattin des Advokaten"
+  },
+  {
+   "id": "per-gegenbauer-fritz",
+   "name": "Fritz Gegenbauer",
+   "fictional": true,
+   "role": "Rigorosums-Kandidat, von Demba vorbereitet"
+  },
+  {
+   "id": "per-becker-elly",
+   "name": "Elly Becker",
+   "fictional": true,
+   "role": "Dembas Schülerin"
+  },
+  {
+   "id": "per-becker-2",
+   "name": "Frau Dr. Becker",
+   "fictional": true,
+   "role": "Wohltätigkeitsdame, Ellys Mutter"
+  },
+  {
+   "id": "per-anny",
+   "name": "Anny",
+   "fictional": true,
+   "role": "Freundin Elly Beckers"
+  },
+  {
+   "id": "per-viky",
+   "name": "Viky",
+   "fictional": true,
+   "role": "Freundin Elly Beckers"
+  },
+  {
+   "id": "per-ruebsam",
+   "name": "Dr. Rübsam",
+   "fictional": true,
+   "role": "Ex-Advokat, hält die Bank im Café Turf"
+  },
+  {
+   "id": "per-suschitzky",
+   "name": "Frau Suschitzky",
+   "fictional": true,
+   "role": "Ex-Heiratsvermittlerin"
+  },
+  {
+   "id": "per-huebel",
+   "name": "Hübel",
+   "fictional": true,
+   "role": "halbverbummelter Mediziner"
+  },
+  {
+   "id": "per-horvath-emil",
+   "name": "Emil Horvath",
+   "fictional": true,
+   "role": "Disponent der Ölindustrie"
+  },
+  {
+   "id": "per-fuhrmann",
+   "name": "Dr. Fuhrmann",
+   "fictional": true,
+   "role": "aus Sonjas Freundeskreis"
   }
  ]
 }

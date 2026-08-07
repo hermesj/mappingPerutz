@@ -52,8 +52,8 @@ def check_work(root, key, w):
     print("· %s" % key)
     group_keys = {g.get("key") for g in w.get("groups", [])}
 
-    # data files exist + parse; collect features
-    feats = []
+    # data files exist + parse; collect features + the persons register
+    feats, persons = [], {}
     for e in ov.normalize_data(w):
         path = os.path.join(root, e["url"])
         if not os.path.exists(path):
@@ -64,6 +64,14 @@ def check_work(root, key, w):
         except Exception as ex:
             err("data file unreadable: %s (%s)" % (e["url"], ex))
             continue
+        for pr in geo.get("persons", []):
+            pid = pr.get("id")
+            if not pid or not pr.get("name"):
+                err("persons entry without id/name: %r" % pr)
+            elif pid in persons:
+                err("duplicate person id %r" % pid)
+            else:
+                persons[pid] = pr
         for f in geo.get("features", []):
             feats.append(f)
     if not feats:
@@ -87,15 +95,35 @@ def check_work(root, key, w):
                 err("feature %r: stories entry %r matches no config group → invisible" % (name, s))
         if p.get("confidence") and p["confidence"] not in ("high", "medium", "low"):
             warn("feature %r: confidence %r not in high|medium|low → halo won't render" % (name, p["confidence"]))
+        # character as per-id list: every ref must resolve in the register
+        if isinstance(p.get("character"), list):
+            for ref in p["character"]:
+                if ref not in persons:
+                    err("feature %r: character ref %r not in the persons register" % (name, ref))
         g = f.get("geometry") or {}
         if g.get("type") not in ("Point", "LineString"):
             err("feature %r: unsupported geometry %r" % (name, g.get("type")))
     ok("%d features, stories match config groups" % len(feats))
+    if persons:
+        ok("%d persons in register, all character refs resolve" % len(persons))
 
-    # duplicate derived ids (fragile overlay keys)
+    # explicit stable entity ids (loc-/rte-): must be unique across the work;
+    # partial coverage means the rest still uses fragile derived slugs
+    explicit = [f["properties"]["id"] for f in feats if f["properties"].get("id")]
+    dup_ids = [i for i, c in Counter(explicit).items() if c > 1]
+    for d in dup_ids:
+        err("duplicate entity id %r — ids must be unique" % d)
+    if explicit and len(explicit) < len(feats):
+        warn("%d of %d features carry an explicit id — the rest falls back to "
+             "derived slug keys" % (len(explicit), len(feats)))
+    elif explicit:
+        ok("%d explicit entity ids, all unique" % len(explicit))
+
+    # duplicate derived ids (fragile overlay keys; only features without explicit ids)
     ids = ov.feature_ids(feats)
+    derived = [i for f, i in zip(feats, ids) if not f["properties"].get("id")]
     dups = [i for i, c in Counter(
-        i[:-2] if i.endswith(("-2", "-3", "-4")) else i for i in ids).items() if c > 1]
+        i[:-2] if i.endswith(("-2", "-3", "-4")) else i for i in derived).items() if c > 1]
     if dups:
         warn("duplicate-name ids (order-dependent -N suffixes): %s" % ", ".join(sorted(dups)))
 

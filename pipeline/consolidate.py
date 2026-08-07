@@ -41,11 +41,15 @@ def ann_slug(s):
 
 
 def assign_ids(features):
-    """Derive each feature's overlay id (annSlug(story)/annSlug(name), -2/-3 for
-    duplicates) — identical to overlay.py / engine.js."""
+    """Stable id per feature: an explicit `properties.id` wins; otherwise the
+    derived annSlug(story)/annSlug(name) with -2/-3 for duplicates — identical
+    to overlay.py / engine.js."""
     seen, ids = {}, []
     for f in features:
         p = f.get("properties", {})
+        if p.get("id"):
+            ids.append(p["id"])
+            continue
         b = ann_slug(p.get("story")) + "/" + ann_slug(p.get("name"))
         seen[b] = seen.get(b, 0) + 1
         ids.append(b if seen[b] == 1 else b + "-" + str(seen[b]))

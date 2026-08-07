@@ -64,10 +64,10 @@ def parse_geojson(path):
             ep = None
         if g.get("type") == "Point":
             yield {"name": p.get("name", ""), "episode": ep, "kind": "place",
-                   "coords": [g["coordinates"][:2]]}
+                   "fid": p.get("id"), "coords": [g["coordinates"][:2]]}
         elif g.get("type") == "LineString":
             yield {"name": p.get("name", ""), "episode": ep, "kind": "route",
-                   "coords": [c[:2] for c in g["coordinates"]]}
+                   "fid": p.get("id"), "coords": [c[:2] for c in g["coordinates"]]}
 
 
 def main(edited, src_path):
@@ -77,8 +77,13 @@ def main(edited, src_path):
     places = src.get("places", [])
     routes = src.get("routes", [])
 
-    def find(entries, ep, name):
-        # exact (episode, name); fall back to name-only if unambiguous
+    def find(entries, ep, name, fid=None):
+        # an explicit stable id wins; else exact (episode, name); else
+        # name-only if unambiguous
+        if fid:
+            id_hits = [e for e in entries if e.get("id") == fid]
+            if id_hits:
+                return id_hits[0]
         hits = [e for e in entries if norm(e.get("name")) == norm(name)]
         if ep is not None:
             ep_hits = [e for e in hits if e.get("episode") == ep]
@@ -89,14 +94,14 @@ def main(edited, src_path):
     updated, ambiguous = 0, []
     for feat in incoming:
         if feat["kind"] == "route":
-            r = find(routes, feat["episode"], feat["name"])
+            r = find(routes, feat["episode"], feat["name"], feat.get("fid"))
             if r:
                 r["coords"] = feat["coords"]
                 updated += 1
             else:
                 ambiguous.append(("route", feat["name"], feat["episode"]))
         else:
-            pl = find(places, feat["episode"], feat["name"])
+            pl = find(places, feat["episode"], feat["name"], feat.get("fid"))
             if pl:
                 lon, lat = feat["coords"][0]
                 pl["lat"], pl["lon"] = lat, lon

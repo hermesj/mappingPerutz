@@ -135,6 +135,40 @@ def own_source_path(work_key):
     return os.path.join(ROOT, "data", work_key + "-own-source.json")
 
 
+def entity_slug(s):
+    """ID-convention slug: lowercase, umlauts/accents transliterated, a-z0-9 + dashes."""
+    s = (s or "").lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss"),
+                 ("é", "e"), ("è", "e"), ("ê", "e"), ("á", "a"), ("à", "a"),
+                 ("ó", "o"), ("ò", "o"), ("í", "i"), ("ú", "u"), ("ç", "c")):
+        s = s.replace(a, b)
+    import re as _re
+    s = _re.sub(r"['’.»«]", "", s)
+    return _re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+
+
+def new_entity_id(cfg, work_key, kind, name):
+    """Mint a loc-/rte- id for a new own feature, unique across the whole work.
+
+    Scans the wired data layers AND the own-source file directly — the latter
+    matters when the own layer isn't wired into config yet (the configHint
+    case), where the rendered layers wouldn't show its ids."""
+    w = cfg["works"][work_key]
+    taken = set(ov.feature_ids(ov.load_work_features(ROOT, w)))
+    src_path = own_source_path(work_key)
+    if os.path.exists(src_path):
+        own = json.load(open(src_path, encoding="utf-8"))
+        for e in own.get("places", []) + own.get("routes", []):
+            if e.get("id"):
+                taken.add(e["id"])
+    base = ("rte-" if kind == "route" else "loc-") + entity_slug(name)
+    fid, n = base, 1
+    while fid in taken:
+        n += 1
+        fid = "%s-%d" % (base, n)
+    return fid
+
+
 def create_feature(cfg, work_key, body):
     """Append a new own feature to <work>-own-source.json and regenerate the
     rendered <work>-own.geojson via the geocoder."""
@@ -150,7 +184,8 @@ def create_feature(cfg, work_key, body):
     # first). Keys are stable, so reordering the config groups never invalidates
     # them. (geocode_source resolves an unknown key straight to the story title.)
     grp = body["group"]
-    entry = {"group": grp, "name": body["name"].strip()}
+    entry = {"id": new_entity_id(cfg, work_key, kind, body["name"]),
+             "group": grp, "name": body["name"].strip()}
     for k in ("gloss", "quote", "character", "time", "ref", "srcText", "essay", "essaySource", "confidence"):
         if body.get(k):
             entry[k] = body[k]
