@@ -6,7 +6,7 @@
     "impressum": "<h2>Impressum &amp; Lizenz</h2><p>Angaben gemäß § 5 DDG:</p><p><strong>Jürgen Hermes</strong><br>Department of Digital Humanities<br>Universität zu Köln<br>50923 Köln<br><a href='https://dh.phil-fak.uni-koeln.de/mitarbeiterinnen/wissenschaftliche-mitarbeiterinnen/dr-juergen-hermes' target='_blank' rel='noopener'>Profilseite</a><br>Kontakt: <a href='mailto:&#104;&#101;&#114;&#109;&#101;&#115;&#106;&#64;&#117;&#110;&#105;&#45;&#107;&#111;&#101;&#108;&#110;&#46;&#100;&#101;'>&#104;&#101;&#114;&#109;&#101;&#115;&#106;&#64;&#117;&#110;&#105;&#45;&#107;&#111;&#101;&#108;&#110;&#46;&#100;&#101;</a></p><h3>Lizenzen</h3><ul><li><strong>Code</strong> (Karten-Engine &amp; Pipeline): MIT (litmap).</li><li><strong>Geodaten</strong>: eigener Datensatz, CC&nbsp;BY-NC&nbsp;4.0.</li><li><strong>Quelltext</strong>: Leo Perutz, <em>Zwischen neun und neun</em> (1918). In den USA gemeinfrei; in der EU bis 31.12.2027 urheberrechtlich geschützt (Perutz †&nbsp;1957, gemeinfrei ab 1.1.2028). Kurzzitate auf dieser Karte dienen als Belegstellen nach §&nbsp;51 UrhG.</li><li>Basemap © <a href='https://www.openstreetmap.org/copyright' target='_blank' rel='noopener'>OpenStreetMap</a>-Mitwirkende © <a href='https://carto.com/attributions' target='_blank' rel='noopener'>CARTO</a>.</li></ul><p>Ein nicht-kommerzielles akademisches Projekt.</p>"
   },
   "basemap": {
-    "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_31vx_1_7d7b3a1568c74f8ad721dfd5",
     "maxZoom": 19,
     "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>"
   },
