@@ -1,5 +1,6 @@
-/* Mapping Joyce — Leaflet view of locations in Joyce's *Dubliners*.
-   Palette echoes figround's warm, aged-paper tone. */
+/* litmap engine — project-neutral styles for the literary-geography map
+   (header · accordion sidebar · Leaflet map · popups · footer). Warm,
+   aged-paper palette; a project may override the tokens below. */
 
 :root {
   --paper: #ede6df;
@@ -7,6 +8,7 @@
   --ink-soft: #5a4535;
   --rule: rgba(60, 40, 20, 0.14);
   --panel-bg: rgba(247, 243, 238, 0.96);
+  --sheet-peek: 52px;   /* height of the collapsed sidebar sheet on small screens */
 }
 
 * { box-sizing: border-box; }
@@ -28,6 +30,7 @@ html, body {
     "header header"
     "sidebar map";
   height: 100vh;
+  height: 100dvh;   /* mobile browsers: exclude the dynamic URL bar */
 }
 
 header {
@@ -278,6 +281,10 @@ header .tagline {
   height: 100%;
   background: #dfe3e6;
 }
+/* Note: Leaflet's controls (zoom, legend) always paint above popups — the map
+   pane is its own stacking context (transform), so no z-index on the controls
+   can change that. engine.js instead pads the popup autoPan so a popup is
+   panned clear of the zoom control's column (autoPanPaddingTopLeft). */
 
 /* ── POPUP ── */
 .leaflet-popup-content-wrapper {
@@ -450,7 +457,7 @@ header .tagline {
 #impressum-modal {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 1200;
   display: none;
   align-items: center;
   justify-content: center;
@@ -487,16 +494,142 @@ header .tagline {
 .impressum-content a { color: #6a5037; }
 .impressum-content ul { padding-left: 1.2em; }
 
-/* ── MOBILE ── */
+/* ── small-screen chrome — hidden on desktop, see @media below ── */
+.sheet-handle, .credit-toggle { display: none; }
+
+/* ── MOBILE ── full-height map; the sidebar becomes a bottom sheet with a
+   handle (tap or swipe); credit collapses behind an ⓘ button; tagline is one
+   ellipsised line that expands on tap; touch targets ≥ 44px. ── */
 @media (max-width: 680px) {
   #app {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 38vh 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
       "header"
-      "sidebar"
       "map";
   }
-  #sidebar { border-right: none; border-bottom: 1px solid var(--rule); }
-  .credit { max-width: calc(100% - 12px); }
+
+  /* grid items must be allowed to shrink below their content's min width —
+     otherwise the nowrap header row widens the whole layout past the viewport
+     and the map pane ends up wider than the screen */
+  #app { width: 100%; max-width: 100vw; }
+  #app > * { min-width: 0; }
+
+  /* header: title + tabs on one row, tagline as a compact second line */
+  header { padding: 0.5em 0.8em; gap: 0.3em 0.8em; align-items: center; }
+  header h1 { font-size: 0.95rem; letter-spacing: 0.06em; flex: 0 0 auto; }
+  /* tabs take the rest of the row and scroll sideways if there are many */
+  .work-switch { flex: 1 1 auto; min-width: 0; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+  .work-switch::-webkit-scrollbar { display: none; }
+  .work-switch a { flex: 0 0 auto; padding: 0.3em 0.6em; font-size: 0.78rem; }
+  header .tagline {
+    flex: 1 1 100%;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  header .tagline.full { white-space: normal; }
+
+  /* sidebar → bottom sheet */
+  #sidebar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 1100;   /* above Leaflet's controls (1000) */
+    height: var(--sheet-peek);
+    padding: 0 0 env(safe-area-inset-bottom, 0);
+    overflow: hidden;
+    border-right: none;
+    border-top: 1px solid var(--rule);
+    border-radius: 14px 14px 0 0;
+    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.15);
+    transition: height 0.25s ease;
+  }
+  body.sheet-open #sidebar {
+    height: min(72vh, 72dvh);
+    overflow-y: auto;
+  }
+  .sheet-handle {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: var(--sheet-peek);
+    padding: 0 1em;
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel-bg);
+    font: inherit;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6a5037;
+    cursor: pointer;
+    text-align: left;
+  }
+  .sheet-handle .grip {
+    position: absolute;
+    top: 6px; left: 50%;
+    width: 36px; height: 4px;
+    margin-left: -18px;
+    border-radius: 2px;
+    background: rgba(60, 40, 20, 0.25);
+  }
+  .sheet-handle .sheet-label { flex: 1 1 auto; margin-top: 6px; }
+  .sheet-handle .sheet-caret {
+    margin-top: 6px;
+    font-size: 1rem;
+    color: #9a8a7a;
+    transition: transform 0.25s ease;
+  }
+  body.sheet-open .sheet-handle .sheet-caret { transform: rotate(180deg); }
+  .sidebar-tools { padding: 0.6em 1em 0.6em; margin-bottom: 0.2em; }
+  .sidebar-tools button { padding: 0.6em 0.4em; font-size: 0.8rem; }
+
+  /* touch targets */
+  .story-item { padding: 0.65em 1em; font-size: 0.95rem; min-height: 44px; }
+  .place-item { padding: 0.6em 1em 0.6em 2.7em; font-size: 0.9rem; min-height: 40px; }
+  .person-sec { padding: 0.7em 1em 0.6em; }
+  .person-item { padding: 0.55em 1em 0.55em 1.5em; }
+  .swatch { position: relative; width: 16px; height: 16px; }
+  .swatch::after { content: ""; position: absolute; inset: -12px; }   /* 40px hit area */
+
+  /* map chrome: keep Leaflet's bottom controls (certainty legend) above the
+     collapsed sheet; credit hides behind the ⓘ button */
+  .leaflet-bottom { bottom: var(--sheet-peek); }
+  .credit {
+    display: none;
+    left: 6px; right: 6px;
+    bottom: calc(var(--sheet-peek) + 44px);
+    max-width: none;
+    text-align: left;
+    font-size: 0.7rem;
+    background: rgba(247, 243, 238, 0.95);
+    border: 1px solid var(--rule);
+    z-index: 1100;
+  }
+  .credit.open { display: block; }
+  .credit-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 8px;
+    bottom: calc(var(--sheet-peek) + 8px);
+    z-index: 1100;
+    width: 30px; height: 30px;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    background: rgba(247, 243, 238, 0.9);
+    color: var(--ink-soft);
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .conf-legend { font-size: 0.66rem; padding: 0.3em 0.5em; }
+  .impressum-box { max-height: 85vh; max-height: 85dvh; padding: 1.2em 1.2em; }
 }

@@ -15,11 +15,14 @@ the hand-curated main source, so everything lives in ONE file.
      own files;
   4. regenerates data/<work>.geojson.
 
-Afterwards the annotator simply re-creates a fresh own-layer the next time you
-add objects. Run `python3 pipeline/check.py` afterwards to confirm.
+Runs over EVERY work in config.json that has a hand-curated
+`data/<work>-source.json`; works without one (e.g. a layer converted from a
+third-party file) are reported and skipped. Afterwards the annotator simply
+re-creates a fresh own-layer the next time you add objects. Run
+`python3 pipeline/check.py` afterwards to confirm.
 
 Usage:
-    python3 pipeline/consolidate.py [--root <project>] [--dry-run]
+    python3 pipeline/consolidate.py [--root <project>] [--work <key>] [--dry-run]
 """
 import argparse
 import json
@@ -81,15 +84,10 @@ def find_entry(src, name):
     return None
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--root", default=os.path.abspath(os.path.join(HERE, "..")))
-    ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args()
-    root = args.root
-    cfg_path = os.path.join(root, "config.json")
-    cfg = load(cfg_path)
-    wkey = next(iter(cfg["works"]))
+def consolidate_work(root, cfg, wkey, dry_run):
+    """Fold one work's overlay + own-layer into its main source. Mutates `cfg`
+    (the work's `data` list); the caller writes config.json once. Returns
+    False when the work has no editable main source."""
     w = cfg["works"][wkey]
 
     def dp(name):
@@ -100,6 +98,10 @@ def main():
     main_geo, own_geo = dp(wkey + ".geojson"), dp(wkey + "-own.geojson")
     region = w.get("regionBBox") or (cfg.get("view") or {}).get("regionBBox")
 
+    if not os.path.exists(src_path):
+        print("· %s: no data/%s-source.json — not a source-based layer, skipped" % (wkey, wkey))
+        return False
+    print("· %s" % wkey)
     main_src = load(src_path)
     own_src = load(own_path) if os.path.exists(own_path) else None
 
@@ -116,7 +118,7 @@ def main():
         return g
 
     # 0. refresh rendered layers so derived ids line up with the overlay keys
-    if not args.dry_run:
+    if not dry_run:
         gs.main(src_path, main_geo, region)
         if own_src is not None:
             gs.main(own_path, own_geo, region)
@@ -171,12 +173,12 @@ def main():
     # 3. config: drop the own GeoJSON from `data`
     new_data = [u for u in data_urls(w) if not u.endswith("-own.geojson")]
 
-    if args.dry_run:
-        print("DRY RUN: would bake %d patch(es)%s, merge %d own entr(ies), "
+    if dry_run:
+        print("  DRY RUN: would bake %d patch(es)%s, merge %d own entr(ies), "
               "set data=%s, delete own files."
               % (baked, (" (%d unmatched)" % len(skipped)) if skipped else "",
                  own_count, new_data))
-        return
+        return True
 
     dump(src_path, main_src)
     if os.path.exists(ann_path):
@@ -185,19 +187,37 @@ def main():
         o["annotations"] = {}
         dump(ann_path, o)
     w["data"] = new_data
-    dump(cfg_path, cfg)
     for p in (own_path, own_geo):
         if os.path.exists(p):
             os.remove(p)
     gs.main(src_path, main_geo, region)
 
-    print("Consolidated '%s':" % wkey)
     print("  baked %d overlay patch(es)%s" % (
         baked, (", %d unmatched/skipped" % len(skipped)) if skipped else ""))
     print("  merged %d own-layer entr(ies) into the main source" % own_count)
     print("  config data -> %s ; deleted own files ; regenerated %s"
           % (new_data, os.path.basename(main_geo)))
-    print("  now run:  python3 pipeline/check.py")
+    return True
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--root", default=os.path.abspath(os.path.join(HERE, "..")))
+    ap.add_argument("--work", help="consolidate only this work key (default: all)")
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+    root = args.root
+    cfg_path = os.path.join(root, "config.json")
+    cfg = load(cfg_path)
+    keys = [args.work] if args.work else list(cfg["works"])
+    if args.work and args.work not in cfg["works"]:
+        sys.exit("unknown work %r — one of: %s" % (args.work, ", ".join(cfg["works"])))
+    done = [k for k in keys if consolidate_work(root, cfg, k, args.dry_run)]
+    if done and not args.dry_run:
+        dump(cfg_path, cfg)
+    print("\nConsolidated %d work(s): %s" % (len(done), ", ".join(done) or "—"))
+    if done and not args.dry_run:
+        print("now run:  python3 pipeline/check.py")
 
 
 if __name__ == "__main__":

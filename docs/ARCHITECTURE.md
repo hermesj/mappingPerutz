@@ -15,7 +15,7 @@ touching engine code.**
 
 | Layer | What it is | Project-specific? |
 |-------|------------|-------------------|
-| **engine/** | Leaflet rendering, accordion sidebar, layer/work toggle, popups (character trajectories *planned*) | No — generic |
+| **engine/** | Leaflet rendering, accordion sidebar (bottom sheet on small screens), layer/work toggle, popups, certainty halos, persons register (character trajectories *planned*) | No — generic |
 | **config.json** | declares works, groups, colours, i18n strings, default view + region, basemap + attribution, per-work group numbering + source-text links | **Yes** |
 | **data/** | GeoJSON (rendered) + `*-source.json` (hand-editable) per work | **Yes** |
 | **pipeline/** | geocode + routing (OSRM/BRouter); annotate-ui; uMap round-trip (export/import); KML export; `consolidate` | No — generic, parametrised |
@@ -111,12 +111,16 @@ The project file the engine reads at startup (excerpt — see the live
 {
   "site":    { "title": "Mapping Joyce", "defaultWork": "dubliners",
                "defaultLang": "en", "impressum": "<h2>…</h2>" },   // impressum HTML optional
+                                                   // defaultLang is THE language (see "i18n" below)
   "basemap": { "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                "maxZoom": 19, "attribution": "© OpenStreetMap contributors © CARTO" },
   "view":    { "center": [53.3478, -6.2597], "zoom": 13,
                "regionBBox": [53.0, -6.7, 53.7, -6.0] },   // [S,W,N,E] = opening extent
-  "ui":      { "en": { "showAll": "Show all", "route": "Route", "page": "p.", "…": "…" },
-               "de": { "…": "…" } },                        // i18n UI strings
+  "ui":      { "en": { "showAll": "Show all", "hideAll": "Hide all", "route": "Route",
+                       "page": "p.", "exp": "experimental", "toggleLayer": "toggle layer",
+                       "expNote": "…", "persons": "Persons",          // optional
+                       "layers": "Chapters & layers" },               // optional: bottom-sheet handle (mobile)
+               "de": { "…": "…" } },                        // UI strings, keyed by language
   "works": {
     "dubliners": {
       "label":   { "en": "Dubliners", "de": "Dubliner" },
@@ -140,15 +144,23 @@ The project file the engine reads at startup (excerpt — see the live
         "anchor": "chap{n2}", "label": { "en": "in context (Gutenberg)", "de": "…" }
       },
       "essay": {                       // optional: a feature.essay URL → "further reading" link
-        "source": "Mapping Dubliners",
+        "source": "Mapping Dubliners",   // byline; a feature's own `essaySource` overrides it
         "label": { "place": { "en": "about this place" }, "route": { "en": "about this route" } }
+      },
+      "confidence": {                  // optional: enables the location-certainty halos + legend
+        "label":  { "en": "Location certainty" },
+        "levels": { "high": { "en": "confirmed" }, "medium": { "en": "street-level" },
+                    "low": { "en": "approximate" } }   // colours/radii are fixed in the engine
       },
       "groups": [
         { "key": "The Sisters", "de": "Die Schwestern", "color": "#b5651d" }
-        /* … one per story/episode/chapter; `key` matches a feature's `story`.
+        /* … one per story/episode/chapter; `key` matches a feature's `story` and
+           doubles as the English label (`de` = German label; no `en` field).
            Optional per group: "badge" (string or {en,de}) — a small free-content
            chip on the sidebar row (e.g. clock times where chapters map to hours
-           of a single day, part labels, years); omitted groups render nothing. */
+           of a single day, part labels, years); "hidden": true — the layer
+           starts switched off (thematic/context layers); "id" — an optional
+           stable group id written by the annotate-ui (not read by the engine). */
       ]
     }
     /* ulysses: experimental true, numberedGroups true, groupPrefix {"en":"Episode"},
@@ -160,6 +172,29 @@ The project file the engine reads at startup (excerpt — see the live
 > *Planned extension* (not in the schema yet): a per-work `layerDimensions`
 > (`["group","character","tier"]`) to toggle views by character or tier — the
 > basis for the movement-profile feature (Roadmap D).
+
+### i18n — prepared, not active
+
+The config is fully bilingual-ready (every user-facing string is keyed by
+language: `ui.<lang>`, `label`/`tagline`/`credit`.<lang>, `groups[].de`,
+`sourceText.label`, `essay.label`, `confidence.*`) and `engine.js` exposes
+`switchLang()`. But the language is **fixed to `site.defaultLang`**: the engine
+does not read a `?lang=` parameter and no project ships a language switch
+(Mapping Joyce's was removed because its quotes are English only). Strings for
+the other language are therefore dead weight — a monolingual project may drop
+them (Mapping Perutz is German-only). To activate switching, read
+`params.get("lang")` where `lang` is set in `engine.js` and add
+`<span class="lang-switch">` links calling `switchLang('de'|'en')` to
+`index.html`.
+
+### Small screens
+
+Below 680 px (`engine.css` `@media`) the map fills the viewport; the sidebar
+becomes a **bottom sheet** with a handle (tap or swipe; label from
+`ui.<lang>.layers`), tapping a place collapses it and flies to the marker; the
+credit line hides behind an ⓘ button; the tagline is a one-line ellipsis that
+expands on tap. Popups are capped to the map pane minus the sheet handle. All
+of this is engine-internal — nothing to configure.
 
 ## Data schema
 
@@ -174,6 +209,8 @@ from `config`, not the data).
 | `story` | **required** | the group's title — must match a `config.works.<w>.groups[].key` |
 | `name` | **required** | place / route label |
 | `kind` | **required** | `place` \| `route` (also inferable from geometry) |
+| `id` | recommended | stable entity id (`loc-…` / `rte-…`), frozen once published; the overlay key. Features without one fall back to the derived `slug(story)/slug(name)` (legacy). |
+| `stories` | optional | list of group keys (primary first) when one place is a scene of several chapters — one marker, listed under each group |
 | `group` | optional | numeric group ordinal; used for the `groupPrefix` popup label ("Episode 4 ·") and as the source-text anchor fallback. Absent for unnumbered works (Dubliners). |
 | `character` | optional | mover(s), comma-separated (for trajectories) |
 | `time` | optional | clock time chip in the popup |
@@ -182,6 +219,11 @@ from `config`, not the data).
 | `page` \| `ref` | optional | citation shown under the quote — two interchangeable styles (a page number vs. an "episode.line" / chapter ref); a feature uses whichever fits its work |
 | `srcText` | optional | verbatim source-page fragment for the "in context" deep link, when it must differ from the displayed `quote` |
 | `essay` | optional | URL of a secondary "further reading" link (the per-work `essay` config supplies its label + source name) |
+| `essaySource` | optional | per-feature byline for the essay link, overriding the work-wide `essay.source` |
+| `confidence` | optional | `high` \| `medium` \| `low` — location-certainty halo behind the marker + inline tag in the popup (only when the work has a `confidence` config) |
+| `wikidata` | optional | Q-id → "↗ Wikidata" link in the popup footer (for a fictional establishment: its real street anchor) |
+| `fictional` | optional | `true` marks an invented place ("✦ fictional place") |
+| `color` | optional | per-feature colour overriding the group colour (e.g. per-character routes) |
 | `source` | optional | provenance tag; the per-work `sources` config maps it to a popup byline (e.g. own additions vs. a derived base layer). May be set per feature or stamped from the `data` file it came from. |
 | `seq` | optional | ordering key; the engine stable-sorts features by it (within their group), letting annotations reorder the list and own additions interleave with the base. |
 | `verified` | optional | `false` flags an unchecked node (legend + popup badge); omit it for stable layers |
@@ -189,15 +231,28 @@ from `config`, not the data).
 
 > One contract, minor justified per-work variation: numbered works carry
 > `group` + `time`; experimental layers carry `verified`; citation is `page`
-> *or* `ref`. Nothing else is emitted. (Historically the data also carried
-> `work`, `group_de`, `story_label` and a raw `description` blob — all removed,
-> as the engine never read them.)
+> *or* `ref`. Nothing else is emitted (`pipeline/geocode_source.py` →
+> `PROP_KEYS`). Working fields such as `evidence` (editorial notes on a
+> placement) or `sameAs` stay in the `*-source.json` only. (Historically the
+> data also carried `work`, `group_de`, `story_label` and a raw `description`
+> blob — all removed, as the engine never read them.)
+
+**Persons register** (optional, top-level `persons` in a data file):
+`[{ "id": "per-…", "name": "…", "role": "…", "color": "#…" }, …]`. A feature's
+`character` is then a list of these ids (legacy: a free-text string); the engine
+resolves them to names in the popup and renders a collapsible *Persons* section
+in the sidebar listing each person's places. `check.py` verifies every ref.
+
+**FeatureCollection `metadata`** (`title`, `note`, `license`, …) is taken from
+the source file's own `metadata` block — the pipeline never invents a licence
+or a public-domain claim; declare them per work.
 
 **Annotation overlay** (optional, `data/<work>-annotations.json`, pointed to by
 `config.works.<w>.annotations`) — an *editorial layer on top of the base data*,
 authored separately from it. Shape: `{ "<feature-id>": { field: value, … } }`,
-where the id is derived as `slug(story)/slug(name)` (`-2`/`-3` for duplicates)
-identically in `engine.js` and `pipeline/overlay.py`. The engine merges the
+where the id is the feature's explicit `properties.id`, or — for legacy
+features without one — derived as `slug(story)/slug(name)` (`-2`/`-3` for
+duplicates) identically in `engine.js` and `pipeline/overlay.py`. The engine merges the
 patch onto matching features **at load time** — the base GeoJSON is never
 modified, so provenance stays clean and removing a patch just drops it on
 reload. Edited with the local tool `pipeline/annotate-ui/` (stdlib, never
@@ -225,11 +280,14 @@ The data is edited through local, stdlib-only tools (no deploy, no LLM):
   overlay merged in); after reshaping points/lines in uMap,
   `pipeline/import_umap.py <edited>.geojson <work>-source.json` writes the edited
   geometry back (matched by name).
-- **`pipeline/consolidate.py`** — end-of-session step: bakes the overlay into the
+- **`pipeline/consolidate.py`** — end-of-session step, for every work that has
+  a `<work>-source.json` (`--work` to pick one): bakes the overlay into the
   source, merges the own-layer into the main source (normalising every `group`
   to its config key), drops the own files from `config.data`, and re-renders.
   Afterwards everything lives in one key-based `<work>-source.json`; the
-  annotator simply re-creates a fresh own-layer next time.
+  annotator simply re-creates a fresh own-layer next time. Works without a
+  source file (e.g. a layer converted from a third-party KML) are skipped and
+  keep their overlay.
 
 Run `pipeline/check.py` before committing. A `group` may be the config **key**
 (`"Chapter 5"`, `"Reiseziele"`) or a legacy numeric value; both resolve, but

@@ -46,7 +46,9 @@ engine (`engine.js`: `loadOverlay`/`applyOverlay`). So:
 - an optional `seq` field reorders features within their group (the engine
   sorts by it), which also lets own additions interleave with the base layer.
 
-Features carry no stored id; a stable id is **derived** from
+Overlay keys are stable feature ids. A feature's explicit `properties.id`
+(the frozen `loc-`/`rte-` entity id — every new object gets one) is used
+verbatim; a legacy feature without one gets a **derived** id
 `slug(story)/slug(name)` (with `-2`/`-3` for duplicates). The exact same rule
 lives in `engine.js` (`annSlug`/`assignIds`) and `pipeline/overlay.py`
 (`slugify`/`feature_ids`), so the overlay keys always match.
@@ -66,8 +68,9 @@ exact line to add (and the header shows "⚠ not wired into config yet").
 ## Notes
 
 - Overriding the **title or coordinates** of a base feature doesn't change its
-  id: the id is derived from the *base* `story`/`name` before the overlay is
-  applied, so it stays stable even after you rename or move the feature.
+  id: an explicit id is frozen, and a derived one is computed from the *base*
+  `story`/`name` before the overlay is applied — so it stays stable even after
+  you rename or move the feature.
 - A route's line is replaced by pasting a fresh GeoJSON `LineString` (the
   typical loop: redraw it in BRouter/uMap, export, paste) — the tool doesn't
   edit individual vertices.

@@ -85,6 +85,62 @@ def route(frm, to, mode="driving"):
     return [[round(c[0], 6), round(c[1], 6)] for c in line]
 
 
+# Feature properties copied verbatim from a source entry when present. This is
+# the engine's data contract (docs/ARCHITECTURE.md) — nothing else is emitted.
+# Working fields such as `evidence` (editorial notes on the placement) or
+# `sameAs` (extra authority links) stay in the source only: the engine never
+# reads them, so they would just bloat the published GeoJSON.
+PROP_KEYS = ("character", "time", "gloss", "quote", "ref", "srcText", "essay",
+             "essaySource", "confidence", "seq", "wikidata", "fictional", "color")
+
+DEFAULT_NOTE = ("Coordinates via OpenStreetMap/Nominatim, routes via OSRM (driving) / "
+                "BRouter (foot) — © OpenStreetMap contributors, ODbL.")
+
+
+def props_for(entry, by_n, prov, kind):
+    """Engine-facing `properties` for one source entry (place or route).
+
+    `group` may be a single chapter (key or legacy int) or a list of chapters a
+    place is a scene of (primary first). The marker lives in the primary group;
+    the engine reads `stories` to list it under each additional group too."""
+    gn = entry.get("group", entry.get("episode"))
+    primary = gn[0] if isinstance(gn, list) else gn
+    g = by_n.get(primary, {})
+    props = {
+        "group": gn,
+        "story": g.get("en", str(primary)),
+        "name": entry["name"],
+        "kind": kind,
+    }
+    if entry.get("id"):        # stable entity id (loc-/rte-…), frozen once published
+        props["id"] = entry["id"]
+    if isinstance(gn, list):
+        props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
+    for k in PROP_KEYS:
+        if entry.get(k):
+            props[k] = entry[k]
+    if "verified" in entry:    # boolean → presence check, not truthiness
+        props["verified"] = entry["verified"]
+    if entry.get("source", prov):
+        props["source"] = entry.get("source", prov)
+    return props
+
+
+def metadata_for(src, work):
+    """FeatureCollection `metadata`: the source file's own `metadata` block
+    (title/note/license/…) wins; only a neutral provenance note is added. No
+    licence or public-domain claim is ever invented — declare it in the source."""
+    meta = {"title": work}
+    meta.update(src.get("metadata") or {})
+    if src.get("license") and "license" not in meta:
+        meta["license"] = src["license"]
+    meta.setdefault("note", DEFAULT_NOTE)
+    if "license" not in meta:
+        print("  note: no `metadata.license` in the source — add one so the GeoJSON "
+              "carries its licence", file=sys.stderr)
+    return meta
+
+
 def main(src_path, out_path, region=None):
     with open(src_path, encoding="utf-8") as f:
         src = json.load(f)
@@ -115,29 +171,7 @@ def main(src_path, out_path, region=None):
             changed = True
             print(f"{lat}, {lon}")
 
-        gn = place.get("group", place.get("episode"))
-        # `group` may be a single chapter (int) or a list of chapters a place is
-        # a scene of (primary first). The marker lives in the primary group; the
-        # engine reads `stories` to list it under each additional group too.
-        primary = gn[0] if isinstance(gn, list) else gn
-        g = by_n.get(primary, {})
-        props = {
-            "group": gn,
-            "story": g.get("en", str(primary)),
-            "name": place["name"],
-            "kind": place.get("kind", "place"),
-        }
-        if place.get("id"):        # stable entity id (loc-/rte-…), frozen once published
-            props["id"] = place["id"]
-        if isinstance(gn, list):
-            props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq", "wikidata", "sameAs", "fictional", "evidence", "color"):
-            if place.get(k):
-                props[k] = place[k]
-        if "verified" in place:           # boolean → presence check, not truthiness
-            props["verified"] = place["verified"]
-        if place.get("source", prov):
-            props["source"] = place.get("source", prov)
+        props = props_for(place, by_n, prov, place.get("kind", "place"))
         features.append({
             "type": "Feature",
             "properties": props,
@@ -163,24 +197,7 @@ def main(src_path, out_path, region=None):
             changed = True
             print(f"{len(coords)} points")
 
-        gn = r.get("group", r.get("episode"))
-        primary = gn[0] if isinstance(gn, list) else gn
-        g = by_n.get(primary, {})
-        props = {
-            "group": gn, "story": g.get("en", str(primary)),
-            "name": r["name"], "kind": "route",
-        }
-        if r.get("id"):
-            props["id"] = r["id"]
-        if isinstance(gn, list):
-            props["stories"] = [by_n.get(n, {}).get("en", str(n)) for n in gn]
-        for k in ("character", "time", "gloss", "quote", "ref", "srcText", "essay", "essaySource", "confidence", "seq", "wikidata", "sameAs", "fictional", "evidence", "color"):
-            if r.get(k):
-                props[k] = r[k]
-        if "verified" in r:
-            props["verified"] = r["verified"]
-        if r.get("source", prov):
-            props["source"] = r.get("source", prov)
+        props = props_for(r, by_n, prov, "route")
         features.append({
             "type": "Feature",
             "properties": props,
@@ -193,12 +210,7 @@ def main(src_path, out_path, region=None):
 
     fc = {
         "type": "FeatureCollection",
-        "metadata": {
-            "title": work,
-            "note": "Dataset compiled from a public-domain text. Coordinates via "
-                    "OpenStreetMap/Nominatim; routes via OSRM (driving) / BRouter (foot).",
-            "license": "CC BY-NC 4.0",
-        },
+        "metadata": metadata_for(src, work),
         "features": features,
     }
     if src.get("persons"):      # prosopography register: [{id, name, aliases, …}]

@@ -4,3 +4,4 @@ __pycache__/
 tmp/
 temp/
 text/
+.claude/

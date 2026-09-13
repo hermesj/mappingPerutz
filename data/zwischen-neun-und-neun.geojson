@@ -2,8 +2,8 @@
  "type": "FeatureCollection",
  "metadata": {
   "title": "Zwischen neun und neun",
-  "note": "Dataset compiled from a public-domain text. Coordinates via OpenStreetMap/Nominatim; routes via OSRM (driving) / BRouter (foot).",
-  "license": "CC BY-NC 4.0"
+  "license": "CC BY-NC 4.0",
+  "note": "Original dataset by J. Hermes for Leo Perutz, »Zwischen neun und neun« (1918). The source text is public domain in the USA but in copyright in the EU until 31 Dec 2027 (public domain from 1 Jan 2028); quotations are short evidentiary excerpts under § 51 UrhG. Coordinates via OpenStreetMap/Nominatim, routes via OSRM (driving) / BRouter (foot) — © OpenStreetMap contributors, ODbL."
  },
  "features": [
   {
@@ -27,8 +27,7 @@
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
     "wikidata": "Q106194700",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -56,8 +55,7 @@
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
-    "fictional": true,
-    "evidence": "external"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -89,8 +87,7 @@
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
     "seq": 2,
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -119,8 +116,7 @@
     "srcText": "den unteren Teil des Parkes erreichten",
     "confidence": "medium",
     "seq": 3,
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -149,8 +145,7 @@
     "srcText": "beim Überqueren der Porzellangasse",
     "confidence": "medium",
     "seq": 1,
-    "wikidata": "Q106194249",
-    "evidence": "text-inferred"
+    "wikidata": "Q106194249"
    },
    "geometry": {
     "type": "Point",
@@ -178,8 +173,7 @@
     "quote": "»Weil ich ein Krüppel bin,« sagte er mit tonloser Stimme. »Es muß heraus. Ich habe keine Arme.«",
     "srcText": "Es muß heraus. Ich habe keine Arme",
     "confidence": "medium",
-    "fictional": true,
-    "evidence": "conjectural"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -201,8 +195,7 @@
     "quote": "»Im Votivpark sollen dieses Jahr Sessel aufgestellt werden statt der Bänke«, erzählte das Fräulein. »Vier Heller pro Person.«",
     "srcText": "Im Votivpark sollen dieses Jahr Sessel aufgestellt werden",
     "confidence": "high",
-    "wikidata": "Q110088387",
-    "evidence": "text-explicit"
+    "wikidata": "Q110088387"
    },
    "geometry": {
     "type": "Point",
@@ -224,8 +217,7 @@
     "quote": "»Also notieren Sie sich meine Adresse: Alice Leitner, bei Herrn kaiserlichen Rat Adalbert Füchsel, neunter Bezirk, Maria-Theresien Straße 18.«",
     "srcText": "neunter Bezirk, Maria-Theresien Straße 18",
     "confidence": "high",
-    "wikidata": "Q106194078",
-    "evidence": "text-explicit"
+    "wikidata": "Q106194078"
    },
    "geometry": {
     "type": "Point",
@@ -246,8 +238,7 @@
     "gloss": "Das k.k. Ministerium für öffentliche Arbeiten residierte im »Fürstenhof«, Liechtensteinstraße 46–46a / Porzellangasse 33a (vgl. Wien Geschichte Wiki) — ums Eck von der Wiesengasse.",
     "quote": "… und der Herr aus dem Arbeitsministerium, der seit Jahren täglich einen »feinen Aufschnitt« für sein zweites Frühstück im Geschäfte der Frau Püchl erstand.",
     "srcText": "der Herr aus dem Arbeitsministerium",
-    "confidence": "high",
-    "evidence": "external"
+    "confidence": "high"
    },
    "geometry": {
     "type": "Point",
@@ -270,8 +261,7 @@
     "srcText": "der altorientalischen Spezialsammlung des kunsthistorischen Museums",
     "confidence": "high",
     "seq": 4,
-    "wikidata": "Q95569",
-    "evidence": "text-inferred"
+    "wikidata": "Q95569"
    },
    "geometry": {
     "type": "Point",
@@ -294,8 +284,7 @@
     "srcText": "und Lehrer an der Konsular-Akademie",
     "confidence": "high",
     "seq": 5,
-    "wikidata": "Q876973",
-    "evidence": "text-inferred"
+    "wikidata": "Q876973"
    },
    "geometry": {
     "type": "Point",
@@ -318,8 +307,7 @@
     "srcText": "von der Akademie der Wissenschaften subventionierten Werke",
     "confidence": "high",
     "seq": 6,
-    "wikidata": "Q299015",
-    "evidence": "text-inferred"
+    "wikidata": "Q299015"
    },
    "geometry": {
     "type": "Point",
@@ -350,8 +338,7 @@
     "quote": "»Claire« und »Ethel« sind für Angestellte einer Manufakturfirma am Franz-Josefs-Kai nicht gerade alltägliche Namen.",
     "srcText": "einer Manufakturfirma am Franz-Josefs-Kai",
     "confidence": "medium",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -373,8 +360,7 @@
     "quote": "In kaum vierundzwanzig Stunden ging der Zug ab, der Sonja Hartmann aus dem Südbahnperron in märchenhafte Fernen entführen sollte.",
     "srcText": "aus dem Südbahnperron in märchenhafte Fernen",
     "confidence": "high",
-    "wikidata": "Q519025",
-    "evidence": "text-explicit"
+    "wikidata": "Q519025"
    },
    "geometry": {
     "type": "Point",
@@ -395,8 +381,7 @@
     "gloss": "Hier, beim Gasthaus im Wienerwald, schwor Sonja »vorigen Herbst« nach dem Nachtmahl im Park, niemals einen andern als Demba zu lieben — »damals war ich ein halbes Kind«. Das beliebte Ausflugsgasthaus (um 1840 vom Forstaufseher J. Rohrer begründet) lag westlich des Schwarzenbergparks an der Straße nach Tulln, am Fuß des Exelbergs; 2000 abgerissen, heute Wohnbau. Lage ungefähr.",
     "quote": "»Vorigen Herbst. In der Rohrerhütte. Wir gingen nach dem Nachtmahl in den Park und da –«",
     "srcText": "Vorigen Herbst. In der Rohrerhütte",
-    "confidence": "low",
-    "evidence": "conjectural"
+    "confidence": "low"
    },
    "geometry": {
     "type": "Point",
@@ -418,8 +403,7 @@
     "quote": "Man wußte, daß er mit dem Zehnuhrzug nach Kottingbrunn fahren wollte, wo nachmittag das Rennen stattfand.",
     "srcText": "mit dem Zehnuhrzug nach Kottingbrunn",
     "confidence": "high",
-    "wikidata": "Q681531",
-    "evidence": "text-explicit"
+    "wikidata": "Q681531"
    },
    "geometry": {
     "type": "Point",
@@ -441,8 +425,7 @@
     "quote": "»Er kommt erst am Abend nach Wien. Er hat mir eben telephoniert, daß er zu seinen Eltern nach Mödling fährt.«",
     "srcText": "zu seinen Eltern nach Mödling",
     "confidence": "high",
-    "wikidata": "Q277965",
-    "evidence": "text-explicit"
+    "wikidata": "Q277965"
    },
    "geometry": {
     "type": "Point",
@@ -471,8 +454,7 @@
     "essay": "https://www.wienerzeitung.at/h/ein-literarischer-spiegel-wiens",
     "essaySource": "Wiener Zeitung",
     "confidence": "high",
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -508,8 +490,7 @@
     "quote": "Ich gab mir einen Ruck, verlor den Halt, ich hörte noch, wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann, und dann –",
     "srcText": "wie die Glocke vom Kirchturm her neun Uhr zu schlagen begann",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "conjectural"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -531,8 +512,7 @@
     "quote": "Ich habe drei Bücher aus der Universitätsbibliothek einem Antiquitätenhändler verkauft. Das heißt, verkauft hab' ich nur zwei. Das dritte hab' ich heute morgen umsonst hergegeben.",
     "srcText": "drei Bücher aus der Universitätsbibliothek",
     "confidence": "high",
-    "wikidata": "Q1478417",
-    "evidence": "text-inferred"
+    "wikidata": "Q1478417"
    },
    "geometry": {
     "type": "Point",
@@ -555,8 +535,7 @@
     "srcText": "in die Antiquitätenläden in der Johannesgasse",
     "confidence": "medium",
     "wikidata": "Q106193866",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -579,8 +558,7 @@
     "srcText": "in der Johannesgasse und in der Weihburggasse",
     "confidence": "medium",
     "wikidata": "Q106194688",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -617,8 +595,7 @@
     "srcText": "gerade in der Liechtensteinstraße wohnte",
     "confidence": "medium",
     "wikidata": "Q96959925",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -653,8 +630,7 @@
     "quote": "»Werdet ihr mir alle nach Venedig schreiben?« fragte sie und ließ eine Rauchwolke zur Decke schweben. »Venetia, posta grande.«",
     "srcText": "Werdet ihr mir alle nach Venedig schreiben",
     "confidence": "high",
-    "wikidata": "Q641",
-    "evidence": "text-explicit"
+    "wikidata": "Q641"
    },
    "geometry": {
     "type": "Point",
@@ -685,8 +661,7 @@
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
     "wikidata": "Q19971190",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -708,8 +683,7 @@
     "quote": "»Bitte, reden Sie selbst mit dem Müller und geben Sie mir dann die Hefte. Er wohnt Pazmanitenstraße, elf.«",
     "srcText": "Er wohnt Pazmanitenstraße, elf",
     "confidence": "medium",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -737,8 +711,7 @@
     "srcText": "Herrenmodewarengeschäft auf dem Graben",
     "confidence": "medium",
     "wikidata": "Q699937",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -766,8 +739,7 @@
     "srcText": "Gegenüber der Oper stand ein Polizist",
     "confidence": "medium",
     "wikidata": "Q209937",
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -790,8 +762,7 @@
     "srcText": "in der Praterstraße eine Unterredung sehr delikater Natur",
     "confidence": "medium",
     "wikidata": "Q2107895",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -820,8 +791,7 @@
     "essaySource": "Wiener Zeitung",
     "confidence": "medium",
     "seq": 1,
-    "wikidata": "Q699930",
-    "evidence": "text-explicit"
+    "wikidata": "Q699930"
    },
    "geometry": {
     "type": "Point",
@@ -853,8 +823,7 @@
     "confidence": "medium",
     "seq": 2,
     "wikidata": "Q695132",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -883,8 +852,7 @@
     "quote": "In dem kleinen reservierten Zimmer des Café Turf, in das man durch eine sorgfältig verhängte und von einem Pikkolo bewachte Tür eintrat, saßen heute elf Personen.",
     "srcText": "Zimmer des Café Turf",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "conjectural"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -923,8 +891,7 @@
     "quote": "»In den Residenzkeller!« sagte Weiner. »In den Residenzkeller? Man ißt gut dort, nicht wahr?«",
     "srcText": "In den Residenzkeller!",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "conjectural"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -964,8 +931,7 @@
     "essaySource": "Alexander Peer",
     "confidence": "medium",
     "wikidata": "Q106193945",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1000,8 +966,7 @@
     "quote": "Demba trat vor den Spiegel, der die Tür des Kleiderkastens und das Prunkstück des dürftig möblierten Zimmers bildete.",
     "srcText": "das Prunkstück des dürftig möblierten Zimmers",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1027,8 +992,7 @@
     "essay": "https://magazin.wienmuseum.at/die-anfaenge-der-telefonie-in-wien",
     "essaySource": "Wien Museum",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "external"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1049,8 +1013,7 @@
     "gloss": "Leo Perutz wohnte mit seiner Familie 17 Jahre lang in der Porzellangasse 37 (9. Bezirk; vgl. Alexander Peer, verlinktes Essay). Kein Schauplatz des Romans, sondern ein biografischer Kontextpunkt — bemerkenswert: Perutz hat die Handlung des Romans in die eigene Nachbarschaft gesetzt.",
     "essay": "https://derive.at/texte/in-ketten-durch-wien/",
     "essaySource": "Alexander Peer",
-    "confidence": "high",
-    "evidence": "external"
+    "confidence": "high"
    },
    "geometry": {
     "type": "Point",
@@ -1072,8 +1035,7 @@
     "essay": "https://de.wikipedia.org/wiki/Sigmund_Freud_Museum",
     "essaySource": "Wikipedia",
     "confidence": "high",
-    "wikidata": "Q694810",
-    "evidence": "external"
+    "wikidata": "Q694810"
    },
    "geometry": {
     "type": "Point",
@@ -1095,8 +1057,7 @@
     "essay": "https://de.wikipedia.org/wiki/Caf%C3%A9_Herrenhof",
     "essaySource": "Wikipedia",
     "confidence": "high",
-    "wikidata": "Q262857",
-    "evidence": "external"
+    "wikidata": "Q262857"
    },
    "geometry": {
     "type": "Point",
@@ -1123,8 +1084,7 @@
     "quote": "Er ging auf einen Passanten zu, der kurz vor Stanislaus Demba die Straße überquert hatte und nun vor dem Schaufenster eines Kravattengeschäftes stand.",
     "srcText": "nun vor dem Schaufenster eines Kravattengeschäftes stand",
     "confidence": "medium",
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1151,8 +1111,7 @@
     "quote": "Und Demba verließ, die Beute in der Tasche, die Wohnung, an zwei unnahbaren Herren im Gehrock vorbei, die im Vorzimmer standen und in düsterer Entschlossenheit auf den Fußboden starrten.",
     "srcText": "an zwei unnahbaren Herren im Gehrock vorbei, die im Vorzimmer standen",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "text-inferred"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1174,8 +1133,7 @@
     "quote": "…seit sie in einem Wettschwimmen im Dianabad den zweiten Preis erzielt hatte, ganz als »sporting girl«.",
     "srcText": "ein Wettschwimmen im Dianabad",
     "confidence": "medium",
-    "wikidata": "Q1208912",
-    "evidence": "text-explicit"
+    "wikidata": "Q1208912"
    },
    "geometry": {
     "type": "Point",
@@ -1197,8 +1155,7 @@
     "quote": "Unlängst hat er mir erklärt, warum die Obstweiber gerade am Bauernmarkt stehen, alle, und die Blumenweiber in der verlängerten Kärntnerstraße.",
     "srcText": "die Obstweiber gerade am Bauernmarkt",
     "confidence": "high",
-    "wikidata": "Q811289",
-    "evidence": "text-explicit"
+    "wikidata": "Q811289"
    },
    "geometry": {
     "type": "Point",
@@ -1220,8 +1177,7 @@
     "quote": "Unlängst hat er mir erklärt, warum die Obstweiber gerade am Bauernmarkt stehen, alle, und die Blumenweiber in der verlängerten Kärntnerstraße.",
     "srcText": "die Blumenweiber in der verlängerten Kärntnerstraße",
     "confidence": "medium",
-    "wikidata": "Q699947",
-    "evidence": "text-explicit"
+    "wikidata": "Q699947"
    },
    "geometry": {
     "type": "Point",
@@ -1248,8 +1204,7 @@
     "quote": "schließlich hab' ich mir heute den Schnurrbart englisch stutzen lassen.",
     "srcText": "den Schnurrbart englisch stutzen lassen",
     "confidence": "low",
-    "fictional": true,
-    "evidence": "conjectural"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1282,8 +1237,7 @@
     "quote": "Ich habe gesehen, wie ein Nachtwächter in Damaskus einem harmlosen Spaziergänger ohne jeden Anlaß einen solchen Tritt in den Magen versetzte, daß der arme Teufel vom Fleck weg ins Spital gebracht werden mußte.",
     "confidence": "high",
     "seq": 3,
-    "wikidata": "Q3766",
-    "evidence": "text-explicit"
+    "wikidata": "Q3766"
    },
    "geometry": {
     "type": "Point",
@@ -1305,8 +1259,7 @@
     "quote": "Ein Limonadenverkäufer in Aleppo, den ich im Rauschzustande beobachten konnte, hielt sich für den Erzengel Gabriel.",
     "confidence": "high",
     "seq": 2,
-    "wikidata": "Q41183",
-    "evidence": "text-explicit"
+    "wikidata": "Q41183"
    },
    "geometry": {
     "type": "Point",
@@ -1327,8 +1280,7 @@
     "gloss": "Zusätzliches Reiseziel von Sonja und Georg Weiner, von dem aus kleinere Ausflüge geplant waren. Außerdem standen noch Laibach (Ljubljana) und Padua auf dem Programm.",
     "quote": "Für die Besichtigung Laibachs – Graz kannte Sonja Hartmann schon – und für den Besuch der Adelsberger Grotte war je ein halber Tag vorgesehen. Von Triest aus sollten größere und kleinere Ausflüge nach Pirano, Capo d'Istria und Grado unternommen und der mehrtägige Aufenthalt in Venedig durch einen Abstecher nach Padua unterbrochen werden. Denn Padua – hatte Georg Weiner erklärt –, war doch nicht solch ein Allerweltsreiseziel wie Venedig, sondern lag abseits vom Strome der Globetrotter, und schon eher im Herzen Italiens. Wer in Venedig war, der kennt nur die Fransen Italiens, wer aber in Padua war, kennt auch das Innere, – hatte auch Herr Zerkowitz bestätigt. Padua stand also gleichfalls auf dem Reiseplan, obwohl Sonja eigentlich einen längeren Aufenthalt auf dem Lido vorgezogen hätte.",
     "confidence": "high",
-    "wikidata": "Q546",
-    "evidence": "text-explicit"
+    "wikidata": "Q546"
    },
    "geometry": {
     "type": "Point",
@@ -1349,8 +1301,7 @@
     "gloss": "Wohnort von Sonjas Tante, angebliches Ziel für ihre Reise, die in Wirklichkeit mit Weiner nach Venedig führt.",
     "quote": "»Er hat gar keine Ursache, sich aufzuregen,«\nsagte Sonja gelassen. »Ich hab' es ihm schon wiederholt gesagt, daß es zwischen mir und ihm ein für allemal aus ist. Übrigens könnt ihr ihm ja wirklich sagen, daß ich nach Budweis zu meiner Tante gefahren bin.«",
     "confidence": "high",
-    "wikidata": "Q16506",
-    "evidence": "text-explicit"
+    "wikidata": "Q16506"
    },
    "geometry": {
     "type": "Point",
@@ -1382,8 +1333,7 @@
     "gloss": "Alternatives Reiseziel (Kap. 4), das Demba Sonja statt Venedig mit Weiner vorgeschlagen hat. – Zugleich ein »Ort der Betrüger«: Skuludis rühmt sich der »Sympathien der guten Gesellschaft« von Paris (Kap. 13), und Demba beruft sich auf Paris, um seinen erfundenen Strohhalm-»Brauch« zu beglaubigen (Kap. 17).",
     "quote": "»Anfangs war er sehr aufgeregt, zum Schluß ist ihm dann eine Idee gekommen, da hat er sich beruhigt. Von sechshundert Kronen hat er etwas gesagt, die er sich verschaffen will, und damit wird er mit dem Fräulein Hartmann nach Paris fahren, hat er gesagt, oder an die Riviera.«\n\nAuf Sonja Hartmann machte diese Eröffnung keinen Eindruck, Fräulein Postelberg hingegen geriet\ndurch die bloße Erwähnung von »Paris« in Ekstase.\n\n»Sonja!« rief sie verzückt, lehnte den Kopf zurück und blickte schwärmerisch zur Decke empor. »Paris! Die Boulevards! Der Père Lachaise! Der Montmartre!«",
     "confidence": "high",
-    "wikidata": "Q90",
-    "evidence": "text-explicit"
+    "wikidata": "Q90"
    },
    "geometry": {
     "type": "Point",
@@ -1404,8 +1354,7 @@
     "gloss": "Wiener Café mit langer Geschichte. Erwähnt von Willy Eisner im Gespräch mit Demba.",
     "quote": "Gestern fragt mich der Baron Reifflingen – kennen Sie den Reifflingen? Ich speise manchmal mit ihm im Imperial – gestern fragt er mich also: Was halten Sie eigentlich von der Gleisbacher Union, haben Sie Meinung für dieses Papier?",
     "confidence": "high",
-    "wikidata": "Q1630919",
-    "evidence": "text-explicit"
+    "wikidata": "Q1630919"
    },
    "geometry": {
     "type": "Point",
@@ -1425,8 +1374,7 @@
     "id": "loc-laibach",
     "gloss": "Geplante Besichtigung (halber Tag) auf der Hinreise von Sonja Hartmann und Georg Weiner nach Venedig.",
     "confidence": "high",
-    "wikidata": "Q437",
-    "evidence": "text-explicit"
+    "wikidata": "Q437"
    },
    "geometry": {
     "type": "Point",
@@ -1446,8 +1394,7 @@
     "id": "loc-graz-bahnhof",
     "gloss": "Auf der Rundreise-Strecke gelegen, aber übersprungen — »Graz kannte Sonja Hartmann schon«.",
     "confidence": "high",
-    "wikidata": "Q873836",
-    "evidence": "text-inferred"
+    "wikidata": "Q873836"
    },
    "geometry": {
     "type": "Point",
@@ -1467,8 +1414,7 @@
     "id": "loc-adelsberger-grotte",
     "gloss": "Halbtägiger Programmpunkt der Venedig-Rundreise (Sonja Hartmann + Georg Weiner).",
     "confidence": "high",
-    "wikidata": "Q15903",
-    "evidence": "text-explicit"
+    "wikidata": "Q15903"
    },
    "geometry": {
     "type": "Point",
@@ -1488,8 +1434,7 @@
     "id": "loc-pirano",
     "gloss": "Tagesausflug ab Triest auf der Venedig-Rundreise (Sonja + Weiner).",
     "confidence": "high",
-    "wikidata": "Q1382",
-    "evidence": "text-explicit"
+    "wikidata": "Q1382"
    },
    "geometry": {
     "type": "Point",
@@ -1509,8 +1454,7 @@
     "id": "loc-capo-distria",
     "gloss": "Tagesausflug ab Triest (Sonja + Weiner).",
     "confidence": "high",
-    "wikidata": "Q1015",
-    "evidence": "text-explicit"
+    "wikidata": "Q1015"
    },
    "geometry": {
     "type": "Point",
@@ -1530,8 +1474,7 @@
     "id": "loc-grado",
     "gloss": "Tagesausflug ab Triest (Sonja + Weiner).",
     "confidence": "high",
-    "wikidata": "Q53130",
-    "evidence": "text-explicit"
+    "wikidata": "Q53130"
    },
    "geometry": {
     "type": "Point",
@@ -1551,8 +1494,7 @@
     "id": "loc-padua",
     "gloss": "Mehrtägiger Abstecher der Rundreise — »wer in Padua war, kennt auch das Innere« Italiens (Sonja + Weiner).",
     "confidence": "high",
-    "wikidata": "Q617",
-    "evidence": "text-explicit"
+    "wikidata": "Q617"
    },
    "geometry": {
     "type": "Point",
@@ -1572,8 +1514,7 @@
     "id": "loc-sonnwendstein",
     "gloss": "Geplante Fahrtunterbrechung mit Besteigung des Sonnwendsteins am Semmering (Sonja + Weiner, Hinreise).",
     "confidence": "high",
-    "wikidata": "Q1668878",
-    "evidence": "text-explicit"
+    "wikidata": "Q1668878"
    },
    "geometry": {
     "type": "Point",
@@ -1593,8 +1534,7 @@
     "id": "loc-ennstal",
     "gloss": "Abschluss der Rundreise: eine Fußwanderung durchs Ennstal (Sonja + Weiner).",
     "confidence": "high",
-    "wikidata": "Q21858133",
-    "evidence": "text-explicit"
+    "wikidata": "Q21858133"
    },
    "geometry": {
     "type": "Point",
@@ -1615,8 +1555,7 @@
     "gloss": "Laut Demba hat ein Professor Haase aus Erlangen seine Arbeit zu einer neuen Wortbedeutung verteildigt.",
     "quote": "Eine große Diskussion hat sich über ein Wort, für das ich eine neue Deutung gegeben habe, entsponnen. Ich bin gelobt und bin angegriffen worden. Ich habe viel Zuschriften bekommen. Professor Haase in Erlangen und Professor Mayer in Graz haben meine Auffassung verteidigt und der berühmte Riemenschmidt in Göttingen hat meine Untersuchung scharfsinnig genannt.",
     "seq": 4,
-    "wikidata": "Q40025",
-    "evidence": "text-inferred"
+    "wikidata": "Q40025"
    },
    "geometry": {
     "type": "Point",
@@ -1639,8 +1578,7 @@
     "srcText": "Professor Mayer in Graz",
     "confidence": "high",
     "seq": 5,
-    "wikidata": "Q622683",
-    "evidence": "text-inferred"
+    "wikidata": "Q622683"
    },
    "geometry": {
     "type": "Point",
@@ -1663,8 +1601,7 @@
     "srcText": "der berühmte Riemenschmidt in Göttingen",
     "confidence": "high",
     "seq": 6,
-    "wikidata": "Q152838",
-    "evidence": "text-inferred"
+    "wikidata": "Q152838"
    },
    "geometry": {
     "type": "Point",
@@ -1687,8 +1624,7 @@
     "srcText": "Wirth in München",
     "confidence": "high",
     "seq": 1,
-    "wikidata": "Q55044",
-    "evidence": "text-inferred"
+    "wikidata": "Q55044"
    },
    "geometry": {
     "type": "Point",
@@ -1718,8 +1654,7 @@
     "confidence": "medium",
     "seq": 3,
     "wikidata": "Q797630",
-    "fictional": true,
-    "evidence": "text-explicit"
+    "fictional": true
    },
    "geometry": {
     "type": "Point",
@@ -1742,8 +1677,7 @@
     "essay": "https://www.zeitenspruenge.at/bild/547",
     "essaySource": "Zeitensprünge",
     "confidence": "high",
-    "seq": 4,
-    "evidence": "external"
+    "seq": 4
    },
    "geometry": {
     "type": "Point",
@@ -1769,8 +1703,7 @@
     "quote": "… die ihm die Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo im Fluge erobert hatten …",
     "srcText": "Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo",
     "seq": 2,
-    "wikidata": "Q656",
-    "evidence": "text-explicit"
+    "wikidata": "Q656"
    },
    "geometry": {
     "type": "Point",
@@ -1795,8 +1728,7 @@
     "quote": "… die ihm die Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo im Fluge erobert hatten …",
     "srcText": "Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo",
     "seq": 3,
-    "wikidata": "Q19660",
-    "evidence": "text-explicit"
+    "wikidata": "Q19660"
    },
    "geometry": {
     "type": "Point",
@@ -1821,8 +1753,7 @@
     "quote": "… die ihm die Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo im Fluge erobert hatten …",
     "srcText": "Sympathien der guten Gesellschaft von Paris, Petersburg, Bukarest und Kairo",
     "seq": 4,
-    "wikidata": "Q85",
-    "evidence": "text-explicit"
+    "wikidata": "Q85"
    },
    "geometry": {
     "type": "Point",
@@ -1847,8 +1778,7 @@
     "quote": "»Eigentlich stammt der Brauch aus Bagdad,« erklärte er. »In Bagdad und Damaskus können Sie an jeder Straßenecke … Araber dutzendweis' sehen, die ihr Bier durch einen Strohhalm trinken.«",
     "srcText": "Eigentlich stammt der Brauch aus Bagdad",
     "seq": 5,
-    "wikidata": "Q1530",
-    "evidence": "text-explicit"
+    "wikidata": "Q1530"
    },
    "geometry": {
     "type": "Point",
@@ -1872,8 +1802,7 @@
     "gloss": "Kein Schauplatz, sondern eine Liedzeile: Aus einem Grammophon tönt »Prinz Eugen, der edle Ritter« (das Lied über die Eroberung Belgrads 1717). Der von der Polizei in die Enge getriebene Demba nimmt die Worte »Stadt und Festung Belgerad« als Absprung-Kommando für seinen Sprung aus dem Fenster (Kap. 8) – die Vorgeschichte zu den Handschellen. Perutz schreibt »Belgerad« (Liedform). Symbolisch in die Stadtmitte gesetzt.",
     "quote": "Ich faßte den Entschluß bei den Worten: Stadt und Festung Belgerad, bei ›Belgerad‹ wollte ich – wollte ich hinunter.",
     "srcText": "Stadt und Festung Belgerad",
-    "wikidata": "Q3711",
-    "evidence": "text-explicit"
+    "wikidata": "Q3711"
    },
    "geometry": {
     "type": "Point",
@@ -1896,8 +1825,7 @@
     "srcText": "Eilzugs Wien-Budapest",
     "confidence": "high",
     "seq": 1,
-    "wikidata": "Q522868",
-    "evidence": "text-explicit"
+    "wikidata": "Q522868"
    },
    "geometry": {
     "type": "Point",

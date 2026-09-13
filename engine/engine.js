@@ -11,8 +11,42 @@
   // Populated from config.json at startup.
   var CFG, WORKS, UI, REGION;
   var params = new URLSearchParams(location.search);
+  // i18n is PREPARED, NOT ACTIVE: config carries per-language strings (ui.<lang>,
+  // label/tagline/credit.<lang>, group.de …) and switchLang() exists, but the
+  // language is fixed to config.site.defaultLang — no ?lang= is read and no
+  // project ships a switch. To activate: read params.get("lang") below and add
+  // the lang-switch markup to index.html (see docs/ARCHITECTURE.md).
   var lang = "en";   // set from config.site.defaultLang once loaded
   var work;          // set from ?work= or config.site.defaultWork once loaded
+  // Small-screen layout (engine.css @media): the sidebar becomes a bottom sheet
+  // over a full-height map; a handle toggles it. JS only flips a body class and
+  // keeps popups clear of the collapsed handle.
+  var MOBILE_Q = window.matchMedia ? window.matchMedia("(max-width: 680px)") : null;
+  function isMobile() { return !!(MOBILE_Q && MOBILE_Q.matches); }
+  function setSheet(open) {
+    document.body.classList.toggle("sheet-open", !!open);
+    var h = document.getElementById("sheet-handle");
+    if (h) h.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+  // Height of the collapsed sheet handle (plus a little air) — the strip of the
+  // map pane a popup must stay clear of on small screens. 0 on desktop.
+  function bottomInset() {
+    if (!isMobile()) return 0;
+    var h = document.getElementById("sheet-handle");
+    return (h ? h.offsetHeight : 52) + 8;
+  }
+  // Width of Leaflet's top-left control column (the +/− zoom buttons). Controls
+  // always paint above popups (the map pane is its own stacking context), so
+  // instead the popup autoPan keeps popups to the right of this column.
+  function leftInset() {
+    var c = map && map.getContainer().querySelector(".leaflet-top.leaflet-left");
+    return c && c.offsetWidth ? c.offsetWidth + 10 : 56;
+  }
+  function popupPanOptions() {
+    return { maxHeight: popupMaxHeight(),
+             autoPanPaddingTopLeft: L.point(leftInset(), 8),
+             autoPanPaddingBottomRight: L.point(8, bottomInset()) };
+  }
 
   var map, groupVisible = {}, allEntries = [], bounds = {}, placesByGroup = {}, confLegend;
   var PERSONS = {};   // prosopography register (per- id → {name, …}), from the data files
@@ -93,9 +127,10 @@
     else { layer.setStyle({ weight: ROUTE_STYLE.weight, opacity: ROUTE_STYLE.opacity, dashArray: ROUTE_STYLE.dashArray }); }
   }
 
+  // Text → HTML, safe for element content AND attribute values (href/title).
   function esc(s) {
-    return (s || "").replace(/[&<>]/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c];
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
 
@@ -143,7 +178,8 @@
     // edition without breaking the highlight.
     var frag = p.srcText || srcSnippet(p.quote);
     var href = st.url + "#" + anchor + ":~:text=" + encodeURIComponent(frag);
-    var label = (st.label && st.label[lang]) || st.label || "source";
+    var lo = st.label;   // {en,de,…} or a plain string
+    var label = (lo && typeof lo === "object") ? (lo[lang] || lo.en || "source") : (lo || "source");
     return '<a class="pop-src" target="_blank" rel="noopener" href="' + href + '">↗ ' + esc(label) + "</a>";
   }
 
@@ -267,7 +303,7 @@
   // gets Leaflet's scrollbar. Pane height is independent of zoom — only the
   // viewport size matters — so this is stable except across window resizes.
   function popupMaxHeight() {
-    return Math.max(120, (map ? map.getSize().y : 600) - 64);
+    return Math.max(120, (map ? map.getSize().y : 600) - 64 - bottomInset());
   }
 
   // ── Annotation overlay ──────────────────────────────────────────────────
@@ -390,7 +426,7 @@
             // maxHeight (sized to the map pane) lets Leaflet add a scrollbar
             // when a long quote would otherwise overflow; autoPan then nudges
             // the popup fully into view below the header.
-            layer.bindPopup(popupHtml(p), { maxWidth: 300, maxHeight: popupMaxHeight() });
+            layer.bindPopup(popupHtml(p), L.extend({ maxWidth: 300 }, popupPanOptions()));
             var entry = {
               name: p.name,
               kind: p.kind || (f.geometry.type === "LineString" ? "route" : "place"),
@@ -449,6 +485,9 @@
   // Pan/zoom to a single place and open its popup, making sure its group
   // layer is switched on first.
   function focusPlace(groupKey, entry, item) {
+    // On a small screen the sidebar sheet covers the map — tuck it away first
+    // so the flight and the popup are visible.
+    if (isMobile()) setSheet(false);
     // Make the group it was clicked under visible; the one marker is shown
     // whenever any of its groups is on, so flipping this one suffices.
     if (!groupVisible[groupKey]) {
@@ -611,6 +650,8 @@
     }
     document.getElementById("btnShowAll").textContent = t.showAll;
     document.getElementById("btnHideAll").textContent = t.hideAll;
+    var sl = document.querySelector("#sheet-handle .sheet-label");
+    if (sl) sl.textContent = t.layers || (lang === "de" ? "Kapitel & Ebenen" : "Chapters & layers");
     var creditEl = document.getElementById("credit");
     creditEl.innerHTML = w.credit[lang] + " · " + CFG.basemap.attribution +
       ' · <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>';
@@ -659,6 +700,41 @@
     });
   }
 
+  // Small-screen chrome (all hidden on desktop by engine.css): a handle that
+  // opens/closes the sidebar sheet (tap, or swipe up/down), an ⓘ button that
+  // reveals the credit line, and a tap-to-expand tagline.
+  function buildMobileChrome() {
+    var sb = document.getElementById("sidebar");
+    if (sb && !document.getElementById("sheet-handle")) {
+      var b = document.createElement("button");
+      b.type = "button"; b.id = "sheet-handle"; b.className = "sheet-handle";
+      b.setAttribute("aria-expanded", "false");
+      b.setAttribute("aria-controls", "story-list");
+      b.innerHTML = '<span class="grip"></span><span class="sheet-label"></span><span class="sheet-caret">▴</span>';
+      b.addEventListener("click", function () {
+        setSheet(!document.body.classList.contains("sheet-open"));
+      });
+      var y0 = null;
+      b.addEventListener("touchstart", function (e) { y0 = e.touches[0].clientY; }, { passive: true });
+      b.addEventListener("touchend", function (e) {
+        if (y0 == null) return;
+        var dy = e.changedTouches[0].clientY - y0; y0 = null;
+        if (Math.abs(dy) > 30) { setSheet(dy < 0); e.preventDefault(); }   // swipe up = open
+      });
+      sb.insertBefore(b, sb.firstChild);
+    }
+    var credit = document.getElementById("credit");
+    if (credit && !document.getElementById("credit-toggle")) {
+      var c = document.createElement("button");
+      c.type = "button"; c.id = "credit-toggle"; c.className = "credit-toggle";
+      c.setAttribute("aria-label", "Credits"); c.textContent = "ⓘ";
+      c.addEventListener("click", function () { credit.classList.toggle("open"); });
+      document.body.appendChild(c);
+    }
+    var tag = document.getElementById("tagline");
+    if (tag) tag.addEventListener("click", function () { tag.classList.toggle("full"); });
+  }
+
   // Build a hidden impressum/about overlay from config.site.impressum (HTML).
   function buildImpressum(htmlStr) {
     if (document.getElementById("impressum-modal")) return;
@@ -690,6 +766,7 @@
         var st = document.getElementById("site-title");
         if (st) st.textContent = cfg.site.title;
         buildWorkTabs();
+        buildMobileChrome();
         if (cfg.site.impressum) buildImpressum(cfg.site.impressum);
 
         // Leaflet's own attribution control is disabled: all attribution lives
@@ -715,7 +792,9 @@
           // next feature is picked (the popup can hide part of the line).
           if (selectedRoute && selectedRoute !== src) { highlightRoute(selectedRoute, false); selectedRoute = null; }
           if (src instanceof L.Polyline) { highlightRoute(src, true); selectedRoute = src; }
-          p.options.maxHeight = popupMaxHeight();
+          // re-read the insets (viewport may have changed): clear of the zoom
+          // control column on the left and of the sheet handle at the bottom
+          L.extend(p.options, popupPanOptions());
           p.update();
           [60, 320, 650].forEach(function (d) {
             setTimeout(function () { if (p.isOpen && p.isOpen() && p._adjustPan) p._adjustPan(); }, d);
@@ -725,7 +804,7 @@
         // Re-fit an open popup when the window (and thus the map pane) is resized.
         map.on("resize", function () {
           var p = map._popup;
-          if (p && p.isOpen()) { p.options.maxHeight = popupMaxHeight(); p.update(); if (p._adjustPan) p._adjustPan(); }
+          if (p && p.isOpen()) { L.extend(p.options, popupPanOptions()); p.update(); if (p._adjustPan) p._adjustPan(); }
         });
 
         applyLang();

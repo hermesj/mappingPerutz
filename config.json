@@ -24,15 +24,6 @@
     ]
   },
   "ui": {
-    "en": {
-      "showAll": "Show all",
-      "hideAll": "Hide all",
-      "route": "Route",
-      "page": "p.",
-      "exp": "experimental",
-      "toggleLayer": "toggle layer",
-      "expNote": "Experimental · a still-incomplete dataset; quotes not yet finally verified."
-    },
     "de": {
       "showAll": "Alle zeigen",
       "hideAll": "Alle aus",
@@ -46,7 +37,6 @@
   "works": {
     "zwischen-neun-und-neun": {
       "label": {
-        "en": "Between Nine and Nine",
         "de": "Zwischen neun und neun"
       },
       "data": [
@@ -60,17 +50,14 @@
         "url": "https://www.gutenberg.org/cache/epub/36901/pg36901-images.html",
         "anchor": "",
         "label": {
-          "en": "in context (Gutenberg)",
           "de": "im Kontext (Gutenberg)"
         }
       },
       "tagline": {
-        "de": "Stanislaus Dembas Weg durch Wien – zwischen 9 Uhr morgens und 9 Uhr abends (1918).",
-        "en": "Stanislaus Demba's way through Vienna – between 9 in the morning and 9 at night (1918)."
+        "de": "Stanislaus Dembas Weg durch Wien – zwischen 9 Uhr morgens und 9 Uhr abends (1918)."
       },
       "credit": {
-        "de": "Eigener Datensatz zum Roman »Zwischen neun und neun« von Leo Perutz (1918)",
-        "en": "Original dataset for Leo Perutz's novel Between Nine and Nine (1918)"
+        "de": "Eigener Datensatz zum Roman »Zwischen neun und neun« von Leo Perutz (1918)"
       },
       "groups": [
         {
@@ -245,32 +232,26 @@
       "essay": {
         "label": {
           "place": {
-            "de": "über diesen Ort",
-            "en": "about this place"
+            "de": "über diesen Ort"
           },
           "route": {
-            "de": "über diese Route",
-            "en": "about this route"
+            "de": "über diese Route"
           }
         }
       },
       "confidence": {
         "label": {
-          "de": "Sicherheit der Verortung",
-          "en": "Location certainty"
+          "de": "Sicherheit der Verortung"
         },
         "levels": {
           "high": {
-            "de": "gesichert",
-            "en": "confirmed"
+            "de": "gesichert"
           },
           "medium": {
-            "de": "straßengenau",
-            "en": "street-level"
+            "de": "straßengenau"
           },
           "low": {
-            "de": "hypothetisch",
-            "en": "approximate"
+            "de": "hypothetisch"
           }
         }
       }

@@ -9,6 +9,10 @@
     "gloss": "Warum dieser Ort zählt.",
     "quote": "Optionales Kurzzitat (sparsam — §51 UrhG bis 2028)."
   },
+  "metadata": {
+    "license": "CC BY-NC 4.0",
+    "note": "Original dataset by J. Hermes for Leo Perutz, »Zwischen neun und neun« (1918). The source text is public domain in the USA but in copyright in the EU until 31 Dec 2027 (public domain from 1 Jan 2028); quotations are short evidentiary excerpts under § 51 UrhG. Coordinates via OpenStreetMap/Nominatim, routes via OSRM (driving) / BRouter (foot) — © OpenStreetMap contributors, ODbL."
+  },
   "places": [
     {
       "id": "loc-greislerladen-puechl",

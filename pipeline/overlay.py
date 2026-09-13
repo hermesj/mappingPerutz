@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Shared helpers for the annotation overlay (used by the annotate-ui tool).
 
-A work's features carry no stored id; a stable id is *derived* from
-slug(story)/slug(name) (with -2/-3 for duplicates), computed over the work's
-features in load order. The exact same rule lives in engine.js (annSlug /
-assignIds) so the overlay keys match what the engine applies at runtime.
+Overlay keys are stable feature ids. A feature carrying an explicit
+`properties.id` (the frozen loc-/rte- entity id) uses it verbatim; a legacy
+feature without one gets a *derived* id slug(story)/slug(name) (with -2/-3 for
+duplicates), computed over the work's features in load order. The exact same
+rule lives in engine.js (annSlug / assignIds) so the overlay keys match what
+the engine applies at runtime.
 
 The overlay file (`data/<work>-annotations.json`) has the shape:
     { "work": "...", "annotations": { "<id>": { "character": "...", ... } } }
@@ -79,10 +81,10 @@ def load_overlay(path):
 
 def save_overlay(path, work_key, annotations):
     doc = {
-        "_comment": ("Editorial annotation overlay for the %s layer — original work by "
-                     "J. Hermes, applied on top of the base features at load time (the base "
-                     "GeoJSON is never modified). Key = stable feature id; value = a patch of "
-                     "fields to merge. Edited via pipeline/annotate-ui/." % work_key),
+        "_comment": ("Editorial annotation overlay for the %s layer — this project's own "
+                     "editorial work, applied on top of the base features at load time (the "
+                     "base GeoJSON is never modified). Key = stable feature id; value = a patch "
+                     "of fields to merge. Edited via pipeline/annotate-ui/." % work_key),
         "work": work_key,
         "annotations": {k: v for k, v in sorted(annotations.items()) if v},
     }
