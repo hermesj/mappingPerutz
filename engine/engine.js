@@ -171,13 +171,19 @@
     // Falls back to the numeric `group` if the story isn't found.
     var idx = groupsOf().findIndex(function (g) { return g.key === p.story; });
     var gn = idx >= 0 ? idx + 1 : primaryGroup(p);
-    var anchor = (st.anchor || "").replace("{n2}", String(gn).padStart(2, "0"))
-                                  .replace("{n}", String(gn));
+    // {n} / {n2} may appear in the anchor (one-page editions: "#chap03") or in
+    // the URL itself (one page per chapter, e.g. Projekt Gutenberg-DE
+    // ".../chapter/{n}"). `offset` shifts the ordinal when the edition's
+    // numbering starts elsewhere (there, page 1 is the title page → offset 1).
+    var n = gn + (st.offset || 0);
+    function fill(s) {
+      return (s || "").replace(/\{n2\}/g, String(n).padStart(2, "0")).replace(/\{n\}/g, String(n));
+    }
     // A fixed `srcText` (verbatim from the source page) wins over a fragment
     // generated from the displayed quote — lets the quote text differ from the
     // edition without breaking the highlight.
     var frag = p.srcText || srcSnippet(p.quote);
-    var href = st.url + "#" + anchor + ":~:text=" + encodeURIComponent(frag);
+    var href = fill(st.url) + "#" + fill(st.anchor) + ":~:text=" + encodeURIComponent(frag);
     var lo = st.label;   // {en,de,…} or a plain string
     var label = (lo && typeof lo === "object") ? (lo[lang] || lo.en || "source") : (lo || "source");
     return '<a class="pop-src" target="_blank" rel="noopener" href="' + href + '">↗ ' + esc(label) + "</a>";

@@ -142,6 +142,9 @@ The project file the engine reads at startup (excerpt — see the live
       "sourceText": {                  // optional: deep-link quotes into a PD text
         "url": "https://www.gutenberg.org/…/pg2814-images.html",
         "anchor": "chap{n2}", "label": { "en": "in context (Gutenberg)", "de": "…" }
+        // {n}/{n2} = the group's ordinal; usable in "anchor" (one-page edition)
+        // or in "url" (one page per chapter, e.g. Projekt Gutenberg-DE
+        // ".../chapter/{n}"); "offset": 1 shifts it when page 1 is a title page
       },
       "essay": {                       // optional: a feature.essay URL → "further reading" link
         "source": "Mapping Dubliners",   // byline; a feature's own `essaySource` overrides it
